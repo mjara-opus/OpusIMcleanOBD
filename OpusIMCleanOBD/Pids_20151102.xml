@@ -1,0 +1,1234 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Parameters>
+  <ParameterSupport Transform="PidSupportMask" id="00" Bytes="4">
+    <Description>PIDs supported [01 - 20]</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded [A7..D0] == [PID 0x01..PID 0x20]</Formula>
+  </ParameterSupport>
+  <Parameter id="01" Bytes="4">
+    <Description>Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)</Description>
+    <ShortDescription>Monitor status</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded</Formula>
+    <Transform Function="MonitorStatus" />
+  </Parameter>
+  <ParameterSkip id="02" Bytes="2">
+    <Description>Freeze DTC</Description>
+    <ShortDescription>Freeze DTC</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>                                                                              
+    <Formula></Formula>
+  </ParameterSkip>
+  <Parameter id="03" Bytes="2">
+    <Description>Fuel system status</Description>
+    <ShortDescription>Fuel system status</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded. See below.</Formula>
+    <Transform Function="FuelSystemStatus"/>
+  </Parameter>
+  <Parameter id="04" Bytes="1">
+    <Description>Calculated engine load value</Description>
+    <ShortDescription>Engine load value</ShortDescription>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="05" Bytes="1">
+    <Description>Engine coolant temperature</Description>
+    <ShortDescription>Engine coolant temperature</ShortDescription>
+    <Min>-40</Min>
+    <Max>215</Max>
+    <Units>°C</Units>
+    <Formula>A-40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="-40" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="06" Bytes="1">
+    <Description>Short term fuel &#37; trim-Bank 1</Description>
+    <ShortDescription>Short term fuel-Bank1</ShortDescription>
+    <Min>-100 (Rich)</Min>
+    <Max>99.22 (Lean)</Max>
+    <Units> &#37;</Units>
+    <Formula>(A-128) * 100/128</Formula>
+    <Transform Function="FuelTrim" />
+  </Parameter>
+  <Parameter id="07" Bytes="1">
+    <Description>Long term fuel &#37; trim-Bank 1</Description>
+    <ShortDescription>Long term fuel-Bank1</ShortDescription>
+    <Min>-100 (Lean)</Min>
+    <Max>99.22 (Rich)</Max>
+    <Units> &#37;</Units>
+    <!-- Formula>(A&#45;128) * 100/128</Formula sf -->
+    <Formula>(A-128) * 100/128</Formula>
+    <Transform Function="FuelTrim" />
+  </Parameter>
+  <Parameter id="08" Bytes="1">
+    <Description>Short term fuel&#37; trim-Bank 2</Description>
+    <ShortDescription>Short term fuel-Bank2</ShortDescription>
+    <Min>-100 (Lean)</Min>
+    <Max>99.22 (Rich)</Max>
+    <Units> &#37;</Units>
+    <Formula>(A-128) * 100/128</Formula>
+    <Transform Function="FuelTrim" />
+  </Parameter>
+  <Parameter id="09" Bytes="1">
+    <Description>Long term fuel&#37; trim-Bank 2</Description>
+    <ShortDescription>Long term fuel-Bank2</ShortDescription>
+    <Min>-100 (Lean)</Min>
+    <Max>99.22 (Rich)</Max>
+    <Units> &#37;</Units>
+    <Formula>(A-128) * 100/128</Formula>
+    <Transform Function="FuelTrim" />
+  </Parameter>
+  <Parameter id="0A" Bytes="1">
+    <Description>Fuel pressure</Description>
+    <ShortDescription>Fuel pressure</ShortDescription>
+    <Min>0</Min>
+    <Max>765</Max>
+    <Units>kPa (gauge)</Units>
+    <Formula>A*3</Formula>
+    <Transform Function="Linear">
+      <Parameters m="3" b="-0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="0B" Bytes="1">
+    <Description>Intake manifold absolute pressure</Description>
+    <ShortDescription>Absolute pressure</ShortDescription>
+    <Min>0</Min>
+    <Max>255</Max>
+    <Units>kPa (absolute)</Units>
+    <Formula>A</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="0C" Bytes="2">
+    <Description>Engine RPM</Description>
+    <ShortDescription>Engine RPM</ShortDescription>
+    <Min>0</Min>
+    <Max>16383.75</Max>
+    <Units>rpm</Units>
+    <Formula>((A*256)+B)/4</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.25" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="0D" Bytes="1">
+    <Description>Vehicle speed</Description>
+    <ShortDescription>Vehicle speed</ShortDescription>
+    <Min>0</Min>
+    <Max>255</Max>
+    <Units>km/h</Units>
+    <Formula>A</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="0E" Bytes="1">
+    <Description>Timing advance</Description>
+    <ShortDescription>Timing advance</ShortDescription>
+    <Min>-64</Min>
+    <Max>63.5</Max>
+    <Units>° relative to #1 cylinder</Units>
+    <Formula>A/2 - 64</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.5" b="-64" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="0F" Bytes="1">
+    <Description>Intake air temperature</Description>
+    <ShortDescription>Intake air temperature</ShortDescription>
+    <Min>-40</Min>
+    <Max>215</Max>
+    <Units>°C</Units>
+    <Formula>A-40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="-40" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="10" Bytes="2">
+    <Description>MAF air flow rate</Description>
+    <ShortDescription>MAF air flow rate</ShortDescription>
+    <Min>0</Min>
+    <Max>655.35</Max>
+    <Units>grams/sec</Units>
+    <Formula>((A*256)+B) / 100</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.01" b="0" decimals="2"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="11" Bytes="1">
+    <Description>Throttle position</Description>
+    <ShortDescription>Throttle position</ShortDescription>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="12" Bytes="1">
+    <Description>Commanded secondary air status</Description>
+    <ShortDescription>Secondary air status</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded. See below.</Formula>
+    <Transform Function="BitMask">
+    </Transform>
+  </Parameter>
+  <Parameter id="13" Bytes="1">
+    <Description>Oxygen sensors present</Description>
+    <ShortDescription>Oxygen sensors present</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>[A0..A3] == Bank 1, Sensors 1-4. [A4..A7] == Bank 2...</Formula>
+    <Transform Function="BitMask">
+    </Transform>
+  </Parameter>
+  <Parameter id="14" Bytes="2">
+    <Description>Bank 1, Sensor 1: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 1, Sensor 1</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts, &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="15" Bytes="2">
+    <Description>Bank 1, Sensor 2: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 1, Sensor 2</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts, &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="16" Bytes="2">
+    <Description>Bank 1, Sensor 3: Oxygen sensor voltage,Short term fuel trim</Description>
+    <ShortDescription>Bank 1, Sensor 3</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="17" Bytes="2">
+    <Description>Bank 1, Sensor 4: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 1, Sensor 4</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="18" Bytes="2">
+    <Description>Bank 2, Sensor 1: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 2, Sensor 1</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts, &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="19" Bytes="2">
+    <Description>Bank 2, Sensor 2: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 2, Sensor 2</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts, &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="1A" Bytes="2">
+    <Description>Bank 2, Sensor 3: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 2, Sensor 3</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts, &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>  
+</Parameter>
+  <Parameter id="1B" Bytes="2">
+    <Description>Bank 2, Sensor 4: Oxygen sensor voltage, Short term fuel trim</Description>
+    <ShortDescription>Bank 2, Sensor 4</ShortDescription>
+    <Min>0, -100(lean)</Min>
+    <Max>1.275, 99.2(rich)</Max>
+    <Units>Volts, &#37;</Units>
+    <Formula>A/200, (B-128) * 100/128 (if B==0xFF, sensor is not used in trim calc)</Formula>
+    <Transform Function="O2FuelSensor"/>
+  </Parameter>
+  <Parameter id="1C" Bytes="1">
+    <Description>OBD standards this vehicle conforms to</Description>
+    <ShortDescription>OBD standards</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded. See below.</Formula>
+    <Transform Function="ObdStandards"/>
+  </Parameter>
+  <Parameter id="1D" Bytes="1">
+    <Description>Oxygen sensors present</Description>
+    <ShortDescription>Oxygen sensors present</ShortDescription>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Similar to PID 13, but [A0..A7] == [B1S1, B1S2, B2S1, B2S2, B3S1, B3S2, B4S1, B4S2]</Formula>
+    <Transform Function="BitMask"/>
+  </Parameter>
+  <Parameter id="1E" Bytes="1">
+    <Description>Auxiliary input status</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>A0 == Power Take Off (PTO) status (1 == active)[A1..A7] not used</Formula>
+    <Transform Function="PowerTakeOff"/>
+  </Parameter>
+  <Parameter id="1F" Bytes="2">
+    <Description>Run time since engine start</Description>
+    <Min>0</Min>
+    <Max>65535</Max>
+    <Units>seconds</Units>
+    <Formula>(A*256)+B</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <ParameterSupport id="20" Bytes="4">
+    <Description>PIDs supported 21-40</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded [A7..D0] == [PID 0x21..PID 0x40]</Formula>
+  </ParameterSupport>
+  <Parameter id="21" Bytes="2">
+    <Description>Distance traveled with malfunction indicator lamp (MIL) on</Description>
+    <Min>0</Min>
+    <Max>65535</Max>
+    <Units>km</Units>
+    <Formula>(A*256)+B</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="22" Bytes="2">
+    <Description>Fuel Rail Pressure (relative to manifold vacuum)</Description>
+    <Min>0</Min>
+    <Max>5177.265</Max>
+    <Units>kPa</Units>
+    <Formula>((A*256)+B) * 0.079</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.079" b="0" decimals="3"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="23" Bytes="2">
+    <Description>Fuel Rail Pressure (diesel, or gasoline direct inject)</Description>
+    <Min>0</Min>
+    <Max>655350</Max>
+    <Units>kPa (gauge)</Units>
+    <Formula>((A*256)+B) * 10</Formula>
+    <Transform Function="Linear">
+      <Parameters m="10" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="24" Bytes="4">
+    <Description>O2S1_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>1.999, 7.999</Max>
+    <Units>N/A, V</Units>
+    <!-- Formula>((A*256)+B)*2/65535 or ((A*256)+B)/32768, ((C*256)+D)*8/65535 or ((C*256)+D)/8192</Formula sf -->
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula> <!-- so all same sf -->
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="25" Bytes="4">
+    <Description>O2S2_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="26" Bytes="4">
+    <Description>O2S3_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="27" Bytes="4">
+    <Description>O2S4_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="28" Bytes="4">
+    <Description>O2S5_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="29" Bytes="4">
+    <Description>O2S6_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="2A" Bytes="4">
+    <Description>O2S7_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="2B" Bytes="4">
+    <Description>O2S8_WR_lambda(1): Equivalence Ratio, Voltage</Description>
+    <Min>0, 0</Min>
+    <Max>2, 8</Max>
+    <Units>N/A, V</Units>
+    <Formula>((A*256)+B)*2/65535, ((C*256)+D)*8/65535</Formula>
+    <Transform Function="LambdaVoltage"/>
+  </Parameter>
+  <Parameter id="2C" Bytes="1">
+    <Description>Commanded EGR</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>100*A/255</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="2D" Bytes="1">
+    <Description>EGR Error</Description>
+    <Min>-100</Min>
+    <Max>99.22</Max>
+    <Units> &#37;</Units>
+    <Formula>(A-128) * 100/128</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.78125" b="-100" decimals="1"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="2E" Bytes="1">
+    <Description>Commanded evaporative purge</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>100*A/255</Formula>
+    <Transform Function="Linear">
+      <!-- Parameters m="0.78125" b="0" decimals="1"/ sf -->
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="2F" Bytes="1">
+    <Description>Fuel Level Input</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>100*A/255</Formula>
+    <Transform Function="Linear">
+      <!-- Parameters m="0.78125" b="0" decimals="1"/ sf -->
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="30" Bytes="1">
+    <Description># of warm-ups since codes cleared</Description>
+    <Min>0</Min>
+    <Max>255</Max>
+    <Units>N/A</Units>
+    <Formula>A</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="31" Bytes="2">
+    <Description>Distance traveled since codes cleared</Description>
+    <Min>0</Min>
+    <Max>65,535</Max>
+    <Units>km</Units>
+    <Formula>(A*256)+B</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="32" Bytes="2">
+    <Description>Evap. System Vapor Pressure</Description>
+    <Min>-8,192</Min>
+    <Max>8,192</Max>
+    <Units>Pa</Units>
+    <Formula>((A*256)+B)/4 (A is signed)</formula> <!-- is there a "SignedLinear"? sf -->
+    <Transform Function="SignedLinear">
+      <Parameters m="0.25" b="0" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="33" Bytes="1">
+    <Description>Barometric pressure</Description>
+    <Min>0</Min>
+    <Max>255</Max>
+    <Units>kPa (Absolute)</Units>
+    <Formula>A</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="34" Bytes="4">
+    <Description>O2S1_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>1.999, 127.99</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="35" Bytes="4">
+    <Description>O2S2_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="36" Bytes="4">
+    <Description>O2S3_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="37" Bytes="4">
+    <Description>O2S4_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="38" Bytes="4">
+    <Description>O2S5_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="39" Bytes="4">
+    <Description>O2S6_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="3A" Bytes="4">
+    <Description>O2S7_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="3B" Bytes="4">
+    <Description>O2S8_WR_lambda(1): Equivalence Ratio, Current</Description>
+    <Min>0, -128</Min>
+    <Max>2, 128</Max>
+    <Units>N/A, mA</Units>
+    <!-- Formula>((A*256)+B)/32,768, ((C*256)+D)/256 - 128</Formula sf -->
+    <Formula>((A*256)+B)/32768, ((C*256)+D)/256 - 128</Formula>
+    <Transform Function="LambdaCurrent"/>
+  </Parameter>
+  <Parameter id="3C" Bytes="2">
+    <Description>Catalyst Temperature Bank 1, Sensor 1</Description>
+    <Min>-40</Min>
+    <Max>6513.5</Max>
+    <Units>°C</Units>
+    <Formula>((A*256)+B)/10 - 40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.1" b="-40" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="3D" Bytes="2">
+    <Description>Catalyst Temperature Bank 2, Sensor 1</Description>
+    <Min>-40</Min>
+    <Max>6513.5</Max>
+    <Units>°C</Units>
+    <Formula>((A*256)+B)/10 - 40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.1" b="-40" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="3E" Bytes="2">
+    <Description>Catalyst Temperature Bank 1, Sensor 2</Description>
+    <Min>-40</Min>
+    <Max>6513.5</Max>
+    <Units>°C</Units>
+    <Formula>((A*256)+B)/10 - 40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.1" b="-40" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="3F" Bytes="2">
+    <Description>Catalyst Temperature Bank 2, Sensor 2</Description>
+    <Min>-40</Min>
+    <Max>6513.5</Max>
+    <Units>°C</Units>
+    <Formula>((A*256)+B)/10 - 40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.1" b="-40" decimals="0"/>
+    </Transform>
+  </Parameter>
+  <ParameterSupport id="40" Bytes="4">
+    <Description>PIDs supported 41-60</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded [A7..D0] == [PID 0x41..PID 0x60]</Formula>
+  </ParameterSupport>
+  <Parameter id="41" Bytes="4">
+    <Description>Monitor status this drive cycle</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>MonitorStatus</Formula>
+  </Parameter>
+  <Parameter id="42" Bytes="2">
+    <Description>Control module voltage</Description>
+    <Min>0</Min>
+    <Max>65.535</Max>
+    <Units>V</Units>
+    <Formula>((A*256)+B)/1000</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.001" b="0" decimals="3"/>
+    </Transform>
+  </Parameter>
+  <Parameter id="43" Bytes="2">
+    <Description>Absolute load value</Description>
+    <Min>0</Min>
+    <Max>25,700</Max>
+    <Units> &#37;</Units>
+    <Formula>((A*256)+B)*100/255</Formula>
+  </Parameter>
+  <Parameter id="44" Bytes="2">
+    <Description>Command equivalence ratio</Description>
+    <Min>0</Min>
+    <Max>2</Max>
+    <Units>N/A</Units>
+    <Formula>((A*256)+B)/32768</Formula>
+  </Parameter>
+  <Parameter id="45" Bytes="1">
+    <Description>Relative throttle position</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+    <Transform Function="Linear">
+      <!-- Parameters m="0.3912" b="0" decimals="1" / sf -->
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="46" Bytes="1">
+    <Description>Ambient air temperature</Description>
+    <Min>-40</Min>
+    <Max>215</Max>
+    <Units>°C</Units>
+    <Formula>A-40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1.0" b="-40.0" decimals="1" /> <!-- 1ø/bit as decimal? sf -->
+    </Transform>
+  </Parameter>
+  <Parameter id="47" Bytes="1">
+    <Description>Absolute throttle position B</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+    <!-- when is 1-byte as percent Transform and when NOT? sf -->
+  </Parameter>
+  <Parameter id="48" Bytes="1">
+    <Description>Absolute throttle position C</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+  </Parameter>
+  <Parameter id="49" Bytes="1">
+    <Description>Accelerator pedal position D</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+  </Parameter>
+  <Parameter id="4A" Bytes="1">
+    <Description>Accelerator pedal position E</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+  </Parameter>
+  <Parameter id="4B" Bytes="1">
+    <Description>Accelerator pedal position F</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+  </Parameter>
+  <Parameter id="4C" Bytes="1">
+    <Description>Commanded throttle actuator</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+  </Parameter>
+  <Parameter id="4D" Bytes="2">
+    <Description>Time run with MIL on</Description>
+    <Min>0</Min>
+    <Max>65535</Max>
+    <Units>minutes</Units>
+    <Formula>(A*256)+B</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="4E" Bytes="2">
+    <Description>Time since trouble codes cleared</Description>
+    <Min>0</Min>
+    <Max>65535</Max>
+    <Units>minutes</Units>
+    <Formula>(A*256)+B</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="0" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="4F" Bytes="4"> <!-- scaling factors for external test equipment sf -->
+    <Description>Maximum value for equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure</Description>
+    <Min>0, 0, 0, 0</Min>
+    <Max>255, 255, 255, 2550</Max>
+    <Units>, V, mA, kPa</Units>
+    <Formula>A, B, C, D*10</Formula>
+  </Parameter>
+  <Parameter id="50" Bytes="4">
+    <Description>Maximum value for air flow rate from mass air flow sensor</Description>
+    <Min>0</Min>
+    <Max>2550</Max>
+    <Units>g/s</Units>
+    <Formula>A*10<!-- , B, C, and D are reserved for future use sf--></Formula>
+  </Parameter>
+  <Parameter id="51" Bytes="1">
+    <Description>Fuel Type</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>From fuel type table see below</Formula>
+    <Transform Function="FuelType"/>
+  </Parameter>
+  <Parameter id="52" Bytes="1">
+    <Description>Ethanol fuel &#37;</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units>&#37;</Units>
+    <Formula>A*100/255</Formula>    
+  </Parameter>
+  <Parameter id="53" Bytes="2">
+    <!-- Description>Absoulute Evap system Vapour Pressure</Description sf -->
+    <Description>Absoulute Evap system Vapor Pressure</Description>
+    <Min>0</Min>
+    <!-- Max>327675</Max sf -->
+    <Max>327.675</Max>
+    <Units>kPa</Units>
+    <Formula>1/200 per bit</Formula>
+  </Parameter>
+  <Parameter id="54" Bytes="2">
+    <Description>Evap system vapor pressure</Description>
+    <Min>-32767</Min>
+    <Max>32768</Max>
+    <Units>Pa</Units>
+    <Formula>A*256+B - 32768</Formula>
+  </Parameter>
+  <Parameter id="55" Bytes="2">
+    <Description>Short term secondary oxygen sensor trim bank 1 and bank 3</Description>
+    <Min>-100</Min>
+    <Max>99.22</Max>
+    <Units> &#37;</Units>
+    <!-- Formula>(A-128)*100/128
+(B-128)*100/128</Formula sf -->
+    <Formula>(A-128)*100/128, (B-128)*100/128</Formula>
+  </Parameter>
+  <Parameter id="56" Bytes="2">
+    <Description>Long term secondary oxygen sensor trim bank 1 and bank 3</Description>
+    <Min>-100</Min>
+    <Max>99.22</Max>
+    <Units> &#37;</Units>
+    <!-- Formula>(A-128)*100/128
+(B-128)*100/128</Formula sf -->
+    <Formula>(A-128)*100/128, (B-128)*100/128</Formula>
+  </Parameter>
+  <Parameter id="57" Bytes="2">
+    <Description>Short term secondary oxygen sensor trim bank 2 and bank 4</Description>
+    <Min>-100</Min>
+    <Max>99.22</Max>
+    <Units> &#37;</Units>
+    <!-- Formula>(A-128)*100/128
+(B-128)*100/128</Formula sf -->
+    <Formula>(A-128)*100/128, (B-128)*100/128</Formula>
+  </Parameter>
+  <Parameter id="58" Bytes="2">
+    <Description>Long term secondary oxygen sensor trim bank 2 and bank 4</Description>
+    <Min>-100</Min>
+    <Max>99.22</Max>
+    <Units> &#37;</Units>
+    <!-- Formula>(A-128)*100/128
+(B-128)*100/128</Formula sf -->
+    <Formula>(A-128)*100/128, (B-128)*100/128</Formula>
+  </Parameter>
+  <Parameter id="59" Bytes="2">
+    <Description>Fuel rail pressure (absolute)</Description>
+    <Min>0</Min>
+    <Max>655350</Max>
+    <Units>kPa</Units>
+    <Formula>((A*256)+B) * 10</Formula>
+  </Parameter>
+  <Parameter id="5A" Bytes="1">
+    <Description>Relative accelerator pedal position</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+  </Parameter>
+  <Parameter id="5B" Bytes="1">
+    <Description>Hybrid battery pack remaining life</Description>
+    <Min>0</Min>
+    <Max>100</Max>
+    <Units> &#37;</Units>
+    <Formula>A*100/255</Formula>
+    <Transform Function="Linear">
+      <Parameters m="0.39216" b="0" decimals="1"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="5C" Bytes="1">
+    <Description>Engine oil temperature</Description>
+    <ShortDescription>Engine oil temperature</ShortDescription>
+    <Min>-40</Min>
+    <Max>215</Max>
+    <Units>°C</Units>
+    <Formula>A-40</Formula>
+    <Transform Function="Linear">
+      <Parameters m="1" b="-40" decimals="0"></Parameters>
+    </Transform>
+  </Parameter>
+  <Parameter id="5D" Bytes="2">
+    <Description>Fuel injection timing</Description>
+    <Min>-210.00</Min>
+    <Max>301.992</Max>
+    <Units>°</Units>
+    <!-- Formula>(38,655-((A*256)+B))/128</Formula sf -->
+    <Formula>(38655-((A*256)+B))/128</Formula>
+  </Parameter>
+  <Parameter id="5E" Bytes="2">
+    <Description>Engine fuel rate</Description>
+    <Min>0</Min>
+    <!-- Max>3212.75</Max sf -->
+    <Max>3276.75</Max>
+    <Units>L/h</Units>
+    <Formula>((A*256)+B)*0.05</Formula>
+  </Parameter>
+  <Parameter id="5F" Bytes="1">
+    <Description>Emission requirements to which vehicle is designed</Description>
+    <Min></Min>
+    <!--
+    Heavy Duty Vehicles (EURO IV) B1    0E    EURO IV B1
+    Heavy Duty Vehicles (EURO  V) B2    0F    EURO  V B2
+    Heavy Duty Vehicles (EURO EEV) C    10    EURO     C
+      -->
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded. See below.</Formula>
+    <Transform Function="EmissionRequirements"/>
+  </Parameter>
+  <ParameterSupport id="60" bytes="4">
+    <Description>PIDs supported 61-80</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit encoded [A7..D0] == [PID 0x61..PID 0x80]</Formula>
+  </ParameterSupport>
+  <Parameter id="61" Bytes="1">
+    <Description>Driver's demand engine - percent torque</Description>
+    <Min>-125</Min>
+    <!-- Max>125</Max sf -->
+    <Max>130</Max>
+    <Units> &#37;</Units>
+    <Formula>A-125</Formula>
+  </Parameter>
+  <Parameter id="62" Bytes="1">
+    <Description>Actual engine - percent torque</Description>
+    <Min>-125</Min>
+    <!-- Max>125</Max sf -->
+    <Max>130</Max>
+    <Units> &#37;</Units>
+    <Formula>A-125</Formula>
+  </Parameter>
+  <Parameter id="63" Bytes="2">
+    <Description>Engine reference torque</Description>
+    <Min>0</Min>
+    <Max>65535</Max>
+    <Units>Nm</Units>
+    <Formula>A*256+B</Formula>
+  </Parameter>
+  <Parameter id="64" Bytes="5">
+    <Description>Engine percent torque data</Description>
+    <Min>-125, -125, -125, -125</Min>
+    <Max>125</Max>
+    <Units> &#37;</Units>
+    <!-- Formula>A-125 Idle, B-125 Engine point 1, C-125 Engine point 2, D-125 Engine point 3, E-125 Engine point 4</Formula>
+    <formula>Idle Point 1, Engine point 2, Engine point 3, Engine point 4, Engine point 5</Formula sf -->
+    <Formula>     A-125 ,         B-125 ,         C-125 ,         D-125 ,         E-125 </Formula>
+  </Parameter>
+  <Parameter id="65" Bytes="2">
+    <Description>Auxiliary input / output supported</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Bit Encoded</Formula>
+  </Parameter>
+  <Parameter id="66" Bytes="5">
+    <Description>Mass air flow sensor</Description>
+    <!--
+    Byte_A bit0 = 1 if MAF 1 Data
+    Byte_A bit1 = 1 if MAF 2 Data
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>0, 0</Min>
+    <Max>2047.96875, 2047.96875</Max>
+    <Units>g/s, g/s</Units>
+    <Formula>((B*256)+C)*0.03125, ((D*256)+E)*0.03125</Formula>
+  </Parameter>
+  <Parameter id="67" Bytes="3">
+    <Description>Engine coolant temperature</Description>
+    <!--
+    Byte_A bit0 = 1 if ECT 1 Data
+    Byte_A bit1 = 1 if ECT 2 Data
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>-40, -40</Min>
+    <Max>215, 215</Max>
+    <Units>°, °</Units>
+    <Formula>A-40, B-40</Formula>
+  </Parameter>
+  <Parameter id="68" Bytes="7">
+    <Description>Intake air temperature sensor</Description>
+    <!--
+    Byte_A bit0 = 1 if IAT 11 Data
+    Byte_A bit1 = 1 if IAT 12 Data
+    Byte_A bit2 = 1 if IAT 13 Data
+    Byte_A bit3 = 1 if IAT 21 Data
+    Byte_A bit4 = 1 if IAT 22 Data
+    Byte_A bit5 = 1 if IAT 23 Data
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>-40, -40, -40, -40, -40, -40</Min>
+    <Max>215, 215, 215, 215, 215, 215</Max>
+    <Units>°, °, °, °, °, °</Units>
+    <Formula>B-40, C-40, D-40, E-40, F-40, G-40</Formula>
+  </Parameter>
+  <Parameter id="69" Bytes="7">
+    <Description>Commanded EGR and EGR Error</Description>
+    <!--
+    Byte_A bit0 = 1 if Cmd EGR A Data
+    Byte_A bit1 = 1 if Act EGR A Data
+    Byte_A bit2 = 1 if Err EGR A Data
+    Byte_A bit3 = 1 if Cmd EGR B Data
+    Byte_A bit4 = 1 if Act EGR B Data
+    Byte_A bit5 = 1 if Err EGR B Data
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>0, 0, -100, 0, 0, -100</Min>
+    <Max>100, 100, 99.22, 100, 100, 99.22</Max>
+    <Units> &#37;, &#37;, &#37;, &#37;, &#37;, &#37;</Units>
+    <Formula>(B*100)/255,(C*100)/255,((D-128)*100)/128,(E*100)/255,(F*100)/255,((G-128)*100)/128</Formula>
+  </Parameter>
+  <Parameter id="6A" Bytes="5">
+    <Description>Commanded Diesel intake air flow control and relative intake air flow position</Description>
+    <Description>Engine coolant temperature</Description>
+    <!--
+    Byte_A bit0 = 1 if Cmd IAF A Data
+    Byte_A bit1 = 1 if Rel IAF A Data
+    Byte_A bit2 = 1 if Cmd IAF B Data
+    Byte_A bit3 = 1 if Rel IAF B Data
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>0,0,0,0</Min>
+    <Max>100,100,100,100</Max>
+    <Units> &#37;, &#37;, &#37;, &#37;</Units>
+    <Formula>(B*100)/255,(C*100)/255,(D*100)/255,(E*100)/255</Formula>
+  </Parameter>
+  <Parameter id="6B" Bytes="5">
+    <Description>Exhaust gas recirculation temperature</Description>
+    <!--
+    Byte_A bit0 = 1 if EGR TS11 1ø Data :x0=1
+    Byte_A bit1 = 1 if EGR TS12 1ø Data :x1=1
+    Byte_A bit2 = 1 if EGR TS21 1ø Data :x2=1
+    Byte_A bit3 = 1 if EGR TS22 1ø Data :x3=1
+    Byte_A bit4 = 1 if EGR TS11 4ø Data :x0=4
+    Byte_A bit5 = 1 if EGR TS12 4ø Data :x1=4
+    Byte_A bit6 = 1 if EGR TS21 4ø Data :x2=4
+    Byte_A bit7 = 1 if EGR TS22 4ø Data :x3=4
+    <!- WHERE x0..x3 are assumed to be variables to be carried to the Formula ->
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>0,0,0,0</Min>
+    <Max>980,980,980,980</Max>
+    <Units>°, °, °, °</Units>
+    <Formula>(B*x0)-40,(C*x1)-40,(D*x2)-40,(E*x3)-40</Formula>
+  </Parameter>
+  <Parameter id="6C" Bytes="5">
+    <Description>Commanded throttle actuator control and relative throttle position</Description>
+    <!--
+    Byte_A bit0 = 1 if Cmd TA A Data
+    Byte_A bit1 = 1 if Rel TA A Data
+    Byte_A bit2 = 1 if Cmd TA B Data
+    Byte_A bit3 = 1 if Rel TA B Data
+    <Min></Min>
+    <Max></Max>
+    <Units></Units -->
+    <!-- Formula></Formula sf -->
+    <Min>0,0,0,0</Min>
+    <Max>100,100,100,100</Max>
+    <Units> &#37;, &#37;, &#37;, &#37;</Units>
+    <Formula>(B*100)/255,(C*100)/255,(D*100)/255,(E*100)/255</Formula>
+  </Parameter>
+  <Parameter id="6D" Bytes="6">
+    <Description>Fuel pressure control system</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="6E" Bytes="5">
+    <Description>Injection pressure control system</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="6F" Bytes="3">
+    <Description>Turbocharger compressor inlet pressure</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="70" Bytes="9">
+    <Description>Boost pressure control</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="71" Bytes="5">
+    <Description>Variable Geometry turbo (VGT) control</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="72" Bytes="5">
+    <Description>Wastegate control</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="73" Bytes="5">
+    <Description>Exhaust pressure</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="74" Bytes="5">
+    <Description>Turbocharger RPM</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="75" Bytes="7">
+    <Description>Turbocharger temperature</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="76" Bytes="7">
+    <Description>Turbocharger temperature</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="77" Bytes="5">
+    <Description>Charge air cooler temperature (CACT)</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="78" Bytes="9">
+    <Description>Exhaust Gas temperature (EGT) Bank 1</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Special PID. See below.</Formula>
+  </Parameter>
+  <Parameter id="79" Bytes="9">
+    <Description>Exhaust Gas temperature (EGT) Bank 2</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula>Special PID. See below.</Formula>
+  </Parameter>
+  <Parameter id="7A" Bytes="7">
+    <Description>Diesel particulate filter (DPF)</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="7B" Bytes="7">
+    <Description>Diesel particulate filter (DPF)</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="7C" Bytes="9">
+    <Description>Diesel Particulate filter (DPF) temperature</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="7D" Bytes="1">
+    <Description>NOx NTE control area status</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="7E" Bytes="1">
+    <Description>PM NTE control area status</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="7F" Bytes="13">
+    <Description>Engine run time</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="81" Bytes="21">
+    <Description>Engine run time for AECD</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="82" Bytes="21">
+    <Description>Engine run time for AECD</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="83" Bytes="5">
+    <Description>NOx sensor</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="84" Bytes="">
+    <Description>Manifold surface temperature</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="85" Bytes="">
+    <Description>NOx reagent system</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="86" Bytes="">
+    <Description>Particulate matter (PM) sensor</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="87" Bytes="">
+    <Description>Intake manifold absolute pressure</Description>
+    <Min></Min>
+    <Max></Max>
+    <Units></Units>
+    <Formula></Formula>
+  </Parameter>
+  <Parameter id="C3" Bytes=" ?">
+    <Description>?</Description>
+    <Min> ?</Min>
+    <Max> ?</Max>
+    <Units> ?</Units>
+    <Formula>Returns numerous data, including Drive Condition ID and Engine Speed*</Formula>
+  </Parameter>
+  <Parameter id="C4" Bytes=" ?">
+    <Description>?</Description>
+    <Min> ?</Min>
+    <Max> ?</Max>
+    <Units> ?</Units>
+    <Formula>B5 is Engine Idle Request, B6 is Engine Stop Request*</Formula>
+  </Parameter>
+</Parameters>

@@ -1,0 +1,24 @@
+﻿Imports System.IO
+Imports System.Net.Mime.MediaTypeNames
+Imports System.Xml
+
+Imports OpusIMCleanOBDdrv
+
+
+Module Module1
+
+    Public cOpusIMCleanOBDdrv As New OpusIMCleanOBDdrv.IMCleanOBD
+
+    '//------------------------------- COLORES
+    Public xFormColor As Object = Drawing.Color.FromArgb(0, 128, 128) '-- Verde Opus
+    Public xMsgUsuColor As Object = Drawing.Color.FromArgb(65, 58, 102) '--#0a3a66
+    Public xPanelMsgUsuColor As Object = Drawing.Color.FromArgb(10, 58, 102) '--#051d33
+    Public xMsgUsuColorOscuro As Object = Drawing.Color.FromArgb(5, 29, 51) '--#051d33
+    Public xFocusColor As Object = Drawing.Color.FromArgb(250, 173, 30) '--#1890ff
+    Public xBtnNeutro As Object = Drawing.Color.FromArgb(223, 221, 217) '--#dfddd9
+    Public xbackColorAmarillo As Object = Drawing.Color.FromArgb(250, 173, 20) '--#faad14
+    Public xbackMarron As Object = Drawing.Color.FromArgb(150, 104, 12) '--#96680c
+    '||-------------------------------
+
+
+End Module

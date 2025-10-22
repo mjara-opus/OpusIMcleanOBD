@@ -1,0 +1,158 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|c:\\pry_nt\\opusimcleanobd\\opusimcleanobd\\opusimcleanobd\\modmja.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\modmja.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\moddtc.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\moddtc.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\modtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\modtools.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\opusimcleanobd\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{363B8D5D-4892-42B4-A843-8C7F338970DC}|OpusIMCleanOBD\\OpusIMCleanOBD.vbproj|solutionrelative:opusimcleanobd\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ModDTC.vb",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\ModDTC.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\ModDTC.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\ModDTC.vb",
+              "RelativeToolTip": "OpusIMCleanOBD\\ModDTC.vb",
+              "ViewState": "AgIAAH8DAAAAAAAAAAAAAI4DAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-17T18:34:29.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\Form1.Designer.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Form1.Designer.vb",
+              "RelativeToolTip": "OpusIMCleanOBD\\Form1.Designer.vb",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAqwIAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-10-16T00:35:18.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\App.config",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\App.config",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\App.config",
+              "RelativeToolTip": "OpusIMCleanOBD\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-06T19:19:09.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ModMJA.vb",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\ModMJA.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\ModMJA.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\ModMJA.vb",
+              "RelativeToolTip": "OpusIMCleanOBD\\ModMJA.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-29T16:57:41.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModTOOLS.vb",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\ModTOOLS.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\ModTOOLS.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\ModTOOLS.vb",
+              "RelativeToolTip": "OpusIMCleanOBD\\ModTOOLS.vb",
+              "ViewState": "AgIAAEcAAAAAAAAAAADwv2EAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-22T16:15:16.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Module1.vb",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Module1.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\Module1.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Module1.vb",
+              "RelativeToolTip": "OpusIMCleanOBD\\Module1.vb",
+              "ViewState": "AgIAAOoJAAAAAAAAAAAmwP4JAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-19T17:22:59.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Form1.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\Form1.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Form1.vb",
+              "RelativeToolTip": "OpusIMCleanOBD\\Form1.vb",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwD8AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-19T17:22:47.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Form1.vb",
+              "RelativeDocumentMoniker": "OpusIMCleanOBD\\Form1.vb",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusIMCleanOBD\\OpusIMCleanOBD\\Form1.vb [Design]",
+              "RelativeToolTip": "OpusIMCleanOBD\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-19T17:22:44.044Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

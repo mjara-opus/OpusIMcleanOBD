@@ -1,8 +1,8 @@
 ﻿Module ModDTC
 
 
-    Public Sub DECODE_DTC_CODIGOS(ByVal pObdFalla As String)
-
+    Public Function DECODE_DTC_CODIGOS(ByVal pObdFalla As String) As Boolean
+        Applog("... DECODE_DTC_CODIGOS: " & pObdFalla)
         Try
             If Len(pObdFalla) = 4 And pObdFalla <> "0000" Then
 
@@ -927,6 +927,12 @@
 
         End Try
 
-    End Sub
+        If xDTC_CAT Or xDTC_CCM Or xDTC_MSI Or xDTC_CMB Or xDTC_O2S Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
 
 End Module

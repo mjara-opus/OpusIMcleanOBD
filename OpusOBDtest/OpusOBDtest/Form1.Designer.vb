@@ -29,7 +29,13 @@ Partial Class Form1
         Me.lblIDmj = New System.Windows.Forms.Label()
         Me.picLogoESP = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblTESTobd = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.lblFirmWare = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblVoltajeDLC = New System.Windows.Forms.Label()
+        Me.lblIdDevice = New System.Windows.Forms.Label()
+        Me.lblDTC = New System.Windows.Forms.TextBox()
         Me.LblOBD_CAT_C = New System.Windows.Forms.Label()
         Me.LblOBD_O2S_C = New System.Windows.Forms.Label()
         Me.LblOBD_CMB_C = New System.Windows.Forms.Label()
@@ -41,8 +47,6 @@ Partial Class Form1
         Me.LblOBD_CCM_D = New System.Windows.Forms.Label()
         Me.LblOBD_MSI_D = New System.Windows.Forms.Label()
         Me.LblOBD_mil = New System.Windows.Forms.Label()
-        Me.lblRPM = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.lblProtocolo = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.LblOBD_CAT = New System.Windows.Forms.Label()
@@ -52,7 +56,7 @@ Partial Class Form1
         Me.LblOBD_MSI = New System.Windows.Forms.Label()
         Me.BtnInitDevice = New System.Windows.Forms.Button()
         Me.PicOBD = New System.Windows.Forms.PictureBox()
-        Me.LblVoltaje = New System.Windows.Forms.Label()
+        Me.lblVoltaje = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.LblVIN = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -65,8 +69,8 @@ Partial Class Form1
         Me.BtnContinuar = New System.Windows.Forms.Button()
         Me.PicOpusLogo = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lblIdDevice = New System.Windows.Forms.Label()
-        Me.txtDTC = New System.Windows.Forms.TextBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PicESPLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogoESP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -124,9 +128,15 @@ Partial Class Form1
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.txtDTC)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.ListBox1)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.lblFirmWare)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.lblVoltajeDLC)
         Me.Panel1.Controls.Add(Me.lblIdDevice)
-        Me.Panel1.Controls.Add(Me.lblTESTobd)
+        Me.Panel1.Controls.Add(Me.lblDTC)
         Me.Panel1.Controls.Add(Me.LblOBD_CAT_C)
         Me.Panel1.Controls.Add(Me.LblOBD_O2S_C)
         Me.Panel1.Controls.Add(Me.LblOBD_CMB_C)
@@ -138,8 +148,6 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.LblOBD_CCM_D)
         Me.Panel1.Controls.Add(Me.LblOBD_MSI_D)
         Me.Panel1.Controls.Add(Me.LblOBD_mil)
-        Me.Panel1.Controls.Add(Me.lblRPM)
-        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.lblProtocolo)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.LblOBD_CAT)
@@ -149,7 +157,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.LblOBD_MSI)
         Me.Panel1.Controls.Add(Me.BtnInitDevice)
         Me.Panel1.Controls.Add(Me.PicOBD)
-        Me.Panel1.Controls.Add(Me.LblVoltaje)
+        Me.Panel1.Controls.Add(Me.lblVoltaje)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.LblVIN)
         Me.Panel1.Controls.Add(Me.Label5)
@@ -162,18 +170,86 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(1320, 610)
         Me.Panel1.TabIndex = 282
         '
-        'lblTESTobd
+        'Button1
         '
-        Me.lblTESTobd.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.lblTESTobd.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTESTobd.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblTESTobd.Location = New System.Drawing.Point(9, 471)
-        Me.lblTESTobd.Multiline = True
-        Me.lblTESTobd.Name = "lblTESTobd"
-        Me.lblTESTobd.ReadOnly = True
-        Me.lblTESTobd.Size = New System.Drawing.Size(1298, 30)
-        Me.lblTESTobd.TabIndex = 300
-        Me.lblTESTobd.Text = "..."
+        Me.Button1.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(9, 113)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(215, 33)
+        Me.Button1.TabIndex = 307
+        Me.Button1.Text = "test"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
+        'lblFirmWare
+        '
+        Me.lblFirmWare.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.lblFirmWare.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblFirmWare.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFirmWare.ForeColor = System.Drawing.Color.White
+        Me.lblFirmWare.Location = New System.Drawing.Point(235, 193)
+        Me.lblFirmWare.Name = "lblFirmWare"
+        Me.lblFirmWare.Size = New System.Drawing.Size(391, 30)
+        Me.lblFirmWare.TabIndex = 306
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(138, 197)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(93, 22)
+        Me.Label3.TabIndex = 305
+        Me.Label3.Text = "FirmWare"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(415, 159)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(49, 22)
+        Me.Label1.TabIndex = 304
+        Me.Label1.Text = "DLC"
+        '
+        'lblVoltajeDLC
+        '
+        Me.lblVoltajeDLC.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.lblVoltajeDLC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblVoltajeDLC.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVoltajeDLC.ForeColor = System.Drawing.Color.White
+        Me.lblVoltajeDLC.Location = New System.Drawing.Point(469, 154)
+        Me.lblVoltajeDLC.Name = "lblVoltajeDLC"
+        Me.lblVoltajeDLC.Size = New System.Drawing.Size(157, 30)
+        Me.lblVoltajeDLC.TabIndex = 303
+        '
+        'lblIdDevice
+        '
+        Me.lblIdDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.lblIdDevice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblIdDevice.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdDevice.ForeColor = System.Drawing.Color.White
+        Me.lblIdDevice.Location = New System.Drawing.Point(235, 118)
+        Me.lblIdDevice.Name = "lblIdDevice"
+        Me.lblIdDevice.Size = New System.Drawing.Size(391, 30)
+        Me.lblIdDevice.TabIndex = 301
+        '
+        'lblDTC
+        '
+        Me.lblDTC.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.lblDTC.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDTC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.lblDTC.Location = New System.Drawing.Point(235, 322)
+        Me.lblDTC.Multiline = True
+        Me.lblDTC.Name = "lblDTC"
+        Me.lblDTC.ReadOnly = True
+        Me.lblDTC.Size = New System.Drawing.Size(391, 30)
+        Me.lblDTC.TabIndex = 300
         '
         'LblOBD_CAT_C
         '
@@ -181,7 +257,7 @@ Partial Class Form1
         Me.LblOBD_CAT_C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CAT_C.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CAT_C.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CAT_C.Location = New System.Drawing.Point(1178, 232)
+        Me.LblOBD_CAT_C.Location = New System.Drawing.Point(1178, 203)
         Me.LblOBD_CAT_C.Name = "LblOBD_CAT_C"
         Me.LblOBD_CAT_C.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_CAT_C.TabIndex = 297
@@ -194,7 +270,7 @@ Partial Class Form1
         Me.LblOBD_O2S_C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_O2S_C.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_O2S_C.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_O2S_C.Location = New System.Drawing.Point(1178, 190)
+        Me.LblOBD_O2S_C.Location = New System.Drawing.Point(1178, 166)
         Me.LblOBD_O2S_C.Name = "LblOBD_O2S_C"
         Me.LblOBD_O2S_C.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_O2S_C.TabIndex = 296
@@ -207,7 +283,7 @@ Partial Class Form1
         Me.LblOBD_CMB_C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CMB_C.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CMB_C.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CMB_C.Location = New System.Drawing.Point(1178, 147)
+        Me.LblOBD_CMB_C.Location = New System.Drawing.Point(1178, 129)
         Me.LblOBD_CMB_C.Name = "LblOBD_CMB_C"
         Me.LblOBD_CMB_C.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_CMB_C.TabIndex = 295
@@ -220,7 +296,7 @@ Partial Class Form1
         Me.LblOBD_CCM_C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CCM_C.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CCM_C.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CCM_C.Location = New System.Drawing.Point(1178, 104)
+        Me.LblOBD_CCM_C.Location = New System.Drawing.Point(1178, 92)
         Me.LblOBD_CCM_C.Name = "LblOBD_CCM_C"
         Me.LblOBD_CCM_C.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_CCM_C.TabIndex = 294
@@ -233,7 +309,7 @@ Partial Class Form1
         Me.LblOBD_MSI_C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_MSI_C.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_MSI_C.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_MSI_C.Location = New System.Drawing.Point(1178, 63)
+        Me.LblOBD_MSI_C.Location = New System.Drawing.Point(1178, 55)
         Me.LblOBD_MSI_C.Name = "LblOBD_MSI_C"
         Me.LblOBD_MSI_C.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_MSI_C.TabIndex = 293
@@ -246,7 +322,7 @@ Partial Class Form1
         Me.LblOBD_CAT_D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CAT_D.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CAT_D.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CAT_D.Location = New System.Drawing.Point(1042, 232)
+        Me.LblOBD_CAT_D.Location = New System.Drawing.Point(1042, 203)
         Me.LblOBD_CAT_D.Name = "LblOBD_CAT_D"
         Me.LblOBD_CAT_D.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_CAT_D.TabIndex = 292
@@ -259,7 +335,7 @@ Partial Class Form1
         Me.LblOBD_O2S_D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_O2S_D.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_O2S_D.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_O2S_D.Location = New System.Drawing.Point(1042, 190)
+        Me.LblOBD_O2S_D.Location = New System.Drawing.Point(1042, 166)
         Me.LblOBD_O2S_D.Name = "LblOBD_O2S_D"
         Me.LblOBD_O2S_D.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_O2S_D.TabIndex = 291
@@ -272,7 +348,7 @@ Partial Class Form1
         Me.LblOBD_CMB_D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CMB_D.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CMB_D.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CMB_D.Location = New System.Drawing.Point(1042, 147)
+        Me.LblOBD_CMB_D.Location = New System.Drawing.Point(1042, 129)
         Me.LblOBD_CMB_D.Name = "LblOBD_CMB_D"
         Me.LblOBD_CMB_D.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_CMB_D.TabIndex = 290
@@ -285,7 +361,7 @@ Partial Class Form1
         Me.LblOBD_CCM_D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CCM_D.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CCM_D.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CCM_D.Location = New System.Drawing.Point(1042, 104)
+        Me.LblOBD_CCM_D.Location = New System.Drawing.Point(1042, 92)
         Me.LblOBD_CCM_D.Name = "LblOBD_CCM_D"
         Me.LblOBD_CCM_D.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_CCM_D.TabIndex = 289
@@ -298,7 +374,7 @@ Partial Class Form1
         Me.LblOBD_MSI_D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_MSI_D.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_MSI_D.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_MSI_D.Location = New System.Drawing.Point(1042, 63)
+        Me.LblOBD_MSI_D.Location = New System.Drawing.Point(1042, 55)
         Me.LblOBD_MSI_D.Name = "LblOBD_MSI_D"
         Me.LblOBD_MSI_D.Size = New System.Drawing.Size(129, 30)
         Me.LblOBD_MSI_D.TabIndex = 288
@@ -318,36 +394,13 @@ Partial Class Form1
         Me.LblOBD_mil.Text = "Luz M.I.L."
         Me.LblOBD_mil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblRPM
-        '
-        Me.lblRPM.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.lblRPM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblRPM.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblRPM.ForeColor = System.Drawing.Color.White
-        Me.lblRPM.Location = New System.Drawing.Point(235, 344)
-        Me.lblRPM.Name = "lblRPM"
-        Me.lblRPM.Size = New System.Drawing.Size(171, 30)
-        Me.lblRPM.TabIndex = 277
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(130, 348)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 22)
-        Me.Label6.TabIndex = 276
-        Me.Label6.Text = "Rpm's"
-        '
         'lblProtocolo
         '
         Me.lblProtocolo.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.lblProtocolo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblProtocolo.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProtocolo.ForeColor = System.Drawing.Color.White
-        Me.lblProtocolo.Location = New System.Drawing.Point(235, 306)
+        Me.lblProtocolo.Location = New System.Drawing.Point(235, 242)
         Me.lblProtocolo.Name = "lblProtocolo"
         Me.lblProtocolo.Size = New System.Drawing.Size(391, 30)
         Me.lblProtocolo.TabIndex = 275
@@ -358,7 +411,7 @@ Partial Class Form1
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(130, 310)
+        Me.Label4.Location = New System.Drawing.Point(130, 243)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 25)
         Me.Label4.TabIndex = 274
@@ -370,7 +423,7 @@ Partial Class Form1
         Me.LblOBD_CAT.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CAT.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CAT.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CAT.Location = New System.Drawing.Point(639, 231)
+        Me.LblOBD_CAT.Location = New System.Drawing.Point(639, 202)
         Me.LblOBD_CAT.Name = "LblOBD_CAT"
         Me.LblOBD_CAT.Size = New System.Drawing.Size(397, 30)
         Me.LblOBD_CAT.TabIndex = 267
@@ -383,7 +436,7 @@ Partial Class Form1
         Me.LblOBD_O2S.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_O2S.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_O2S.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_O2S.Location = New System.Drawing.Point(639, 189)
+        Me.LblOBD_O2S.Location = New System.Drawing.Point(639, 165)
         Me.LblOBD_O2S.Name = "LblOBD_O2S"
         Me.LblOBD_O2S.Size = New System.Drawing.Size(397, 30)
         Me.LblOBD_O2S.TabIndex = 266
@@ -396,7 +449,7 @@ Partial Class Form1
         Me.LblOBD_CMB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CMB.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CMB.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CMB.Location = New System.Drawing.Point(639, 146)
+        Me.LblOBD_CMB.Location = New System.Drawing.Point(639, 128)
         Me.LblOBD_CMB.Name = "LblOBD_CMB"
         Me.LblOBD_CMB.Size = New System.Drawing.Size(397, 30)
         Me.LblOBD_CMB.TabIndex = 265
@@ -409,7 +462,7 @@ Partial Class Form1
         Me.LblOBD_CCM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_CCM.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_CCM.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_CCM.Location = New System.Drawing.Point(639, 103)
+        Me.LblOBD_CCM.Location = New System.Drawing.Point(639, 91)
         Me.LblOBD_CCM.Name = "LblOBD_CCM"
         Me.LblOBD_CCM.Size = New System.Drawing.Size(397, 30)
         Me.LblOBD_CCM.TabIndex = 264
@@ -422,7 +475,7 @@ Partial Class Form1
         Me.LblOBD_MSI.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblOBD_MSI.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblOBD_MSI.ForeColor = System.Drawing.Color.White
-        Me.LblOBD_MSI.Location = New System.Drawing.Point(639, 62)
+        Me.LblOBD_MSI.Location = New System.Drawing.Point(639, 54)
         Me.LblOBD_MSI.Name = "LblOBD_MSI"
         Me.LblOBD_MSI.Size = New System.Drawing.Size(397, 30)
         Me.LblOBD_MSI.TabIndex = 263
@@ -451,26 +504,26 @@ Partial Class Form1
         Me.PicOBD.TabStop = False
         Me.PicOBD.Visible = False
         '
-        'LblVoltaje
+        'lblVoltaje
         '
-        Me.LblVoltaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.LblVoltaje.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.LblVoltaje.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblVoltaje.ForeColor = System.Drawing.Color.White
-        Me.LblVoltaje.Location = New System.Drawing.Point(235, 267)
-        Me.LblVoltaje.Name = "LblVoltaje"
-        Me.LblVoltaje.Size = New System.Drawing.Size(171, 30)
-        Me.LblVoltaje.TabIndex = 252
+        Me.lblVoltaje.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.lblVoltaje.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblVoltaje.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVoltaje.ForeColor = System.Drawing.Color.White
+        Me.lblVoltaje.Location = New System.Drawing.Point(235, 155)
+        Me.lblVoltaje.Name = "lblVoltaje"
+        Me.lblVoltaje.Size = New System.Drawing.Size(157, 30)
+        Me.lblVoltaje.TabIndex = 252
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(130, 271)
+        Me.Label7.Location = New System.Drawing.Point(159, 159)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(71, 25)
+        Me.Label7.Size = New System.Drawing.Size(67, 22)
         Me.Label7.TabIndex = 251
         Me.Label7.Text = "Voltaje"
         '
@@ -480,7 +533,7 @@ Partial Class Form1
         Me.LblVIN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblVIN.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVIN.ForeColor = System.Drawing.Color.White
-        Me.LblVIN.Location = New System.Drawing.Point(235, 383)
+        Me.LblVIN.Location = New System.Drawing.Point(235, 278)
         Me.LblVIN.Name = "LblVIN"
         Me.LblVIN.Size = New System.Drawing.Size(391, 30)
         Me.LblVIN.TabIndex = 250
@@ -491,7 +544,7 @@ Partial Class Form1
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(130, 387)
+        Me.Label5.Location = New System.Drawing.Point(185, 282)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 22)
         Me.Label5.TabIndex = 249
@@ -510,6 +563,7 @@ Partial Class Form1
         '
         'BtnOBDtest
         '
+        Me.BtnOBDtest.Enabled = False
         Me.BtnOBDtest.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOBDtest.ForeColor = System.Drawing.Color.Black
         Me.BtnOBDtest.Location = New System.Drawing.Point(9, 63)
@@ -594,26 +648,28 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 900
         '
-        'lblIdDevice
+        'ListBox1
         '
-        Me.lblIdDevice.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.lblIdDevice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblIdDevice.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblIdDevice.ForeColor = System.Drawing.Color.White
-        Me.lblIdDevice.Location = New System.Drawing.Point(235, 118)
-        Me.lblIdDevice.Name = "lblIdDevice"
-        Me.lblIdDevice.Size = New System.Drawing.Size(391, 30)
-        Me.lblIdDevice.TabIndex = 301
+        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.ListBox1.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 15
+        Me.ListBox1.Location = New System.Drawing.Point(639, 242)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(668, 259)
+        Me.ListBox1.TabIndex = 308
         '
-        'txtDTC
+        'Label2
         '
-        Me.txtDTC.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(152, Byte), Integer))
-        Me.txtDTC.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDTC.Location = New System.Drawing.Point(639, 270)
-        Me.txtDTC.Multiline = True
-        Me.txtDTC.Name = "txtDTC"
-        Me.txtDTC.Size = New System.Drawing.Size(668, 191)
-        Me.txtDTC.TabIndex = 302
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(182, 324)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(50, 22)
+        Me.Label2.TabIndex = 309
+        Me.Label2.Text = "DTC"
         '
         'Form1
         '
@@ -649,7 +705,7 @@ Partial Class Form1
     Friend WithEvents lblIDmj As Label
     Friend WithEvents picLogoESP As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblTESTobd As TextBox
+    Friend WithEvents lblDTC As TextBox
     Friend WithEvents LblOBD_CAT_C As Label
     Friend WithEvents LblOBD_O2S_C As Label
     Friend WithEvents LblOBD_CMB_C As Label
@@ -661,8 +717,6 @@ Partial Class Form1
     Friend WithEvents LblOBD_CCM_D As Label
     Friend WithEvents LblOBD_MSI_D As Label
     Friend WithEvents LblOBD_mil As Label
-    Friend WithEvents lblRPM As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents lblProtocolo As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents LblOBD_CAT As Label
@@ -672,7 +726,7 @@ Partial Class Form1
     Friend WithEvents LblOBD_MSI As Label
     Friend WithEvents BtnInitDevice As Button
     Friend WithEvents PicOBD As PictureBox
-    Friend WithEvents LblVoltaje As Label
+    Friend WithEvents lblVoltaje As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents LblVIN As Label
     Friend WithEvents Label5 As Label
@@ -686,5 +740,11 @@ Partial Class Form1
     Friend WithEvents PicOpusLogo As PictureBox
     Friend WithEvents Timer1 As Timer
     Friend WithEvents lblIdDevice As Label
-    Friend WithEvents txtDTC As TextBox
+    Friend WithEvents lblVoltajeDLC As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblFirmWare As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label2 As Label
 End Class

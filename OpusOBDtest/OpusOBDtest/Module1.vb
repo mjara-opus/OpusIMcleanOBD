@@ -20,5 +20,23 @@ Module Module1
     Public xbackMarron As Object = Drawing.Color.FromArgb(150, 104, 12) '--#96680c
     '||-------------------------------
 
+    Public Sub Applog(ByVal lParametro As String)
+
+        Dim logFile As String = "C:\OPUS_PROG\OpusIMCleanOBD\OpusIMCleanOBD_test.log"
+
+        Try
+            Dim lDato As String
+
+            lDato = Format(Now, "hh:mm:ss| ") & lParametro
+
+            Dim sw As New System.IO.StreamWriter(logFile, True)
+            sw.WriteLine(lDato)
+            sw.Close()
+
+        Catch ex As Exception
+            'MsgBox("AppLog:" + ex.Message)
+        End Try
+
+    End Sub
 
 End Module

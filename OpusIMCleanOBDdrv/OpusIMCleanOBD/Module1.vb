@@ -53,13 +53,6 @@ Module Module1
     Public Const OBD_PROTOCOL_NAME_CAN11_250 As String = "CAN11-250"
     Public Const OBD_PROTOCOL_NAME_CAN29_250 As String = "CAN29-250"
 
-    Public Const LOGLEVEL_CONFIG_SECTION As String = "ObdLink/Default"
-    Public Const LOGLEVEL_CONFIG_KEY As String = "LogLevel"
-    Public Const LOGLEVEL_CONFIG_DISPLAY_ERROR As Boolean = False
-    Public Const LOGLEVEL_DEFAULT As Integer = 1
-    Public Const LOGFILE_PREFIX As String = "OBDDrewDAD"
-    Public Const LOGLEVEL_USE_GLOBAL As Boolean = False
-
     Public Const OBD_VOLTAGE_FAILURE As Single = -3.0
     Public Const OBD_VOLTAGE_BUSY As Single = -8.0
     Public Const OBD_VOLTAGE_UPDATE_REQUIRED As Single = -9.0
@@ -194,8 +187,6 @@ Module Module1
 
     Public Save_VehicleIsLinked As String = ""
 
-    Public MyLogLevel As Integer = LOGLEVEL_DEFAULT
-
     Public MySerialDataLogMaxBytes As Double = 160000
     Public MyVendorDataLogMaxBytes As Double = 120000
 
@@ -207,6 +198,8 @@ Module Module1
 
     Public LrdOBD_STATUS_Cadd As String
     Public OBDdataBus As String()
+
+    Public OBDdata_PROTOCOLO As String
     Public OBDdata_VIN As String
     Public OBDdata_VINtxt As String
     Public OBDdata_MIL As String
@@ -253,6 +246,8 @@ Module Module1
     Public xVIDB_ConnectionString As String
     Public xOpus_VIDBLinkOnline As Boolean
 
+    Public xLocalKEYfile As String = My.Computer.FileSystem.CurrentDirectory & "\OpusKeyLicense.key"
+
     Public Structure srtOBDBatteryInformation
         Public BatteryCycleCountAvailable As Boolean
         Public BatteryCycleCountUpdateDateTime As DateTime
@@ -287,6 +282,27 @@ Module Module1
         UpdateRequired
         Exception
     End Enum
+
+    Public Structure DeviceInfoStruct
+        Public DeviceName As String
+        Public DeviceCaption As String
+        Public DeviceDescription As String
+        Public DeviceID As String
+        Public DevicePortName As String
+        Public DeviceDriverName As String
+        Public DeviceManufacturer As String
+        Public DeviceHardwareIDs As String
+        Public DeviceFirmwareVersion As String
+        Public UserChoice() As String
+    End Structure
+    Public strDeviceInfo As DeviceInfoStruct
+
+    Public Structure OBDWorkParams
+        Dim sCommand As String
+        Dim sLocation As String
+        Dim oInParameters() As Object
+        Dim oOutParameters() As Object
+    End Structure
 
     Public Sub InitializeStringArrayData()
         InitStringArray(ECUArray)
@@ -327,41 +343,6 @@ Module Module1
         Mode9TotalPIDCount = 0
     End Sub
 
-    Public Structure DeviceInfoStruct
-        Public DeviceName As String
-        Public DeviceCaption As String
-        Public DeviceDescription As String
-        Public DeviceID As String
-        Public DevicePortName As String
-        Public DeviceDriverName As String
-        Public DeviceManufacturer As String
-        Public DeviceHardwareIDs As String
-        Public UserChoice() As String
-    End Structure
-    Public strDeviceInfo As DeviceInfoStruct
-
-    Public Structure OBDWorkParams
-        Dim sCommand As String
-        Dim sLocation As String
-        Dim oInParameters() As Object
-        Dim oOutParameters() As Object
-    End Structure
-
-    Private Sub InitStringArray(ByRef aString(,) As String)
-        Try
-            If ((IsNothing(aString) = False) AndAlso
-                (aString.GetLength(0) > 0) AndAlso
-                (aString.GetLength(1) > 0)) Then
-                For idx0 As Integer = 0 To aString.GetLength(0) - 1
-                    For idx1 As Integer = 0 To aString.GetLength(1) - 1
-                        aString(idx0, idx1) = ""
-                    Next
-                Next
-            End If
-        Catch ex As Exception
-            Applog("ISA-ex: " & ex.Message)
-        End Try
-    End Sub
 
 
     Function GetCallingProcedure(Optional ByVal CallDepth As Integer = 2,
@@ -428,11 +409,10 @@ Module Module1
             sReturn = result.ToString
         End If
 
-        Applog("... CReplace | " & sReturn)
+        'Applog("... CReplace | " & sReturn)
         Return (sReturn)
 
     End Function
-
 
 
 
@@ -524,7 +504,6 @@ Module Module1
     Public Function SetupMyLastCommResult(ByVal CommResult As DrewTech.IIMClean.DT_Com_Result,
                                            ByVal VehicleCommFlag As Boolean,
                                            Optional ByVal NoDeviceCountCheck As Boolean = False) As DrewTech.IIMClean.DT_Com_Result
-        'Applog("... SetupMyLastCommResult")
 
         If (IsNothing(CommResult) = True) Then
             MyLastCommResult = DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect
@@ -602,11 +581,6 @@ Module Module1
         Return (bReturn)
     End Function
 
-    Public Function GetMyLogLevel() As Integer
-        'Applog("... GetMyLogLevel")
-        GetMyLogLevel = MyLogLevel
-    End Function
-
 
     Public Function DeltaTimeTicks(ByVal StartTicks As Int32, Optional ByVal sControl As String = "Seconds") As Double
         'Applog("... DeltaTimeTicks")
@@ -637,7 +611,6 @@ Module Module1
 
 
     Public Function FunctionSeconds(ByVal StartTicks As Int32) As String
-        'Applog("... FunctionSeconds")
 
         Dim sReturn As String = "-1"
         Try
@@ -689,7 +662,7 @@ Module Module1
             sError = "(No DAD"
             If (MyDAD_FullOpenClose = True) Then MyDadOpen = False ' No DAD cannot be open
         End If
-        If ((bLogFlag = True) OrElse (MyDadOpen = False) OrElse (GetMyLogLevel() > 4)) Then
+        If (bLogFlag = True) OrElse (MyDadOpen = False) Then
             Applog("OpenDAD_If_Needed | DAD_Open:" & MyDadOpen.ToString &
                                              " ... " &
                                              sError & " | " & FunctionSeconds(StartTicks) & ") " &
@@ -979,8 +952,8 @@ Module Module1
                         End If
                         ElapsedSeconds = DeltaTimeTicks(StartTicks)
                         Applog("VendorLogTime3: " & ElapsedSeconds.ToString("0.000"))
-                        If (GetMyLogLevel() > 0) Then
-                            Applog("DoDad-" & iCount.ToString("00") & " | " & Tag & " ... Updating VendorLog (" &
+
+                        Applog("DoDad-" & iCount.ToString("00") & " | " & Tag & " ... Updating VendorLog (" &
                                         "SL:" & MyCurrentSerialDataLogSize.ToString("0") &
                                         " | " & MyCurrentSerialDataLog.Length.ToString("0") &
                                         " | " & MySerialDataLogMaxBytes.ToString("0") &
@@ -988,20 +961,20 @@ Module Module1
                                         " | " & MyCurrentVendorDataLog.Length.ToString("0") &
                                         " | " & MyVendorDataLogMaxBytes.ToString("0") & ")")
 
-                            sTemp = "?"
-                            If (MyLastClearLogs > DateTime.MinValue) Then sTemp = MyLastClearLogs.ToString(MyDeviceLogStatusDateFormat)
+                        sTemp = "?"
+                        If (MyLastClearLogs > DateTime.MinValue) Then sTemp = MyLastClearLogs.ToString(MyDeviceLogStatusDateFormat)
 
-                            sTemp = "?"
-                            If (MyLastConnect > DateTime.MinValue) Then sTemp = MyLastConnect.ToString(MyDeviceLogStatusDateFormat)
+                        sTemp = "?"
+                        If (MyLastConnect > DateTime.MinValue) Then sTemp = MyLastConnect.ToString(MyDeviceLogStatusDateFormat)
 
-                            sTemp = "?"
-                            If (MyLastReConnect > DateTime.MinValue) Then sTemp = MyLastReConnect.ToString(MyDeviceLogStatusDateFormat)
+                        sTemp = "?"
+                        If (MyLastReConnect > DateTime.MinValue) Then sTemp = MyLastReConnect.ToString(MyDeviceLogStatusDateFormat)
 
-                            ElapsedSeconds = DeltaTimeTicks(StartTicks)
+                        ElapsedSeconds = DeltaTimeTicks(StartTicks)
 
-                            ElapsedSeconds = DeltaTimeTicks(StartTicks)
+                        ElapsedSeconds = DeltaTimeTicks(StartTicks)
 
-                        End If
+
                     Catch ex As Exception
                         MyDeviceLogSaveStatus = "SaveError:'" & ex.Message & "'"
                         Applog("Err:DoDad" & " | " & ex.Message)
@@ -1023,7 +996,7 @@ Module Module1
 
         'Applog("TraceLog:" & MyDad.TraceLog)
         'Applog("CommandLog:" & MyDad.CommandLog)
-        'Applog("OBDProtocol:" & MyDad.OBDProtocol)
+        OBDdata_PROTOCOLO = MyDad.OBDProtocol
         'Applog("VendorLog:" & MyDad.VendorLog)
         'Applog("SerialDataLog:" & MyDad.SerialDataLog)
         'Applog("Port:" & MyDad.Port)
@@ -1176,14 +1149,13 @@ Module Module1
             bMask = bMask << 1
         Next
 
-        Applog("... CountBits | " & iReturn)
+        'Applog("... CountBits | " & iReturn)
         Return (iReturn)
     End Function
 
 
     Public Sub SetSupportedBitArrayFromObdBytes(ByVal ObdBytes() As Byte, ByRef SupportedBitArray As BitArray,
                                                  ByVal StartIndex As Integer, ByVal sDebug As String)
-        Applog("... SetSupportedBitArrayFromObdBytes")
 
         Dim sTemp As String = ""
         Dim iTemp As Integer = 0
@@ -1230,7 +1202,7 @@ Module Module1
         For idx As Integer = 0 To SupportedBitArray.Length - 1
             If (SupportedBitArray(idx) = True) Then iTemp = iTemp + 1
         Next
-        Applog("SSBAFOB | BitAryLen:" & SupportedBitArray.Length.ToString("000") &
+        Applog("... SetSupportedBitArrayFromObdBytes | BitAryLen:" & SupportedBitArray.Length.ToString("000") &
                                "  BitSetCnt:" & iTemp.ToString("000") &
                                "  BAI:" & sTemp)
     End Sub
@@ -3416,7 +3388,7 @@ Module Module1
         Dim Ix1 As Integer = 0
         'ReDim OBDdataBus(100)      Chr(13) & '& vbCrLf
 
-        If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
+        If InStr(pDataTxt, "41 01") > 0 And InStr(pDataTxt, "07 E8") > 0 Then '-- OBDdata_MIL 
 
             If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
 
@@ -3449,7 +3421,7 @@ Module Module1
     End Sub
 
 
-    Private Sub DECODE_MIL(ByVal pBufferDAT As String)
+    Public Sub DECODE_MIL(ByVal pBufferDAT As String)
 
         '-- Aqui evaluamos los 2 primeros digitos (DISPONIBLE y COMPLETADO) El tercer digito se infiere aqui pero se rectifica en DECODE_FALLAS
         '-- Interpretación del codigo de MONITOR:   110 >>  1:Disponible ok,  1:Completado Ok,  0:Sin DTC Ok => PASO
@@ -3505,10 +3477,10 @@ Module Module1
                 xD = fncDEC_to_BIN(CInt("&H" & Mid(xDato, 7, 2)))
 
                 Applog("Status: " & xDato)
-                Applog("A: " & Mid(xDato, 1, 2) & " | " & CInt("&H" & Mid(xDato, 1, 2)) & " | " & xA)
-                Applog("B: " & Mid(xDato, 3, 2) & " | " & CInt("&H" & Mid(xDato, 3, 2)) & " | " & xB)
-                Applog("C: " & Mid(xDato, 5, 2) & " | " & CInt("&H" & Mid(xDato, 5, 2)) & " | " & xC)
-                Applog("D: " & Mid(xDato, 7, 2) & " | " & CInt("&H" & Mid(xDato, 7, 2)) & " | " & xD)
+                Applog("A: " & Mid(xDato, 1, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 1, 2)), "000") & " | " & xA)
+                Applog("B: " & Mid(xDato, 3, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 3, 2)), "000") & " | " & xB)
+                Applog("C: " & Mid(xDato, 5, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 5, 2)), "000") & " | " & xC)
+                Applog("D: " & Mid(xDato, 7, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 7, 2)), "000") & " | " & xD)
 
                 '-- Bin  Dec (posiciones)
                 '-- 0 -> 8
@@ -3720,76 +3692,49 @@ Module Module1
 
     Private Sub DECODE_DTC(ByVal pBufferDAT As String)
 
-        '0343 | = ejemplo de salida 1
-        '0343 | 0401 8301 9320 0420 0500 0000 = ejemplo de salida 1
-        '0343040183019320042005000000 = ejemplo de salida 1
+        Applog("... DECODE_DTC: " & pBufferDAT)
 
-        '03#4300#008#0:430301830193#1:20150000000000##
-
-        'pBufferDAT = "034303400016030043045204490000" '--"034301280300030143030200000000"
-        'pBufferDAT = "03430000C0:4305018301931:03042004200500"
+        'pBufferDAT = "000007E843092677267A26AE043204260420030203050310"
 
         LrdOBD_STATUS_Cadd = zipESP(pBufferDAT) 'lfncLimpCadd(pBufferDAT)
-        Dim lPidx As String = Nothing
+        Dim lPid As String = Nothing
         Dim Ixd As Integer = 0
         Dim zBufferDAT As Integer = Len(LrdOBD_STATUS_Cadd)
-        Applog("DECODE_DTC: " & pBufferDAT & " | " & LrdOBD_STATUS_Cadd)
-
-        Select Case Mid(LrdOBD_STATUS_Cadd, 1, 2)
-            Case "03"
-
-                Ixd = Strings.InStr(LrdOBD_STATUS_Cadd, "43") '-- Se localiza lectura del ECU
-                Dim Isz As Integer = Len(LrdOBD_STATUS_Cadd)
-                Dim xDato As String = Mid(LrdOBD_STATUS_Cadd, Ixd + 2, Isz) '-- Tomamos bus restante
-
-            Case "07"
-                Ixd = Strings.InStr(LrdOBD_STATUS_Cadd, "47") '-- Se localiza lectura del ECU
-                Dim Isz As Integer = Len(LrdOBD_STATUS_Cadd)
-                Dim xDato As String = Mid(LrdOBD_STATUS_Cadd, Ixd + 2, Isz) '-- Tomamos bus restante
-
-        End Select
-
-        OBDdata_DTCtxt = ""
+        Dim NoDTC As Integer = 0
+        Dim Ix0 As Integer = 0
 
         Try
 
-            Dim Ixa As Integer = 0
+            Ixd = InStr(LrdOBD_STATUS_Cadd, "07E843") '-- 07E843##  | ## = numero de DTC detectados
+            If Ixd > 0 Then
 
-            Select Case Mid(LrdOBD_STATUS_Cadd, 1, 2)
+                NoDTC = Convert.ToInt16(Mid(LrdOBD_STATUS_Cadd, Ixd + 6, 2), 16)
 
-                Case "03"
+                LrdOBD_STATUS_Cadd = Mid(LrdOBD_STATUS_Cadd, Ixd + 8, zBufferDAT)
 
-                    Ixa = Strings.InStr(LrdOBD_STATUS_Cadd, "43") '-- Buscamos ":43##"
-                    If Ixa > 0 Then
+                NoDTC = NoDTC * 4
+                For Ix0 = 1 To NoDTC Step 4
 
-                        Ixa += 4 '-- ":43##?"
-                        Do
-                            lPidx = Mid(LrdOBD_STATUS_Cadd, Ixa, 4)
-                            OBDdata_DTCtxt &= "P" & lPidx & ", "
-                            Call DECODE_DTC_CODIGOS(lPidx)
-                            Ixa += 4
-                            If Len(LrdOBD_STATUS_Cadd) <= Ixa Then Exit Do
-                        Loop
+                    'MsgBox(Ix0 & " == " & NoDTC)
+                    If Len(LrdOBD_STATUS_Cadd) >= 4 Then
 
+                        lPid = Mid(LrdOBD_STATUS_Cadd, Ix0, 4)
+                        'MsgBox(lPid)
+                        If DECODE_DTC_CODIGOS(lPid) Then
+                            If Len(OBDdata_DTCtxt) > 1 Then
+                                OBDdata_DTCtxt &= ", P" & lPid  '-- Solo si el DTC es parte del catalogo se reporta.
+                            Else
+                                OBDdata_DTCtxt &= "P" & lPid   '-- Solo si el DTC es parte del catalogo se reporta.
+                            End If
+
+                        End If
+                    Else
+                        Exit For
                     End If
 
-                Case "07"
+                Next
 
-                    Ixa = Strings.InStr(LrdOBD_STATUS_Cadd, "47") '-- Buscamos ":47##"
-                    If Ixa > 0 Then
-
-                        Ixa += 4 '-- ":47##?"
-                        Do
-                            lPidx = Mid(LrdOBD_STATUS_Cadd, Ixa, 4)
-                            OBDdata_DTCtxt &= "P" & lPidx & ", "
-                            Call DECODE_DTC_CODIGOS(lPidx)
-                            Ixa += 4
-                            If Len(LrdOBD_STATUS_Cadd) <= Ixa Then Exit Do
-                        Loop
-
-                    End If
-
-            End Select
+            End If
 
         Catch ex As Exception
             'lrdError = pBufferDAT & "|" & ex.Message
@@ -4013,10 +3958,6 @@ Module Module1
                                "  (" & MyLastResult() & ", " & FunctionSeconds(StartTicks) & ")" & " (" & CallingProcedure & ")")
             LocalDecrementActiveCount(CallingProcedure)
 
-            'Form1.TextBox1.Text = "Connect: " & Connect_Succeeded.ToString
-            'Form1.TextBox2.Text = "Prot: " & Connect_MyObdProtocol
-            'Form1.TextBox3.Text = "LastResult: " & MyLastResult()
-
             '===================================
 
             Applog("... Get VIN >>>")
@@ -4130,8 +4071,6 @@ Module Module1
 
         Try
 
-            Applog("Inicializando dispositivo IMClean OBD...")
-
             MyDad = New DT.DAD.IMClean
 
             If (IsNothing(MyDad) = False) Then
@@ -4141,26 +4080,30 @@ Module Module1
 
                 rStr = MyDad.GetFirmwareVersion()
                 sFirmwareVersion = rStr.Data
+                Applog("InitIMCleanDevice | FirmwareVersion:" & sFirmwareVersion)
 
                 rInt = MyDad.GetDeviceType
                 sDeviceType = rInt.Data
+                Applog("InitIMCleanDevice | DeviceType:" & sDeviceType)
 
                 rDec = MyDad.GetVoltage
                 sDeviceVoltage = rDec.Data
+                Applog("InitIMCleanDevice | DeviceVoltage:" & sDeviceVoltage)
 
                 rDec = MyDad.GetVoltageDLC
                 sDeviceVoltageDLC = rDec.Data
+                Applog("InitIMCleanDevice | DeviceVoltageDLC:" & sDeviceVoltageDLC)
 
                 MyDad.ClearCommandLog()
 
             Else
 
-                Applog("Err:OpenDevice | Dispositivo IMClean OBD no detectado.")
+                Applog("Err:InitIMCleanDevice | Dispositivo IMClean OBD no detectado.")
 
             End If
 
         Catch ex As Exception
-            Applog("Err:OpenDevice | " & ex.Message)
+            Applog("Err:InitIMCleanDevice | " & ex.Message)
         End Try
 
     End Sub
@@ -4193,7 +4136,6 @@ Module Module1
 
     Public Function GetPropertyValueAsString(ByRef info As System.Management.ManagementObject,
                                               ByVal ValueName As String) As String
-        'Applog("... GetPropertyValueAsString")
 
         Dim sReturn As String = ""
         Dim sName As String = ""
@@ -4226,9 +4168,11 @@ Module Module1
         Return (sReturn)
 
     End Function
+
+
     Public Function CheckForDevice(ByVal sDevice As String, ByVal sDeviceID As String, ByVal sHardwareID As String,
                                 ByRef sDeviceInfo() As DeviceInfoStruct, Optional ByVal sControl As String = "") As Integer
-        Applog("... CheckForDevice")
+
         Dim iReturn As Integer = 0
         Dim StartTicks As Int32 = System.Environment.TickCount
         Dim sDeviceList() As String = Nothing
@@ -4360,27 +4304,35 @@ Module Module1
                         For Each info In searchinfo
                             ' Go through each device detected.
                             deviceID = GetPropertyValueAsString(info, "DeviceID")
-                            strDeviceInfo.DeviceID = deviceID
+                            Dim Ix0 As Integer = InStrRev(deviceID, "\") + 1
+                            strDeviceInfo.DeviceID = Mid(deviceID, Ix0, 50)
+
                             deviceHardwareIDs = GetPropertyValueAsString(info, "HardwareID")
                             strDeviceInfo.DeviceHardwareIDs = deviceHardwareIDs
-                            devicePortName = GetPropertyValueAsString(info, "PortName")
-                            strDeviceInfo.DevicePortName = devicePortName
+
+                            'devicePortName = GetPropertyValueAsString(info, "PortName")
+                            'strDeviceInfo.DevicePortName = devicePortName
+
                             deviceManufacturer = GetPropertyValueAsString(info, "Manufacturer")
                             strDeviceInfo.DeviceManufacturer = deviceManufacturer
+
                             devicePNPID = GetPropertyValueAsString(info, "PNPDeviceID")
                             devicePNPClass = GetPropertyValueAsString(info, "PNPClass")
                             deviceCaption = GetPropertyValueAsString(info, "Caption")
                             deviceName = GetPropertyValueAsString(info, "Name")
                             deviceClass = GetPropertyValueAsString(info, "CreationClassName")
+
                             deviceDescription = GetPropertyValueAsString(info, "Description")
                             strDeviceInfo.DeviceDescription = deviceDescription
-                            deviceDriverName = GetPropertyValueAsString(info, "DriverName")
-                            strDeviceInfo.DeviceDriverName = deviceDriverName
-                            If ((IsNothing(UC_Property) = False) AndAlso (UC_Property.Length > 0)) Then
-                                For idx As Integer = 0 To UC_Property.Length - 1
-                                    userchoice(idx) = GetPropertyValueAsString(info, UC_Property(idx))
-                                Next
-                            End If
+
+                            'deviceDriverName = GetPropertyValueAsString(info, "DriverName")
+                            'strDeviceInfo.DeviceDriverName = deviceDriverName
+                            'If ((IsNothing(UC_Property) = False) AndAlso (UC_Property.Length > 0)) Then
+                            'For idx As Integer = 0 To UC_Property.Length - 1
+                            'userchoice(idx) = GetPropertyValueAsString(info, UC_Property(idx))
+                            'Next
+                            'End If
+
                             iDeviceCount = iDeviceCount + 1
 
                             sLogString = "Dev_" & iDeviceCount.ToString("000") & Chr(13) & '& vbCrLf
@@ -4452,13 +4404,13 @@ Module Module1
                         Next
                     End If
                 Catch ex As Exception
-                    Applog("Err:CFD |ex1: " & ex.Message)
+                    Applog("Err:CheckForDevice |ex1: " & ex.Message)
                 End Try
             Else
-                Applog("CFD | No_search_results")
+                Applog("CheckForDevice | No_search_results")
             End If
         Catch ex As Exception
-            Applog("CFD | ex2: " & ex.Message)
+            Applog("CheckForDevice | ex2: " & ex.Message)
         End Try
         Try
             If (IsNothing(info) = False) Then
@@ -4466,7 +4418,7 @@ Module Module1
                 info = Nothing
             End If
         Catch ex As Exception
-            Applog("CFD | ex3: " & ex.Message)
+            Applog("CheckForDevice | ex3: " & ex.Message)
         End Try
         Try
             If (IsNothing(searchinfo) = False) Then
@@ -4474,7 +4426,7 @@ Module Module1
                 searchinfo = Nothing
             End If
         Catch ex As Exception
-            Applog("Err:CFD | ex4 " & ex.Message)
+            Applog("Err:CheckForDevice | ex4 " & ex.Message)
         End Try
         Try
             If (IsNothing(search) = False) Then
@@ -4482,7 +4434,7 @@ Module Module1
                 search = Nothing
             End If
         Catch ex As Exception
-            Applog("CFD | ex5:'" & ex.Message & "'")
+            Applog("CheckForDevice | ex5:'" & ex.Message & "'")
         End Try
         Try
             If ((IsNothing(DeviceNames) = False) AndAlso (DeviceNames.Count > 0) AndAlso (iReturn > 0) AndAlso
@@ -4492,10 +4444,11 @@ Module Module1
             End If
         Catch ex As Exception
             iReturn = 0
-            Applog("Err:CFD | Ending-ex:" & ex.Message)
+            Applog("Err:CheckForDevice | Ending-ex:" & ex.Message)
         End Try
-        Applog("CFD | Ending ... Cnt:" & iReturn.ToString)
-        Return (iReturn)
+
+        Applog("... CheckForDevice |" & iReturn.ToString)
+        Return iReturn
     End Function
 
 
@@ -4528,18 +4481,11 @@ Module Module1
             If sReturn.Count > 0 Then
 
                 lStatus = "Pass:FindUSBDevices."
-                Applog(lStatus)
-                Applog("DeviceID: " & strDeviceInfo.DeviceID)
-                Applog("DeviceID: " & strDeviceInfo.DeviceHardwareIDs)
-                Applog("DeviceID: " & strDeviceInfo.DevicePortName)
-                Applog("DeviceID: " & strDeviceInfo.DeviceManufacturer)
-                Applog(strDeviceInfo.DeviceDescription)
 
             End If
         Else
 
             lStatus = "Err:FindUSBDevices | Dispositivo IMClean no detectado. "
-            Applog(lStatus)
 
         End If
 
@@ -4547,9 +4493,5 @@ Module Module1
         Return lStatus
 
     End Function
-
-
-
-
 
 End Module

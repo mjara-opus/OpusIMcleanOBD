@@ -1,5 +1,7 @@
 ﻿Public Class IMCleanOBD
 
+    Public Opus_KeyDevicePass As Boolean
+
     Public Structure srtDeviceData
 
         Public DeviceID As String
@@ -9,7 +11,6 @@
         Public DeviceFirmwareVersion As String
 
         Public DeviceType As Integer
-        Public FirmwareVersion As String
         Public DeviceVoltage As Single
         Public DeviceVoltageDLC As Single
 
@@ -18,12 +19,14 @@
 
     Public Structure srtInspectionData
 
+        Public OBDdata_VINhx As String
         Public OBDdata_VIN As String
-        Public OBDdata_VINtxt As String
+        Public OBDdata_MILhx As String
         Public OBDdata_MIL As String
-        Public OBDdata_MILtxt As String
+        Public OBDdata_DTChx As String
         Public OBDdata_DTC As String
-        Public OBDdata_DTCtxt As String
+
+        Public OBDdata_PROTOCOLO As String
 
         Public OBD_MSI As String '-- Sistema de detección de condiciones inadecuadas de ignición de cilindros ' LrdOBD_cilin
         Public OBD_CCM As String '-- Sistema de eficiencia del convertidor catalitico 
@@ -42,12 +45,12 @@
 
     Private Sub SetData()
 
-        InspectionData.OBDdata_VIN = OBDdata_VIN
-        InspectionData.OBDdata_VINtxt = OBDdata_VINtxt
-        InspectionData.OBDdata_MIL = OBDdata_MIL
-        InspectionData.OBDdata_MILtxt = OBDdata_MILtxt
-        InspectionData.OBDdata_DTC = OBDdata_DTC
-        InspectionData.OBDdata_DTCtxt = OBDdata_DTCtxt
+        InspectionData.OBDdata_VINhx = OBDdata_VIN
+        InspectionData.OBDdata_VIN = OBDdata_VINtxt
+        InspectionData.OBDdata_MILhx = OBDdata_MIL
+        InspectionData.OBDdata_MIL = OBDdata_MILtxt
+        InspectionData.OBDdata_DTChx = OBDdata_DTC
+        InspectionData.OBDdata_DTC = OBDdata_DTCtxt
 
         InspectionData.OBD_MSI = LrdOBD_MSI
         InspectionData.OBD_CCM = LrdOBD_CCM
@@ -61,27 +64,11 @@
         InspectionData.OBD_FAA = LrdOBD_FAA
         InspectionData.OBD_O2C = LrdOBD_O2C
 
-        InspectionData.OBDdata_DTCtxt = OBDdata_DTCtxt
+        InspectionData.OBDdata_PROTOCOLO = OBDdata_PROTOCOLO
 
     End Sub
 
-    Public Function set_OpusKeyDevice(ByVal pKeyDevice As String)
 
-        Dim lStatus As String = Nothing
-
-        xOpus_KeyDevice = pKeyDevice
-
-        If xOpus_KeyDevice = "OPUS1234" Then
-            xOpus_KeyDevicePass = True
-            lStatus = "Pass:set_OpusKeyDevice"
-        Else
-            xOpus_KeyDevicePass = False
-            lStatus = "Err:set_OpusKeyDevice"
-        End If
-
-        Applog(lStatus)
-        Return lStatus
-    End Function
 
     Public Function set_ConnectionString(ByVal pVIDB_ConnectionString As String)
 
@@ -105,39 +92,67 @@
     Public Function ReviewDevicePlug() As String
         Dim lStatus As String = Nothing
 
+        DeviceData.DeviceID = "Null"
+        DeviceData.DeviceHardwareIDs = "Null"
+        DeviceData.DeviceManufacturer = "Null"
+        DeviceData.DeviceDescription = "Null"
+        Opus_KeyDevicePass = False
+
         lStatus = lFindUSBDevices()
 
         If Mid(lStatus, 1, 4) = "Pass" Then
 
-            DeviceData.DeviceID = strDeviceInfo.DeviceID
-            DeviceData.DeviceHardwareIDs = strDeviceInfo.DeviceHardwareIDs
-            DeviceData.DeviceManufacturer = strDeviceInfo.DeviceManufacturer
-            DeviceData.DeviceDescription = strDeviceInfo.DeviceDescription
-            lStatus = "Pass:ReviewDevicePlug"
+            If System.IO.File.Exists(xLocalKEYfile) Then
+
+                If getOpusKeyFile() = "Pass" Then '-- Se valida la licencia 
+
+                    Opus_KeyDevicePass = True
+                    DeviceData.DeviceID = strDeviceInfo.DeviceID
+                    DeviceData.DeviceHardwareIDs = strDeviceInfo.DeviceHardwareIDs
+                    DeviceData.DeviceManufacturer = strDeviceInfo.DeviceManufacturer
+                    DeviceData.DeviceDescription = strDeviceInfo.DeviceDescription
+                    DeviceData.DeviceFirmwareVersion = sFirmwareVersion
+                    lStatus = "Pass:ReviewDevicePlug | IMClean OBD pluggded in"
+
+                Else
+
+                    lStatus = "Key? " & strDeviceInfo.DeviceID & " | " & getMacAddress(0)
+
+                End If
+
+            Else
+
+                lStatus = "Key? " & strDeviceInfo.DeviceID & " | " & getMacAddress(0)
+
+            End If
 
         Else
 
-            DeviceData.DeviceID = "Null"
-            DeviceData.DeviceHardwareIDs = "Null"
-            DeviceData.DeviceManufacturer = "Null"
-            DeviceData.DeviceDescription = "Null"
-            lStatus = "Err:ReviewDevicePlug"
+            lStatus = "Err:ReviewDevicePlug | IMClean OBD unpluggded"
 
         End If
 
         Return lStatus
+
     End Function
+
 
     Public Function InitIMCleanDevice() As String
         Dim lStatus As String = Nothing
 
         If Len(strDeviceInfo.DeviceID) < 5 Then
+
             lStatus = lFindUSBDevices()
+
             If Mid(lStatus, 1, 4) = "Pass" Then
                 DeviceData.DeviceID = strDeviceInfo.DeviceID
                 DeviceData.DeviceHardwareIDs = strDeviceInfo.DeviceHardwareIDs
                 DeviceData.DeviceManufacturer = strDeviceInfo.DeviceManufacturer
                 DeviceData.DeviceDescription = strDeviceInfo.DeviceDescription
+                DeviceData.DeviceFirmwareVersion = sFirmwareVersion
+                DeviceData.DeviceType = sDeviceType
+                DeviceData.DeviceVoltage = sDeviceVoltage
+                DeviceData.DeviceVoltageDLC = sDeviceVoltageDLC
 
             End If
         Else
@@ -148,16 +163,16 @@
 
             Call lInitIMCleanDevice()
             DeviceData.DeviceType = sDeviceType
-            DeviceData.FirmwareVersion = sFirmwareVersion
+            DeviceData.DeviceFirmwareVersion = sFirmwareVersion
             DeviceData.DeviceVoltage = sDeviceVoltage
             DeviceData.DeviceVoltageDLC = sDeviceVoltageDLC
 
-            lStatus = "Pass:InitIMCleanDevice"
+            lStatus = "Pass:InitIMCleanDevice | IMClean OBD online"
         Else
 
-            lStatus = "Err:InitIMCleanDevice"
+            lStatus = "Err:InitIMCleanDevice | IMClean OBD line off"
             DeviceData.DeviceType = 0
-            DeviceData.FirmwareVersion = "Null"
+            DeviceData.DeviceFirmwareVersion = "Null"
             DeviceData.DeviceVoltage = 0
             DeviceData.DeviceVoltageDLC = 0
 
@@ -174,6 +189,27 @@
         Call SetData()
 
         Return lStatus
+    End Function
+
+    Public Sub tmpDECODE_Bus(ByVal pDato As String)
+
+        Call DECODE_Bus(pDato)
+        Call SetData()
+
+    End Sub
+
+
+    Public Sub tmpDECODE_MIL(ByVal pDato As String)
+
+        Call DECODE_MIL(pDato)
+        Call SetData()
+
+    End Sub
+
+    Public Function set_OpusKeyDevice(ByVal pOpusKey As String)
+
+        Return lset_OpusKeyDevice(pOpusKey)
+
     End Function
 
 

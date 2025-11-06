@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="ModChksum.vb" />
     <Compile Include="ModDTC.vb" />
     <Compile Include="ModTools.vb" />
     <Compile Include="Module1.vb" />

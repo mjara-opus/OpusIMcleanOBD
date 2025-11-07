@@ -2,6 +2,8 @@
 
     Private Sub frmOBDtest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Me.Location = New Drawing.Point(50, 50)
+
         ListBox1.HorizontalScrollbar = True
         Timer1.Enabled = True
 
@@ -40,8 +42,9 @@
 
         If Mid(lStatus, 1, 4) = "Key?" Then '-- requerimiento de licencia
 
-            Call rntMensajeusuario("!:Opus IMClean OBD requiere licencia usuario.")
-            ListBox1.Items.Add("Opus IMClean OBD licencia no valida o expirada.")
+            Call rntMensajeusuario("!:Opus IMClean OBD requiere licencia usuario." & lStatus) ' Opus IMClean OBD requiere licencia usuario.")
+            ListBox1.Items.Add("Opus IMClean OBD requiere licencia usuario.") '"Opus IMClean OBD licencia no valida o expirada.")
+            ListBox1.Items.Add(lStatus)
 
             lStatus = InputBox(Mid(lStatus, 5, 50), "Ingrese Licencia usuario.")
 
@@ -52,12 +55,17 @@
         Else
 
             ListBox1.Items.Add("initDeviceOBD: " & lStatus)
-            ListBox1.Items.Add("Licencia: " & Year(Now) & Chr(174) & " Ok")
 
             lblDeviceDescription.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceDescription
             lblIdDevice.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceID
 
             If Mid(lStatus, 1, 4) = "Pass" Then
+
+                ListBox1.Items.Add("Licencia: " & Year(Now) & Chr(174) & " Ok")
+                ListBox1.Items.Add("DeviceDescription: " & cOpusIMCleanOBDdrv.DeviceData.DeviceDescription)
+                ListBox1.Items.Add("DeviceID: " & cOpusIMCleanOBDdrv.DeviceData.DeviceID)
+                ListBox1.Items.Add(" ")
+                ListBox1.Items.Add("IMClean OBD en línea, Iniciando dispositivo ...")
 
                 Call rntMensajeusuario("IMClean OBD en línea, Iniciando dispositivo ...")
                 lStatus = cOpusIMCleanOBDdrv.InitIMCleanDevice()
@@ -72,15 +80,13 @@
                     lblVoltajeDLC.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC
                     lblFirmWare.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceFirmwareVersion
 
-                Else
-                    'Call rntMensajeusuario(lStatus)
                 End If
-                'Call rntMensajeusuario(lStatus)
 
             End If
 
         End If
 
+        ListBox1.Items.Add(lStatus)
         Call rntMensajeusuario(lStatus)
 
     End Sub

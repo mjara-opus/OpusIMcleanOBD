@@ -104,7 +104,7 @@
 
             If System.IO.File.Exists(xLocalKEYfile) Then
 
-                If getOpusKeyFile() = "Pass" Then '-- Se valida la licencia 
+                If Mid(getOpusKeyFile(), 1, 4) = "Pass" Then '-- Se valida la licencia 
 
                     Opus_KeyDevicePass = True
                     DeviceData.DeviceID = strDeviceInfo.DeviceID
@@ -112,23 +112,23 @@
                     DeviceData.DeviceManufacturer = strDeviceInfo.DeviceManufacturer
                     DeviceData.DeviceDescription = strDeviceInfo.DeviceDescription
                     DeviceData.DeviceFirmwareVersion = sFirmwareVersion
-                    lStatus = "Pass:ReviewDevicePlug | IMClean OBD pluggded in"
+                    lStatus = "Pass:IMClean OBD conectado."
 
                 Else
 
-                    lStatus = "Key? " & strDeviceInfo.DeviceID & " | " & getMacAddress(0)
+                    lStatus = "Key? " & strDeviceInfo.DeviceID & "-" & getMacAddress(0)
 
                 End If
 
             Else
 
-                lStatus = "Key? " & strDeviceInfo.DeviceID & " | " & getMacAddress(0)
+                lStatus = "Key? " & strDeviceInfo.DeviceID & "-" & getMacAddress(0)
 
             End If
 
         Else
 
-            lStatus = "Err:ReviewDevicePlug | IMClean OBD unpluggded"
+            lStatus = "Err:IMClean OBD desconectado."
 
         End If
 
@@ -206,9 +206,21 @@
 
     End Sub
 
-    Public Function set_OpusKeyDevice(ByVal pOpusKey As String)
+    Public Function set_OpusKeyDevice(ByVal pOpusKey As String) As String
 
         Return lset_OpusKeyDevice(pOpusKey)
+
+    End Function
+
+    Public Function DriverVersion() As String
+        '-- Leemos el número de versión de la aplicación 
+
+        Dim x1 As String = My.Application.Info.Version.Major
+        Dim x2 As String = My.Application.Info.Version.Minor
+        Dim x3 As String = My.Application.Info.Version.Build
+        'Dim x4 As String = My.Application.Info.AssemblyName
+
+        Return "v." & x1 & "." & x2 & "." & x3 '& "." & x4
 
     End Function
 

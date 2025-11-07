@@ -8,92 +8,113 @@ Module ModChksum
         '-- "0c26.23" 31.10.23 
         '-- Funcion para calcular la clave  PU
         '-------------------------------------------------------------------------------
-
         Dim linCADD As String = Nothing
         Dim lchkSumCADD As String = Nothing
 
         Dim dt(9) As String
         Dim fxA(9) As Int64
 
-        Dim i As Integer
+        Try
 
-        Dim lFecha As String = Format(Now, "ddMMyy")
-        If pCadd = "000" Then
-            lFecha = Format(Now, "ddMMyy") '-- Chksum nuevo
-        Else
-            '-- Cadena esperada = xxxxxxxxxxxxyyddmm
-            If Len(pCadd) = 17 Then
-                lFecha = DecodeDD(Mid(pCadd, 15, 2)) & DecodeDD(Mid(pCadd, 17, 2)) & DecodeDD(Mid(pCadd, 13, 2))  '-- Extraemos y decodificamos Fecha yyddmm -> ddmmyy
-                MsgBox(lFecha)
+            Dim i As Integer
+
+            Dim lFecha As String = Nothing
+
+            If pCadd = "000" Then
+                lFecha = Format(Now, "ddMMyy") '-- Chksum nuevo
+            Else
+                '-- Cadena esperada = xxxxxxxxxxxxyyddmm
+                If Len(pCadd) > 3 Then
+                    lFecha = DecodeDD(Mid(pCadd, 15, 2)) & DecodeDD(Mid(pCadd, 17, 2)) & DecodeDD(Mid(pCadd, 13, 2))  '-- Extraemos y decodificamos Fecha yyddmm -> ddmmyy
+
+                End If
+
             End If
 
-        End If
+            Dim lEquipo As String = getMacAddress(0)
 
-        Dim lEquipo As String = getMacAddress(0)
-        Dim zEq As Integer = Len(lEquipo)
-        If zEq > 6 Then
-            lEquipo = Mid$(lEquipo, (zEq - 5), 6)
-        End If
+            Dim zEq As Integer = Len(lEquipo)
+            If zEq > 6 Then
+                lEquipo = Mid$(lEquipo, (zEq - 5), 6)
+            End If
 
-        Dim lDevice As String = strDeviceInfo.DeviceID
-        If Len(lDevice) > 6 Then
-            lDevice = Mid$(lDevice, (Len(lDevice) - 5), 6)
-        End If
+            Dim lDevice As String = strDeviceInfo.DeviceID
 
-        linCADD = lEquipo & lDevice
-        Dim zCADD As Integer = Len(linCADD)
+            If Len(lDevice) > 6 Then
+                lDevice = Mid$(lDevice, (Len(lDevice) - 5), 6)
+            End If
 
-        ReDim dt(zCADD)
+            linCADD = lEquipo & lDevice
+            Dim zCADD As Integer = Len(linCADD)
 
-        fxA(1) = 726528 + Val(Mid(lFecha, 1, 4))
-        fxA(2) = 118088 + Val(Mid(lFecha, 1, 4))
-        fxA(3) = 726528 + Val(Mid(lFecha, 1, 4))
-        fxA(4) = 156738 + Val(Mid(lFecha, 1, 4))
-        fxA(5) = 123538 + Val(Mid(lFecha, 1, 4))
-        fxA(6) = 110000 + Val(Mid(lFecha, 1, 4))
-        fxA(7) = 201882 + Val(Mid(lFecha, 1, 4))
-        fxA(8) = 233211 + Val(Mid(lFecha, 1, 4))
-        fxA(9) = 761422 + Val(Mid(lFecha, 1, 4))
+            ReDim DT(zCADD)
 
-        Dim i0 As Integer = 0
-        Dim cc As Int64 = 0
+            fxA(1) = 726528 + Val(Mid(lFecha, 1, 4))
+            fxA(2) = 118088 + Val(Mid(lFecha, 1, 4))
+            fxA(3) = 726528 + Val(Mid(lFecha, 1, 4))
+            fxA(4) = 156738 + Val(Mid(lFecha, 1, 4))
+            fxA(5) = 123538 + Val(Mid(lFecha, 1, 4))
+            fxA(6) = 110000 + Val(Mid(lFecha, 1, 4))
+            fxA(7) = 201882 + Val(Mid(lFecha, 1, 4))
+            fxA(8) = 233211 + Val(Mid(lFecha, 1, 4))
+            fxA(9) = 761422 + Val(Mid(lFecha, 1, 4))
 
-        For i = 1 To zCADD
-            dt(i) = Mid(linCADD, i, 1)
+            Dim i0 As Integer = 0
+            Dim cc As Int64 = 0
 
-            For i0 = 1 To 9
-                cc = cc + (Asc(dt(i)) * fxA(i0))
+            For i = 1 To zCADD
+                DT(i) = Mid(linCADD, i, 1)
+
+                For i0 = 1 To 9
+                    cc = cc + (Asc(DT(i)) * fxA(i0))
+                Next
+
+                lchkSumCADD &= Chr((cc - (26 * Int(cc / 26))) + 65)
+                Select Case i
+                    Case 4, 8, 12, 16, 20, 24, 28, 32, 36, 40
+                        lchkSumCADD &= " "
+                End Select
+
             Next
 
-            lchkSumCADD &= Chr((cc - (26 * Int(cc / 26))) + 65)
-            Select Case i
-                Case 4, 8, 12, 16, 20, 24, 28, 32, 36, 40
-                    lchkSumCADD &= " "
-            End Select
+            Dim dd As Int64 = 0
+            Dim lCadFH As String = Nothing
 
-        Next
+            If pCadd = "000" Then
 
-        Dim dd As Int64 = 0
-        Dim lCadFH As String = Nothing
+                lCadFH = CodeDD(Val(Mid(lFecha, 5, 2)) + 1) & CodeDD(Mid(lFecha, 1, 2)) & CodeDD(Mid(lFecha, 3, 2)) '-- yyddmm | yy + 1
+                linCADD = lchkSumCADD & lCadFH
 
-        lCadFH = CodeDD(Val(Mid(lFecha, 5, 2)) + 1) & CodeDD(Mid(lFecha, 1, 2)) & CodeDD(Mid(lFecha, 3, 2)) '-- yyddmm
-
-        If pCadd = "000" Then
-            linCADD = lchkSumCADD & lCadFH
-        Else
-            MsgBox(Mid(pCadd, 1, 12) & " =/= " & zipESP(lchkSumCADD))
-            If Mid(pCadd, 1, 12) = zipESP(lchkSumCADD) Then '-- Validamos Chksum y vigencia
-                Dim laFecha As Date = CDate(Mid(lFecha, 1, 2) & "/" & Mid(lFecha, 3, 2) & "/20" & Mid(lFecha, 5, 2)) '--> dd/mm/yyyy
-                If laFecha <= Now Then
-                    linCADD = "Pass:Licencia valida."
-                Else
-                    linCADD = "Err:Opus IMClean OBD licencia no valida o expirada."
-                End If
             Else
-                linCADD = "Err:Opus IMClean OBD licencia no valida o expirada."
-            End If
-        End If
 
+                lCadFH = CodeDD(Mid(lFecha, 5, 2)) & CodeDD(Mid(lFecha, 1, 2)) & CodeDD(Mid(lFecha, 3, 2)) '-- yyddmm
+
+                If Mid(pCadd, 1, 12) = zipESP(lchkSumCADD) Then '-- Validamos Chksum
+
+                    Dim laFecha As Date = CDate(DecodeDD(Mid(lCadFH, 3, 2)) & "/" & DecodeDD(Mid(lCadFH, 5, 2)) & "/20" & DecodeDD(Mid(lCadFH, 1, 2))) '--> dd/mm/yyyy
+                    Dim lHoy As Date = CDate(Format(Now, "dd/MM/yyyy"))
+
+                    If lHoy <= laFecha Then '-- Validamos vigencia
+                        linCADD = "Pass:Opus IMClean OBD Licencia valida."
+                    Else
+                        linCADD = "Err:Opus IMClean OBD licencia expirada."
+                    End If
+
+                Else
+
+                    linCADD = "Err:Opus IMClean OBD licencia no valida."
+
+                End If
+
+            End If
+
+        Catch ex As Exception
+
+            linCADD = "Err:chkSumCADD | " & ex.Message
+            Applog(linCADD)
+        End Try
+
+        'MsgBox("chkSumCADD | " & pCadd & " | " & linCADD)
         Return linCADD
 
     End Function
@@ -247,16 +268,8 @@ Module ModChksum
                 Loop
                 FileSystem.FileClose(Apunt)
 
-                Dim lDatoKey As String = zipESP(chkSumCADD())
-                Dim zDK As Integer = Len(lDatoKey)
-
-                lDatoKey = Trim(Mid(lDatoKey, InStr(lDatoKey, "|") + 2, zDK))
-
-                If Trim(lStatus) = Trim(lDatoKey) Then
-                    lStatus = "Pass:Opus IMClean OBD registrado."
-                Else
-                    lStatus = "Err:Opus IMClean OBD licencia no valida o expirada."
-                End If
+                lStatus = CryptoData(lStatus, 0) '-- Desencriptamos chksum
+                lStatus = chkSumCADD(lStatus) '-- Validamos chksum
 
             Else
                 lStatus = "Err:Opus IMClean OBD licencia no registrada."
@@ -277,17 +290,14 @@ Module ModChksum
 
         Try
 
-            Dim lDatoKey As String = zipESP(chkSumCADD())
-            Dim zDK As Integer = Len(lDatoKey)
+            lOpusKey = zipESP(pOpusKey)
+            If Len(lOpusKey) > 18 Then lOpusKey = Mid(lOpusKey, 1, 18)
+            MsgBox(lOpusKey)
+            MsgBox("set_OpusKeyDevice: " & chkSumCADD(lOpusKey))
 
-            lOpusKey = Trim(Mid(lDatoKey, 1, InStr(lDatoKey, "|") - 2))
-            MsgBox(lOpusKey & " =/= " & pOpusKey)
+            If Mid(chkSumCADD(lOpusKey), 1, 4) = "Pass" Then
 
-            If lOpusKey = pOpusKey Then
-
-                lDatoKey = Trim(Mid(lDatoKey, InStr(lDatoKey, "|") + 2, zDK))
-
-                'MsgBox(xLocalKEYfile & " | " & lDatoKey)
+                Dim lDatoKey As String = CryptoData(lOpusKey, 1)
 
                 If System.IO.File.Exists(xLocalKEYfile) Then System.IO.File.Delete(xLocalKEYfile)
 
@@ -304,7 +314,7 @@ Module ModChksum
             End If
 
         Catch ex As Exception
-            lStatus = "Err:setOpusKeyFile | " & ex.Message
+            lStatus = "Err:set_OpusKeyDevice | " & ex.Message
 
         End Try
 

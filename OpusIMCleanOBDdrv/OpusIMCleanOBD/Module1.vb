@@ -5,6 +5,11 @@ Imports DT
 Imports Microsoft.SqlServer.Server
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
+'---------------------------------------------------------------------------------------------------------------------
+'-- 06.11.25  Se agregan chkSumCADD(), CodeDD(), DecodeDD(), genera Chksum-licencia de versión del DLL, vigencia anual
+'-- 07.11.25  Se agregan calcCRC(), calcCRCNS(), facNS, facFH para generar CHKSUM por registros Hx de la prueba 
+'---------------------------------------------------------------------------------------------------------------------
+
 Module Module1
 
     Public MyDad As DT.DAD.IMClean = Nothing
@@ -237,6 +242,9 @@ Module Module1
     Public xDTC_SAS As Boolean
     Public xDTC_FAA As Boolean
     Public xDTC_O2C As Boolean
+
+    Public facNS As Int32
+    Public facFH As Int32
 
     '||--
 

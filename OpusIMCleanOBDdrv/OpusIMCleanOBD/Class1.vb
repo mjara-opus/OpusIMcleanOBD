@@ -19,6 +19,8 @@
 
     Public Structure srtInspectionData
 
+        Public Fecha_Test As String
+
         Public OBDdata_VINhx As String
         Public OBDdata_VIN As String
         Public OBDdata_MILhx As String
@@ -45,11 +47,13 @@
 
     Private Sub SetData()
 
-        InspectionData.OBDdata_VINhx = OBDdata_VIN
+        InspectionData.Fecha_Test = Format(Now, "ddMMyyyy")
+
+        InspectionData.OBDdata_VINhx = OBDdata_VIN & " #" & calcCRC(OBDdata_VIN)
         InspectionData.OBDdata_VIN = OBDdata_VINtxt
-        InspectionData.OBDdata_MILhx = OBDdata_MIL
+        InspectionData.OBDdata_MILhx = OBDdata_MIL & " #" & calcCRC(OBDdata_MIL)
         InspectionData.OBDdata_MIL = OBDdata_MILtxt
-        InspectionData.OBDdata_DTChx = OBDdata_DTC
+        InspectionData.OBDdata_DTChx = OBDdata_DTC & " #" & calcCRC(OBDdata_DTC)
         InspectionData.OBDdata_DTC = OBDdata_DTCtxt
 
         InspectionData.OBD_MSI = LrdOBD_MSI
@@ -113,6 +117,12 @@
                     DeviceData.DeviceDescription = strDeviceInfo.DeviceDescription
                     DeviceData.DeviceFirmwareVersion = sFirmwareVersion
                     lStatus = "Pass:IMClean OBD conectado."
+
+                    facNS = calcCRCNS(strDeviceInfo.DeviceID)
+                    Applog("facNS: " & strDeviceInfo.DeviceID & " -> " & facNS)
+
+                    facFH = calcCRCNS(Format(Now, "ddMMyyyy"))
+                    Applog("facFH: " & Format(Now, "ddMMyyyy") & " -> " & facFH)
 
                 Else
 

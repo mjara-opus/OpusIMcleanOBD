@@ -322,4 +322,96 @@ Module ModChksum
 
     End Function
 
+    Public Function calcCRC(ByVal pCampo As String) As String
+
+        pCampo = Trim(pCampo)
+
+        Dim nTXTASC As Int32
+        'facNS = calcCRCNS(txtIMCleanNs.Text)
+        'Dim facFH As Int32 = calcCRCNS(Trim(txtFecha.Text))
+        Dim zTXT As Integer = Len(pCampo)
+        Dim nI0, nI1, nTXTASCTot As Integer
+        Dim xTXTASCTot As String = Nothing
+        Dim xTXTASCSal As String = Nothing
+
+        Try
+
+            nTXTASCTot = 0
+            If zTXT > 0 Then
+                nI1 = 0
+                For nI0 = 1 To zTXT
+                    nI1 += 1
+                    nTXTASC = Asc(Mid(pCampo, nI0, 1)) * ((zTXT + 1) - nI1)
+                    nTXTASCTot += nTXTASC
+                    If nI1 = 5 Then nI1 = 0
+
+                Next
+
+            End If
+
+            nTXTASCTot = nTXTASCTot + facNS + facFH '-- agregamos el factor del numero de serie el instrumneto
+
+            xTXTASCTot = Format(nTXTASCTot, "000000")
+
+            xTXTASCSal = Nothing
+            zTXT = Len(xTXTASCTot)
+            For nI0 = 1 To zTXT
+                Select Case Mid(xTXTASCTot, nI0, 1)
+                    Case "0" : xTXTASCSal &= "Z"
+                    Case "1" : xTXTASCSal &= "S"
+                    Case "2" : xTXTASCSal &= "F"
+                    Case "3" : xTXTASCSal &= "X"
+                    Case "4" : xTXTASCSal &= "C"
+                    Case "5" : xTXTASCSal &= "T"
+                    Case "6" : xTXTASCSal &= "Y"
+                    Case "7" : xTXTASCSal &= "J"
+                    Case "8" : xTXTASCSal &= "M"
+                    Case "9" : xTXTASCSal &= "K"
+
+                End Select
+            Next
+
+            If Len(xTXTASCSal) > 6 Then xTXTASCSal = Mid(xTXTASCSal, 1, 6) '-- limitamos la cadena a 6 caracteres
+
+        Catch ex As Exception
+            Applog("Err:calcCRC | " & ex.Message)
+        End Try
+
+        Return xTXTASCSal '-- xTXTASCTot & " | " & xTXTASCSal
+
+    End Function
+
+    Public Function calcCRCNS(ByVal pCampo As String) As Int32
+
+        pCampo = Trim(pCampo)
+
+        Dim nTXTASC As Integer
+        Dim zTXT As Integer = Len(pCampo)
+        Dim nI0, nI1, nTXTASCTot As Int32
+
+        Try
+            nTXTASCTot = 0
+            If zTXT > 0 Then
+
+                nI1 = 0
+                For nI0 = 1 To zTXT
+                    nI1 += 1
+                    nTXTASC = Asc(Mid(pCampo, nI0, 1)) * ((zTXT + 1) - nI1)
+                    nTXTASCTot += nTXTASC
+                    If nI1 = 5 Then nI1 = 0
+
+                Next
+
+            End If
+
+        Catch ex As Exception
+            Applog("Err:calcCRCNS | " & ex.Message)
+        End Try
+
+        Return nTXTASCTot
+
+    End Function
+
+
+
 End Module

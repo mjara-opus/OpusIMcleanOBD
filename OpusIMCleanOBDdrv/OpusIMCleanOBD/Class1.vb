@@ -1,4 +1,6 @@
-﻿Public Class IMCleanOBD
+﻿Imports System.Runtime.InteropServices.WindowsRuntime
+
+Public Class IMCleanOBD
 
     Public Opus_KeyDevicePass As Boolean
 
@@ -14,12 +16,15 @@
         Public DeviceVoltage As Single
         Public DeviceVoltageDLC As Single
 
+        Public DeviceLinkOn As Boolean
+
     End Structure
     Public DeviceData As srtDeviceData
+    Public Shared lDeviceData As srtDeviceData
 
     Public Structure srtInspectionData
 
-        Public Fecha_Test As String
+        Public Fecha_Test As DateTime
 
         Public OBDdata_VINhx As String
         Public OBDdata_VIN As String
@@ -44,10 +49,11 @@
 
     End Structure
     Public InspectionData As srtInspectionData
+    Public Shared lInspectionData As srtInspectionData
 
     Private Sub SetData()
 
-        InspectionData.Fecha_Test = Format(Now, "ddMMyyyy")
+        InspectionData.Fecha_Test = Now 'Format(Now, "ddMMyyyy")
 
         InspectionData.OBDdata_VINhx = OBDdata_VIN & " #" & calcCRC(OBDdata_VIN)
         InspectionData.OBDdata_VIN = OBDdata_VINtxt
@@ -70,6 +76,8 @@
 
         InspectionData.OBDdata_PROTOCOLO = OBDdata_PROTOCOLO
 
+        lInspectionData = InspectionData
+
     End Sub
 
 
@@ -80,13 +88,7 @@
 
         xVIDB_ConnectionString = pVIDB_ConnectionString
 
-        If xVIDB_ConnectionString = "OPUS1234" Then
-            xOpus_VIDBLinkOnline = True
-            lStatus = "Pass:set_ConnectionString"
-        Else
-            xOpus_VIDBLinkOnline = False
-            lStatus = "Err:set_ConnectionString"
-        End If
+        lStatus = lConectaSQL()
 
         Applog(lStatus)
         Return lStatus
@@ -100,7 +102,11 @@
         DeviceData.DeviceHardwareIDs = "Null"
         DeviceData.DeviceManufacturer = "Null"
         DeviceData.DeviceDescription = "Null"
+        DeviceData.DeviceLinkOn = False
+
         Opus_KeyDevicePass = False
+
+        xMacAddress = getMacAddress(0)
 
         lStatus = lFindUSBDevices()
 
@@ -126,13 +132,13 @@
 
                 Else
 
-                    lStatus = "Key? " & strDeviceInfo.DeviceID & "-" & getMacAddress(0)
+                    lStatus = "Key? " & strDeviceInfo.DeviceID & "-" & xMacAddress
 
                 End If
 
             Else
 
-                lStatus = "Key? " & strDeviceInfo.DeviceID & "-" & getMacAddress(0)
+                lStatus = "Key? " & strDeviceInfo.DeviceID & "-" & xMacAddress
 
             End If
 
@@ -141,6 +147,8 @@
             lStatus = "Err:IMClean OBD desconectado."
 
         End If
+
+        lDeviceData = DeviceData
 
         Return lStatus
 
@@ -155,6 +163,7 @@
             lStatus = lFindUSBDevices()
 
             If Mid(lStatus, 1, 4) = "Pass" Then
+
                 DeviceData.DeviceID = strDeviceInfo.DeviceID
                 DeviceData.DeviceHardwareIDs = strDeviceInfo.DeviceHardwareIDs
                 DeviceData.DeviceManufacturer = strDeviceInfo.DeviceManufacturer
@@ -165,30 +174,38 @@
                 DeviceData.DeviceVoltageDLC = sDeviceVoltageDLC
 
             End If
+
         Else
+
             lStatus = "Pass"
+
         End If
 
         If Mid(lStatus, 1, 4) = "Pass" Then
 
             Call lInitIMCleanDevice()
+
             DeviceData.DeviceType = sDeviceType
             DeviceData.DeviceFirmwareVersion = sFirmwareVersion
             DeviceData.DeviceVoltage = sDeviceVoltage
             DeviceData.DeviceVoltageDLC = sDeviceVoltageDLC
+            DeviceData.DeviceLinkOn = True
 
-            lStatus = "Pass:InitIMCleanDevice | IMClean OBD online"
+            lStatus = "Pass: IMClean OBD en línea."
+
         Else
 
-            lStatus = "Err:InitIMCleanDevice | IMClean OBD line off"
+            lStatus = "Err: IMClean OBD fuera de línea."
             DeviceData.DeviceType = 0
             DeviceData.DeviceFirmwareVersion = "Null"
             DeviceData.DeviceVoltage = 0
             DeviceData.DeviceVoltageDLC = 0
+            DeviceData.DeviceLinkOn = False
 
         End If
 
         Return lStatus
+
     End Function
 
     Public Function VehiculoLink() As String
@@ -198,23 +215,32 @@
         lStatus = lVehiculoLink()
         Call SetData()
 
+        If Mid(lStatus, 1, 4) = "Pass" Then
+            If xVIDBLinkOnline Then lStatus = Set_DataMySQL()
+        End If
+
+        Applog("VehiculoLink: " & lStatus)
         Return lStatus
+
     End Function
 
-    Public Sub tmpDECODE_Bus(ByVal pDato As String)
+    'Public Function tmpSet_DataMySQL() As String
+    'Dim lStatus As String = Nothing
+    '   lStatus = Set_DataMySQL()
+    '  Applog("ZZ: " & lStatus)
+    'Return lStatus
+    'End Function
 
-        Call DECODE_Bus(pDato)
-        Call SetData()
+    'Public Sub tmpDECODE_Bus(ByVal pDato As String)
+    'Call DECODE_Bus(pDato)
+    'Call SetData()
+    'End Sub
 
-    End Sub
 
-
-    Public Sub tmpDECODE_MIL(ByVal pDato As String)
-
-        Call DECODE_MIL(pDato)
-        Call SetData()
-
-    End Sub
+    'Public Sub tmpDECODE_MIL(ByVal pDato As String)
+    'Call DECODE_MIL(pDato)
+    'Call SetData()
+    'End Sub
 
     Public Function set_OpusKeyDevice(ByVal pOpusKey As String) As String
 

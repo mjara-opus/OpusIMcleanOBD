@@ -1,16 +1,40 @@
-﻿Public Class Form1
+﻿
+Imports System.Threading
+
+Public Class Form1
+
+    Public Hilo01 As Thread
 
     Private Sub frmOBDtest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        Dim lStatus As String = Nothing
+
         Me.Location = New Drawing.Point(50, 50)
 
+        UsrBallTimer.wTime = 150
+
         ListBox1.HorizontalScrollbar = True
+
         Timer1.Enabled = True
 
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
         lblFechaHora.Text = Format(Now, "dd-MMM-yyyy - HH:mm:ss")
+
+        PicOBD.Visible = cOpusIMCleanOBDdrv.DeviceData.DeviceLinkOn
+
+        If b_initDeviceOBD Then
+            UsrBallTimer.Visible = True
+            Call Me.UsrBallTimer.tick_tock()
+
+        Else
+
+            'Hilo01.Abort()
+            UsrBallTimer.Visible = False
+
+        End If
 
     End Sub
 
@@ -18,33 +42,24 @@
 
         ListBox1.Items.Clear()
 
-        Call initDeviceOBD()
-
-        ListBox1.Items.Add("DeviceData ")
-        ListBox1.Items.Add("-------------------------------------------------------")
-        ListBox1.Items.Add("DeviceDescription: " & cOpusIMCleanOBDdrv.DeviceData.DeviceDescription)
-        ListBox1.Items.Add("DeviceID: " & cOpusIMCleanOBDdrv.DeviceData.DeviceID)
-        ListBox1.Items.Add("DeviceManufacturer: " & cOpusIMCleanOBDdrv.DeviceData.DeviceManufacturer)
-        ListBox1.Items.Add("DeviceType: " & cOpusIMCleanOBDdrv.DeviceData.DeviceType)
-        ListBox1.Items.Add("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
-        ListBox1.Items.Add("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
+        Call ComunicaDeviceOBD()
 
     End Sub
 
-    Private Sub initDeviceOBD()
+    Private Sub ComunicaDeviceOBD()
 
-        Dim lStatus As String = Nothing
+        Dim lStatus As String = "Iniciando conexión con el IMClean OBD..." & Format(Now, "HH:mm:ss")
 
-        Call rntMensajeusuario("Iniciando conexión con el IMClean OBD...")
-        ListBox1.Items.Add("Iniciando conexión con el IMClean OBD...")
+        Call rntMensajeusuario(lStatus)
+        Applog(lStatus)
 
         lStatus = cOpusIMCleanOBDdrv.ReviewDevicePlug()
 
         If Mid(lStatus, 1, 4) = "Key?" Then '-- requerimiento de licencia
 
             Call rntMensajeusuario("!:Opus IMClean OBD requiere licencia usuario." & lStatus) ' Opus IMClean OBD requiere licencia usuario.")
-            ListBox1.Items.Add("Opus IMClean OBD requiere licencia usuario.") '"Opus IMClean OBD licencia no valida o expirada.")
-            ListBox1.Items.Add(lStatus)
+            Applog("Opus IMClean OBD requiere licencia usuario.") '"Opus IMClean OBD licencia no valida o expirada.")
+            Applog(lStatus)
 
             lStatus = InputBox(Mid(lStatus, 5, 50), "Ingrese Licencia usuario.")
 
@@ -54,40 +69,68 @@
 
         Else
 
-            ListBox1.Items.Add("initDeviceOBD: " & lStatus)
+            Applog("initDeviceOBD: " & lStatus)
 
             lblDeviceDescription.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceDescription
             lblIdDevice.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceID
 
+            Applog("DeviceData ")
+            Applog("-------------------------------------------------------")
+
             If Mid(lStatus, 1, 4) = "Pass" Then
 
-                ListBox1.Items.Add("Licencia: " & Year(Now) & Chr(174) & " Ok")
-                ListBox1.Items.Add("DeviceDescription: " & cOpusIMCleanOBDdrv.DeviceData.DeviceDescription)
-                ListBox1.Items.Add("DeviceID: " & cOpusIMCleanOBDdrv.DeviceData.DeviceID)
-                ListBox1.Items.Add(" ")
-                ListBox1.Items.Add("IMClean OBD en línea, Iniciando dispositivo ...")
+                Applog("Licencia: " & Year(Now) & Chr(174) & " Ok")
+                Applog("DeviceDescription: " & cOpusIMCleanOBDdrv.DeviceData.DeviceDescription)
+                Applog("DeviceID: " & cOpusIMCleanOBDdrv.DeviceData.DeviceID)
+                Applog(" ")
+                Applog("IMClean OBD en línea, Iniciando dispositivo ...")
 
                 Call rntMensajeusuario("IMClean OBD en línea, Iniciando dispositivo ...")
-                lStatus = cOpusIMCleanOBDdrv.InitIMCleanDevice()
 
-                If Mid(lStatus, 1, 4) = "Pass" Then
+                Control.CheckForIllegalCrossThreadCalls = False
+                Threading.Thread.CurrentThread.ApartmentState = Threading.ApartmentState.STA
 
-                    PicOBD.Visible = True
-                    BtnOBDtest.Enabled = True
-                    lStatus = "Opus IMClean OBD en línea."
-
-                    lblVoltaje.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage
-                    lblVoltajeDLC.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC
-                    lblFirmWare.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceFirmwareVersion
-
-                End If
+                b_initDeviceOBD = True
+                Hilo01 = New Thread(AddressOf initDeviceOBD)
+                Hilo01.Start()
 
             End If
 
         End If
 
-        ListBox1.Items.Add(lStatus)
+        Applog(lStatus)
         Call rntMensajeusuario(lStatus)
+
+    End Sub
+
+
+    Private Sub initDeviceOBD()
+
+        Dim lStatus As String = Nothing
+
+        lStatus = cOpusIMCleanOBDdrv.InitIMCleanDevice()
+
+        Applog("initDeviceOBD: " & lStatus)
+
+        If Mid(lStatus, 1, 4) = "Pass" Then
+
+            'PicOBD.Visible = True
+
+            BtnOBDtest.Enabled = True
+            lStatus = "Opus IMClean OBD en línea."
+
+            lblVoltaje.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage
+            lblVoltajeDLC.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC
+            lblFirmWare.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceFirmwareVersion
+
+            Applog("DeviceManufacturer: " & cOpusIMCleanOBDdrv.DeviceData.DeviceManufacturer)
+            Applog("DeviceType: " & cOpusIMCleanOBDdrv.DeviceData.DeviceType)
+            Applog("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
+            Applog("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
+
+        End If
+
+        b_initDeviceOBD = False
 
     End Sub
 
@@ -95,6 +138,7 @@
 
         Dim lStatus As String = Nothing
 
+        '//-- 009 - Valor nulo = Monitor no disponible, no completado, sin DTC.  
         LblOBD_MSI_D.BackColor = Drawing.Color.Gray
         LblOBD_MSI_C.BackColor = Drawing.Color.Gray
         LblOBD_MSI.BackColor = Drawing.Color.Gray
@@ -114,10 +158,9 @@
         LblOBD_CAT_D.BackColor = Drawing.Color.Gray
         LblOBD_CAT_C.BackColor = Drawing.Color.Gray
         LblOBD_CAT.BackColor = Drawing.Color.Gray
+        '||-- 009 - Valor nulo = Monitor no disponible, no completado, sin DTC.  
 
         Call rntMensajeusuario("IMClean OBD comunicando con el ECU del vehículo, espere un momento...")
-
-        'Me.Refresh()
 
         lStatus = cOpusIMCleanOBDdrv.VehiculoLink()
 
@@ -160,23 +203,23 @@
 
             lblDTC.Text = cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC
 
-            ListBox1.Items.Add("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
-            ListBox1.Items.Add("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
-            ListBox1.Items.Add(" ")
-            ListBox1.Items.Add("InspectionData")
-            ListBox1.Items.Add("-------------------------------------------------------")
-            ListBox1.Items.Add("OBDdata_PROTOCOLO: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO)
-            ListBox1.Items.Add("OBDdata_VINhx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VINhx)
-            ListBox1.Items.Add("OBDdata_VIN: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN)
-            ListBox1.Items.Add("OBDdata_MILhx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MILhx)
-            ListBox1.Items.Add("OBDdata_MIL: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
-            ListBox1.Items.Add("MSI: " & cOpusIMCleanOBDdrv.InspectionData.OBD_MSI)
-            ListBox1.Items.Add("CCM: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CCM)
-            ListBox1.Items.Add("CMB: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CMB)
-            ListBox1.Items.Add("OS2: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2S)
-            ListBox1.Items.Add("CAT: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CAT)
-            ListBox1.Items.Add("DTChx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTChx)
-            ListBox1.Items.Add("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
+            Applog("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
+            Applog("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
+            Applog(" ")
+            Applog("InspectionData")
+            Applog("-------------------------------------------------------")
+            Applog("OBDdata_PROTOCOLO: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO)
+            Applog("OBDdata_VINhx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VINhx)
+            Applog("OBDdata_VIN: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN)
+            Applog("OBDdata_MILhx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MILhx)
+            Applog("OBDdata_MIL: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
+            Applog("MSI: " & cOpusIMCleanOBDdrv.InspectionData.OBD_MSI)
+            Applog("CCM: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CCM)
+            Applog("CMB: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CMB)
+            Applog("OS2: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2S)
+            Applog("CAT: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CAT)
+            Applog("DTChx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTChx)
+            Applog("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
 
             Call rntMensajeusuario("Inpección de monitores y codigos DTC en el ECU del vehículo terminada.")
 
@@ -241,27 +284,35 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim lStatus As String
-
-        lStatus = "-  DAD_DLL_VERSION_21.10.25.0
-                    -  4,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
-                    -  6,RX QRY,ICAN11bt500,Delay: 100
-                    -  108,RX MSG,ICAN11bt500,00 00 07 DF 
-                    -  110,RX MSG,ICAN11bt500,00 00 07 E8 41 01 00 07 E1 00 
-                    -  110,RX MSG,ICAN11bt500,00 00 07 EA 41 01 00 04 00 00 
-                    -  110,RX QRY,ICAN11bt500,Delay: 100
-                    -  220,RX QRY,ICAN11bt500,Delay: 100
-                    -  333,RX QRY,ICAN11bt500,Delay: 100
-                    -  445,RX QRY,ICAN11bt500,Delay: 100
-                    -  556,RX QRY,ICAN11bt500,Delay: 100"
-
-        Call cOpusIMCleanOBDdrv.tmpDECODE_Bus(lStatus)
-
-        ListBox1.Items.Add("mil: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL & " | FIN")
+        Dim lStatus As String = Nothing
+        'lStatus = "-  DAD_DLL_VERSION_21.10.25.0
+        '-  4,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+        '-  6,RX QRY,ICAN11bt500,Delay: 100
+        '-  108,RX MSG,ICAN11bt500,00 00 07 DF 
+        '-  110,RX MSG,ICAN11bt500,00 00 07 E8 41 01 00 07 E1 00 
+        '-  110,RX MSG,ICAN11bt500,00 00 07 EA 41 01 00 04 00 00 
+        '-  110,RX QRY,ICAN11bt500,Delay: 100
+        '-  220,RX QRY,ICAN11bt500,Delay: 100
+        '-  333,RX QRY,ICAN11bt500,Delay: 100
+        '-  445,RX QRY,ICAN11bt500,Delay: 100
+        '-  556,RX QRY,ICAN11bt500,Delay: 100"
+        'Call cOpusIMCleanOBDdrv.tmpDECODE_Bus(lStatus)
+        'ListBox1.Items.Add("mil: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL & " | FIN")
         'Call cOpusIMCleanOBDdrv.tmpDECODE_MIL(cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
+
+        'lStatus = cOpusIMCleanOBDdrv.tmpSet_DataMySQL()
+        'MsgBox(lStatus)
+
+        'Timer1.Enabled = False
+
+
+        'Call UsrBallTimerAlta.tick_tock()
+
+        'Call CorreHilo()
 
 
     End Sub
+
 
     Private Sub PicESPLogo_Click(sender As Object, e As EventArgs) Handles PicESPLogo.Click
 
@@ -270,6 +321,48 @@
         Else
             Button1.Visible = True
         End If
+
     End Sub
+
+    Private Sub btnIniSQL_Click(sender As Object, e As EventArgs) Handles btnIniSQL.Click
+
+        Dim lStatus As String = Nothing
+
+        MySQLConnectionString = txtMySQLConnectionString.Text
+
+        If Len(MySQLConnectionString) > 10 Then '-- Not IsNothing(MySQLConnectionString)
+            lStatus = IniSQL()
+            If Mid(lStatus, 1, 4) = "Pass" Then
+                lblTerminalDatos.BackColor = Color.Green
+            Else
+                lblTerminalDatos.BackColor = Color.Red
+            End If
+
+        Else
+            lblTerminalDatos.BackColor = Color.Gray
+        End If
+
+    End Sub
+
+
+    Public Function IniSQL() As String
+
+        Dim lStatus As String = Nothing
+
+        Try
+
+            lStatus = cOpusIMCleanOBDdrv.set_ConnectionString(MySQLConnectionString)
+
+        Catch ex As Exception
+
+            lStatus = "Err:IniSQL | " & ex.Message
+
+        End Try
+
+        Applog(lStatus)
+        Return lStatus
+
+    End Function
+
 
 End Class

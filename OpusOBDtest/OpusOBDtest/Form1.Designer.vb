@@ -29,6 +29,11 @@ Partial Class Form1
         Me.lblIDmj = New System.Windows.Forms.Label()
         Me.picLogoESP = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtMySQLConnectionString = New System.Windows.Forms.TextBox()
+        Me.btnIniSQL = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.lblFirmWare = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -69,8 +74,7 @@ Partial Class Form1
         Me.BtnContinuar = New System.Windows.Forms.Button()
         Me.PicOpusLogo = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.UsrBallTimer = New usrBallTimer.usrBallTimer()
         CType(Me.PicESPLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogoESP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -128,6 +132,10 @@ Partial Class Form1
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.UsrBallTimer)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.txtMySQLConnectionString)
+        Me.Panel1.Controls.Add(Me.btnIniSQL)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.ListBox1)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -170,17 +178,71 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(1320, 610)
         Me.Panel1.TabIndex = 282
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(14, 581)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(212, 18)
+        Me.Label6.TabIndex = 312
+        Me.Label6.Text = "Cadena de conexión MySQL:"
+        '
+        'txtMySQLConnectionString
+        '
+        Me.txtMySQLConnectionString.Location = New System.Drawing.Point(231, 577)
+        Me.txtMySQLConnectionString.Name = "txtMySQLConnectionString"
+        Me.txtMySQLConnectionString.Size = New System.Drawing.Size(850, 26)
+        Me.txtMySQLConnectionString.TabIndex = 311
+        Me.txtMySQLConnectionString.Text = "server=localhost;uid=opus1234;pwd=1234opus;database=OpusOBDtest;Integrated Securi" &
+    "ty=True"
+        '
+        'btnIniSQL
+        '
+        Me.btnIniSQL.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIniSQL.ForeColor = System.Drawing.Color.Black
+        Me.btnIniSQL.Location = New System.Drawing.Point(9, 17)
+        Me.btnIniSQL.Name = "btnIniSQL"
+        Me.btnIniSQL.Size = New System.Drawing.Size(218, 33)
+        Me.btnIniSQL.TabIndex = 310
+        Me.btnIniSQL.Text = "Conectar SQL"
+        Me.btnIniSQL.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(182, 390)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(50, 22)
+        Me.Label2.TabIndex = 309
+        Me.Label2.Text = "DTC"
+        '
+        'ListBox1
+        '
+        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.ListBox1.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 15
+        Me.ListBox1.Location = New System.Drawing.Point(639, 242)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(668, 259)
+        Me.ListBox1.TabIndex = 308
+        '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(9, 113)
+        Me.Button1.Location = New System.Drawing.Point(9, 184)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(215, 33)
         Me.Button1.TabIndex = 307
         Me.Button1.Text = "test"
         Me.Button1.UseVisualStyleBackColor = True
-        Me.Button1.Visible = False
         '
         'lblFirmWare
         '
@@ -188,7 +250,7 @@ Partial Class Form1
         Me.lblFirmWare.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblFirmWare.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFirmWare.ForeColor = System.Drawing.Color.White
-        Me.lblFirmWare.Location = New System.Drawing.Point(235, 193)
+        Me.lblFirmWare.Location = New System.Drawing.Point(235, 259)
         Me.lblFirmWare.Name = "lblFirmWare"
         Me.lblFirmWare.Size = New System.Drawing.Size(391, 30)
         Me.lblFirmWare.TabIndex = 306
@@ -199,7 +261,7 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(138, 197)
+        Me.Label3.Location = New System.Drawing.Point(138, 263)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 22)
         Me.Label3.TabIndex = 305
@@ -211,7 +273,7 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(415, 159)
+        Me.Label1.Location = New System.Drawing.Point(415, 207)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 22)
         Me.Label1.TabIndex = 304
@@ -223,7 +285,7 @@ Partial Class Form1
         Me.lblVoltajeDLC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblVoltajeDLC.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVoltajeDLC.ForeColor = System.Drawing.Color.White
-        Me.lblVoltajeDLC.Location = New System.Drawing.Point(469, 154)
+        Me.lblVoltajeDLC.Location = New System.Drawing.Point(469, 202)
         Me.lblVoltajeDLC.Name = "lblVoltajeDLC"
         Me.lblVoltajeDLC.Size = New System.Drawing.Size(157, 30)
         Me.lblVoltajeDLC.TabIndex = 303
@@ -244,7 +306,7 @@ Partial Class Form1
         Me.lblDTC.BackColor = System.Drawing.Color.FromArgb(CType(CType(5, Byte), Integer), CType(CType(29, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.lblDTC.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDTC.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.lblDTC.Location = New System.Drawing.Point(235, 322)
+        Me.lblDTC.Location = New System.Drawing.Point(235, 388)
         Me.lblDTC.Multiline = True
         Me.lblDTC.Name = "lblDTC"
         Me.lblDTC.ReadOnly = True
@@ -400,7 +462,7 @@ Partial Class Form1
         Me.lblProtocolo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblProtocolo.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProtocolo.ForeColor = System.Drawing.Color.White
-        Me.lblProtocolo.Location = New System.Drawing.Point(235, 242)
+        Me.lblProtocolo.Location = New System.Drawing.Point(235, 303)
         Me.lblProtocolo.Name = "lblProtocolo"
         Me.lblProtocolo.Size = New System.Drawing.Size(391, 30)
         Me.lblProtocolo.TabIndex = 275
@@ -411,7 +473,7 @@ Partial Class Form1
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(130, 243)
+        Me.Label4.Location = New System.Drawing.Point(130, 304)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 25)
         Me.Label4.TabIndex = 274
@@ -486,7 +548,7 @@ Partial Class Form1
         '
         Me.BtnInitDevice.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInitDevice.ForeColor = System.Drawing.Color.Black
-        Me.BtnInitDevice.Location = New System.Drawing.Point(9, 17)
+        Me.BtnInitDevice.Location = New System.Drawing.Point(9, 59)
         Me.BtnInitDevice.Name = "BtnInitDevice"
         Me.BtnInitDevice.Size = New System.Drawing.Size(218, 33)
         Me.BtnInitDevice.TabIndex = 260
@@ -510,7 +572,7 @@ Partial Class Form1
         Me.lblVoltaje.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblVoltaje.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVoltaje.ForeColor = System.Drawing.Color.White
-        Me.lblVoltaje.Location = New System.Drawing.Point(235, 155)
+        Me.lblVoltaje.Location = New System.Drawing.Point(469, 161)
         Me.lblVoltaje.Name = "lblVoltaje"
         Me.lblVoltaje.Size = New System.Drawing.Size(157, 30)
         Me.lblVoltaje.TabIndex = 252
@@ -521,7 +583,7 @@ Partial Class Form1
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(159, 159)
+        Me.Label7.Location = New System.Drawing.Point(393, 165)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(67, 22)
         Me.Label7.TabIndex = 251
@@ -533,7 +595,7 @@ Partial Class Form1
         Me.LblVIN.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.LblVIN.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblVIN.ForeColor = System.Drawing.Color.White
-        Me.LblVIN.Location = New System.Drawing.Point(235, 278)
+        Me.LblVIN.Location = New System.Drawing.Point(235, 344)
         Me.LblVIN.Name = "LblVIN"
         Me.LblVIN.Size = New System.Drawing.Size(391, 30)
         Me.LblVIN.TabIndex = 250
@@ -544,7 +606,7 @@ Partial Class Form1
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(185, 282)
+        Me.Label5.Location = New System.Drawing.Point(185, 348)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 22)
         Me.Label5.TabIndex = 249
@@ -566,7 +628,7 @@ Partial Class Form1
         Me.BtnOBDtest.Enabled = False
         Me.BtnOBDtest.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOBDtest.ForeColor = System.Drawing.Color.Black
-        Me.BtnOBDtest.Location = New System.Drawing.Point(9, 63)
+        Me.BtnOBDtest.Location = New System.Drawing.Point(9, 102)
         Me.BtnOBDtest.Name = "BtnOBDtest"
         Me.BtnOBDtest.Size = New System.Drawing.Size(218, 33)
         Me.BtnOBDtest.TabIndex = 143
@@ -607,7 +669,7 @@ Partial Class Form1
         Me.lblTerminalDatos.Name = "lblTerminalDatos"
         Me.lblTerminalDatos.Size = New System.Drawing.Size(100, 31)
         Me.lblTerminalDatos.TabIndex = 283
-        Me.lblTerminalDatos.Text = "..."
+        Me.lblTerminalDatos.Text = "MySQL"
         Me.lblTerminalDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblTerminalDatos.UseCompatibleTextRendering = True
         '
@@ -648,28 +710,15 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 900
         '
-        'ListBox1
+        'UsrBallTimer
         '
-        Me.ListBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(152, Byte), Integer))
-        Me.ListBox1.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(639, 242)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(668, 259)
-        Me.ListBox1.TabIndex = 308
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(182, 324)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 22)
-        Me.Label2.TabIndex = 309
-        Me.Label2.Text = "DTC"
+        Me.UsrBallTimer.BackColor = System.Drawing.Color.White
+        Me.UsrBallTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.UsrBallTimer.Location = New System.Drawing.Point(9, 390)
+        Me.UsrBallTimer.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.UsrBallTimer.Name = "UsrBallTimer"
+        Me.UsrBallTimer.Size = New System.Drawing.Size(115, 101)
+        Me.UsrBallTimer.TabIndex = 313
         '
         'Form1
         '
@@ -747,4 +796,8 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnIniSQL As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtMySQLConnectionString As TextBox
+    Friend WithEvents UsrBallTimer As usrBallTimer.usrBallTimer
 End Class

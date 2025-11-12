@@ -13,7 +13,6 @@
                 'CAT#Componentes integrales
                 Select Case pObdFalla
 
-
                     Case "0420" : xDTC_CAT = True
                     Case "0422" : xDTC_CAT = True
                     Case "0426" : xDTC_CAT = True
@@ -928,6 +927,19 @@
         End Try
 
         If xDTC_CAT Or xDTC_CCM Or xDTC_MSI Or xDTC_CMB Or xDTC_O2S Then
+
+            If xDTC_CCM Then LrdOBD_CCM = Mid(LrdOBD_CCM, 1, 2) & "1"
+            If xDTC_MSI Then LrdOBD_MSI = Mid(LrdOBD_MSI, 1, 2) & "1"
+            If xDTC_O2S Then LrdOBD_O2S = Mid(LrdOBD_O2S, 1, 2) & "1"
+            If xDTC_CMB Then LrdOBD_CMB = Mid(LrdOBD_CMB, 1, 2) & "1"
+            If xDTC_CAT Then LrdOBD_CAT = Mid(LrdOBD_CAT, 1, 2) & "1"
+
+            If xDTC_CCM Then LrdOBD_CCC = Mid(LrdOBD_CCC, 1, 2) & "1"
+            If xDTC_EVS Then LrdOBD_EVS = Mid(LrdOBD_EVS, 1, 2) & "1"
+            If xDTC_SAS Then LrdOBD_SAS = Mid(LrdOBD_SAS, 1, 2) & "1"
+            If xDTC_FAA Then LrdOBD_FAA = Mid(LrdOBD_FAA, 1, 2) & "1"
+            If xDTC_O2C Then LrdOBD_O2C = Mid(LrdOBD_O2C, 1, 2) & "1"
+
             Return True
         Else
             Return False

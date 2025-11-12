@@ -24,3 +24,12 @@ C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\obj\Debug\OpusIMCl.65D
 C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\obj\Debug\OpusIMCleanOBDdrv.dll
 C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\obj\Debug\OpusIMCleanOBDdrv.xml
 C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\obj\Debug\OpusIMCleanOBDdrv.pdb
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\MySql.Data.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\Google.Protobuf.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\ZstdNet.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\BouncyCastle.Crypto.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\Ubiety.Dns.Core.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\System.Buffers.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\K4os.Compression.LZ4.dll
+C:\PRY_NT\OpusIMcleanOBD\OpusIMCleanOBDdrv\OpusIMCleanOBD\bin\Debug\K4os.Hash.xxHash.dll

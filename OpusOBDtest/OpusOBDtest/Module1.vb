@@ -1,13 +1,17 @@
 ﻿Imports System.IO
 Imports System.Net.Mime.MediaTypeNames
 Imports System.Xml
+Imports System.Threading
 
 Imports OpusIMCleanOBDdrv
 
 
 Module Module1
 
+    Public b_initDeviceOBD As Boolean
     Public cOpusIMCleanOBDdrv As New OpusIMCleanOBDdrv.IMCleanOBD
+
+    Public MySQLConnectionString As String = "server=localhost;uid=opus1234;pwd=1234opus;database=OpusOBDtest;Integrated Security=True"
 
     '//------------------------------- COLORES
     Public xFormColor As Object = Drawing.Color.FromArgb(0, 128, 128) '-- Verde Opus
@@ -26,6 +30,9 @@ Module Module1
 
         Try
             Dim lDato As String
+
+            Form1.ListBox1.Items.Add(lParametro)
+            Form1.ListBox1.Refresh()
 
             lDato = Format(Now, "hh:mm:ss| ") & lParametro
 

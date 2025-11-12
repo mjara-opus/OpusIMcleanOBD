@@ -1,0 +1,7 @@
+06:58:47| Err:ConectaMySQL | Authentication to host 'localhost' for user 'OPUS1234' using method 'mysql_native_password' failed with message: Access denied for user 'OPUS1234'@'localhost' (using password: YES)
+06:58:47| 
+07:07:07| Err:ConectaSQL | Authentication to host 'localhost' for user 'OPUS1234' using method 'mysql_native_password' failed with message: Access denied for user 'OPUS1234'@'localhost' (using password: YES)
+07:07:07| Err:ConectaSQL | Authentication to host 'localhost' for user 'OPUS1234' using method 'mysql_native_password' failed with message: Access denied for user 'OPUS1234'@'localhost' (using password: YES)
+07:08:45| Err:ConectaSQL | Authentication to host 'localhost' for user 'opus1234' using method 'mysql_native_password' failed with message: Access denied for user 'opus1234'@'localhost' (using password: YES)
+07:08:45| Err:ConectaSQL | Authentication to host 'localhost' for user 'opus1234' using method 'mysql_native_password' failed with message: Access denied for user 'opus1234'@'localhost' (using password: YES)
+07:24:37| Pass: Servicios NET en línea.

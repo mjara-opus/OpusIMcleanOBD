@@ -2,6 +2,7 @@
 Imports System.Xml
 
 Imports DT
+Imports MySql.Data.MySqlClient
 Imports Microsoft.SqlServer.Server
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
@@ -92,6 +93,7 @@ Module Module1
 
     Public lvalue As Integer
     Public OBDLinkType As Integer
+    Public lDeviceLinkOn As Boolean
 
     Public Connect_Succeeded As Boolean
     Public Connect_MyEngineId As Byte
@@ -248,13 +250,17 @@ Module Module1
 
     '||--
 
+    Public conn As New MySql.Data.MySqlClient.MySqlConnection
+
     Public xOpus_KeyDevice As String
     Public xOpus_KeyDevicePass As Boolean
 
     Public xVIDB_ConnectionString As String
-    Public xOpus_VIDBLinkOnline As Boolean
+    Public xVIDBLinkOnline As Boolean
 
     Public xLocalKEYfile As String = My.Computer.FileSystem.CurrentDirectory & "\OpusKeyLicense.key"
+
+    Public xMacAddress As String
 
     Public Structure srtOBDBatteryInformation
         Public BatteryCycleCountAvailable As Boolean
@@ -1979,7 +1985,7 @@ Module Module1
                     (iNewType = OBDLINK_TYPE_DREWDADWIRED_GA)) Then
                     MyDeviceType = iNewType
                 Else
-                    MsgBox("0002 iNewType: " & iNewType)
+                    'MsgBox("0002 iNewType: " & iNewType)
                 End If
             End If
         End If
@@ -2840,7 +2846,7 @@ Module Module1
             sTemp = OBDLINK_FIRMWARE_KEY_BASE & "Unknown"
         End If
 
-        MsgBox(sTemp) '-- mja
+        'MsgBox(sTemp) '-- mja
 
         If (ValidateFirmwareVersion(sTemp) = True) Then sReturn = sTemp
 
@@ -3512,7 +3518,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_MSI = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_MSI = "009" '-- No disponible se considera aprobatorio PVVO 2025
 
                 End If '||-------------------------------
 
@@ -3528,7 +3534,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_CCM = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_CCM = "009" '-- No disponible se considera aprobatorio PVVO 2025
 
                 End If '||-------------------------------
 
@@ -3544,7 +3550,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_CMB = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_CMB = "009" '-- No disponible se considera aprobatorio PVVO 2025
 
                 End If '||-------------------------------
 
@@ -3560,7 +3566,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_O2S = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_O2S = "009" '-- No disponible se considera aprobatorio PVVO 2025
 
                 End If '||-------------------------------
 
@@ -3576,7 +3582,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_CAT = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_CAT = "009" '-- No disponible se considera aprobatorio PVVO 2025
 
                 End If '||-------------------------------
 
@@ -3593,7 +3599,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_CCC = "100" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_CCC = "009" '-- No disponible se considera aprobatorio PVVO 2025
                 End If '||-------------------------------
 
                 '//-- EVS | LrdOBD_EVS / Sistema evaporativo-------------------------------------------------------------------------------
@@ -3607,7 +3613,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_EVS = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_EVS = "009" '-- No disponible se considera aprobatorio PVVO 2025
                 End If '||-------------------------------
 
                 '//-- SAS | LrdOBD_SAS / Sistema secundario de aire -------------------------------------------------------------------------------
@@ -3621,7 +3627,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_SAS = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_SAS = "009" '-- No disponible se considera aprobatorio PVVO 2025
                 End If '||-------------------------------
 
                 '//-- FAA | LrdOBD_FAA / Sistema de fugas de aire acondicionado ------------------------------------------------------------------
@@ -3635,7 +3641,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_FAA = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_FAA = "009" '-- No disponible se considera aprobatorio PVVO 2025
                 End If '||-------------------------------
 
                 '//-- O2C | LrdOBD_O2C / Sistema de calentamiento del sensor de oxigeno-------------------------------------------------------------
@@ -3649,7 +3655,7 @@ Module Module1
                     End If
 
                 Else
-                    LrdOBD_O2C = "000" '-- No disponible se considera aprobatorio PVVO 2025
+                    LrdOBD_O2C = "009" '-- No disponible se considera aprobatorio PVVO 2025
                 End If '||-------------------------------
 
                 LrdOBD_EDO_MIL = Mid(xA, 1, 1) '-- LrdOBD_EDO_MIL / A7  0 = MIL off,  1 = MIL on / (0)0000000 A7 ------------------------------------------------------- 
@@ -3729,6 +3735,7 @@ Module Module1
                         lPid = Mid(LrdOBD_STATUS_Cadd, Ix0, 4)
                         'MsgBox(lPid)
                         If DECODE_DTC_CODIGOS(lPid) Then
+
                             If Len(OBDdata_DTCtxt) > 1 Then
                                 OBDdata_DTCtxt &= ", P" & lPid  '-- Solo si el DTC es parte del catalogo se reporta.
                             Else
@@ -3794,11 +3801,11 @@ Module Module1
 
             Call Connect_OBD()
 
-            lStatus = "Pass:VehiculoLink"
+            lStatus = "Pass: Inspección vehicular OBD exitosa."
 
         Catch ex As Exception
 
-            lStatus = "Err:VehiculoLink | " & ex.Message
+            lStatus = "Err: Inspección vehicular OBD fallo | " & ex.Message
 
         End Try
 
@@ -4061,7 +4068,7 @@ Module Module1
 
             lStatus = "Err:Connect | " & ex.Message
             Applog(lStatus)
-            MsgBox(lStatus)
+            'MsgBox(lStatus)
 
         End Try
 

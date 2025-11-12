@@ -1,4 +1,5 @@
 ﻿Imports System.Net.WebRequestMethods
+Imports MySql.Data.MySqlClient
 
 Module ModTools
 
@@ -184,7 +185,8 @@ Module ModTools
 
     Public Sub Applog(ByVal lParametro As String)
 
-        Dim logFile As String = "C:\OPUS_PROG\OpusIMCleanOBD\OpusIMCleanOBD.log"
+        Dim lMes As String = Format(Now, "ddMMyyyy")
+        Dim logFile As String = "OpusIMCleanOBD_" & lMes & ".log"
 
         Try
             Dim lDato As String
@@ -200,5 +202,166 @@ Module ModTools
         End Try
 
     End Sub
+
+    Public Function lConectaSQL() As String
+
+        Dim lStatus As String = Nothing
+
+        Try
+
+            conn.ConnectionString = xVIDB_ConnectionString
+            conn.Open()
+            lStatus = "Pass: Servicios NET en línea."
+            xVIDBLinkOnline = True
+
+        Catch ex As Exception
+            xVIDBLinkOnline = False
+            lStatus = "Err:ConectaSQL | " & ex.Message
+            Applog(lStatus)
+
+        End Try
+
+        Return lStatus
+
+    End Function
+
+    Public Function Set_DataMySQL() As String
+
+        Dim lStatus As String = Nothing
+
+        Try
+
+            Dim str_CADSql As String = "insert into InspectionData 
+                                (IdInspectionData, 
+                                IdStation,
+                                FECHA,
+                                DeviceID,
+                                VINhx,
+                                MILhx,
+                                DTChx,
+                                VIN,
+                                MIL,
+                                MSI,
+                                CCM,
+                                CMB,
+                                O2S,
+                                CAT,
+                                CCC,
+                                EVS,
+                                SAS,
+                                FAA,
+                                O2C,
+                                DTC)
+                              values
+                                (@IdInspectionData, 
+                                @IdStation,
+                                @FECHA,
+                                @DeviceID,
+                                @VINhx,
+                                @MILhx,
+                                @DTChx,
+                                @VIN,
+                                @MIL,
+                                @MSI,
+                                @CCM,
+                                @CMB,
+                                @O2S,
+                                @CAT,
+                                @CCC,
+                                @EVS,
+                                @SAS,
+                                @FAA,
+                                @O2C,
+                                @DTC)"
+
+            Dim lIdInspectionData As Integer = getIdFolioTablaSQL("InspectionData", "IdInspectionData")
+
+            If conn.State = 0 Then conn.Open()
+
+            Dim sqlCommand As New MySqlCommand
+            sqlCommand.Connection = conn
+            sqlCommand.CommandText = str_CADSql
+
+            sqlCommand.Parameters.AddWithValue("@IdInspectionData", lIdInspectionData)
+            sqlCommand.Parameters.AddWithValue("@IdStation", xMacAddress)
+            sqlCommand.Parameters.AddWithValue("@FECHA", IMCleanOBD.lInspectionData.Fecha_Test)
+            sqlCommand.Parameters.AddWithValue("@DeviceID", IMCleanOBD.lDeviceData.DeviceID)
+            sqlCommand.Parameters.AddWithValue("@VINhx", IMCleanOBD.lInspectionData.OBDdata_VINhx)
+            sqlCommand.Parameters.AddWithValue("@MILhx", IMCleanOBD.lInspectionData.OBDdata_MILhx)
+            sqlCommand.Parameters.AddWithValue("@DTChx", IMCleanOBD.lInspectionData.OBDdata_DTChx)
+            sqlCommand.Parameters.AddWithValue("@VIN", IMCleanOBD.lInspectionData.OBDdata_VIN)
+            sqlCommand.Parameters.AddWithValue("@MIL", IIf(IMCleanOBD.lInspectionData.OBDdata_MIL = "1", True, False))
+            sqlCommand.Parameters.AddWithValue("@MSI", IMCleanOBD.lInspectionData.OBD_MSI)
+            sqlCommand.Parameters.AddWithValue("@CCM", IMCleanOBD.lInspectionData.OBD_CCM)
+            sqlCommand.Parameters.AddWithValue("@CMB", IMCleanOBD.lInspectionData.OBD_CMB)
+            sqlCommand.Parameters.AddWithValue("@O2S", IMCleanOBD.lInspectionData.OBD_O2S)
+            sqlCommand.Parameters.AddWithValue("@CAT", IMCleanOBD.lInspectionData.OBD_CAT)
+            sqlCommand.Parameters.AddWithValue("@CCC", IMCleanOBD.lInspectionData.OBD_CCC)
+            sqlCommand.Parameters.AddWithValue("@EVS", IMCleanOBD.lInspectionData.OBD_EVS)
+            sqlCommand.Parameters.AddWithValue("@SAS", IMCleanOBD.lInspectionData.OBD_SAS)
+            sqlCommand.Parameters.AddWithValue("@FAA", IMCleanOBD.lInspectionData.OBD_FAA)
+            sqlCommand.Parameters.AddWithValue("@O2C", IMCleanOBD.lInspectionData.OBD_O2C)
+            sqlCommand.Parameters.AddWithValue("@DTC", IMCleanOBD.lInspectionData.OBDdata_DTC)
+
+            sqlCommand.ExecuteNonQuery()
+            conn.Close()
+
+            lStatus = "Pass:Set_DataMySQL "
+
+        Catch ex As Exception
+
+            lStatus = "Err:Set_DataMySQL | " & ex.Message
+            Applog(lStatus)
+
+        End Try
+
+
+        Return lStatus
+
+    End Function
+
+    Public Function getIdFolioTablaSQL(ByVal pTablaSQL As String, ByVal pCampoTablaSQL As String) As Long
+
+        Dim lIdFolio As Long = 0
+        Dim resultado As MySqlDataReader
+        Dim sqlCommand As New MySqlCommand
+
+        Dim str_CADSql = " SELECT max(" & pCampoTablaSQL & ") FROM " & pTablaSQL
+
+        Try
+
+            If conn.State = 0 Then conn.Open()
+
+            sqlCommand.Connection = conn
+            sqlCommand.CommandText = str_CADSql
+
+            resultado = sqlCommand.ExecuteReader
+
+            If resultado.Read Then
+
+                If resultado.IsDBNull(0) Then
+                    lIdFolio = 1
+                Else
+                    lIdFolio = resultado(0) + 1
+                End If
+                conn.Close()
+
+            Else
+
+                lIdFolio = 999999
+                conn.Close()
+
+            End If
+
+        Catch ex As Exception
+            Applog("Err:getIdFolioTablaSQL|" & ex.Message)
+            lIdFolio = 999999
+
+        End Try
+
+        Return lIdFolio
+
+    End Function
+
 
 End Module

@@ -292,8 +292,8 @@ Module ModChksum
 
             lOpusKey = zipESP(pOpusKey)
             If Len(lOpusKey) > 18 Then lOpusKey = Mid(lOpusKey, 1, 18)
-            MsgBox(lOpusKey)
-            MsgBox("set_OpusKeyDevice: " & chkSumCADD(lOpusKey))
+            'MsgBox(lOpusKey)
+            'MsgBox("set_OpusKeyDevice: " & chkSumCADD(lOpusKey))
 
             If Mid(chkSumCADD(lOpusKey), 1, 4) = "Pass" Then
 
@@ -305,7 +305,7 @@ Module ModChksum
                 sw.WriteLine(lDatoKey)
                 sw.Close()
 
-                lStatus = "Pass:Opus IMClean OBD registrado."
+                lStatus = "Pass:Opus IMClean OBD registrado exitosamente."
 
             Else
 

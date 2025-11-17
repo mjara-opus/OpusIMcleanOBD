@@ -122,7 +122,7 @@ Public Class IMCleanOBD
                     DeviceData.DeviceManufacturer = strDeviceInfo.DeviceManufacturer
                     DeviceData.DeviceDescription = strDeviceInfo.DeviceDescription
                     DeviceData.DeviceFirmwareVersion = sFirmwareVersion
-                    lStatus = "Pass:IMClean OBD conectado."
+                    lStatus = "Pass:IMClean OBD conectado al CPU."
 
                     facNS = calcCRCNS(strDeviceInfo.DeviceID)
                     Applog("facNS: " & strDeviceInfo.DeviceID & " -> " & facNS)
@@ -144,7 +144,7 @@ Public Class IMCleanOBD
 
         Else
 
-            lStatus = "Err:IMClean OBD desconectado."
+            lStatus = "Err:IMClean OBD desconectado del CPU."
 
         End If
 

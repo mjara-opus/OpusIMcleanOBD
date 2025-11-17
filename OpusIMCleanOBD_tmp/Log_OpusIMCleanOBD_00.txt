@@ -1,0 +1,1865 @@
+01:29:52| >>> Conecta OBD ...................................................
+01:32:05| Success
+01:32:05| 4.0.0.0
+01:32:05| 4171
+01:32:05| 12.1
+01:32:05| 12.4
+01:32:17| >>> OBD - ECU ...................................................
+01:32:17| ... Connect
+01:32:17| ... LocalIncrementActiveCount
+01:32:17| ... IncrementActiveCount
+01:32:17| ... MyDADStatus: LCR:ConditionsNotCorrect,Unknown
+01:32:17| ... Connect | ---------------- Connect --------------- VIN:'' SC:'' (LCR:ConditionsNotCorrect,Unknown) (Button4_Click,OnClick,OnClick)
+01:32:17| GetDAD | Starting ... Cnt:00001,00 Opn:F (Connect)
+01:32:17| GetDAD | Success ... Cnt:00001,01 Opn:F (Connect, )
+01:32:17| ... SetupMyLastCommResult: InvalidData
+01:32:17| ... MyDad.Initialize 
+01:32:17| ... DoDad | Action: System.Action | tag: Initialize
+01:32:17| DoDad-01 | Initialize (Open:False | Button4_Click,OnClick,OnClick)
+01:32:17| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+01:32:17| ... OpenDAD_If_Needed
+01:32:17| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (Button4_Click,OnClick,OnClick)
+01:32:17| ... SetupMyLastCommResult: Success
+01:32:17| ... IsCommResultSuccess
+01:32:17| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.00) DoDad-Initialize (Button4_Click,OnClick,OnClick)
+01:32:17| DoDad-MyDeviceLogClear-01  ClearLogs ...
+01:32:17| DoDad-01  ClearCommandLog ...
+01:32:17| DoDad-01  Invoke ... (Initialize)
+01:32:29| ... SetupVehicleIsLinked
+01:32:29| SVLI | VehicleIsLinked:'?'->'True'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+01:32:29| ... SetupMyLastCommResult: Success
+01:32:29| DoDad-01  Invoke ... (Initialize)  (12063)
+01:32:29| DoDad-01  CommandLog.Length ...
+01:32:29| DoDad-01  CommandLog ... (0)
+01:32:29| DoDad-01-CommandLog-Len:310 Siz:310 | iStart: 0
+01:32:29| DoDad-01  SerialData.Length ... (506)
+01:32:29| DoDad-01 | Initialize-SLL:00506,00506-CF:T-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    (12.068 s,F) Initialize | 
+01:32:29| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+
+==============================================================
+
+01:32:29| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+
+01:32:29| OBDProtocol:ICAN11bt500
+01:32:29| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:29| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:29| Port:USB
+01:32:29| ... MyLastResult
+01:32:29| Connect | Init-Rty:2 (Success,Unknown,?->True | 12.11) | Button4_Click,OnClick,OnClick
+01:32:29| ... MyDad.Initialize > Success
+01:32:29| DrewProtocol2MyProtocol | In:'ICAN11bt500'  Out:'CAN11' (CAN:True)
+01:32:29| ... GetSupportedPIDs
+01:32:29| GetSupportedPIDs | Starting ... (Mode:1) (Connect_TMP,Button4_Click,OnClick)
+01:32:29| ... SetupMyLastCommResult: InvalidData
+01:32:29| ... DoDad | Action: System.Action | tag: GetModePID(01, 00) - PID support mask
+01:32:29| DoDad-01 | GetModePID(01, 00) - PID support mask (Open:True,012.09 | Connect_TMP,Button4_Click,OnClick)
+01:32:29| DoDad-01  ClearCommandLog ...
+01:32:29| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)
+01:32:30| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)  (687)
+01:32:30| DoDad-01  CommandLog.Length ...
+01:32:30| DoDad-01  CommandLog ... (0)
+01:32:30| DoDad-01-CommandLog-Len:180 Siz:180 | iStart: 0
+01:32:30| DoDad-01  SerialData.Length ... (872)
+01:32:30| DoDad-01 | GetModePID(01, 00) - PID support mask-SLL:00872,00872-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    -  12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12090,RX QRY,ICAN11bt500,Delay: 100
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12207,RX QRY,ICAN11bt500,Delay: 100
+                    -  12324,RX QRY,ICAN11bt500,Delay: 100
+                    -  12439,RX QRY,ICAN11bt500,Delay: 100
+                    -  12554,RX QRY,ICAN11bt500,Delay: 100
+                    -  12658,RX QRY,ICAN11bt500,Delay: 100
+                    (0.688 s,F) GetModePID(01, 00) - PID support mask | NoEOL
+01:32:30| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+
+==============================================================
+
+01:32:30| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+
+01:32:30| OBDProtocol:ICAN11bt500
+01:32:30| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:30| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12090,RX QRY,ICAN11bt500,Delay: 100
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+12207,RX QRY,ICAN11bt500,Delay: 100
+12324,RX QRY,ICAN11bt500,Delay: 100
+12439,RX QRY,ICAN11bt500,Delay: 100
+12554,RX QRY,ICAN11bt500,Delay: 100
+12658,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:30| Port:USB
+01:32:30| ... SetupVehicleIsLinked
+01:32:30| ... SetupMyLastCommResult: Success
+01:32:30| ... MyLastResult
+01:32:30|  (Result:Success,Unknown,True->True)
+01:32:30| GetSupportedPIDs | PID00 RspCnt:1
+01:32:30| ... GetEcuIdFromAddress
+01:32:30| ... DT_DataToString
+01:32:30| ... ByteArrayToHexString
+01:32:30| ... ByteArrayToHexString
+01:32:30| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:00,Dat:FFFFFFFFFF
+01:32:30| ... SetSupportedBitArrayFromObdBytes
+01:32:30| ... CountBits
+01:32:30| ... CountBits
+01:32:30| ... CountBits
+01:32:30| ... CountBits
+01:32:30| ... CountBits
+01:32:30| SSBAFOB | MdPID:01,00 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:001
+01:32:30| SSBAFOB | BitAryLen:256  BitSetCnt:033  BAI:5-5,01,02,03,04,05,06,07,08,09,0A,0B,0C,0D,0E,0F,10,11,12,13,14,15,16,17,18,19,1A,1B,1C,1D,1E,1F,20
+01:32:30| ... LogBitArray
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:30| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:033 F:223)
+01:32:30| ... SetupMyLastCommResult: InvalidData
+01:32:30| ... DoDad | Action: System.Action | tag: GetModePID(01, 20) - PID support mask
+01:32:30| DoDad-01 | GetModePID(01, 20) - PID support mask (Open:True,012.83 | Connect_TMP,Button4_Click,OnClick)
+01:32:30| DoDad-01  ClearCommandLog ...
+01:32:30| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)
+01:32:30| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)  (688)
+01:32:30| DoDad-01  CommandLog.Length ...
+01:32:30| DoDad-01  CommandLog ... (0)
+01:32:30| DoDad-01-CommandLog-Len:180 Siz:180 | iStart: 0
+01:32:30| DoDad-01  SerialData.Length ... (1238)
+01:32:30| DoDad-01 | GetModePID(01, 20) - PID support mask-SLL:01238,01238-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    -  12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12090,RX QRY,ICAN11bt500,Delay: 100
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12207,RX QRY,ICAN11bt500,Delay: 100
+                    -  12324,RX QRY,ICAN11bt500,Delay: 100
+                    -  12439,RX QRY,ICAN11bt500,Delay: 100
+                    -  12554,RX QRY,ICAN11bt500,Delay: 100
+                    -  12658,RX QRY,ICAN11bt500,Delay: 100
+                    -  12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12826,RX QRY,ICAN11bt500,Delay: 100
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12941,RX QRY,ICAN11bt500,Delay: 100
+                    -  13061,RX QRY,ICAN11bt500,Delay: 100
+                    -  13173,RX QRY,ICAN11bt500,Delay: 100
+                    -  13274,RX QRY,ICAN11bt500,Delay: 100
+                    -  13389,RX QRY,ICAN11bt500,Delay: 100
+                    (0.680 s,F) GetModePID(01, 20) - PID support mask | NoEOL
+01:32:30| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+
+==============================================================
+
+01:32:30| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+12941,RX MSG,ICAN11bt500,00 00 07 DF 
+12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+
+01:32:31| OBDProtocol:ICAN11bt500
+01:32:31| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:31| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12090,RX QRY,ICAN11bt500,Delay: 100
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+12207,RX QRY,ICAN11bt500,Delay: 100
+12324,RX QRY,ICAN11bt500,Delay: 100
+12439,RX QRY,ICAN11bt500,Delay: 100
+12554,RX QRY,ICAN11bt500,Delay: 100
+12658,RX QRY,ICAN11bt500,Delay: 100
+12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+12826,RX QRY,ICAN11bt500,Delay: 100
+12941,RX MSG,ICAN11bt500,00 00 07 DF 
+12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+12941,RX QRY,ICAN11bt500,Delay: 100
+13061,RX QRY,ICAN11bt500,Delay: 100
+13173,RX QRY,ICAN11bt500,Delay: 100
+13274,RX QRY,ICAN11bt500,Delay: 100
+13389,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:31| Port:USB
+01:32:31| ... SetupVehicleIsLinked
+01:32:31| ... SetupMyLastCommResult: Success
+01:32:31| ... MyLastResult
+01:32:31|  (Result:Success,Unknown,True->True)
+01:32:31| GetSupportedPIDs | PID20 RspCnt:1
+01:32:31| ... GetEcuIdFromAddress
+01:32:31| ... DT_DataToString
+01:32:31| ... ByteArrayToHexString
+01:32:31| ... ByteArrayToHexString
+01:32:31| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:20,Dat:FFFFFFFFFF
+01:32:31| ... SetSupportedBitArrayFromObdBytes
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| SSBAFOB | MdPID:01,20 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:033
+01:32:31| SSBAFOB | BitAryLen:256  BitSetCnt:065  BAI:5-5,21,22,23,24,25,26,27,28,29,2A,2B,2C,2D,2E,2F,30,31,32,33,34,35,36,37,38,39,3A,3B,3C,3D,3E,3F,40
+01:32:31| ... LogBitArray
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:065 F:191)
+01:32:31| ... SetupMyLastCommResult: InvalidData
+01:32:31| ... DoDad | Action: System.Action | tag: GetModePID(01, 40) - PID support mask
+01:32:31| DoDad-01 | GetModePID(01, 40) - PID support mask (Open:True,013.56 | Connect_TMP,Button4_Click,OnClick)
+01:32:31| DoDad-01  ClearCommandLog ...
+01:32:31| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)
+01:32:31| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)  (671)
+01:32:31| DoDad-01  CommandLog.Length ...
+01:32:31| DoDad-01  CommandLog ... (0)
+01:32:31| DoDad-01-CommandLog-Len:180 Siz:180 | iStart: 0
+01:32:31| DoDad-01  SerialData.Length ... (1604)
+01:32:31| DoDad-01 | GetModePID(01, 40) - PID support mask-SLL:01604,01604-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    -  12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12090,RX QRY,ICAN11bt500,Delay: 100
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12207,RX QRY,ICAN11bt500,Delay: 100
+                    -  12324,RX QRY,ICAN11bt500,Delay: 100
+                    -  12439,RX QRY,ICAN11bt500,Delay: 100
+                    -  12554,RX QRY,ICAN11bt500,Delay: 100
+                    -  12658,RX QRY,ICAN11bt500,Delay: 100
+                    -  12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12826,RX QRY,ICAN11bt500,Delay: 100
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12941,RX QRY,ICAN11bt500,Delay: 100
+                    -  13061,RX QRY,ICAN11bt500,Delay: 100
+                    -  13173,RX QRY,ICAN11bt500,Delay: 100
+                    -  13274,RX QRY,ICAN11bt500,Delay: 100
+                    -  13389,RX QRY,ICAN11bt500,Delay: 100
+                    -  13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13557,RX QRY,ICAN11bt500,Delay: 100
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13674,RX QRY,ICAN11bt500,Delay: 100
+                    -  13790,RX QRY,ICAN11bt500,Delay: 100
+                    -  13906,RX QRY,ICAN11bt500,Delay: 100
+                    -  14007,RX QRY,ICAN11bt500,Delay: 100
+                    -  14122,RX QRY,ICAN11bt500,Delay: 100
+                    (0.668 s,F) GetModePID(01, 40) - PID support mask | NoEOL
+01:32:31| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+
+==============================================================
+
+01:32:31| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+13674,RX MSG,ICAN11bt500,00 00 07 DF 
+13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+
+01:32:31| OBDProtocol:ICAN11bt500
+01:32:31| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:31| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12090,RX QRY,ICAN11bt500,Delay: 100
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+12207,RX QRY,ICAN11bt500,Delay: 100
+12324,RX QRY,ICAN11bt500,Delay: 100
+12439,RX QRY,ICAN11bt500,Delay: 100
+12554,RX QRY,ICAN11bt500,Delay: 100
+12658,RX QRY,ICAN11bt500,Delay: 100
+12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+12826,RX QRY,ICAN11bt500,Delay: 100
+12941,RX MSG,ICAN11bt500,00 00 07 DF 
+12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+12941,RX QRY,ICAN11bt500,Delay: 100
+13061,RX QRY,ICAN11bt500,Delay: 100
+13173,RX QRY,ICAN11bt500,Delay: 100
+13274,RX QRY,ICAN11bt500,Delay: 100
+13389,RX QRY,ICAN11bt500,Delay: 100
+13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+13557,RX QRY,ICAN11bt500,Delay: 100
+13674,RX MSG,ICAN11bt500,00 00 07 DF 
+13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+13674,RX QRY,ICAN11bt500,Delay: 100
+13790,RX QRY,ICAN11bt500,Delay: 100
+13906,RX QRY,ICAN11bt500,Delay: 100
+14007,RX QRY,ICAN11bt500,Delay: 100
+14122,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:31| Port:USB
+01:32:31| ... SetupVehicleIsLinked
+01:32:31| ... SetupMyLastCommResult: Success
+01:32:31| ... MyLastResult
+01:32:31|  (Result:Success,Unknown,True->True)
+01:32:31| GetSupportedPIDs | PID40 RspCnt:1
+01:32:31| ... GetEcuIdFromAddress
+01:32:31| ... DT_DataToString
+01:32:31| ... ByteArrayToHexString
+01:32:31| ... ByteArrayToHexString
+01:32:31| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:40,Dat:FFFFFFFFFF
+01:32:31| ... SetSupportedBitArrayFromObdBytes
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| ... CountBits
+01:32:31| SSBAFOB | MdPID:01,40 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:065
+01:32:31| SSBAFOB | BitAryLen:256  BitSetCnt:097  BAI:5-5,41,42,43,44,45,46,47,48,49,4A,4B,4C,4D,4E,4F,50,51,52,53,54,55,56,57,58,59,5A,5B,5C,5D,5E,5F,60
+01:32:31| ... LogBitArray
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:31| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+01:32:31| ... SetupMyLastCommResult: InvalidData
+01:32:31| ... DoDad | Action: System.Action | tag: GetModePID(01, 60) - PID support mask
+01:32:31| DoDad-01 | GetModePID(01, 60) - PID support mask (Open:True,014.28 | Connect_TMP,Button4_Click,OnClick)
+01:32:31| DoDad-01  ClearCommandLog ...
+01:32:31| DoDad-01  Invoke ... (GetModePID(01, 60) - PID support mask)
+01:32:32| DoDad-01  Invoke ... (GetModePID(01, 60) - PID support mask)  (641)
+01:32:32| DoDad-01  CommandLog.Length ...
+01:32:32| DoDad-01  CommandLog ... (0)
+01:32:32| DoDad-01-CommandLog-Len:180 Siz:180 | iStart: 0
+01:32:32| DoDad-01  SerialData.Length ... (1970)
+01:32:32| DoDad-01 | GetModePID(01, 60) - PID support mask-SLL:01970,01970-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    -  12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12090,RX QRY,ICAN11bt500,Delay: 100
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12207,RX QRY,ICAN11bt500,Delay: 100
+                    -  12324,RX QRY,ICAN11bt500,Delay: 100
+                    -  12439,RX QRY,ICAN11bt500,Delay: 100
+                    -  12554,RX QRY,ICAN11bt500,Delay: 100
+                    -  12658,RX QRY,ICAN11bt500,Delay: 100
+                    -  12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12826,RX QRY,ICAN11bt500,Delay: 100
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12941,RX QRY,ICAN11bt500,Delay: 100
+                    -  13061,RX QRY,ICAN11bt500,Delay: 100
+                    -  13173,RX QRY,ICAN11bt500,Delay: 100
+                    -  13274,RX QRY,ICAN11bt500,Delay: 100
+                    -  13389,RX QRY,ICAN11bt500,Delay: 100
+                    -  13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13557,RX QRY,ICAN11bt500,Delay: 100
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13674,RX QRY,ICAN11bt500,Delay: 100
+                    -  13790,RX QRY,ICAN11bt500,Delay: 100
+                    -  13906,RX QRY,ICAN11bt500,Delay: 100
+                    -  14007,RX QRY,ICAN11bt500,Delay: 100
+                    -  14122,RX QRY,ICAN11bt500,Delay: 100
+                    -  14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+                    -  14274,RX QRY,ICAN11bt500,Delay: 100
+                    -  14380,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  14380,RX QRY,ICAN11bt500,Delay: 100
+                    -  14489,RX QRY,ICAN11bt500,Delay: 100
+                    -  14599,RX QRY,ICAN11bt500,Delay: 100
+                    -  14706,RX QRY,ICAN11bt500,Delay: 100
+                    -  14806,RX QRY,ICAN11bt500,Delay: 100
+                    (0.651 s,F) GetModePID(01, 60) - PID support mask | NoEOL
+01:32:32| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+14247,SerialDataLog: Get
+14250,Port: Get
+14274,ClearCommandLog
+14274,GetModePID: Mode($01), Pid($60), Ecu(null)
+14922,GetModePID [Response]: DADTimedOut (Count: 0) {  null  }
+14928,CommandLog: Get
+14928,CommandLog: Get
+14930,SerialDataLog: Get
+14930,SerialDataLog: Get
+14934,TraceDataLog: Get
+
+==============================================================
+
+01:32:32| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14380,RX MSG,ICAN11bt500,00 00 07 DF 
+14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+
+01:32:32| OBDProtocol:ICAN11bt500
+01:32:32| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+14247,SerialDataLog: Get
+14250,Port: Get
+14274,ClearCommandLog
+14274,GetModePID: Mode($01), Pid($60), Ecu(null)
+14922,GetModePID [Response]: DADTimedOut (Count: 0) {  null  }
+14928,CommandLog: Get
+14928,CommandLog: Get
+14930,SerialDataLog: Get
+14930,SerialDataLog: Get
+14934,TraceDataLog: Get
+14938,CommandLog: Get
+14941,OBDProtocol: Get( ICAN11bt500 )
+14941,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:32| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12090,RX QRY,ICAN11bt500,Delay: 100
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+12207,RX QRY,ICAN11bt500,Delay: 100
+12324,RX QRY,ICAN11bt500,Delay: 100
+12439,RX QRY,ICAN11bt500,Delay: 100
+12554,RX QRY,ICAN11bt500,Delay: 100
+12658,RX QRY,ICAN11bt500,Delay: 100
+12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+12826,RX QRY,ICAN11bt500,Delay: 100
+12941,RX MSG,ICAN11bt500,00 00 07 DF 
+12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+12941,RX QRY,ICAN11bt500,Delay: 100
+13061,RX QRY,ICAN11bt500,Delay: 100
+13173,RX QRY,ICAN11bt500,Delay: 100
+13274,RX QRY,ICAN11bt500,Delay: 100
+13389,RX QRY,ICAN11bt500,Delay: 100
+13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+13557,RX QRY,ICAN11bt500,Delay: 100
+13674,RX MSG,ICAN11bt500,00 00 07 DF 
+13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+13674,RX QRY,ICAN11bt500,Delay: 100
+13790,RX QRY,ICAN11bt500,Delay: 100
+13906,RX QRY,ICAN11bt500,Delay: 100
+14007,RX QRY,ICAN11bt500,Delay: 100
+14122,RX QRY,ICAN11bt500,Delay: 100
+14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14274,RX QRY,ICAN11bt500,Delay: 100
+14380,RX MSG,ICAN11bt500,00 00 07 DF 
+14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14380,RX QRY,ICAN11bt500,Delay: 100
+14489,RX QRY,ICAN11bt500,Delay: 100
+14599,RX QRY,ICAN11bt500,Delay: 100
+14706,RX QRY,ICAN11bt500,Delay: 100
+14806,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:32| Port:USB
+01:32:32| ... SetupVehicleIsLinked
+01:32:32| SVLI | VehicleIsLinked:'True'->'False'  (SetupMyLastCommResult,GetSupportedPIDs,Connect_TMP)
+01:32:32| ... SetupMyLastCommResult: DADTimedOut
+01:32:32| ... MyLastResult
+01:32:32|  (Result:DADTimedOut,Unknown,True->False)
+01:32:32| GetSupportedPIDs | Mode:1 ECUCnt:1 PIDSupDicCnt:1
+01:32:32| ... LogBitArray
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:-------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 4 | GetSupportedPIDS | Mode1-ECUE8:224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+01:32:32| ... LogBitArray
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+01:32:32| 2 | GetSupportedPIDs | 1-ECUxx 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+01:32:32| GetSupportedPIDs | PIDCnt-1-E8:093  (TPC:93)
+01:32:32| ... DictValueSortDesc
+01:32:32| DVSD | E8:093->E8:093
+01:32:32| GetSupportedPIDs | Mode:1 PIDs-'097:00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60
+01:32:32|  GetSupportedPIDs | Ending ... Success:TrueTrueTrueFalse 1-E8:093
+01:32:32| ReleaseDAD |  Starting ... Cnt:00001,01 (Connect)
+01:32:32| ... ReleaseDAD | Success ... Cnt:00001,00 Opn:T (Connect, Connect)
+01:32:32| ... SetupVehicleIsLinked
+01:32:32| SVLI | VehicleIsLinked:'False'->'?'  (Connect_TMP,Button4_Click,OnClick)
+01:32:32| ... SetupVehicleIsLinked
+01:32:32| SVLI | VehicleIsLinked:'?'->'True'  (Connect_TMP,Button4_Click,OnClick)
+01:32:32| ... MyLastResult
+01:32:32| Connect | Rslt:True EECUID:E8 ECUs:1-(E8:093->E8:093,) Prot:'CAN11', 'CAN11' PC:93  (DADTimedOut,Unknown,?->True, 15.05) (Button4_Click,OnClick,OnClick)
+01:32:32| ... DecrementActiveCount
+01:32:32| ... MyLastResult
+01:32:32| ... GetVIN >>>
+01:32:33| A.[]
+01:32:33| SR: 0 | 1
+01:32:33| ... GetEcuIdFromAddress
+01:32:33| ... ByteArrayToHexString
+01:32:33| GetVIN | ECU:E8  DLen:018 (01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36)
+01:32:33| ... ByteArrayToHexString
+01:32:33| ... CheckForNAK | Ret:False  Len:18  Buf:01,4D,42,32,50,43,33,41,35,34,50,4D,38,33,30,35,30,36  SID:09  PID:02  Prot:'CAN11'
+01:32:33| ... ByteArrayToString
+01:32:33| GetVIN | ECU:E8  tVIN: MB2PC3A54PM830506
+01:32:33| ... GetMONITORES >>>
+01:32:33| ... SetupMyLastCommResult: ConditionsNotCorrect
+01:32:33| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+01:32:33| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,015.71 | Button4_Click,OnClick,OnClick)
+01:32:33| DoDad-01  ClearCommandLog ...
+01:32:33| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+01:32:33| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (672)
+01:32:33| DoDad-01  CommandLog.Length ...
+01:32:33| DoDad-01  CommandLog ... (0)
+01:32:33| DoDad-01-CommandLog-Len:180 Siz:180 | iStart: 0
+01:32:33| DoDad-01  SerialData.Length ... (2780)
+01:32:33| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:02780,02780-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    -  12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12090,RX QRY,ICAN11bt500,Delay: 100
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12207,RX QRY,ICAN11bt500,Delay: 100
+                    -  12324,RX QRY,ICAN11bt500,Delay: 100
+                    -  12439,RX QRY,ICAN11bt500,Delay: 100
+                    -  12554,RX QRY,ICAN11bt500,Delay: 100
+                    -  12658,RX QRY,ICAN11bt500,Delay: 100
+                    -  12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12826,RX QRY,ICAN11bt500,Delay: 100
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12941,RX QRY,ICAN11bt500,Delay: 100
+                    -  13061,RX QRY,ICAN11bt500,Delay: 100
+                    -  13173,RX QRY,ICAN11bt500,Delay: 100
+                    -  13274,RX QRY,ICAN11bt500,Delay: 100
+                    -  13389,RX QRY,ICAN11bt500,Delay: 100
+                    -  13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13557,RX QRY,ICAN11bt500,Delay: 100
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13674,RX QRY,ICAN11bt500,Delay: 100
+                    -  13790,RX QRY,ICAN11bt500,Delay: 100
+                    -  13906,RX QRY,ICAN11bt500,Delay: 100
+                    -  14007,RX QRY,ICAN11bt500,Delay: 100
+                    -  14122,RX QRY,ICAN11bt500,Delay: 100
+                    -  14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+                    -  14274,RX QRY,ICAN11bt500,Delay: 100
+                    -  14380,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  14380,RX QRY,ICAN11bt500,Delay: 100
+                    -  14489,RX QRY,ICAN11bt500,Delay: 100
+                    -  14599,RX QRY,ICAN11bt500,Delay: 100
+                    -  14706,RX QRY,ICAN11bt500,Delay: 100
+                    -  14806,RX QRY,ICAN11bt500,Delay: 100
+                    -  15016,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+                    -  15016,RX QRY,ICAN11bt500,Delay: 100
+                    -  15124,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  15124,RX MSG,ICAN11bt500,00 00 07 E8 
+                    -  15124,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 
+                    -  15124,RX QRY,ICAN11bt500,Delay: 100
+                    -  15237,RX QRY,ICAN11bt500,Delay: 100
+                    -  15340,RX QRY,ICAN11bt500,Delay: 100
+                    -  15456,RX QRY,ICAN11bt500,Delay: 100
+                    -  15575,RX QRY,ICAN11bt500,Delay: 100
+                    -  15707,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+                    -  15707,RX QRY,ICAN11bt500,Delay: 100
+                    -  15823,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  15823,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+                    -  15823,RX QRY,ICAN11bt500,Delay: 100
+                    -  15938,RX QRY,ICAN11bt500,Delay: 100
+                    -  16038,RX QRY,ICAN11bt500,Delay: 100
+                    -  16140,RX QRY,ICAN11bt500,Delay: 100
+                    -  16257,RX QRY,ICAN11bt500,Delay: 100
+                    (0.667 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+01:32:33| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+14247,SerialDataLog: Get
+14250,Port: Get
+14274,ClearCommandLog
+14274,GetModePID: Mode($01), Pid($60), Ecu(null)
+14922,GetModePID [Response]: DADTimedOut (Count: 0) {  null  }
+14928,CommandLog: Get
+14928,CommandLog: Get
+14930,SerialDataLog: Get
+14930,SerialDataLog: Get
+14934,TraceDataLog: Get
+14938,CommandLog: Get
+14941,OBDProtocol: Get( ICAN11bt500 )
+14941,VendorLog: Get
+14945,SerialDataLog: Get
+14949,Port: Get
+15016,GetModePID: Mode($09), Pid($02), Ecu(null)
+15680,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 }
+15705,ClearCommandLog
+15706,GetModePID: Mode($01), Pid($01), Ecu(null)
+16368,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+16373,CommandLog: Get
+16374,CommandLog: Get
+16377,SerialDataLog: Get
+16377,SerialDataLog: Get
+16383,TraceDataLog: Get
+
+==============================================================
+
+01:32:33| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+15707,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+15823,RX MSG,ICAN11bt500,00 00 07 DF 
+15823,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+
+01:32:33| OBDProtocol:ICAN11bt500
+01:32:33| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+14247,SerialDataLog: Get
+14250,Port: Get
+14274,ClearCommandLog
+14274,GetModePID: Mode($01), Pid($60), Ecu(null)
+14922,GetModePID [Response]: DADTimedOut (Count: 0) {  null  }
+14928,CommandLog: Get
+14928,CommandLog: Get
+14930,SerialDataLog: Get
+14930,SerialDataLog: Get
+14934,TraceDataLog: Get
+14938,CommandLog: Get
+14941,OBDProtocol: Get( ICAN11bt500 )
+14941,VendorLog: Get
+14945,SerialDataLog: Get
+14949,Port: Get
+15016,GetModePID: Mode($09), Pid($02), Ecu(null)
+15680,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 }
+15705,ClearCommandLog
+15706,GetModePID: Mode($01), Pid($01), Ecu(null)
+16368,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+16373,CommandLog: Get
+16374,CommandLog: Get
+16377,SerialDataLog: Get
+16377,SerialDataLog: Get
+16383,TraceDataLog: Get
+16389,CommandLog: Get
+16390,OBDProtocol: Get( ICAN11bt500 )
+16390,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:33| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12090,RX QRY,ICAN11bt500,Delay: 100
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+12207,RX QRY,ICAN11bt500,Delay: 100
+12324,RX QRY,ICAN11bt500,Delay: 100
+12439,RX QRY,ICAN11bt500,Delay: 100
+12554,RX QRY,ICAN11bt500,Delay: 100
+12658,RX QRY,ICAN11bt500,Delay: 100
+12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+12826,RX QRY,ICAN11bt500,Delay: 100
+12941,RX MSG,ICAN11bt500,00 00 07 DF 
+12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+12941,RX QRY,ICAN11bt500,Delay: 100
+13061,RX QRY,ICAN11bt500,Delay: 100
+13173,RX QRY,ICAN11bt500,Delay: 100
+13274,RX QRY,ICAN11bt500,Delay: 100
+13389,RX QRY,ICAN11bt500,Delay: 100
+13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+13557,RX QRY,ICAN11bt500,Delay: 100
+13674,RX MSG,ICAN11bt500,00 00 07 DF 
+13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+13674,RX QRY,ICAN11bt500,Delay: 100
+13790,RX QRY,ICAN11bt500,Delay: 100
+13906,RX QRY,ICAN11bt500,Delay: 100
+14007,RX QRY,ICAN11bt500,Delay: 100
+14122,RX QRY,ICAN11bt500,Delay: 100
+14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14274,RX QRY,ICAN11bt500,Delay: 100
+14380,RX MSG,ICAN11bt500,00 00 07 DF 
+14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14380,RX QRY,ICAN11bt500,Delay: 100
+14489,RX QRY,ICAN11bt500,Delay: 100
+14599,RX QRY,ICAN11bt500,Delay: 100
+14706,RX QRY,ICAN11bt500,Delay: 100
+14806,RX QRY,ICAN11bt500,Delay: 100
+15016,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+15016,RX QRY,ICAN11bt500,Delay: 100
+15124,RX MSG,ICAN11bt500,00 00 07 DF 
+15124,RX MSG,ICAN11bt500,00 00 07 E8 
+15124,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 
+15124,RX QRY,ICAN11bt500,Delay: 100
+15237,RX QRY,ICAN11bt500,Delay: 100
+15340,RX QRY,ICAN11bt500,Delay: 100
+15456,RX QRY,ICAN11bt500,Delay: 100
+15575,RX QRY,ICAN11bt500,Delay: 100
+15707,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+15707,RX QRY,ICAN11bt500,Delay: 100
+15823,RX MSG,ICAN11bt500,00 00 07 DF 
+15823,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+15823,RX QRY,ICAN11bt500,Delay: 100
+15938,RX QRY,ICAN11bt500,Delay: 100
+16038,RX QRY,ICAN11bt500,Delay: 100
+16140,RX QRY,ICAN11bt500,Delay: 100
+16257,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:33| Port:USB
+01:32:33| ... SetupMyLastCommResult: ConditionsNotCorrect
+01:32:33| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+01:32:33| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,016.40 | Button4_Click,OnClick,OnClick)
+01:32:33| DoDad-01  ClearCommandLog ...
+01:32:33| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+01:32:34| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (641)
+01:32:34| DoDad-01  CommandLog.Length ...
+01:32:34| DoDad-01  CommandLog ... (0)
+01:32:34| DoDad-01-CommandLog-Len:219 Siz:219 | iStart: 0
+01:32:34| DoDad-01  SerialData.Length ... (3185)
+01:32:34| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:03185,03185-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  542,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  542,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  761,RX QRY,JVPW1850,Delay: 100
+                    -  898,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  924,TX MSG,I914**,33 
+                    -  5251,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11735,RX QRY,ICAN11bt500,Delay: 100
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11846,RX QRY,ICAN11bt500,Delay: 100
+                    -  11953,RX QRY,ICAN11bt500,Delay: 100
+                    -  12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12090,RX QRY,ICAN11bt500,Delay: 100
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12207,RX QRY,ICAN11bt500,Delay: 100
+                    -  12324,RX QRY,ICAN11bt500,Delay: 100
+                    -  12439,RX QRY,ICAN11bt500,Delay: 100
+                    -  12554,RX QRY,ICAN11bt500,Delay: 100
+                    -  12658,RX QRY,ICAN11bt500,Delay: 100
+                    -  12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12826,RX QRY,ICAN11bt500,Delay: 100
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12941,RX QRY,ICAN11bt500,Delay: 100
+                    -  13061,RX QRY,ICAN11bt500,Delay: 100
+                    -  13173,RX QRY,ICAN11bt500,Delay: 100
+                    -  13274,RX QRY,ICAN11bt500,Delay: 100
+                    -  13389,RX QRY,ICAN11bt500,Delay: 100
+                    -  13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13557,RX QRY,ICAN11bt500,Delay: 100
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13674,RX QRY,ICAN11bt500,Delay: 100
+                    -  13790,RX QRY,ICAN11bt500,Delay: 100
+                    -  13906,RX QRY,ICAN11bt500,Delay: 100
+                    -  14007,RX QRY,ICAN11bt500,Delay: 100
+                    -  14122,RX QRY,ICAN11bt500,Delay: 100
+                    -  14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+                    -  14274,RX QRY,ICAN11bt500,Delay: 100
+                    -  14380,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  14380,RX QRY,ICAN11bt500,Delay: 100
+                    -  14489,RX QRY,ICAN11bt500,Delay: 100
+                    -  14599,RX QRY,ICAN11bt500,Delay: 100
+                    -  14706,RX QRY,ICAN11bt500,Delay: 100
+                    -  14806,RX QRY,ICAN11bt500,Delay: 100
+                    -  15016,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+                    -  15016,RX QRY,ICAN11bt500,Delay: 100
+                    -  15124,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  15124,RX MSG,ICAN11bt500,00 00 07 E8 
+                    -  15124,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 
+                    -  15124,RX QRY,ICAN11bt500,Delay: 100
+                    -  15237,RX QRY,ICAN11bt500,Delay: 100
+                    -  15340,RX QRY,ICAN11bt500,Delay: 100
+                    -  15456,RX QRY,ICAN11bt500,Delay: 100
+                    -  15575,RX QRY,ICAN11bt500,Delay: 100
+                    -  15707,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+                    -  15707,RX QRY,ICAN11bt500,Delay: 100
+                    -  15823,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  15823,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+                    -  15823,RX QRY,ICAN11bt500,Delay: 100
+                    -  15938,RX QRY,ICAN11bt500,Delay: 100
+                    -  16038,RX QRY,ICAN11bt500,Delay: 100
+                    -  16140,RX QRY,ICAN11bt500,Delay: 100
+                    -  16257,RX QRY,ICAN11bt500,Delay: 100
+                    -  16404,TX MSG,ICAN11bt500,00 00 07 DF 03 
+                    -  16406,RX QRY,ICAN11bt500,Delay: 100
+                    -  16507,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  16507,RX MSG,ICAN11bt500,00 00 07 E8 
+                    -  16507,RX MSG,ICAN11bt500,00 00 07 E8 43 03 01 72 02 57 03 39 
+                    -  16507,RX QRY,ICAN11bt500,Delay: 100
+                    -  16609,RX QRY,ICAN11bt500,Delay: 100
+                    -  16720,RX QRY,ICAN11bt500,Delay: 100
+                    -  16824,RX QRY,ICAN11bt500,Delay: 100
+                    -  16939,RX QRY,ICAN11bt500,Delay: 100
+                    (0.638 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+01:32:34| TraceLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+14247,SerialDataLog: Get
+14250,Port: Get
+14274,ClearCommandLog
+14274,GetModePID: Mode($01), Pid($60), Ecu(null)
+14922,GetModePID [Response]: DADTimedOut (Count: 0) {  null  }
+14928,CommandLog: Get
+14928,CommandLog: Get
+14930,SerialDataLog: Get
+14930,SerialDataLog: Get
+14934,TraceDataLog: Get
+14938,CommandLog: Get
+14941,OBDProtocol: Get( ICAN11bt500 )
+14941,VendorLog: Get
+14945,SerialDataLog: Get
+14949,Port: Get
+15016,GetModePID: Mode($09), Pid($02), Ecu(null)
+15680,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 }
+15705,ClearCommandLog
+15706,GetModePID: Mode($01), Pid($01), Ecu(null)
+16368,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+16373,CommandLog: Get
+16374,CommandLog: Get
+16377,SerialDataLog: Get
+16377,SerialDataLog: Get
+16383,TraceDataLog: Get
+16389,CommandLog: Get
+16390,OBDProtocol: Get( ICAN11bt500 )
+16390,VendorLog: Get
+16396,SerialDataLog: Get
+16400,Port: Get
+16404,ClearCommandLog
+16404,GetModePID: Mode($03), Pid($00), Ecu(null)
+17040,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--03 01 72 02 57 03 39 }
+17043,CommandLog: Get
+17045,CommandLog: Get
+17045,SerialDataLog: Get
+17047,SerialDataLog: Get
+17055,TraceDataLog: Get
+
+==============================================================
+
+01:32:34| CommandLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+16404,TX MSG,ICAN11bt500,00 00 07 DF 03 
+16507,RX MSG,ICAN11bt500,00 00 07 DF 
+16507,RX MSG,ICAN11bt500,00 00 07 E8 
+16507,RX MSG,ICAN11bt500,00 00 07 E8 43 03 01 72 02 57 03 39 
+
+01:32:34| OBDProtocol:ICAN11bt500
+01:32:34| VendorLog:DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+
+==============================================================
+Trace Data Log
+==============================================================
+
+2,ClearCommandLog
+5,Initialize
+506,GetVoltage
+510,GetVoltage [Response]: 12.1
+12058,Initialize [Response]: Success ICAN11bt500
+12064,CommandLog: Get
+12066,CommandLog: Get
+12067,SerialDataLog: Get
+12068,SerialDataLog: Get
+12071,TraceDataLog: Get
+12073,CommandLog: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12074,VendorLog: Get
+12074,SerialDataLog: Get
+12074,Port: Get
+12074,OBDProtocol: Get( ICAN11bt500 )
+12090,ClearCommandLog
+12090,GetModePID: Mode($01), Pid($00), Ecu(null)
+12776,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+12778,CommandLog: Get
+12780,CommandLog: Get
+12782,SerialDataLog: Get
+12782,SerialDataLog: Get
+12784,TraceDataLog: Get
+12786,CommandLog: Get
+12789,OBDProtocol: Get( ICAN11bt500 )
+12791,VendorLog: Get
+12795,SerialDataLog: Get
+12797,Port: Get
+12826,ClearCommandLog
+12826,GetModePID: Mode($01), Pid($20), Ecu(null)
+13505,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+13509,CommandLog: Get
+13510,CommandLog: Get
+13510,SerialDataLog: Get
+13515,SerialDataLog: Get
+13516,TraceDataLog: Get
+13526,CommandLog: Get
+13529,OBDProtocol: Get( ICAN11bt500 )
+13531,VendorLog: Get
+13535,SerialDataLog: Get
+13539,Port: Get
+13557,ClearCommandLog
+13557,GetModePID: Mode($01), Pid($40), Ecu(null)
+14223,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+14228,CommandLog: Get
+14228,CommandLog: Get
+14230,SerialDataLog: Get
+14230,SerialDataLog: Get
+14234,TraceDataLog: Get
+14237,CommandLog: Get
+14240,OBDProtocol: Get( ICAN11bt500 )
+14241,VendorLog: Get
+14247,SerialDataLog: Get
+14250,Port: Get
+14274,ClearCommandLog
+14274,GetModePID: Mode($01), Pid($60), Ecu(null)
+14922,GetModePID [Response]: DADTimedOut (Count: 0) {  null  }
+14928,CommandLog: Get
+14928,CommandLog: Get
+14930,SerialDataLog: Get
+14930,SerialDataLog: Get
+14934,TraceDataLog: Get
+14938,CommandLog: Get
+14941,OBDProtocol: Get( ICAN11bt500 )
+14941,VendorLog: Get
+14945,SerialDataLog: Get
+14949,Port: Get
+15016,GetModePID: Mode($09), Pid($02), Ecu(null)
+15680,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 }
+15705,ClearCommandLog
+15706,GetModePID: Mode($01), Pid($01), Ecu(null)
+16368,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--FF FF FF FF FF }
+16373,CommandLog: Get
+16374,CommandLog: Get
+16377,SerialDataLog: Get
+16377,SerialDataLog: Get
+16383,TraceDataLog: Get
+16389,CommandLog: Get
+16390,OBDProtocol: Get( ICAN11bt500 )
+16390,VendorLog: Get
+16396,SerialDataLog: Get
+16400,Port: Get
+16404,ClearCommandLog
+16404,GetModePID: Mode($03), Pid($00), Ecu(null)
+17040,GetModePID [Response]: Success (Count: 1) { 0: 07 E8--03 01 72 02 57 03 39 }
+17043,CommandLog: Get
+17045,CommandLog: Get
+17045,SerialDataLog: Get
+17047,SerialDataLog: Get
+17055,TraceDataLog: Get
+17063,CommandLog: Get
+17065,OBDProtocol: Get( ICAN11bt500 )
+17067,VendorLog: Get
+
+==============================================================
+Message Data Log
+==============================================================
+
+
+==============================================================
+
+
+01:32:34| SerialDataLog:DAD_DLL_VERSION_1.0.0.0
+542,TX MSG,JVPW1850,68 6A F1 01 00 
+542,RX QRY,JVPW1850,Delay: 100
+657,RX QRY,JVPW1850,Delay: 100
+761,RX QRY,JVPW1850,Delay: 100
+898,TX MSG,JPWM1850,61 6A F1 01 00 
+924,TX MSG,I914**,33 
+5251,TX MSG,KWPF**,C1 33 F1 81 
+11733,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+11735,RX QRY,ICAN11bt500,Delay: 100
+11841,RX MSG,ICAN11bt500,00 00 07 DF 
+11841,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+11846,RX QRY,ICAN11bt500,Delay: 100
+11953,RX QRY,ICAN11bt500,Delay: 100
+12090,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+12090,RX QRY,ICAN11bt500,Delay: 100
+12207,RX MSG,ICAN11bt500,00 00 07 DF 
+12207,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+12207,RX QRY,ICAN11bt500,Delay: 100
+12324,RX QRY,ICAN11bt500,Delay: 100
+12439,RX QRY,ICAN11bt500,Delay: 100
+12554,RX QRY,ICAN11bt500,Delay: 100
+12658,RX QRY,ICAN11bt500,Delay: 100
+12826,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+12826,RX QRY,ICAN11bt500,Delay: 100
+12941,RX MSG,ICAN11bt500,00 00 07 DF 
+12941,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+12941,RX QRY,ICAN11bt500,Delay: 100
+13061,RX QRY,ICAN11bt500,Delay: 100
+13173,RX QRY,ICAN11bt500,Delay: 100
+13274,RX QRY,ICAN11bt500,Delay: 100
+13389,RX QRY,ICAN11bt500,Delay: 100
+13557,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+13557,RX QRY,ICAN11bt500,Delay: 100
+13674,RX MSG,ICAN11bt500,00 00 07 DF 
+13674,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+13674,RX QRY,ICAN11bt500,Delay: 100
+13790,RX QRY,ICAN11bt500,Delay: 100
+13906,RX QRY,ICAN11bt500,Delay: 100
+14007,RX QRY,ICAN11bt500,Delay: 100
+14122,RX QRY,ICAN11bt500,Delay: 100
+14274,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14274,RX QRY,ICAN11bt500,Delay: 100
+14380,RX MSG,ICAN11bt500,00 00 07 DF 
+14380,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14380,RX QRY,ICAN11bt500,Delay: 100
+14489,RX QRY,ICAN11bt500,Delay: 100
+14599,RX QRY,ICAN11bt500,Delay: 100
+14706,RX QRY,ICAN11bt500,Delay: 100
+14806,RX QRY,ICAN11bt500,Delay: 100
+15016,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+15016,RX QRY,ICAN11bt500,Delay: 100
+15124,RX MSG,ICAN11bt500,00 00 07 DF 
+15124,RX MSG,ICAN11bt500,00 00 07 E8 
+15124,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 4D 42 32 50 43 33 41 35 34 50 4D 38 33 30 35 30 36 
+15124,RX QRY,ICAN11bt500,Delay: 100
+15237,RX QRY,ICAN11bt500,Delay: 100
+15340,RX QRY,ICAN11bt500,Delay: 100
+15456,RX QRY,ICAN11bt500,Delay: 100
+15575,RX QRY,ICAN11bt500,Delay: 100
+15707,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+15707,RX QRY,ICAN11bt500,Delay: 100
+15823,RX MSG,ICAN11bt500,00 00 07 DF 
+15823,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+15823,RX QRY,ICAN11bt500,Delay: 100
+15938,RX QRY,ICAN11bt500,Delay: 100
+16038,RX QRY,ICAN11bt500,Delay: 100
+16140,RX QRY,ICAN11bt500,Delay: 100
+16257,RX QRY,ICAN11bt500,Delay: 100
+16404,TX MSG,ICAN11bt500,00 00 07 DF 03 
+16406,RX QRY,ICAN11bt500,Delay: 100
+16507,RX MSG,ICAN11bt500,00 00 07 DF 
+16507,RX MSG,ICAN11bt500,00 00 07 E8 
+16507,RX MSG,ICAN11bt500,00 00 07 E8 43 03 01 72 02 57 03 39 
+16507,RX QRY,ICAN11bt500,Delay: 100
+16609,RX QRY,ICAN11bt500,Delay: 100
+16720,RX QRY,ICAN11bt500,Delay: 100
+16824,RX QRY,ICAN11bt500,Delay: 100
+16939,RX QRY,ICAN11bt500,Delay: 100
+
+01:32:34| Port:USB

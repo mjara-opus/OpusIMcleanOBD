@@ -213,6 +213,9 @@ Module Module1
     Public OBDdata_MILtxt As String
     Public OBDdata_DTC As String
     Public OBDdata_DTCtxt As String
+    Public OBDdata_RPMhx As String
+    Public OBDdata_RPM As Integer
+    Public OBDdata_RPMmat(3) As Integer
 
     'Public xOBDcadtxt As String
     Public xOBDHeadtxt As String
@@ -255,7 +258,7 @@ Module Module1
     Public xOpus_KeyDevice As String
     Public xOpus_KeyDevicePass As Boolean
 
-    Public xVIDB_ConnectionString As String
+    Public xVIDB_ConnectionString As String '= "server=localhost;uid=opus1234;pwd=1234opus;database=OpusOBDtest;Integrated Security=True"
     Public xVIDBLinkOnline As Boolean
 
     Public xLocalKEYfile As String = My.Computer.FileSystem.CurrentDirectory & "\OpusKeyLicense.key"
@@ -3402,29 +3405,39 @@ Module Module1
         Dim Ix1 As Integer = 0
         'ReDim OBDdataBus(100)      Chr(13) & '& vbCrLf
 
-        If InStr(pDataTxt, "41 01") > 0 And InStr(pDataTxt, "07 E8") > 0 Then '-- OBDdata_MIL 
+        If InStr(pDataTxt, "07 E8") > 0 Then '-- 07 E8 = ECU motor de gasolina 
 
-            If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
-
-            OBDdata_MIL = Trim(lBustxt)
-            'Call DECODE_MIL(OBDdata_MIL)
-
-        Else
-
-            If InStr(pDataTxt, "49 02") > 0 Then '-- OBDdata_MIL 
+            If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
 
                 If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
 
-                OBDdata_VIN = Trim(lBustxt)
+                OBDdata_MIL = Trim(lBustxt)
+                'Call DECODE_MIL(OBDdata_MIL)
 
             Else
 
-                If InStr(pDataTxt, "43") > 0 Then '-- OBDdata_DTC 
+                If InStr(pDataTxt, "41 0C") > 0 Then '-- OBDdata_RPM 
 
                     If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    OBDdata_RPMhx = Trim(lBustxt)
 
-                    OBDdata_DTC = Trim(lBustxt)
-                    'Call DECODE_DTC(OBDdata_DTC)
+                Else
+
+                    If InStr(pDataTxt, "49 02") > 0 Then '-- OBDdata_MIL 
+
+                        If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                        OBDdata_VIN = Trim(lBustxt)
+
+                    Else
+
+                        If InStr(pDataTxt, "43") > 0 Then '-- OBDdata_DTC 
+
+                            If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                            OBDdata_DTC = Trim(lBustxt)
+
+                        End If
+
+                    End If
 
                 End If
 
@@ -3702,6 +3715,41 @@ Module Module1
 
     End Function
 
+    Private Sub DECODE_RPM(ByVal pBufferDAT As String)
+
+        pBufferDAT = zipESP(pBufferDAT)
+        Applog("DECODE_RPM: " & pBufferDAT)
+
+        Dim Ix0 As Integer = 0
+        Dim SizeBufferSalina As Integer = Len(pBufferDAT)
+
+        If InStr(pBufferDAT, "NODATA") Then
+            OBDdata_RPM = 0
+
+        Else
+            For Ix0 = 1 To SizeBufferSalina
+                If Mid(pBufferDAT, Ix0, 4) = "410C" Then
+
+                    Dim B1, B2 As String
+                    Dim B3, B4, RdRPM As Double
+                    Dim xRPM As String = Mid(pBufferDAT, Ix0 + 4, 4)
+
+                    B1 = Mid(xRPM, 1, 2)
+                    B2 = Mid(xRPM, 3, 2)
+                    B3 = ("&H" & B1) 'Convert to Hex
+                    B4 = ("&H" & B2)
+                    RdRPM = (((B3 * 256) + B4) / 4)
+
+                    OBDdata_RPM = Math.Round(RdRPM, 0)
+                    Exit For
+
+                End If
+
+            Next
+
+        End If
+
+    End Sub
 
 
     Private Sub DECODE_DTC(ByVal pBufferDAT As String)
@@ -3975,7 +4023,7 @@ Module Module1
 
             '===================================
 
-            Applog("... Get VIN >>>")
+            Applog("... Get VIN >>>-----------------------------------------------------------------------")
 
             sr = MyDad.GetModePID(9, 2) '-- vin
 
@@ -4012,7 +4060,7 @@ Module Module1
                 'Form1.TextBox3.Text = "VIN: NULL"
             End If
 
-            Applog("... Get MON >>>")
+            Applog("... Get MON >>>-----------------------------------------------------------------------")
 
             sr = Nothing
             MyDad.ClearLogs()
@@ -4022,9 +4070,7 @@ Module Module1
                 lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
 
                 Call DECODE_Bus(MyDad.CommandLog)
-                'Form1.TextBox5.Text = "MON Hx: " & OBDdata_MIL
                 Call DECODE_MIL(OBDdata_MIL)
-                'Form1.TextBox6.Text = "MON: " & OBDdata_MILtxt
 
             Else
                 lStatus = "sr | Get MON: NULL"
@@ -4032,8 +4078,7 @@ Module Module1
             End If
             Applog(lStatus)
 
-
-            Applog("... Get DTC >>>")
+            Applog("... Get DTC >>>-----------------------------------------------------------------------")
 
             sr = Nothing
             MyDad.ClearLogs()
@@ -4043,15 +4088,40 @@ Module Module1
                 lStatus = "sr | Get DTC: " & sr.CommResult & " | " & sr.Data.Count
 
                 Call DECODE_Bus(MyDad.CommandLog)
-                'Form1.TextBox7.Text = "DTC Hx: " & OBDdata_DTC
                 Call DECODE_DTC(OBDdata_DTC)
-                'Form1.TextBox8.Text = "DTC: " & OBDdata_DTCtxt
 
             Else
                 lStatus = "sr | Get DTC: NULL"
-                'Form1.TextBox7.Text = lStatus
             End If
             Applog(lStatus)
+
+            Applog("... Get RPM >>>-----------------------------------------------------------------------")
+            Dim Ix0 As Integer = 0
+            ReDim OBDdata_RPMmat(3)
+
+            For Ix0 = 1 To 4
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &HC), "GetModePID(03, 00) - DTC count, MIL", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get RPM(" & Ix0 & "): " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_RPM(OBDdata_RPMhx)
+
+                    If Ix0 < 4 Then OBDdata_RPMmat(Ix0) = OBDdata_RPM
+
+                Else
+                    lStatus = "sr | Get RPM: NULL"
+                End If
+                Applog(lStatus)
+
+            Next
+
+            Applog("... >>>-----------------------------------------------------------------------")
+            Applog("... >>>-----------------------------------------------------------------------")
 
             Applog("VIN Hx: " & OBDdata_VIN)
             Applog("VIN: " & OBDdata_VINtxt)
@@ -4061,6 +4131,14 @@ Module Module1
 
             Applog("DTC Hx: " & OBDdata_DTC)
             Applog("DTC: " & OBDdata_DTCtxt)
+
+            Applog("RPM Hx: " & OBDdata_RPMhx)
+            Applog("RPM: " & OBDdata_RPM & " | 1: " & OBDdata_RPMmat(1) & " | 2: " & OBDdata_RPMmat(2) & " | 3: " & OBDdata_RPMmat(3))
+            If OBDdata_RPM = OBDdata_RPMmat(1) And
+                    OBDdata_RPM = OBDdata_RPMmat(2) And
+                        OBDdata_RPM = OBDdata_RPMmat(3) Then
+                Applog("****** Simulación de lecturas OBD detectada.")
+            End If
 
             Applog("*** Connect ... EOF()")
 

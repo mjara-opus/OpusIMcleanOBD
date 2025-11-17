@@ -1,0 +1,358 @@
+03:12:07| Err: LcmdOBDoff | Referencia a objeto no establecida como instancia de un objeto.
+03:12:11| >>............................ LcmdOBDon| COM COM7| BaudRate: 38400| DataBits: 8
+03:12:11| ==================================================================================================================
+03:12:11| >>... Puerto abierto, se cierra y pausa de 900 mls
+03:12:12| .
+03:12:12| >> LcmdOBDon| COM7 en línea.. ok.
+03:12:12| >> LcmdOBDon| ATSP0  
+03:12:13| >> LcmdOBDon| ATZ
+03:12:14| >> LcmdOBDon| AT H1 
+03:12:15| << LcmdOBDon | ATSP0OK>ATZ?ELM327 v1.5>AT H1OK>
+03:12:15| <<..........GetDATA| ATSP0OK>ATZ?ELM327 v1.5>AT H1OK> | size:43
+03:12:15| DECODE: ATSP0OK| size: 7 | ErrUTC: 0
+03:12:15| =========== : ATSP0OK
+03:12:15| DECODE: ATZELM327v1.5| size: 13 | ErrUTC: 0
+03:12:15| =========== ID DEVICE: ELM327v1.5
+03:12:15| DECODE: ATH1OK| size: 6 | ErrUTC: 0
+03:12:15| =========== : ATH1OK
+03:12:15| DECODE: | size: 0 | ErrUTC: 0
+03:12:15| LcmdOBDon|SDB (ELM327v1.5) en línea| COM7 ... Ok
+03:12:15| >>> SendComand| > ATRV | cc: 1 | tmr: 300
+03:12:16| <<< SendComand |  ATRV | sz:13 | stmo:1200 | bf: ATRV12.5V>
+03:12:16| <<..........GetDATA| ATRV12.5V> | size:13
+03:12:16| DECODE: ATRV12.5V| size: 9 | ErrUTC: 0
+03:12:16| =========== VOLTAJE: 12.5V | 12.5
+03:12:16| DECODE: | size: 0 | ErrUTC: 0
+03:12:16| << LcmdOBDon| Voltaje: 12.5 .... Ok
+03:12:16| >>> SendComand| > ATDP | cc: 1 | tmr: 300
+03:12:16| <<< SendComand |  ATDP | sz:12 | stmo:1200 | bf: ATDPAUTO>
+03:12:16| <<..........GetDATA| ATDPAUTO> | size:12
+03:12:16| DECODE: ATDPAUTO| size: 8 | ErrUTC: 0
+03:12:16| =========== PROTOCOLO: AUTO
+03:12:16| DECODE: | size: 0 | ErrUTC: 0
+03:12:16| << LcmdOBDon| Protocolo: AUTO ..... ok
+03:12:16| LcmdOBDon| ELM327v1.5 | << LcmdOBDon| Protocolo: AUTO ..... ok| Status: True | ... Secuencia de inicio terminada.
+03:12:16| .............................................................................................................
+03:12:18| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 1
+03:12:18| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:12:19| <<< SendComand |  0101 | sz:17 | stmo:1200 | bf: 0101SEARCHING...
+03:12:22| <<< SendComand |  0101 | sz:20 | stmo:1200 | bf: UNABLE TO CONNECT>
+03:12:22| <<..........GetDATA| 0101SEARCHING...UNABLE TO CONNECT> | size:37
+03:12:22| DECODE: 0101SEARCHING...UNABLETOCONNECT| size: 31 | ErrUTC: 17
+03:12:22| Err:DECODE| Falla de conexión con el ECU. | 1
+03:12:22| DECODE: | size: 0 | ErrUTC: 0
+03:12:23| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 2
+03:12:23| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:12:24| <<< SendComand |  0101 | sz:17 | stmo:1200 | bf: 0101SEARCHING...
+03:12:27| <<< SendComand |  0101 | sz:1 | stmo:1200 | bf: U
+03:12:27| <<< SendComand |  0101 | sz:19 | stmo:1200 | bf: NABLE TO CONNECT>
+03:12:27| <<..........GetDATA| 0101SEARCHING...UNABLE TO CONNECT> | size:37
+03:12:27| DECODE: 0101SEARCHING...UNABLETOCONNECT| size: 31 | ErrUTC: 17
+03:12:27| Err:DECODE| Falla de conexión con el ECU. | 1
+03:12:27| DECODE: | size: 0 | ErrUTC: 0
+03:12:29| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 3
+03:12:29| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:12:29| <<< SendComand |  0101 | sz:17 | stmo:1200 | bf: 0101SEARCHING...
+03:12:33| <<< SendComand |  0101 | sz:1 | stmo:1200 | bf: U
+03:12:33| <<< SendComand |  0101 | sz:19 | stmo:1200 | bf: NABLE TO CONNECT>
+03:12:33| <<..........GetDATA| 0101SEARCHING...UNABLE TO CONNECT> | size:37
+03:12:33| DECODE: 0101SEARCHING...UNABLETOCONNECT| size: 31 | ErrUTC: 17
+03:12:33| Err:DECODE| Falla de conexión con el ECU. | 1
+03:12:33| DECODE: | size: 0 | ErrUTC: 0
+03:12:34| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 4
+03:12:34| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:12:34| <<< SendComand |  0101 | sz:17 | stmo:1200 | bf: 0101SEARCHING...
+03:12:38| <<< SendComand |  0101 | sz:20 | stmo:1200 | bf: UNABLE TO CONNECT>
+03:12:38| <<..........GetDATA| 0101SEARCHING...UNABLE TO CONNECT> | size:37
+03:12:38| DECODE: 0101SEARCHING...UNABLETOCONNECT| size: 31 | ErrUTC: 17
+03:12:38| Err:DECODE| Falla de conexión con el ECU. | 1
+03:12:38| DECODE: | size: 0 | ErrUTC: 0
+03:12:39| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 5
+03:12:39| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:12:39| <<< SendComand |  0101 | sz:17 | stmo:1200 | bf: 0101SEARCHING...
+03:12:43| <<< SendComand |  0101 | sz:1 | stmo:1200 | bf: U
+03:12:43| <<< SendComand |  0101 | sz:19 | stmo:1200 | bf: NABLE TO CONNECT>
+03:12:43| <<..........GetDATA| 0101SEARCHING...UNABLE TO CONNECT> | size:37
+03:12:43| DECODE: 0101SEARCHING...UNABLETOCONNECT| size: 31 | ErrUTC: 17
+03:12:43| Err:DECODE| Falla de conexión con el ECU. | 1
+03:12:43| DECODE: | size: 0 | ErrUTC: 0
+03:12:44| >> LcmdOBDon| AT H0 
+03:12:45| << LgetMILsts - SendComand(0101) | 9 | 
+03:12:46| |||||||||||||||||||||||||||||||||||||||||  OBD-OFF
+03:12:47| |||||||||||||||||||||||||||||||||||||||||  OBD-OFF
+03:13:15| >>............................ LcmdOBDon| COM COM7| BaudRate: 38400| DataBits: 8
+03:13:15| ==================================================================================================================
+03:13:15| >>... Puerto abierto, se cierra y pausa de 900 mls
+03:13:17| .
+03:13:17| >> LcmdOBDon| COM7 en línea.. ok.
+03:13:17| >> LcmdOBDon| ATSP0  
+03:13:17| >> LcmdOBDon| ATZ
+03:13:18| >> LcmdOBDon| AT H1 
+03:13:19| << LcmdOBDon | ATSP0OK>ATZ?ELM327 v1.5>AT H1OK>
+03:13:19| <<..........GetDATA| ATSP0OK>ATZ?ELM327 v1.5>AT H1OK> | size:43
+03:13:19| DECODE: ATSP0OK| size: 7 | ErrUTC: 0
+03:13:19| =========== 0101: ATSP0OK
+03:13:19| DECODE: ATZELM327v1.5| size: 13 | ErrUTC: 0
+03:13:19| =========== ID DEVICE: ELM327v1.5
+03:13:19| DECODE: ATH1OK| size: 6 | ErrUTC: 0
+03:13:19| =========== 0101: ATH1OK
+03:13:19| DECODE: | size: 0 | ErrUTC: 0
+03:13:19| LcmdOBDon|SDB (ELM327v1.5) en línea| COM7 ... Ok
+03:13:19| >>> SendComand| > ATRV | cc: 1 | tmr: 300
+03:13:20| <<< SendComand |  ATRV | sz:13 | stmo:1200 | bf: ATRV14.3V>
+03:13:20| <<..........GetDATA| ATRV14.3V> | size:13
+03:13:20| DECODE: ATRV14.3V| size: 9 | ErrUTC: 0
+03:13:20| =========== VOLTAJE: 14.3V | 14.3
+03:13:20| DECODE: | size: 0 | ErrUTC: 0
+03:13:20| << LcmdOBDon| Voltaje: 14.3 .... Ok
+03:13:20| >>> SendComand| > ATDP | cc: 1 | tmr: 300
+03:13:20| <<< SendComand |  ATDP | sz:12 | stmo:1200 | bf: ATDPAUTO>
+03:13:20| <<..........GetDATA| ATDPAUTO> | size:12
+03:13:20| DECODE: ATDPAUTO| size: 8 | ErrUTC: 0
+03:13:20| =========== PROTOCOLO: AUTO
+03:13:20| DECODE: | size: 0 | ErrUTC: 0
+03:13:21| << LcmdOBDon| Protocolo: AUTO ..... ok
+03:13:21| LcmdOBDon| ELM327v1.5 | << LcmdOBDon| Protocolo: AUTO ..... ok| Status: True | ... Secuencia de inicio terminada.
+03:13:21| .............................................................................................................
+03:13:22| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 1
+03:13:22| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:13:23| <<< SendComand |  0101 | sz:17 | stmo:1200 | bf: 0101SEARCHING...
+03:13:23| <<< SendComand |  0101 | sz:1 | stmo:1200 | bf: 8
+03:13:23| <<< SendComand |  0101 | sz:28 | stmo:1200 | bf: 6 F1 11 41 01 85 07 E5 05 40
+03:13:23| <<< SendComand |  0101 | sz:1 | stmo:1200 | bf: >
+03:13:23| <<..........GetDATA| 0101SEARCHING...86 F1 11 41 01 85 07 E5 05 40> | size:47
+03:13:23| DECODE: 0101SEARCHING...86F11141018507E50540| size: 36 | ErrUTC: 0
+03:13:23| =========== MIL: 0101SEARCHING...86F11141018507E50540 | 
+03:13:23| DECODE: | size: 0 | ErrUTC: 0
+03:13:24| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 2
+03:13:24| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:13:25| <<< SendComand |  0101 | sz:38 | stmo:1200 | bf: 010186 F1 11 41 01 85 07 E5 05 40 >
+03:13:25| <<..........GetDATA| 010186 F1 11 41 01 85 07 E5 05 40 > | size:38
+03:13:25| DECODE: 010186F11141018507E50540| size: 24 | ErrUTC: 0
+03:13:25| DECODE_MIL | Pid02: 010186F11141018507E50540
+03:13:25| DECODE_MIL dato: 8507E505
+03:13:25| Status: 8507E505
+03:13:25| A: 85 | 133 | 10000101
+03:13:25| B: 07 | 7 | 00000111
+03:13:25| C: E5 | 229 | 11100101
+03:13:25| D: 05 | 5 | 00000101
+03:13:25| LrdOBD_Vin : 
+03:13:25| LrdOBD_EDO_MIL : 1
+03:13:25| LrdOBD_MSI   : 110 | B0 : 1 | B4 : 0
+03:13:25| LrdOBD_CCM   : 109 | C0 : 1 | D0 : 1
+03:13:25| LrdOBD_CMB   : 110 | B1 : 1 | B5 : 0
+03:13:25| LrdOBD_O2S   : 110 | C5 : 1 | D5 : 0
+03:13:25| LrdOBD_CAT   : 110 | B2 : 1 | B6 : 0
+03:13:25| LrdOBD_CCC   : 100 | C1 : 0 | D1 : 0
+03:13:25| LrdOBD_EVS   : 109 | C2 : 1 | D2 : 1
+03:13:25| LrdOBD_SAS   : 110 | C3 : 0 | D3 : 0
+03:13:25| LrdOBD_FAA   : 110 | C4 : 0 | D4 : 0
+03:13:25| LrdOBD_O2C   : 110 | C6 : 1 | D6 : 0
+03:13:25| =========== MIL: 010186F11141018507E50540 | 1
+03:13:25| DECODE: | size: 0 | ErrUTC: 0
+03:13:25| >> ...............................................LgetMILsts - SendComand(0101) MIL | cc: 3
+03:13:25| >>> SendComand| > 0101 | cc: 1 | tmr: 300
+03:13:25| <<< SendComand |  0101 | sz:38 | stmo:1200 | bf: 010186 F1 11 41 01 85 07 E5 05 40 >
+03:13:25| <<..........GetDATA| 010186 F1 11 41 01 85 07 E5 05 40 > | size:38
+03:13:25| DECODE: 010186F11141018507E50540| size: 24 | ErrUTC: 0
+03:13:25| DECODE_MIL | Pid02: 010186F11141018507E50540
+03:13:25| DECODE_MIL dato: 8507E505
+03:13:25| Status: 8507E505
+03:13:25| A: 85 | 133 | 10000101
+03:13:25| B: 07 | 7 | 00000111
+03:13:25| C: E5 | 229 | 11100101
+03:13:25| D: 05 | 5 | 00000101
+03:13:25| LrdOBD_Vin : 
+03:13:25| LrdOBD_EDO_MIL : 1
+03:13:25| LrdOBD_MSI   : 110 | B0 : 1 | B4 : 0
+03:13:25| LrdOBD_CCM   : 109 | C0 : 1 | D0 : 1
+03:13:25| LrdOBD_CMB   : 110 | B1 : 1 | B5 : 0
+03:13:25| LrdOBD_O2S   : 110 | C5 : 1 | D5 : 0
+03:13:25| LrdOBD_CAT   : 110 | B2 : 1 | B6 : 0
+03:13:25| LrdOBD_CCC   : 100 | C1 : 0 | D1 : 0
+03:13:25| LrdOBD_EVS   : 109 | C2 : 1 | D2 : 1
+03:13:25| LrdOBD_SAS   : 110 | C3 : 0 | D3 : 0
+03:13:25| LrdOBD_FAA   : 110 | C4 : 0 | D4 : 0
+03:13:25| LrdOBD_O2C   : 110 | C6 : 1 | D6 : 0
+03:13:25| =========== MIL: 010186F11141018507E50540 | 1
+03:13:25| DECODE: | size: 0 | ErrUTC: 0
+03:13:25| >> LcmdOBDon| AT H0 
+03:13:26| << LgetMILsts - SendComand(0101) | 1 | 8507E505
+03:13:29| >> LgetRPM - SendComand(010C) 
+03:13:29| >>> SendComand| > 010C | cc: 1 | tmr: 300
+03:13:29| <<< SendComand |  010C | sz:31 | stmo:1200 | bf: AT H0OK>010C41 0C 0E B6 >
+03:13:29| <<..........GetDATA| AT H0OK>010C41 0C 0E B6 > | size:31
+03:13:29| DECODE: ATH0OK| size: 6 | ErrUTC: 0
+03:13:29| =========== 010C: ATH0OK
+03:13:29| DECODE: 010C410C0EB6| size: 12 | ErrUTC: 0
+03:13:29| DECODE_RPM: 410C0EB6
+03:13:29| =========== RPM: 410C0EB6 | 942
+03:13:29| DECODE: | size: 0 | ErrUTC: 0
+03:13:29| << LgetRPM - SendComand(010C) | 942
+03:13:31| >> LgetVIN - SendComand(0902) 
+03:13:31| >>> SendComand| > 0902 | cc: 1 | tmr: 300
+03:13:31| <<< SendComand |  0902 | sz:113 | stmo:1200 | bf: 090249 02 01 00 00 00 33 49 02 02 47 31 54 41 49 02 03 35 41 46 39 49 02 04 48 4C 31 34 49 02 05 34 30 38 32
+03:13:31| <<< SendComand |  0902 | sz:1 | stmo:1200 | bf: >
+03:13:31| <<..........GetDATA| 090249 02 01 00 00 00 33 49 02 02 47 31 54 41 49 02 03 35 41 46 39 49 02 04 48 4C 31 34 49 02 05 34 30 38 32> | size:114
+03:13:31| DECODE: 0902490201000000334902024731544149020335414639490204484C313449020534303832| size: 74 | ErrUTC: 0
+03:13:31| DECODE_VIN | Pid01: 0902490201000000334902024731544149020335414639490204484C313449020534303832 | 86F111490201000000334902024731544149020335414639490204484C313449020534303832
+03:13:31| =========== SERIE: 0902490201000000334902024731544149020335414639490204484C313449020534303832 | 3G1TA5AF9HL144082
+03:13:31| DECODE: | size: 0 | ErrUTC: 0
+03:13:31| << LgetVIN - SendComand(0902) | 3G1TA5AF9HL144082
+03:13:32| >> LfncBasicTest - SendComand(03) 
+03:13:32| >>> SendComand| > 03 | cc: 1 | tmr: 300
+03:13:33| <<< SendComand |  03 | sz:49 | stmo:1200 | bf: 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 >
+03:13:33| <<..........GetDATA| 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 > | size:49
+03:13:33| DECODE: 034303400016030043045204490000| size: 30 | ErrUTC: 0
+03:13:33| DECODE_DTC | Pid03-07: 034303400016030043045204490000 | 034303400016030043045204490000
+03:13:33| ....4000
+03:13:33| ----------- DTC codigo falla: 4000 | ...
+03:13:33| ....1603
+03:13:33| ----------- DTC codigo falla: 1603 | ...
+03:13:33| ....0043
+03:13:33| ----------- DTC codigo falla: 0043 | ...
+03:13:33| ....0452
+03:13:33| ----------- DTC codigo falla: 0452 | ...
+03:13:33| ....0449
+03:13:33| ----------- DTC codigo falla: 0449 | ...
+03:13:33| ....0000
+03:13:33| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:33| =========== DTC: 034303400016030043045204490000
+03:13:33| DECODE: | size: 0 | ErrUTC: 0
+03:13:34| >> LfncBasicTest - SendComand(07) 
+03:13:34| >>> SendComand| > 07 | cc: 1 | tmr: 300
+03:13:34| <<< SendComand |  07 | sz:27 | stmo:1200 | bf: 0747 04 52 04 49 00 00 >
+03:13:34| <<..........GetDATA| 0747 04 52 04 49 00 00 > | size:27
+03:13:34| DECODE: 0747045204490000| size: 16 | ErrUTC: 0
+03:13:34| DECODE_DTC | Pid03-07: 0747045204490000 | 0747045204490000
+03:13:34| ----------- DTC codigo falla: 5204 | ...
+03:13:34| ----------- DTC codigo falla: 4900 | ...
+03:13:34| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:34| =========== DTC: 0747045204490000
+03:13:34| DECODE: | size: 0 | ErrUTC: 0
+03:13:35| >> LfncBasicTest - SendComand(03) 
+03:13:35| >>> SendComand| > 03 | cc: 1 | tmr: 300
+03:13:35| <<< SendComand |  03 | sz:49 | stmo:1200 | bf: 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 >
+03:13:35| <<..........GetDATA| 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 > | size:49
+03:13:35| DECODE: 034303400016030043045204490000| size: 30 | ErrUTC: 0
+03:13:35| DECODE_DTC | Pid03-07: 034303400016030043045204490000 | 034303400016030043045204490000
+03:13:35| ....4000
+03:13:35| ----------- DTC codigo falla: 4000 | ...
+03:13:35| ....1603
+03:13:35| ----------- DTC codigo falla: 1603 | ...
+03:13:35| ....0043
+03:13:35| ----------- DTC codigo falla: 0043 | ...
+03:13:35| ....0452
+03:13:35| ----------- DTC codigo falla: 0452 | ...
+03:13:35| ....0449
+03:13:35| ----------- DTC codigo falla: 0449 | ...
+03:13:35| ....0000
+03:13:35| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:35| =========== DTC: 034303400016030043045204490000
+03:13:35| DECODE: | size: 0 | ErrUTC: 0
+03:13:36| >> LfncBasicTest - SendComand(07) 
+03:13:36| >>> SendComand| > 07 | cc: 1 | tmr: 300
+03:13:37| <<< SendComand |  07 | sz:27 | stmo:1200 | bf: 0747 04 52 04 49 00 00 >
+03:13:37| <<..........GetDATA| 0747 04 52 04 49 00 00 > | size:27
+03:13:37| DECODE: 0747045204490000| size: 16 | ErrUTC: 0
+03:13:37| DECODE_DTC | Pid03-07: 0747045204490000 | 0747045204490000
+03:13:37| ----------- DTC codigo falla: 5204 | ...
+03:13:37| ----------- DTC codigo falla: 4900 | ...
+03:13:37| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:37| =========== DTC: 0747045204490000
+03:13:37| DECODE: | size: 0 | ErrUTC: 0
+03:13:38| >> LfncBasicTest - SendComand(03) 
+03:13:38| >>> SendComand| > 03 | cc: 1 | tmr: 300
+03:13:38| <<< SendComand |  03 | sz:49 | stmo:1200 | bf: 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 >
+03:13:38| <<..........GetDATA| 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 > | size:49
+03:13:38| DECODE: 034303400016030043045204490000| size: 30 | ErrUTC: 0
+03:13:38| DECODE_DTC | Pid03-07: 034303400016030043045204490000 | 034303400016030043045204490000
+03:13:38| ....4000
+03:13:38| ----------- DTC codigo falla: 4000 | ...
+03:13:38| ....1603
+03:13:38| ----------- DTC codigo falla: 1603 | ...
+03:13:38| ....0043
+03:13:38| ----------- DTC codigo falla: 0043 | ...
+03:13:38| ....0452
+03:13:38| ----------- DTC codigo falla: 0452 | ...
+03:13:38| ....0449
+03:13:38| ----------- DTC codigo falla: 0449 | ...
+03:13:38| ....0000
+03:13:38| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:38| =========== DTC: 034303400016030043045204490000
+03:13:38| DECODE: | size: 0 | ErrUTC: 0
+03:13:39| >> LfncBasicTest - SendComand(07) 
+03:13:39| >>> SendComand| > 07 | cc: 1 | tmr: 300
+03:13:39| <<< SendComand |  07 | sz:27 | stmo:1200 | bf: 0747 04 52 04 49 00 00 >
+03:13:39| <<..........GetDATA| 0747 04 52 04 49 00 00 > | size:27
+03:13:39| DECODE: 0747045204490000| size: 16 | ErrUTC: 0
+03:13:39| DECODE_DTC | Pid03-07: 0747045204490000 | 0747045204490000
+03:13:39| ----------- DTC codigo falla: 5204 | ...
+03:13:39| ----------- DTC codigo falla: 4900 | ...
+03:13:39| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:39| =========== DTC: 0747045204490000
+03:13:39| DECODE: | size: 0 | ErrUTC: 0
+03:13:40| >> LfncBasicTest - SendComand(03) 
+03:13:40| >>> SendComand| > 03 | cc: 1 | tmr: 300
+03:13:41| <<< SendComand |  03 | sz:49 | stmo:1200 | bf: 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 >
+03:13:41| <<..........GetDATA| 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 > | size:49
+03:13:41| DECODE: 034303400016030043045204490000| size: 30 | ErrUTC: 0
+03:13:41| DECODE_DTC | Pid03-07: 034303400016030043045204490000 | 034303400016030043045204490000
+03:13:41| ....4000
+03:13:41| ----------- DTC codigo falla: 4000 | ...
+03:13:41| ....1603
+03:13:41| ----------- DTC codigo falla: 1603 | ...
+03:13:41| ....0043
+03:13:41| ----------- DTC codigo falla: 0043 | ...
+03:13:41| ....0452
+03:13:41| ----------- DTC codigo falla: 0452 | ...
+03:13:41| ....0449
+03:13:41| ----------- DTC codigo falla: 0449 | ...
+03:13:41| ....0000
+03:13:41| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:41| =========== DTC: 034303400016030043045204490000
+03:13:41| DECODE: | size: 0 | ErrUTC: 0
+03:13:42| >> LfncBasicTest - SendComand(07) 
+03:13:42| >>> SendComand| > 07 | cc: 1 | tmr: 300
+03:13:42| <<< SendComand |  07 | sz:27 | stmo:1200 | bf: 0747 04 52 04 49 00 00 >
+03:13:42| <<..........GetDATA| 0747 04 52 04 49 00 00 > | size:27
+03:13:42| DECODE: 0747045204490000| size: 16 | ErrUTC: 0
+03:13:42| DECODE_DTC | Pid03-07: 0747045204490000 | 0747045204490000
+03:13:42| ----------- DTC codigo falla: 5204 | ...
+03:13:42| ----------- DTC codigo falla: 4900 | ...
+03:13:42| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:42| =========== DTC: 0747045204490000
+03:13:42| DECODE: | size: 0 | ErrUTC: 0
+03:13:43| >> LfncBasicTest - SendComand(03) 
+03:13:43| >>> SendComand| > 03 | cc: 1 | tmr: 300
+03:13:43| <<< SendComand |  03 | sz:49 | stmo:1200 | bf: 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 >
+03:13:43| <<..........GetDATA| 0343 03 40 00 16 03 00 43 04 52 04 49 00 00 > | size:49
+03:13:43| DECODE: 034303400016030043045204490000| size: 30 | ErrUTC: 0
+03:13:43| DECODE_DTC | Pid03-07: 034303400016030043045204490000 | 034303400016030043045204490000
+03:13:43| ....4000
+03:13:43| ----------- DTC codigo falla: 4000 | ...
+03:13:43| ....1603
+03:13:43| ----------- DTC codigo falla: 1603 | ...
+03:13:43| ....0043
+03:13:43| ----------- DTC codigo falla: 0043 | ...
+03:13:43| ....0452
+03:13:43| ----------- DTC codigo falla: 0452 | ...
+03:13:43| ....0449
+03:13:43| ----------- DTC codigo falla: 0449 | ...
+03:13:43| ....0000
+03:13:43| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:43| =========== DTC: 034303400016030043045204490000
+03:13:43| DECODE: | size: 0 | ErrUTC: 0
+03:13:44| >> LfncBasicTest - SendComand(07) 
+03:13:44| >>> SendComand| > 07 | cc: 1 | tmr: 300
+03:13:45| <<< SendComand |  07 | sz:27 | stmo:1200 | bf: 0747 04 52 04 49 00 00 >
+03:13:45| <<..........GetDATA| 0747 04 52 04 49 00 00 > | size:27
+03:13:45| DECODE: 0747045204490000| size: 16 | ErrUTC: 0
+03:13:45| DECODE_DTC | Pid03-07: 0747045204490000 | 0747045204490000
+03:13:45| ----------- DTC codigo falla: 5204 | ...
+03:13:45| ----------- DTC codigo falla: 4900 | ...
+03:13:45| DECODE_DTC >> 110|109|110|110|110[1] Dtc:
+03:13:45| =========== DTC: 0747045204490000
+03:13:45| DECODE: | size: 0 | ErrUTC: 0
+03:13:46| << LfncBasicTest - SendComand(03/07) | 110|109|110|110|110[1] Dtc:
+03:13:47| |||||||||||||||||||||||||||||||||||||||||  OBD-OFF

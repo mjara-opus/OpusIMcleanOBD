@@ -1,0 +1,1175 @@
+09:04:22| Pass: Servicios NET en línea.
+09:04:27| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:04:27| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:04:30| CFD | Search_Result_Count:0
+09:04:30| ... CheckForDevice |0
+09:04:30| Err:FindUSBDevices | Dispositivo IMClean no detectado. 
+09:04:46| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:04:46| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:04:49| CFD | Search_Result_Count:1
+09:04:49| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:04:50| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:04:50| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:04:50| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:04:50| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:04:50| ... GetPropertyValueAsString: VehiclePassThru
+09:04:50| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:04:50| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:04:50| ... GetPropertyValueAsString: Win32_PnPEntity
+09:04:50| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:04:50| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:04:50| ... CheckForDevice |1
+09:04:50| Pass:FindUSBDevices.
+09:04:50| zipESP: HODW NEWP AXID  | HODWNEWPAXID
+09:04:50| facNS: IEXFM0000207393E -> 13417
+09:04:50| facFH: 12112025 -> 2533
+09:07:03| Success
+09:07:03| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+09:07:03| InitIMCleanDevice | DeviceType:4171
+09:07:03| InitIMCleanDevice | DeviceVoltage:11.9
+09:07:03| InitIMCleanDevice | DeviceVoltageDLC:12.3
+09:07:17| ... Connect_OBD
+09:07:17| ... GetCallingProcedure | lVehiculoLink
+09:07:17| ... GetCallingProcedure | VehiculoLink
+09:07:17| ... GetCallingProcedure | BtnOBDtest_Click
+09:07:17| ... IncrementActiveCount | 1
+09:07:17| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+09:07:17| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+09:07:17| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+09:07:17| ... MyDADStatus | LCR:ConditionsNotCorrect,Unknown
+09:07:17| ... Connect | ---------------- Connect --------------- VIN:'' SC:'' (LCR:ConditionsNotCorrect,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:17| GetDAD | Starting ... Cnt:00001,00 Opn:F (Connect)
+09:07:17| GetDAD | Success ... Cnt:00001,01 Opn:F (Connect, )
+09:07:17| ... SetupMyLastCommResult: InvalidData
+09:07:17| ... MyDad.Initialize 
+09:07:17| ... DoDad | Action: System.Action | tag: Initialize
+09:07:17| ... GetCallingProcedure | lVehiculoLink
+09:07:17| ... GetCallingProcedure | VehiculoLink
+09:07:17| ... GetCallingProcedure | BtnOBDtest_Click
+09:07:17| DoDad-01 | Initialize (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:17| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+09:07:17| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:17| ... SetupMyLastCommResult: Success
+09:07:17| ... IsCommResultSuccess | True
+09:07:17| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.00) DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:17| ... OpenDAD_If_Needed | True
+09:07:17| DoDad-MyDeviceLogClear-01  ClearLogs ...
+09:07:17| DoDad-01  ClearCommandLog ...
+09:07:17| DoDad-01  Invoke ... (Initialize)
+09:07:29| ... SetupVehicleIsLinked
+09:07:29| ... GetCallingProcedure | SetupMyLastCommResult
+09:07:29| ... GetCallingProcedure | _Lambda$__0
+09:07:29| ... GetCallingProcedure | DoDad
+09:07:29| SVLI | VehicleIsLinked:'?'->'True'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+09:07:29| ... SetupMyLastCommResult: Success
+09:07:29| DoDad-01  Invoke ... (Initialize)  (12078)
+09:07:29| DoDad-01  CommandLog.Length ...
+09:07:29| DoDad-01  CommandLog ... (0)
+09:07:29| DoDad-01-CommandLog-Len:313 Siz:313 | iStart: 0
+09:07:29| DoDad-01  SerialData.Length ... (509)
+09:07:29| DoDad-01 | Initialize-SLL:00509,00509-CF:T-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  551,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  566,RX QRY,JVPW1850,Delay: 100
+                    -  684,RX QRY,JVPW1850,Delay: 100
+                    -  797,RX QRY,JVPW1850,Delay: 100
+                    -  910,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  932,TX MSG,I914**,33 
+                    -  5253,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11736,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11851,RX QRY,ICAN11bt500,Delay: 100
+                    -  11965,RX QRY,ICAN11bt500,Delay: 100
+                    (12.086 s,F) Initialize | 
+09:07:29| ... MyLastResult | Success,Unknown,?->True
+09:07:29| Connect | Init-Rty:2 (Success,Unknown,?->True | 12.11) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+09:07:29| ... MyDad.Initialize > Success
+09:07:29| DrewProtocol2MyProtocol | In:'ICAN11bt500'  Out:'CAN11' (CAN:True)
+09:07:29| ... GetCallingProcedure | Connect_OBD
+09:07:29| ... GetCallingProcedure | lVehiculoLink
+09:07:29| ... GetCallingProcedure | VehiculoLink
+09:07:29| GetSupportedPIDs | Starting ... (Mode:1) (Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:29| ... SetupMyLastCommResult: InvalidData
+09:07:29| ... DoDad | Action: System.Action | tag: GetModePID(01, 00) - PID support mask
+09:07:29| ... GetCallingProcedure | Connect_OBD
+09:07:29| ... GetCallingProcedure | lVehiculoLink
+09:07:29| ... GetCallingProcedure | VehiculoLink
+09:07:29| DoDad-01 | GetModePID(01, 00) - PID support mask (Open:True,012.10 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:29| DoDad-01  ClearCommandLog ...
+09:07:29| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)
+09:07:30| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)  (656)
+09:07:30| DoDad-01  CommandLog.Length ...
+09:07:30| DoDad-01  CommandLog ... (0)
+09:07:30| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:07:30| DoDad-01  SerialData.Length ... (875)
+09:07:30| DoDad-01 | GetModePID(01, 00) - PID support mask-SLL:00875,00875-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  551,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  566,RX QRY,JVPW1850,Delay: 100
+                    -  684,RX QRY,JVPW1850,Delay: 100
+                    -  797,RX QRY,JVPW1850,Delay: 100
+                    -  910,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  932,TX MSG,I914**,33 
+                    -  5253,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11736,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11851,RX QRY,ICAN11bt500,Delay: 100
+                    -  11965,RX QRY,ICAN11bt500,Delay: 100
+                    -  12097,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12099,RX QRY,ICAN11bt500,Delay: 100
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12200,RX QRY,ICAN11bt500,Delay: 100
+                    -  12316,RX QRY,ICAN11bt500,Delay: 100
+                    -  12416,RX QRY,ICAN11bt500,Delay: 100
+                    -  12532,RX QRY,ICAN11bt500,Delay: 100
+                    -  12642,RX QRY,ICAN11bt500,Delay: 100
+                    (0.654 s,F) GetModePID(01, 00) - PID support mask | NoEOL
+09:07:30| ... SetupVehicleIsLinked
+09:07:30| ... GetCallingProcedure | SetupMyLastCommResult
+09:07:30| ... GetCallingProcedure | GetSupportedPIDs
+09:07:30| ... GetCallingProcedure | Connect_OBD
+09:07:30| ... SetupMyLastCommResult: Success
+09:07:30| ... MyLastResult | Success,Unknown,True->True
+09:07:30|  (Result:Success,Unknown,True->True)
+09:07:30| GetSupportedPIDs | PID00 RspCnt:1
+09:07:30| ... GetEcuIdFromAddress
+09:07:30| ... ByteArrayToHexString | 07E8
+09:07:30| ... ByteArrayToHexString | FFFFFFFFFF
+09:07:30| ... DT_DataToString | Adr:07E8,Mod:01,PID:00,Dat:FFFFFFFFFF
+09:07:30| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:00,Dat:FFFFFFFFFF
+09:07:30| SSBAFOB | MdPID:01,00 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:001
+09:07:30| ... SetSupportedBitArrayFromObdBytes | BitAryLen:256  BitSetCnt:033  BAI:5-5,01,02,03,04,05,06,07,08,09,0A,0B,0C,0D,0E,0F,10,11,12,13,14,15,16,17,18,19,1A,1B,1C,1D,1E,1F,20
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:30| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:033 F:223)
+09:07:30| ... LogBitArray | 8
+09:07:30| ... SetupMyLastCommResult: InvalidData
+09:07:30| ... DoDad | Action: System.Action | tag: GetModePID(01, 20) - PID support mask
+09:07:30| ... GetCallingProcedure | Connect_OBD
+09:07:30| ... GetCallingProcedure | lVehiculoLink
+09:07:30| ... GetCallingProcedure | VehiculoLink
+09:07:30| DoDad-01 | GetModePID(01, 20) - PID support mask (Open:True,012.77 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:30| DoDad-01  ClearCommandLog ...
+09:07:30| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)
+09:07:31| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)  (672)
+09:07:31| DoDad-01  CommandLog.Length ...
+09:07:31| DoDad-01  CommandLog ... (0)
+09:07:31| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:07:31| DoDad-01  SerialData.Length ... (1241)
+09:07:31| DoDad-01 | GetModePID(01, 20) - PID support mask-SLL:01241,01241-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  551,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  566,RX QRY,JVPW1850,Delay: 100
+                    -  684,RX QRY,JVPW1850,Delay: 100
+                    -  797,RX QRY,JVPW1850,Delay: 100
+                    -  910,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  932,TX MSG,I914**,33 
+                    -  5253,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11736,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11851,RX QRY,ICAN11bt500,Delay: 100
+                    -  11965,RX QRY,ICAN11bt500,Delay: 100
+                    -  12097,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12099,RX QRY,ICAN11bt500,Delay: 100
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12200,RX QRY,ICAN11bt500,Delay: 100
+                    -  12316,RX QRY,ICAN11bt500,Delay: 100
+                    -  12416,RX QRY,ICAN11bt500,Delay: 100
+                    -  12532,RX QRY,ICAN11bt500,Delay: 100
+                    -  12642,RX QRY,ICAN11bt500,Delay: 100
+                    -  12773,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12773,RX QRY,ICAN11bt500,Delay: 100
+                    -  12882,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12882,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12882,RX QRY,ICAN11bt500,Delay: 100
+                    -  12999,RX QRY,ICAN11bt500,Delay: 100
+                    -  13114,RX QRY,ICAN11bt500,Delay: 100
+                    -  13223,RX QRY,ICAN11bt500,Delay: 100
+                    -  13335,RX QRY,ICAN11bt500,Delay: 100
+                    (0.672 s,F) GetModePID(01, 20) - PID support mask | NoEOL
+09:07:31| ... SetupVehicleIsLinked
+09:07:31| ... GetCallingProcedure | SetupMyLastCommResult
+09:07:31| ... GetCallingProcedure | GetSupportedPIDs
+09:07:31| ... GetCallingProcedure | Connect_OBD
+09:07:31| ... SetupMyLastCommResult: Success
+09:07:31| ... MyLastResult | Success,Unknown,True->True
+09:07:31|  (Result:Success,Unknown,True->True)
+09:07:31| GetSupportedPIDs | PID20 RspCnt:1
+09:07:31| ... GetEcuIdFromAddress
+09:07:31| ... ByteArrayToHexString | 07E8
+09:07:31| ... ByteArrayToHexString | FFFFFFFFFF
+09:07:31| ... DT_DataToString | Adr:07E8,Mod:01,PID:20,Dat:FFFFFFFFFF
+09:07:31| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:20,Dat:FFFFFFFFFF
+09:07:31| SSBAFOB | MdPID:01,20 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:033
+09:07:31| ... SetSupportedBitArrayFromObdBytes | BitAryLen:256  BitSetCnt:065  BAI:5-5,21,22,23,24,25,26,27,28,29,2A,2B,2C,2D,2E,2F,30,31,32,33,34,35,36,37,38,39,3A,3B,3C,3D,3E,3F,40
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:065 F:191)
+09:07:31| ... LogBitArray | 8
+09:07:31| ... SetupMyLastCommResult: InvalidData
+09:07:31| ... DoDad | Action: System.Action | tag: GetModePID(01, 40) - PID support mask
+09:07:31| ... GetCallingProcedure | Connect_OBD
+09:07:31| ... GetCallingProcedure | lVehiculoLink
+09:07:31| ... GetCallingProcedure | VehiculoLink
+09:07:31| DoDad-01 | GetModePID(01, 40) - PID support mask (Open:True,013.46 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:31| DoDad-01  ClearCommandLog ...
+09:07:31| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)
+09:07:31| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)  (657)
+09:07:31| DoDad-01  CommandLog.Length ...
+09:07:31| DoDad-01  CommandLog ... (0)
+09:07:31| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:07:31| DoDad-01  SerialData.Length ... (1607)
+09:07:31| DoDad-01 | GetModePID(01, 40) - PID support mask-SLL:01607,01607-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  551,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  566,RX QRY,JVPW1850,Delay: 100
+                    -  684,RX QRY,JVPW1850,Delay: 100
+                    -  797,RX QRY,JVPW1850,Delay: 100
+                    -  910,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  932,TX MSG,I914**,33 
+                    -  5253,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11736,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11851,RX QRY,ICAN11bt500,Delay: 100
+                    -  11965,RX QRY,ICAN11bt500,Delay: 100
+                    -  12097,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12099,RX QRY,ICAN11bt500,Delay: 100
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12200,RX QRY,ICAN11bt500,Delay: 100
+                    -  12316,RX QRY,ICAN11bt500,Delay: 100
+                    -  12416,RX QRY,ICAN11bt500,Delay: 100
+                    -  12532,RX QRY,ICAN11bt500,Delay: 100
+                    -  12642,RX QRY,ICAN11bt500,Delay: 100
+                    -  12773,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12773,RX QRY,ICAN11bt500,Delay: 100
+                    -  12882,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12882,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12882,RX QRY,ICAN11bt500,Delay: 100
+                    -  12999,RX QRY,ICAN11bt500,Delay: 100
+                    -  13114,RX QRY,ICAN11bt500,Delay: 100
+                    -  13223,RX QRY,ICAN11bt500,Delay: 100
+                    -  13335,RX QRY,ICAN11bt500,Delay: 100
+                    -  13454,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13456,RX QRY,ICAN11bt500,Delay: 100
+                    -  13565,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13565,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13565,RX QRY,ICAN11bt500,Delay: 100
+                    -  13673,RX QRY,ICAN11bt500,Delay: 100
+                    -  13779,RX QRY,ICAN11bt500,Delay: 100
+                    -  13883,RX QRY,ICAN11bt500,Delay: 100
+                    -  14005,RX QRY,ICAN11bt500,Delay: 100
+                    (0.656 s,F) GetModePID(01, 40) - PID support mask | NoEOL
+09:07:31| ... SetupVehicleIsLinked
+09:07:31| ... GetCallingProcedure | SetupMyLastCommResult
+09:07:31| ... GetCallingProcedure | GetSupportedPIDs
+09:07:31| ... GetCallingProcedure | Connect_OBD
+09:07:31| ... SetupMyLastCommResult: Success
+09:07:31| ... MyLastResult | Success,Unknown,True->True
+09:07:31|  (Result:Success,Unknown,True->True)
+09:07:31| GetSupportedPIDs | PID40 RspCnt:1
+09:07:31| ... GetEcuIdFromAddress
+09:07:31| ... ByteArrayToHexString | 07E8
+09:07:31| ... ByteArrayToHexString | FFFFFFFFFF
+09:07:31| ... DT_DataToString | Adr:07E8,Mod:01,PID:40,Dat:FFFFFFFFFF
+09:07:31| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:40,Dat:FFFFFFFFFF
+09:07:31| SSBAFOB | MdPID:01,40 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:065
+09:07:31| ... SetSupportedBitArrayFromObdBytes | BitAryLen:256  BitSetCnt:097  BAI:5-5,41,42,43,44,45,46,47,48,49,4A,4B,4C,4D,4E,4F,50,51,52,53,54,55,56,57,58,59,5A,5B,5C,5D,5E,5F,60
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:31| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+09:07:31| ... LogBitArray | 8
+09:07:31| ... SetupMyLastCommResult: InvalidData
+09:07:31| ... DoDad | Action: System.Action | tag: GetModePID(01, 60) - PID support mask
+09:07:31| ... GetCallingProcedure | Connect_OBD
+09:07:31| ... GetCallingProcedure | lVehiculoLink
+09:07:31| ... GetCallingProcedure | VehiculoLink
+09:07:31| DoDad-01 | GetModePID(01, 60) - PID support mask (Open:True,014.13 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:31| DoDad-01  ClearCommandLog ...
+09:07:31| DoDad-01  Invoke ... (GetModePID(01, 60) - PID support mask)
+09:07:32| DoDad-01  Invoke ... (GetModePID(01, 60) - PID support mask)  (641)
+09:07:32| DoDad-01  CommandLog.Length ...
+09:07:32| DoDad-01  CommandLog ... (0)
+09:07:32| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:07:32| DoDad-01  SerialData.Length ... (1973)
+09:07:32| DoDad-01 | GetModePID(01, 60) - PID support mask-SLL:01973,01973-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  551,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  566,RX QRY,JVPW1850,Delay: 100
+                    -  684,RX QRY,JVPW1850,Delay: 100
+                    -  797,RX QRY,JVPW1850,Delay: 100
+                    -  910,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  932,TX MSG,I914**,33 
+                    -  5253,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11736,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11847,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11851,RX QRY,ICAN11bt500,Delay: 100
+                    -  11965,RX QRY,ICAN11bt500,Delay: 100
+                    -  12097,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12099,RX QRY,ICAN11bt500,Delay: 100
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12200,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12200,RX QRY,ICAN11bt500,Delay: 100
+                    -  12316,RX QRY,ICAN11bt500,Delay: 100
+                    -  12416,RX QRY,ICAN11bt500,Delay: 100
+                    -  12532,RX QRY,ICAN11bt500,Delay: 100
+                    -  12642,RX QRY,ICAN11bt500,Delay: 100
+                    -  12773,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12773,RX QRY,ICAN11bt500,Delay: 100
+                    -  12882,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12882,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12882,RX QRY,ICAN11bt500,Delay: 100
+                    -  12999,RX QRY,ICAN11bt500,Delay: 100
+                    -  13114,RX QRY,ICAN11bt500,Delay: 100
+                    -  13223,RX QRY,ICAN11bt500,Delay: 100
+                    -  13335,RX QRY,ICAN11bt500,Delay: 100
+                    -  13454,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13456,RX QRY,ICAN11bt500,Delay: 100
+                    -  13565,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13565,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13565,RX QRY,ICAN11bt500,Delay: 100
+                    -  13673,RX QRY,ICAN11bt500,Delay: 100
+                    -  13779,RX QRY,ICAN11bt500,Delay: 100
+                    -  13883,RX QRY,ICAN11bt500,Delay: 100
+                    -  14005,RX QRY,ICAN11bt500,Delay: 100
+                    -  14123,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+                    -  14124,RX QRY,ICAN11bt500,Delay: 100
+                    -  14232,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  14232,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  14232,RX QRY,ICAN11bt500,Delay: 100
+                    -  14336,RX QRY,ICAN11bt500,Delay: 100
+                    -  14446,RX QRY,ICAN11bt500,Delay: 100
+                    -  14548,RX QRY,ICAN11bt500,Delay: 100
+                    -  14650,RX QRY,ICAN11bt500,Delay: 100
+                    (0.637 s,F) GetModePID(01, 60) - PID support mask | NoEOL
+09:07:32| ... SetupVehicleIsLinked
+09:07:32| ... GetCallingProcedure | SetupMyLastCommResult
+09:07:32| ... GetCallingProcedure | GetSupportedPIDs
+09:07:32| ... GetCallingProcedure | Connect_OBD
+09:07:32| SVLI | VehicleIsLinked:'True'->'False'  (SetupMyLastCommResult,GetSupportedPIDs,Connect_OBD)
+09:07:32| ... SetupMyLastCommResult: DADTimedOut
+09:07:32| ... MyLastResult | DADTimedOut,Unknown,True->False
+09:07:32|  (Result:DADTimedOut,Unknown,True->False)
+09:07:32| GetSupportedPIDs | Mode:1 ECUCnt:1 PIDSupDicCnt:1
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:-------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 4 | GetSupportedPIDS | Mode1-ECUE8:224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+09:07:32| ... LogBitArray | 8
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:07:32| 2 | GetSupportedPIDs | 1-ECUxx 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+09:07:32| ... LogBitArray | 8
+09:07:32| GetSupportedPIDs | PIDCnt-1-E8:097  (TPC:97)
+09:07:32| ... DictValueSortDesc
+09:07:32| DVSD | E8:097->E8:097
+09:07:32| GetSupportedPIDs | Mode:1 PIDs-'097:00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60
+09:07:32|  GetSupportedPIDs | Ending ... Success:TrueTrueTrueFalse 1-E8:097
+09:07:32| ReleaseDAD |  Starting ... Cnt:00001,01 (Connect)
+09:07:32| ... ReleaseDAD | Success ... Cnt:00001,00 Opn:T (Connect, Connect)
+09:07:32| ... SetupVehicleIsLinked
+09:07:32| ... GetCallingProcedure | Connect_OBD
+09:07:32| ... GetCallingProcedure | lVehiculoLink
+09:07:32| ... GetCallingProcedure | VehiculoLink
+09:07:32| SVLI | VehicleIsLinked:'False'->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:32| ... SetupVehicleIsLinked
+09:07:32| ... GetCallingProcedure | Connect_OBD
+09:07:32| ... GetCallingProcedure | lVehiculoLink
+09:07:32| ... GetCallingProcedure | VehiculoLink
+09:07:32| SVLI | VehicleIsLinked:'?'->'True'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+09:07:32| ... MyLastResult | DADTimedOut,Unknown,?->True
+09:07:32| Connect | Rslt:True EECUID:E8 ECUs:1-(E8:097->E8:097,) Prot:'CAN11', 'CAN11' PC:97  (DADTimedOut,Unknown,?->True, 14.83) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:32| ... DecrementActiveCount | 0
+09:07:32| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+09:07:32| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+09:07:32| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+09:07:32| ... LocalDecrementActiveCount | 0
+09:07:32| ... Get VIN >>>
+09:07:33| DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+14123,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14232,RX MSG,ICAN11bt500,00 00 07 DF 
+14232,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14803,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+14914,RX MSG,ICAN11bt500,00 00 07 DF 
+14914,RX MSG,ICAN11bt500,00 00 07 E8 
+14914,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37 
+
+09:07:33| SR: 0 | 1
+09:07:33| ... GetEcuIdFromAddress
+09:07:33| ... ByteArrayToHexString | 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37
+09:07:33| GetVIN | ECU:E8  DLen:018 (01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37)
+09:07:33| ... ByteArrayToHexString | 01,39,42,57,44,4C,35,42,5A,37,4E,50,30,34,33,35,37,37
+09:07:33| ... CheckForNAK | Ret:False  Len:18  Buf:01,39,42,57,44,4C,35,42,5A,37,4E,50,30,34,33,35,37,37  SID:09  PID:02  Prot:'CAN11'
+09:07:33| ... ByteArrayToString | 9BWDL5BZ7NP043577
+09:07:33| GetVIN | ECU:E8  VIN: 
+09:07:33| DECODE_Bus: DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+14123,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14232,RX MSG,ICAN11bt500,00 00 07 DF 
+14232,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14803,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+14914,RX MSG,ICAN11bt500,00 00 07 DF 
+14914,RX MSG,ICAN11bt500,00 00 07 E8 
+14914,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37 
+
+09:07:33| ... Get MON >>>
+09:07:33| ... SetupMyLastCommResult: ConditionsNotCorrect
+09:07:33| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+09:07:33| ... GetCallingProcedure | lVehiculoLink
+09:07:33| ... GetCallingProcedure | VehiculoLink
+09:07:33| ... GetCallingProcedure | BtnOBDtest_Click
+09:07:33| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,015.49 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:33| DoDad-01  ClearCommandLog ...
+09:07:33| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+09:07:33| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (640)
+09:07:33| DoDad-01  CommandLog.Length ...
+09:07:33| DoDad-01  CommandLog ... (0)
+09:07:33| DoDad-01-CommandLog-Len:175 Siz:175 | iStart: 0
+09:07:33| DoDad-01  SerialData.Length ... (372)
+09:07:33| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00372,00372-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+                    -  3,RX QRY,ICAN11bt500,Delay: 100
+                    -  103,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  103,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+                    -  103,RX QRY,ICAN11bt500,Delay: 100
+                    -  210,RX QRY,ICAN11bt500,Delay: 100
+                    -  315,RX QRY,ICAN11bt500,Delay: 100
+                    -  426,RX QRY,ICAN11bt500,Delay: 100
+                    -  528,RX QRY,ICAN11bt500,Delay: 100
+                    (0.641 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+09:07:33| DECODE_Bus: DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+2,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+103,RX MSG,ICAN11bt500,00 00 07 DF 
+103,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+
+09:07:33| DECODE_MIL: 00 00 07 E8 41 01 FF FF FF FF FF
+09:07:33| zipESP: 00 00 07 E8 41 01 FF FF FF FF FF | 000007E84101FFFFFFFFFF
+09:07:33| DECODE_MIL dato: FFFFFFFFFF
+09:07:33| Status: FFFFFFFFFF
+09:07:33| A: FF | 255 | 11111111
+09:07:33| B: FF | 255 | 11111111
+09:07:33| C: FF | 255 | 11111111
+09:07:33| D: FF | 255 | 11111111
+09:07:33| sr | Get MON: 0 | 1
+09:07:33| ... Get DTC >>>
+09:07:33| ... SetupMyLastCommResult: ConditionsNotCorrect
+09:07:33| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+09:07:33| ... GetCallingProcedure | lVehiculoLink
+09:07:33| ... GetCallingProcedure | VehiculoLink
+09:07:33| ... GetCallingProcedure | BtnOBDtest_Click
+09:07:33| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,016.14 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:07:33| DoDad-01  ClearCommandLog ...
+09:07:33| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+09:07:34| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (656)
+09:07:34| DoDad-01  CommandLog.Length ...
+09:07:34| DoDad-01  CommandLog ... (0)
+09:07:34| DoDad-01-CommandLog-Len:230 Siz:230 | iStart: 0
+09:07:34| DoDad-01  SerialData.Length ... (427)
+09:07:34| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00427,00427-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  3,TX MSG,ICAN11bt500,00 00 07 DF 03 
+                    -  4,RX QRY,ICAN11bt500,Delay: 100
+                    -  110,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  110,RX MSG,ICAN11bt500,00 00 07 E8 
+                    -  110,RX MSG,ICAN11bt500,00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26 
+                    -  110,RX QRY,ICAN11bt500,Delay: 100
+                    -  224,RX QRY,ICAN11bt500,Delay: 100
+                    -  327,RX QRY,ICAN11bt500,Delay: 100
+                    -  429,RX QRY,ICAN11bt500,Delay: 100
+                    -  544,RX QRY,ICAN11bt500,Delay: 100
+                    (0.658 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+09:07:34| DECODE_Bus: DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+3,TX MSG,ICAN11bt500,00 00 07 DF 03 
+110,RX MSG,ICAN11bt500,00 00 07 DF 
+110,RX MSG,ICAN11bt500,00 00 07 E8 
+110,RX MSG,ICAN11bt500,00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26 
+
+09:07:34| ... DECODE_DTC: 00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26
+09:07:34| zipESP: 00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26 | 000007E84306219622480172025704320426
+09:07:34| ... DECODE_DTC_CODIGOS: 2196
+09:07:34| ... DECODE_DTC_CODIGOS: 2248
+09:07:34| ... DECODE_DTC_CODIGOS: 0172
+09:07:34| ... DECODE_DTC_CODIGOS: 0257
+09:07:34| ... DECODE_DTC_CODIGOS: 0432
+09:07:34| ... DECODE_DTC_CODIGOS: 0426
+09:07:34| sr | Get DTC: 0 | 1
+09:07:34| VIN Hx: 00 00 07 E8 49 02 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37
+09:07:34| VIN: 9BWDL5BZ7NP043577
+09:07:34| MON Hx: 00 00 07 E8 41 01 FF FF FF FF FF
+09:07:34| MON: Mil:1| Msi:109 | Ccm:109 | Cmb:109 | O2s:109 | Cat:109 | Ccc:109 | Evs:109 | Sas:109 | Faa:109 | O2c:109
+09:07:34| DTC Hx: 00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26
+09:07:34| DTC: P2196, P2248, P0172, P0257, P0432, P0426
+09:07:34| *** Connect ... EOF()
+09:07:34| VehiculoLink: Pass:Set_DataMySQL 
+09:10:12| Pass: Servicios NET en línea.
+09:10:21| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:10:21| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:10:25| CFD | Search_Result_Count:1
+09:10:25| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:10:25| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:10:25| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:10:25| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:10:25| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:10:25| ... GetPropertyValueAsString: VehiclePassThru
+09:10:25| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:10:25| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:10:25| ... GetPropertyValueAsString: Win32_PnPEntity
+09:10:25| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:10:25| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:10:25| ... CheckForDevice |1
+09:10:25| Pass:FindUSBDevices.
+09:10:25| zipESP: HODW NEWP AXID  | HODWNEWPAXID
+09:10:25| facNS: IEXFM0000207393E -> 13417
+09:10:25| facFH: 12112025 -> 2533
+09:12:39| Success
+09:12:39| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+09:12:39| InitIMCleanDevice | DeviceType:4171
+09:12:39| InitIMCleanDevice | DeviceVoltage:11.9
+09:12:39| InitIMCleanDevice | DeviceVoltageDLC:12.3
+09:16:53| Pass: Servicios NET en línea.
+09:18:12| Pass: Servicios NET en línea.
+09:18:18| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:18:18| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:18:22| CFD | Search_Result_Count:1
+09:18:22| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:18:22| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:18:22| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:18:22| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:18:22| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:18:22| ... GetPropertyValueAsString: VehiclePassThru
+09:18:22| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:18:22| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:18:22| ... GetPropertyValueAsString: Win32_PnPEntity
+09:18:22| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:18:22| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:18:22| ... CheckForDevice |1
+09:18:22| Pass:FindUSBDevices.
+09:18:22| zipESP: HODW NEWP AXID  | HODWNEWPAXID
+09:18:22| facNS: IEXFM0000207393E -> 13417
+09:18:22| facFH: 12112025 -> 2533
+09:20:34| Success
+09:20:34| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+09:20:34| InitIMCleanDevice | DeviceType:4171
+09:20:34| InitIMCleanDevice | DeviceVoltage:12
+09:20:34| InitIMCleanDevice | DeviceVoltageDLC:12.4
+09:43:41| Pass: Servicios NET en línea.
+09:43:50| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:43:50| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:43:53| CFD | Search_Result_Count:1
+09:43:53| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:43:53| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:43:53| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:43:53| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:43:53| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:43:53| ... GetPropertyValueAsString: VehiclePassThru
+09:43:53| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:43:53| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:43:53| ... GetPropertyValueAsString: Win32_PnPEntity
+09:43:53| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:43:53| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:43:53| ... CheckForDevice |1
+09:43:53| Pass:FindUSBDevices.
+09:43:53| zipESP: HODW NEWP AXID  | HODWNEWPAXID
+09:43:53| facNS: IEXFM0000207393E -> 13417
+09:43:53| facFH: 12112025 -> 2533
+09:46:06| Success
+09:46:06| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+09:46:06| InitIMCleanDevice | DeviceType:4171
+09:46:06| InitIMCleanDevice | DeviceVoltage:12
+09:46:06| InitIMCleanDevice | DeviceVoltageDLC:12.4
+09:51:22| Pass: Servicios NET en línea.
+09:51:49| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:51:49| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:51:53| CFD | Search_Result_Count:1
+09:51:53| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:51:53| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:51:53| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:51:53| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:51:53| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:51:53| ... GetPropertyValueAsString: VehiclePassThru
+09:51:53| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:51:53| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:51:53| ... GetPropertyValueAsString: Win32_PnPEntity
+09:51:53| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:51:53| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:51:53| ... CheckForDevice |1
+09:51:53| Pass:FindUSBDevices.
+09:51:53| zipESP: HODW NEWP AXID  | HODWNEWPAXID
+09:51:53| facNS: IEXFM0000207393E -> 13417
+09:51:53| facFH: 12112025 -> 2533
+09:54:06| Success
+09:54:06| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+09:54:06| InitIMCleanDevice | DeviceType:4171
+09:54:06| InitIMCleanDevice | DeviceVoltage:12.1
+09:54:06| InitIMCleanDevice | DeviceVoltageDLC:12.4
+09:54:53| ... Connect_OBD
+09:54:53| ... GetCallingProcedure | lVehiculoLink
+09:54:53| ... GetCallingProcedure | VehiculoLink
+09:54:53| ... GetCallingProcedure | BtnOBDtest_Click
+09:54:53| ... IncrementActiveCount | 1
+09:54:53| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+09:54:53| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+09:54:53| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+09:54:53| ... MyDADStatus | LCR:ConditionsNotCorrect,Unknown
+09:54:53| ... Connect | ---------------- Connect --------------- VIN:'' SC:'' (LCR:ConditionsNotCorrect,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:54:53| GetDAD | Starting ... Cnt:00001,00 Opn:F (Connect)
+09:54:53| GetDAD | Success ... Cnt:00001,01 Opn:F (Connect, )
+09:54:53| ... SetupMyLastCommResult: InvalidData
+09:54:53| ... MyDad.Initialize 
+09:54:53| ... DoDad | Action: System.Action | tag: Initialize
+09:54:53| ... GetCallingProcedure | lVehiculoLink
+09:54:53| ... GetCallingProcedure | VehiculoLink
+09:54:53| ... GetCallingProcedure | BtnOBDtest_Click
+09:54:53| DoDad-01 | Initialize (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:54:53| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+09:54:53| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:54:53| ... SetupMyLastCommResult: Success
+09:54:53| ... IsCommResultSuccess | True
+09:54:53| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.00) DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:54:53| ... OpenDAD_If_Needed | True
+09:54:53| DoDad-MyDeviceLogClear-01  ClearLogs ...
+09:54:53| DoDad-01  ClearCommandLog ...
+09:54:53| DoDad-01  Invoke ... (Initialize)
+09:55:05| ... SetupVehicleIsLinked
+09:55:05| ... GetCallingProcedure | SetupMyLastCommResult
+09:55:05| ... GetCallingProcedure | _Lambda$__0
+09:55:05| ... GetCallingProcedure | DoDad
+09:55:05| SVLI | VehicleIsLinked:'?'->'True'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+09:55:05| ... SetupMyLastCommResult: Success
+09:55:05| DoDad-01  Invoke ... (Initialize)  (12078)
+09:55:05| DoDad-01  CommandLog.Length ...
+09:55:05| DoDad-01  CommandLog ... (0)
+09:55:05| DoDad-01-CommandLog-Len:313 Siz:313 | iStart: 0
+09:55:05| DoDad-01  SerialData.Length ... (509)
+09:55:05| DoDad-01 | Initialize-SLL:00509,00509-CF:T-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  540,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  555,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  776,RX QRY,JVPW1850,Delay: 100
+                    -  911,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  935,TX MSG,I914**,33 
+                    -  5254,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11735,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11845,RX QRY,ICAN11bt500,Delay: 100
+                    -  11958,RX QRY,ICAN11bt500,Delay: 100
+                    (12.082 s,F) Initialize | 
+09:55:05| ... MyLastResult | Success,Unknown,?->True
+09:55:05| Connect | Init-Rty:2 (Success,Unknown,?->True | 12.11) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+09:55:05| ... MyDad.Initialize > Success
+09:55:05| DrewProtocol2MyProtocol | In:'ICAN11bt500'  Out:'CAN11' (CAN:True)
+09:55:05| ... GetCallingProcedure | Connect_OBD
+09:55:05| ... GetCallingProcedure | lVehiculoLink
+09:55:05| ... GetCallingProcedure | VehiculoLink
+09:55:05| GetSupportedPIDs | Starting ... (Mode:1) (Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:05| ... SetupMyLastCommResult: InvalidData
+09:55:05| ... DoDad | Action: System.Action | tag: GetModePID(01, 00) - PID support mask
+09:55:05| ... GetCallingProcedure | Connect_OBD
+09:55:05| ... GetCallingProcedure | lVehiculoLink
+09:55:05| ... GetCallingProcedure | VehiculoLink
+09:55:05| DoDad-01 | GetModePID(01, 00) - PID support mask (Open:True,012.09 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:05| DoDad-01  ClearCommandLog ...
+09:55:05| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)
+09:55:05| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)  (687)
+09:55:05| DoDad-01  CommandLog.Length ...
+09:55:05| DoDad-01  CommandLog ... (0)
+09:55:05| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:55:05| DoDad-01  SerialData.Length ... (875)
+09:55:05| DoDad-01 | GetModePID(01, 00) - PID support mask-SLL:00875,00875-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  540,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  555,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  776,RX QRY,JVPW1850,Delay: 100
+                    -  911,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  935,TX MSG,I914**,33 
+                    -  5254,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11735,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11845,RX QRY,ICAN11bt500,Delay: 100
+                    -  11958,RX QRY,ICAN11bt500,Delay: 100
+                    -  12105,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12106,RX QRY,ICAN11bt500,Delay: 100
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12224,RX QRY,ICAN11bt500,Delay: 100
+                    -  12340,RX QRY,ICAN11bt500,Delay: 100
+                    -  12442,RX QRY,ICAN11bt500,Delay: 100
+                    -  12558,RX QRY,ICAN11bt500,Delay: 100
+                    -  12663,RX QRY,ICAN11bt500,Delay: 100
+                    (0.689 s,F) GetModePID(01, 00) - PID support mask | NoEOL
+09:55:05| ... SetupVehicleIsLinked
+09:55:05| ... GetCallingProcedure | SetupMyLastCommResult
+09:55:05| ... GetCallingProcedure | GetSupportedPIDs
+09:55:05| ... GetCallingProcedure | Connect_OBD
+09:55:05| ... SetupMyLastCommResult: Success
+09:55:05| ... MyLastResult | Success,Unknown,True->True
+09:55:05|  (Result:Success,Unknown,True->True)
+09:55:05| GetSupportedPIDs | PID00 RspCnt:1
+09:55:05| ... GetEcuIdFromAddress
+09:55:05| ... ByteArrayToHexString | 07E8
+09:55:05| ... ByteArrayToHexString | FFFFFFFFFF
+09:55:05| ... DT_DataToString | Adr:07E8,Mod:01,PID:00,Dat:FFFFFFFFFF
+09:55:05| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:00,Dat:FFFFFFFFFF
+09:55:05| SSBAFOB | MdPID:01,00 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:001
+09:55:05| ... SetSupportedBitArrayFromObdBytes | BitAryLen:256  BitSetCnt:033  BAI:5-5,01,02,03,04,05,06,07,08,09,0A,0B,0C,0D,0E,0F,10,11,12,13,14,15,16,17,18,19,1A,1B,1C,1D,1E,1F,20
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:05| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:033 F:223)
+09:55:05| ... LogBitArray | 8
+09:55:05| ... SetupMyLastCommResult: InvalidData
+09:55:05| ... DoDad | Action: System.Action | tag: GetModePID(01, 20) - PID support mask
+09:55:05| ... GetCallingProcedure | Connect_OBD
+09:55:05| ... GetCallingProcedure | lVehiculoLink
+09:55:05| ... GetCallingProcedure | VehiculoLink
+09:55:05| DoDad-01 | GetModePID(01, 20) - PID support mask (Open:True,012.80 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:05| DoDad-01  ClearCommandLog ...
+09:55:05| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)
+09:55:06| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)  (687)
+09:55:06| DoDad-01  CommandLog.Length ...
+09:55:06| DoDad-01  CommandLog ... (0)
+09:55:06| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:55:06| DoDad-01  SerialData.Length ... (1241)
+09:55:06| DoDad-01 | GetModePID(01, 20) - PID support mask-SLL:01241,01241-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  540,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  555,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  776,RX QRY,JVPW1850,Delay: 100
+                    -  911,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  935,TX MSG,I914**,33 
+                    -  5254,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11735,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11845,RX QRY,ICAN11bt500,Delay: 100
+                    -  11958,RX QRY,ICAN11bt500,Delay: 100
+                    -  12105,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12106,RX QRY,ICAN11bt500,Delay: 100
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12224,RX QRY,ICAN11bt500,Delay: 100
+                    -  12340,RX QRY,ICAN11bt500,Delay: 100
+                    -  12442,RX QRY,ICAN11bt500,Delay: 100
+                    -  12558,RX QRY,ICAN11bt500,Delay: 100
+                    -  12663,RX QRY,ICAN11bt500,Delay: 100
+                    -  12797,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12799,RX QRY,ICAN11bt500,Delay: 100
+                    -  12907,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12907,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12907,RX QRY,ICAN11bt500,Delay: 100
+                    -  13010,RX QRY,ICAN11bt500,Delay: 100
+                    -  13126,RX QRY,ICAN11bt500,Delay: 100
+                    -  13245,RX QRY,ICAN11bt500,Delay: 100
+                    -  13357,RX QRY,ICAN11bt500,Delay: 100
+                    (0.688 s,F) GetModePID(01, 20) - PID support mask | NoEOL
+09:55:06| ... SetupVehicleIsLinked
+09:55:06| ... GetCallingProcedure | SetupMyLastCommResult
+09:55:06| ... GetCallingProcedure | GetSupportedPIDs
+09:55:06| ... GetCallingProcedure | Connect_OBD
+09:55:06| ... SetupMyLastCommResult: Success
+09:55:06| ... MyLastResult | Success,Unknown,True->True
+09:55:06|  (Result:Success,Unknown,True->True)
+09:55:06| GetSupportedPIDs | PID20 RspCnt:1
+09:55:06| ... GetEcuIdFromAddress
+09:55:06| ... ByteArrayToHexString | 07E8
+09:55:06| ... ByteArrayToHexString | FFFFFFFFFF
+09:55:06| ... DT_DataToString | Adr:07E8,Mod:01,PID:20,Dat:FFFFFFFFFF
+09:55:06| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:20,Dat:FFFFFFFFFF
+09:55:06| SSBAFOB | MdPID:01,20 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:033
+09:55:06| ... SetSupportedBitArrayFromObdBytes | BitAryLen:256  BitSetCnt:065  BAI:5-5,21,22,23,24,25,26,27,28,29,2A,2B,2C,2D,2E,2F,30,31,32,33,34,35,36,37,38,39,3A,3B,3C,3D,3E,3F,40
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:06| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:065 F:191)
+09:55:06| ... LogBitArray | 8
+09:55:06| ... SetupMyLastCommResult: InvalidData
+09:55:06| ... DoDad | Action: System.Action | tag: GetModePID(01, 40) - PID support mask
+09:55:06| ... GetCallingProcedure | Connect_OBD
+09:55:06| ... GetCallingProcedure | lVehiculoLink
+09:55:06| ... GetCallingProcedure | VehiculoLink
+09:55:06| DoDad-01 | GetModePID(01, 40) - PID support mask (Open:True,013.50 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:06| DoDad-01  ClearCommandLog ...
+09:55:06| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)
+09:55:07| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)  (672)
+09:55:07| DoDad-01  CommandLog.Length ...
+09:55:07| DoDad-01  CommandLog ... (0)
+09:55:07| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:55:07| DoDad-01  SerialData.Length ... (1607)
+09:55:07| DoDad-01 | GetModePID(01, 40) - PID support mask-SLL:01607,01607-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  540,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  555,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  776,RX QRY,JVPW1850,Delay: 100
+                    -  911,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  935,TX MSG,I914**,33 
+                    -  5254,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11735,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11845,RX QRY,ICAN11bt500,Delay: 100
+                    -  11958,RX QRY,ICAN11bt500,Delay: 100
+                    -  12105,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12106,RX QRY,ICAN11bt500,Delay: 100
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12224,RX QRY,ICAN11bt500,Delay: 100
+                    -  12340,RX QRY,ICAN11bt500,Delay: 100
+                    -  12442,RX QRY,ICAN11bt500,Delay: 100
+                    -  12558,RX QRY,ICAN11bt500,Delay: 100
+                    -  12663,RX QRY,ICAN11bt500,Delay: 100
+                    -  12797,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12799,RX QRY,ICAN11bt500,Delay: 100
+                    -  12907,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12907,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12907,RX QRY,ICAN11bt500,Delay: 100
+                    -  13010,RX QRY,ICAN11bt500,Delay: 100
+                    -  13126,RX QRY,ICAN11bt500,Delay: 100
+                    -  13245,RX QRY,ICAN11bt500,Delay: 100
+                    -  13357,RX QRY,ICAN11bt500,Delay: 100
+                    -  13496,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13496,RX QRY,ICAN11bt500,Delay: 100
+                    -  13606,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13606,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13606,RX QRY,ICAN11bt500,Delay: 100
+                    -  13706,RX QRY,ICAN11bt500,Delay: 100
+                    -  13824,RX QRY,ICAN11bt500,Delay: 100
+                    -  13940,RX QRY,ICAN11bt500,Delay: 100
+                    -  14056,RX QRY,ICAN11bt500,Delay: 100
+                    (0.664 s,F) GetModePID(01, 40) - PID support mask | NoEOL
+09:55:07| ... SetupVehicleIsLinked
+09:55:07| ... GetCallingProcedure | SetupMyLastCommResult
+09:55:07| ... GetCallingProcedure | GetSupportedPIDs
+09:55:07| ... GetCallingProcedure | Connect_OBD
+09:55:07| ... SetupMyLastCommResult: Success
+09:55:07| ... MyLastResult | Success,Unknown,True->True
+09:55:07|  (Result:Success,Unknown,True->True)
+09:55:07| GetSupportedPIDs | PID40 RspCnt:1
+09:55:07| ... GetEcuIdFromAddress
+09:55:07| ... ByteArrayToHexString | 07E8
+09:55:07| ... ByteArrayToHexString | FFFFFFFFFF
+09:55:07| ... DT_DataToString | Adr:07E8,Mod:01,PID:40,Dat:FFFFFFFFFF
+09:55:07| GetSupportedPIDS | Data-Adr:07E8,Mod:01,PID:40,Dat:FFFFFFFFFF
+09:55:07| SSBAFOB | MdPID:01,40 ECU:E8 ...  InCnt:5 (FF,FF,FF,FF,FF,BC:040) SrtIdx:065
+09:55:07| ... SetSupportedBitArrayFromObdBytes | BitAryLen:256  BitSetCnt:097  BAI:5-5,41,42,43,44,45,46,47,48,49,4A,4B,4C,4D,4E,4F,50,51,52,53,54,55,56,57,58,59,5A,5B,5C,5D,5E,5F,60
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-E8-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+09:55:07| ... LogBitArray | 8
+09:55:07| ... SetupMyLastCommResult: InvalidData
+09:55:07| ... DoDad | Action: System.Action | tag: GetModePID(01, 60) - PID support mask
+09:55:07| ... GetCallingProcedure | Connect_OBD
+09:55:07| ... GetCallingProcedure | lVehiculoLink
+09:55:07| ... GetCallingProcedure | VehiculoLink
+09:55:07| DoDad-01 | GetModePID(01, 60) - PID support mask (Open:True,014.17 | Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:07| DoDad-01  ClearCommandLog ...
+09:55:07| DoDad-01  Invoke ... (GetModePID(01, 60) - PID support mask)
+09:55:07| DoDad-01  Invoke ... (GetModePID(01, 60) - PID support mask)  (640)
+09:55:07| DoDad-01  CommandLog.Length ...
+09:55:07| DoDad-01  CommandLog ... (0)
+09:55:07| DoDad-01-CommandLog-Len:183 Siz:183 | iStart: 0
+09:55:07| DoDad-01  SerialData.Length ... (1973)
+09:55:07| DoDad-01 | GetModePID(01, 60) - PID support mask-SLL:01973,01973-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  540,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  555,RX QRY,JVPW1850,Delay: 100
+                    -  657,RX QRY,JVPW1850,Delay: 100
+                    -  776,RX QRY,JVPW1850,Delay: 100
+                    -  911,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  935,TX MSG,I914**,33 
+                    -  5254,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11735,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11737,RX QRY,ICAN11bt500,Delay: 100
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  11839,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  11845,RX QRY,ICAN11bt500,Delay: 100
+                    -  11958,RX QRY,ICAN11bt500,Delay: 100
+                    -  12105,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  12106,RX QRY,ICAN11bt500,Delay: 100
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12224,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  12224,RX QRY,ICAN11bt500,Delay: 100
+                    -  12340,RX QRY,ICAN11bt500,Delay: 100
+                    -  12442,RX QRY,ICAN11bt500,Delay: 100
+                    -  12558,RX QRY,ICAN11bt500,Delay: 100
+                    -  12663,RX QRY,ICAN11bt500,Delay: 100
+                    -  12797,TX MSG,ICAN11bt500,00 00 07 DF 01 20 
+                    -  12799,RX QRY,ICAN11bt500,Delay: 100
+                    -  12907,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  12907,RX MSG,ICAN11bt500,00 00 07 E8 41 20 FF FF FF FF FF 
+                    -  12907,RX QRY,ICAN11bt500,Delay: 100
+                    -  13010,RX QRY,ICAN11bt500,Delay: 100
+                    -  13126,RX QRY,ICAN11bt500,Delay: 100
+                    -  13245,RX QRY,ICAN11bt500,Delay: 100
+                    -  13357,RX QRY,ICAN11bt500,Delay: 100
+                    -  13496,TX MSG,ICAN11bt500,00 00 07 DF 01 40 
+                    -  13496,RX QRY,ICAN11bt500,Delay: 100
+                    -  13606,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  13606,RX MSG,ICAN11bt500,00 00 07 E8 41 40 FF FF FF FF FF 
+                    -  13606,RX QRY,ICAN11bt500,Delay: 100
+                    -  13706,RX QRY,ICAN11bt500,Delay: 100
+                    -  13824,RX QRY,ICAN11bt500,Delay: 100
+                    -  13940,RX QRY,ICAN11bt500,Delay: 100
+                    -  14056,RX QRY,ICAN11bt500,Delay: 100
+                    -  14170,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+                    -  14170,RX QRY,ICAN11bt500,Delay: 100
+                    -  14273,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  14273,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+                    -  14273,RX QRY,ICAN11bt500,Delay: 100
+                    -  14375,RX QRY,ICAN11bt500,Delay: 100
+                    -  14490,RX QRY,ICAN11bt500,Delay: 100
+                    -  14598,RX QRY,ICAN11bt500,Delay: 100
+                    -  14706,RX QRY,ICAN11bt500,Delay: 100
+                    (0.643 s,F) GetModePID(01, 60) - PID support mask | NoEOL
+09:55:07| ... SetupVehicleIsLinked
+09:55:07| ... GetCallingProcedure | SetupMyLastCommResult
+09:55:07| ... GetCallingProcedure | GetSupportedPIDs
+09:55:07| ... GetCallingProcedure | Connect_OBD
+09:55:07| SVLI | VehicleIsLinked:'True'->'False'  (SetupMyLastCommResult,GetSupportedPIDs,Connect_OBD)
+09:55:07| ... SetupMyLastCommResult: DADTimedOut
+09:55:07| ... MyLastResult | DADTimedOut,Unknown,True->False
+09:55:07|  (Result:DADTimedOut,Unknown,True->False)
+09:55:07| GetSupportedPIDs | Mode:1 ECUCnt:1 PIDSupDicCnt:1
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:-------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 4 | GetSupportedPIDS | Mode1-ECUE8:224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+09:55:07| ... LogBitArray | 8
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 000-00_00-020: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 032-20_20-040: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 064-40_40-060: T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T, T,T,T,T,T,T,T,T
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 096-60_60-080: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+09:55:07| 2 | GetSupportedPIDs | 1-ECUxx 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:097 F:159)
+09:55:07| ... LogBitArray | 8
+09:55:07| GetSupportedPIDs | PIDCnt-1-E8:097  (TPC:97)
+09:55:07| ... DictValueSortDesc
+09:55:07| DVSD | E8:097->E8:097
+09:55:07| GetSupportedPIDs | Mode:1 PIDs-'097:00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F 20 21 22 23 24 25 26 27 28 29 2A 2B 2C 2D 2E 2F 30 31 32 33 34 35 36 37 38 39 3A 3B 3C 3D 3E 3F 40 41 42 43 44 45 46 47 48 49 4A 4B 4C 4D 4E 4F 50 51 52 53 54 55 56 57 58 59 5A 5B 5C 5D 5E 5F 60
+09:55:07|  GetSupportedPIDs | Ending ... Success:TrueTrueTrueFalse 1-E8:097
+09:55:07| ReleaseDAD |  Starting ... Cnt:00001,01 (Connect)
+09:55:07| ... ReleaseDAD | Success ... Cnt:00001,00 Opn:T (Connect, Connect)
+09:55:07| ... SetupVehicleIsLinked
+09:55:07| ... GetCallingProcedure | Connect_OBD
+09:55:07| ... GetCallingProcedure | lVehiculoLink
+09:55:07| ... GetCallingProcedure | VehiculoLink
+09:55:07| SVLI | VehicleIsLinked:'False'->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:07| ... SetupVehicleIsLinked
+09:55:07| ... GetCallingProcedure | Connect_OBD
+09:55:07| ... GetCallingProcedure | lVehiculoLink
+09:55:07| ... GetCallingProcedure | VehiculoLink
+09:55:07| SVLI | VehicleIsLinked:'?'->'True'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+09:55:07| ... MyLastResult | DADTimedOut,Unknown,?->True
+09:55:07| Connect | Rslt:True EECUID:E8 ECUs:1-(E8:097->E8:097,) Prot:'CAN11', 'CAN11' PC:97  (DADTimedOut,Unknown,?->True, 14.89) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:55:07| ... DecrementActiveCount | 0
+09:55:07| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+09:55:07| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+09:55:07| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+09:55:07| ... LocalDecrementActiveCount | 0
+09:55:07| ... Get VIN >>>
+09:55:08| DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+14170,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14273,RX MSG,ICAN11bt500,00 00 07 DF 
+14273,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14860,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+14975,RX MSG,ICAN11bt500,00 00 07 DF 
+14975,RX MSG,ICAN11bt500,00 00 07 E8 
+14975,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37 
+
+09:55:08| SR: 0 | 1
+09:55:08| ... GetEcuIdFromAddress
+09:55:08| ... ByteArrayToHexString | 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37
+09:55:08| GetVIN | ECU:E8  DLen:018 (01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37)
+09:55:08| ... ByteArrayToHexString | 01,39,42,57,44,4C,35,42,5A,37,4E,50,30,34,33,35,37,37
+09:55:08| ... CheckForNAK | Ret:False  Len:18  Buf:01,39,42,57,44,4C,35,42,5A,37,4E,50,30,34,33,35,37,37  SID:09  PID:02  Prot:'CAN11'
+09:55:08| ... ByteArrayToString | 9BWDL5BZ7NP043577
+09:55:08| GetVIN | ECU:E8  VIN: 
+09:55:08| DECODE_Bus: DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+14170,TX MSG,ICAN11bt500,00 00 07 DF 01 60 
+14273,RX MSG,ICAN11bt500,00 00 07 DF 
+14273,RX MSG,ICAN11bt500,00 00 07 E8 41 00 FF FF FF FF FF 
+14860,TX MSG,ICAN11bt500,00 00 07 DF 09 02 
+14975,RX MSG,ICAN11bt500,00 00 07 DF 
+14975,RX MSG,ICAN11bt500,00 00 07 E8 
+14975,RX MSG,ICAN11bt500,00 00 07 E8 49 02 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37 
+
+09:55:08| ... Get MON >>>
+09:55:08| ... SetupMyLastCommResult: ConditionsNotCorrect
+09:55:08| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+09:55:08| ... GetCallingProcedure | lVehiculoLink
+09:55:08| ... GetCallingProcedure | VehiculoLink
+09:55:08| ... GetCallingProcedure | BtnOBDtest_Click
+09:55:08| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,015.53 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:55:08| DoDad-01  ClearCommandLog ...
+09:55:08| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+09:55:09| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (672)
+09:55:09| DoDad-01  CommandLog.Length ...
+09:55:09| DoDad-01  CommandLog ... (0)
+09:55:09| DoDad-01-CommandLog-Len:175 Siz:175 | iStart: 0
+09:55:09| DoDad-01  SerialData.Length ... (372)
+09:55:09| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00372,00372-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+                    -  2,RX QRY,ICAN11bt500,Delay: 100
+                    -  110,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  110,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+                    -  110,RX QRY,ICAN11bt500,Delay: 100
+                    -  212,RX QRY,ICAN11bt500,Delay: 100
+                    -  327,RX QRY,ICAN11bt500,Delay: 100
+                    -  443,RX QRY,ICAN11bt500,Delay: 100
+                    -  561,RX QRY,ICAN11bt500,Delay: 100
+                    (0.679 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+09:55:09| DECODE_Bus: DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+2,TX MSG,ICAN11bt500,00 00 07 DF 01 01 
+110,RX MSG,ICAN11bt500,00 00 07 DF 
+110,RX MSG,ICAN11bt500,00 00 07 E8 41 01 FF FF FF FF FF 
+
+09:55:09| DECODE_MIL: 00 00 07 E8 41 01 FF FF FF FF FF
+09:55:09| zipESP: 00 00 07 E8 41 01 FF FF FF FF FF | 000007E84101FFFFFFFFFF
+09:55:09| DECODE_MIL dato: FFFFFFFFFF
+09:55:09| Status: FFFFFFFFFF
+09:55:09| A: FF | 255 | 11111111
+09:55:09| B: FF | 255 | 11111111
+09:55:09| C: FF | 255 | 11111111
+09:55:09| D: FF | 255 | 11111111
+09:55:09| sr | Get MON: 0 | 1
+09:55:09| ... Get DTC >>>
+09:55:09| ... SetupMyLastCommResult: ConditionsNotCorrect
+09:55:09| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+09:55:09| ... GetCallingProcedure | lVehiculoLink
+09:55:09| ... GetCallingProcedure | VehiculoLink
+09:55:09| ... GetCallingProcedure | BtnOBDtest_Click
+09:55:09| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,016.22 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+09:55:09| DoDad-01  ClearCommandLog ...
+09:55:09| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+09:55:10| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (656)
+09:55:10| DoDad-01  CommandLog.Length ...
+09:55:10| DoDad-01  CommandLog ... (0)
+09:55:10| DoDad-01-CommandLog-Len:230 Siz:230 | iStart: 0
+09:55:10| DoDad-01  SerialData.Length ... (427)
+09:55:10| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00427,00427-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  3,TX MSG,ICAN11bt500,00 00 07 DF 03 
+                    -  5,RX QRY,ICAN11bt500,Delay: 100
+                    -  117,RX MSG,ICAN11bt500,00 00 07 DF 
+                    -  117,RX MSG,ICAN11bt500,00 00 07 E8 
+                    -  117,RX MSG,ICAN11bt500,00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26 
+                    -  117,RX QRY,ICAN11bt500,Delay: 100
+                    -  222,RX QRY,ICAN11bt500,Delay: 100
+                    -  323,RX QRY,ICAN11bt500,Delay: 100
+                    -  440,RX QRY,ICAN11bt500,Delay: 100
+                    -  541,RX QRY,ICAN11bt500,Delay: 100
+                    (0.652 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+09:55:10| DECODE_Bus: DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+3,TX MSG,ICAN11bt500,00 00 07 DF 03 
+117,RX MSG,ICAN11bt500,00 00 07 DF 
+117,RX MSG,ICAN11bt500,00 00 07 E8 
+117,RX MSG,ICAN11bt500,00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26 
+
+09:55:10| ... DECODE_DTC: 00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26
+09:55:10| zipESP: 00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26 | 000007E84306219622480172025704320426
+09:55:10| ... DECODE_DTC_CODIGOS: 2196
+09:55:10| ... DECODE_DTC_CODIGOS: 2248
+09:55:10| ... DECODE_DTC_CODIGOS: 0172
+09:55:10| ... DECODE_DTC_CODIGOS: 0257
+09:55:10| ... DECODE_DTC_CODIGOS: 0432
+09:55:10| ... DECODE_DTC_CODIGOS: 0426
+09:55:10| sr | Get DTC: 0 | 1
+09:55:10| VIN Hx: 00 00 07 E8 49 02 01 39 42 57 44 4C 35 42 5A 37 4E 50 30 34 33 35 37 37
+09:55:10| VIN: 9BWDL5BZ7NP043577
+09:55:10| MON Hx: 00 00 07 E8 41 01 FF FF FF FF FF
+09:55:10| MON: Mil:1| Msi:109 | Ccm:109 | Cmb:109 | O2s:109 | Cat:109 | Ccc:109 | Evs:109 | Sas:109 | Faa:109 | O2c:109
+09:55:10| DTC Hx: 00 00 07 E8 43 06 21 96 22 48 01 72 02 57 04 32 04 26
+09:55:10| DTC: P2196, P2248, P0172, P0257, P0432, P0426
+09:55:10| *** Connect ... EOF()
+09:55:10| VehiculoLink: Pass:Set_DataMySQL 

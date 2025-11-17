@@ -1,0 +1,465 @@
+02:03:56| >>> Conecta OBD ...................................................
+02:06:08| Success
+02:06:08| 4.0.0.0
+02:06:08| 4171
+02:06:08| 0
+02:06:08| 0
+02:07:01| >>> OBD - ECU ...................................................
+02:07:01| ... Connect
+02:07:01| ... LocalIncrementActiveCount
+02:07:01| ... IncrementActiveCount
+02:07:01| ... MyDADStatus: LCR:ConditionsNotCorrect,Unknown
+02:07:01| ... Connect | ---------------- Connect --------------- VIN:'' SC:'' (LCR:ConditionsNotCorrect,Unknown) (Button4_Click,OnClick,OnClick)
+02:07:01| GetDAD | Starting ... Cnt:00001,00 Opn:F (Connect)
+02:07:01| GetDAD | Success ... Cnt:00001,01 Opn:F (Connect, )
+02:07:01| ... SetupMyLastCommResult: InvalidData
+02:07:01| ... MyDad.Initialize 
+02:07:01| ... DoDad | Action: System.Action | tag: Initialize
+02:07:01| DoDad-01 | Initialize (Open:False | Button4_Click,OnClick,OnClick)
+02:07:01| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+02:07:01| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (Button4_Click,OnClick,OnClick)
+02:07:01| ... SetupMyLastCommResult: Success
+02:07:01| ... IsCommResultSuccess | True
+02:07:01| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.00) DoDad-Initialize (Button4_Click,OnClick,OnClick)
+02:07:01| ... OpenDAD_If_Needed | True
+02:07:01| DoDad-MyDeviceLogClear-01  ClearLogs ...
+02:07:01| DoDad-01  ClearCommandLog ...
+02:07:01| DoDad-01  Invoke ... (Initialize)
+02:07:09| ... SetupVehicleIsLinked
+02:07:09| SVLI | VehicleIsLinked:'?'->'True'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+02:07:09| ... SetupMyLastCommResult: Success
+02:07:09| DoDad-01  Invoke ... (Initialize)  (7984)
+02:07:09| DoDad-01  CommandLog.Length ...
+02:07:09| DoDad-01  CommandLog ... (0)
+02:07:09| DoDad-01-CommandLog-Len:350 Siz:350 | iStart: 0
+02:07:09| DoDad-01  SerialData.Length ... (567)
+02:07:09| DoDad-01 | Initialize-SLL:00567,00567-CF:T-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  537,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  544,RX QRY,JVPW1850,Delay: 100
+                    -  644,RX QRY,JVPW1850,Delay: 100
+                    -  759,RX QRY,JVPW1850,Delay: 100
+                    -  867,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  885,TX MSG,I914**,33 
+                    -  5202,TX MSG,KWPF**,C1 33 F1 81 
+                    -  6648,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  6682,RX QRY,KWPF8F6B,Delay: 100
+                    -  6783,RX MSG,KWPF8F6B,
+                    -  6783,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  6789,RX QRY,KWPF8F6B,Delay: 100
+                    -  6895,RX QRY,KWPF8F6B,Delay: 100
+                    -  7072,RX QRY,KWPF8F6B,Delay: 512
+                    -  7598,RX MSG,KWPF8F6B,
+                    -  7598,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11
+                    (7.987 s,F) Initialize | 
+02:07:09| ... MyLastResult | Success,Unknown,?->True
+02:07:09| Connect | Init-Rty:2 (Success,Unknown,?->True | 8.00) | Button4_Click,OnClick,OnClick
+02:07:09| ... MyDad.Initialize > Success
+02:07:09| DrewProtocol2MyProtocol | In:'KWPF8F6B'  Out:'KWD 2000-F' (CAN:False)
+02:07:09| ... GetSupportedPIDs
+02:07:09| GetSupportedPIDs | Starting ... (Mode:1) (Connect_TMP,Button4_Click,OnClick)
+02:07:09| ... SetupMyLastCommResult: InvalidData
+02:07:09| ... DoDad | Action: System.Action | tag: GetModePID(01, 00) - PID support mask
+02:07:09| DoDad-01 | GetModePID(01, 00) - PID support mask (Open:True,008.00 | Connect_TMP,Button4_Click,OnClick)
+02:07:09| DoDad-01  ClearCommandLog ...
+02:07:09| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)
+02:07:10| DoDad-01  Invoke ... (GetModePID(01, 00) - PID support mask)  (1156)
+02:07:10| DoDad-01  CommandLog.Length ...
+02:07:10| DoDad-01  CommandLog ... (0)
+02:07:10| DoDad-01-CommandLog-Len:147 Siz:147 | iStart: 0
+02:07:10| DoDad-01  SerialData.Length ... (876)
+02:07:10| DoDad-01 | GetModePID(01, 00) - PID support mask-SLL:00876,00876-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  537,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  544,RX QRY,JVPW1850,Delay: 100
+                    -  644,RX QRY,JVPW1850,Delay: 100
+                    -  759,RX QRY,JVPW1850,Delay: 100
+                    -  867,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  885,TX MSG,I914**,33 
+                    -  5202,TX MSG,KWPF**,C1 33 F1 81 
+                    -  6648,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  6682,RX QRY,KWPF8F6B,Delay: 100
+                    -  6783,RX MSG,KWPF8F6B,
+                    -  6783,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  6789,RX QRY,KWPF8F6B,Delay: 100
+                    -  6895,RX QRY,KWPF8F6B,Delay: 100
+                    -  7072,RX QRY,KWPF8F6B,Delay: 512
+                    -  7598,RX MSG,KWPF8F6B,
+                    -  7598,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  8409,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  8446,RX QRY,KWPF8F6B,Delay: 100
+                    -  8559,RX MSG,KWPF8F6B,
+                    -  8559,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  8559,RX QRY,KWPF8F6B,Delay: 100
+                    -  8666,RX QRY,KWPF8F6B,Delay: 100
+                    -  8776,RX QRY,KWPF8F6B,Delay: 100
+                    -  8876,RX QRY,KWPF8F6B,Delay: 100
+                    -  8982,RX QRY,KWPF8F6B,Delay: 100
+                    (1.168 s,F) GetModePID(01, 00) - PID support mask | NoEOL
+02:07:10| ... SetupVehicleIsLinked
+02:07:10| ... SetupMyLastCommResult: Success
+02:07:10| ... MyLastResult | Success,Unknown,True->True
+02:07:10|  (Result:Success,Unknown,True->True)
+02:07:10| GetSupportedPIDs | PID00 RspCnt:1
+02:07:10| ... GetEcuIdFromAddress
+02:07:10| ... DT_DataToString
+02:07:10| ... ByteArrayToHexString
+02:07:10| ... ByteArrayToHexString
+02:07:10| GetSupportedPIDS | Data-Adr:11,Mod:01,PID:00,Dat:BE3EB811
+02:07:10| ... SetSupportedBitArrayFromObdBytes
+02:07:10| ... CountBits: 6
+02:07:10| ... CountBits: 5
+02:07:10| ... CountBits: 4
+02:07:10| ... CountBits: 2
+02:07:10| SSBAFOB | MdPID:01,00 ECU:11 ...  InCnt:4 (BE,3E,B8,11,BC:017) SrtIdx:001
+02:07:10| SSBAFOB | BitAryLen:256  BitSetCnt:018  BAI:4-4,01,03,04,05,06,07,0B,0C,0D,0E,0F,11,13,14,15,1C,20
+02:07:10| ... LogBitArray
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 000-00_00-020: T,T,F,T,T,T,T,T, F,F,F,T,T,T,T,T, F,T,F,T,T,T,F,F, F,F,F,F,T,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 032-20_20-040: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 064-40_40-060: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:10| 2 | GetSupportedPIDs | 1-11-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:018 F:238)
+02:07:10| ... SetupMyLastCommResult: InvalidData
+02:07:10| ... DoDad | Action: System.Action | tag: GetModePID(01, 20) - PID support mask
+02:07:10| DoDad-01 | GetModePID(01, 20) - PID support mask (Open:True,009.18 | Connect_TMP,Button4_Click,OnClick)
+02:07:10| DoDad-01  ClearCommandLog ...
+02:07:10| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)
+02:07:12| DoDad-01  Invoke ... (GetModePID(01, 20) - PID support mask)  (1125)
+02:07:12| DoDad-01  CommandLog.Length ...
+02:07:12| DoDad-01  CommandLog ... (0)
+02:07:12| DoDad-01-CommandLog-Len:147 Siz:147 | iStart: 0
+02:07:12| DoDad-01  SerialData.Length ... (1187)
+02:07:12| DoDad-01 | GetModePID(01, 20) - PID support mask-SLL:01187,01187-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  537,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  544,RX QRY,JVPW1850,Delay: 100
+                    -  644,RX QRY,JVPW1850,Delay: 100
+                    -  759,RX QRY,JVPW1850,Delay: 100
+                    -  867,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  885,TX MSG,I914**,33 
+                    -  5202,TX MSG,KWPF**,C1 33 F1 81 
+                    -  6648,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  6682,RX QRY,KWPF8F6B,Delay: 100
+                    -  6783,RX MSG,KWPF8F6B,
+                    -  6783,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  6789,RX QRY,KWPF8F6B,Delay: 100
+                    -  6895,RX QRY,KWPF8F6B,Delay: 100
+                    -  7072,RX QRY,KWPF8F6B,Delay: 512
+                    -  7598,RX MSG,KWPF8F6B,
+                    -  7598,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  8409,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  8446,RX QRY,KWPF8F6B,Delay: 100
+                    -  8559,RX MSG,KWPF8F6B,
+                    -  8559,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  8559,RX QRY,KWPF8F6B,Delay: 100
+                    -  8666,RX QRY,KWPF8F6B,Delay: 100
+                    -  8776,RX QRY,KWPF8F6B,Delay: 100
+                    -  8876,RX QRY,KWPF8F6B,Delay: 100
+                    -  8982,RX QRY,KWPF8F6B,Delay: 100
+                    -  9578,TX MSG,KWPF8F6B,C2 33 F1 01 20 
+                    -  9609,RX QRY,KWPF8F6B,Delay: 100
+                    -  9711,RX MSG,KWPF8F6B,
+                    -  9711,RX MSG,KWPF8F6B,86 F1 11 41 20 80 00 00 01 
+                    -  9711,RX QRY,KWPF8F6B,Delay: 100
+                    -  9812,RX QRY,KWPF8F6B,Delay: 100
+                    -  9913,RX QRY,KWPF8F6B,Delay: 100
+                    -  10025,RX QRY,KWPF8F6B,Delay: 100
+                    -  10126,RX QRY,KWPF8F6B,Delay: 100
+                    (1.116 s,F) GetModePID(01, 20) - PID support mask | NoEOL
+02:07:12| ... SetupVehicleIsLinked
+02:07:12| ... SetupMyLastCommResult: Success
+02:07:12| ... MyLastResult | Success,Unknown,True->True
+02:07:12|  (Result:Success,Unknown,True->True)
+02:07:12| GetSupportedPIDs | PID20 RspCnt:1
+02:07:12| ... GetEcuIdFromAddress
+02:07:12| ... DT_DataToString
+02:07:12| ... ByteArrayToHexString
+02:07:12| ... ByteArrayToHexString
+02:07:12| GetSupportedPIDS | Data-Adr:11,Mod:01,PID:20,Dat:80000001
+02:07:12| ... SetSupportedBitArrayFromObdBytes
+02:07:12| ... CountBits: 1
+02:07:12| ... CountBits: 0
+02:07:12| ... CountBits: 0
+02:07:12| ... CountBits: 1
+02:07:12| SSBAFOB | MdPID:01,20 ECU:11 ...  InCnt:4 (80,00,00,01,BC:002) SrtIdx:033
+02:07:12| SSBAFOB | BitAryLen:256  BitSetCnt:020  BAI:4-4,21,40
+02:07:12| ... LogBitArray
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 000-00_00-020: T,T,F,T,T,T,T,T, F,F,F,T,T,T,T,T, F,T,F,T,T,T,F,F, F,F,F,F,T,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 032-20_20-040: T,T,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 064-40_40-060: T,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:12| 2 | GetSupportedPIDs | 1-11-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:020 F:236)
+02:07:12| ... SetupMyLastCommResult: InvalidData
+02:07:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 40) - PID support mask
+02:07:12| DoDad-01 | GetModePID(01, 40) - PID support mask (Open:True,010.31 | Connect_TMP,Button4_Click,OnClick)
+02:07:12| DoDad-01  ClearCommandLog ...
+02:07:12| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)
+02:07:13| DoDad-01  Invoke ... (GetModePID(01, 40) - PID support mask)  (1156)
+02:07:13| DoDad-01  CommandLog.Length ...
+02:07:13| DoDad-01  CommandLog ... (0)
+02:07:13| DoDad-01-CommandLog-Len:150 Siz:150 | iStart: 0
+02:07:13| DoDad-01  SerialData.Length ... (1505)
+02:07:13| DoDad-01 | GetModePID(01, 40) - PID support mask-SLL:01505,01505-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  537,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  544,RX QRY,JVPW1850,Delay: 100
+                    -  644,RX QRY,JVPW1850,Delay: 100
+                    -  759,RX QRY,JVPW1850,Delay: 100
+                    -  867,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  885,TX MSG,I914**,33 
+                    -  5202,TX MSG,KWPF**,C1 33 F1 81 
+                    -  6648,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  6682,RX QRY,KWPF8F6B,Delay: 100
+                    -  6783,RX MSG,KWPF8F6B,
+                    -  6783,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  6789,RX QRY,KWPF8F6B,Delay: 100
+                    -  6895,RX QRY,KWPF8F6B,Delay: 100
+                    -  7072,RX QRY,KWPF8F6B,Delay: 512
+                    -  7598,RX MSG,KWPF8F6B,
+                    -  7598,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  8409,TX MSG,KWPF8F6B,C2 33 F1 01 00 
+                    -  8446,RX QRY,KWPF8F6B,Delay: 100
+                    -  8559,RX MSG,KWPF8F6B,
+                    -  8559,RX MSG,KWPF8F6B,86 F1 11 41 00 BE 3E B8 11 
+                    -  8559,RX QRY,KWPF8F6B,Delay: 100
+                    -  8666,RX QRY,KWPF8F6B,Delay: 100
+                    -  8776,RX QRY,KWPF8F6B,Delay: 100
+                    -  8876,RX QRY,KWPF8F6B,Delay: 100
+                    -  8982,RX QRY,KWPF8F6B,Delay: 100
+                    -  9578,TX MSG,KWPF8F6B,C2 33 F1 01 20 
+                    -  9609,RX QRY,KWPF8F6B,Delay: 100
+                    -  9711,RX MSG,KWPF8F6B,
+                    -  9711,RX MSG,KWPF8F6B,86 F1 11 41 20 80 00 00 01 
+                    -  9711,RX QRY,KWPF8F6B,Delay: 100
+                    -  9812,RX QRY,KWPF8F6B,Delay: 100
+                    -  9913,RX QRY,KWPF8F6B,Delay: 100
+                    -  10025,RX QRY,KWPF8F6B,Delay: 100
+                    -  10126,RX QRY,KWPF8F6B,Delay: 100
+                    -  10707,TX MSG,KWPF8F6B,C2 33 F1 01 40 
+                    -  10744,RX QRY,KWPF8F6B,Delay: 100
+                    -  10856,RX MSG,KWPF8F6B,
+                    -  10856,RX MSG,KWPF8F6B,86 F1 11 41 40 08 08 00 00 
+                    -  10856,RX QRY,KWPF8F6B,Delay: 100
+                    -  10966,RX QRY,KWPF8F6B,Delay: 100
+                    -  11073,RX QRY,KWPF8F6B,Delay: 100
+                    -  11183,RX QRY,KWPF8F6B,Delay: 100
+                    -  11291,RX QRY,KWPF8F6B,Delay: 100
+                    (1.160 s,F) GetModePID(01, 40) - PID support mask | NoEOL
+02:07:13| ... SetupVehicleIsLinked
+02:07:13| ... SetupMyLastCommResult: Success
+02:07:13| ... MyLastResult | Success,Unknown,True->True
+02:07:13|  (Result:Success,Unknown,True->True)
+02:07:13| GetSupportedPIDs | PID40 RspCnt:1
+02:07:13| ... GetEcuIdFromAddress
+02:07:13| ... DT_DataToString
+02:07:13| ... ByteArrayToHexString
+02:07:13| ... ByteArrayToHexString
+02:07:13| GetSupportedPIDS | Data-Adr:11,Mod:01,PID:40,Dat:08080000
+02:07:13| ... SetSupportedBitArrayFromObdBytes
+02:07:13| ... CountBits: 1
+02:07:13| ... CountBits: 1
+02:07:13| ... CountBits: 0
+02:07:13| ... CountBits: 0
+02:07:13| SSBAFOB | MdPID:01,40 ECU:11 ...  InCnt:4 (08,08,00,00,BC:002) SrtIdx:065
+02:07:13| SSBAFOB | BitAryLen:256  BitSetCnt:022  BAI:4-4,45,4D
+02:07:13| ... LogBitArray
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 000-00_00-020: T,T,F,T,T,T,T,T, F,F,F,T,T,T,T,T, F,T,F,T,T,T,F,F, F,F,F,F,T,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 032-20_20-040: T,T,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 064-40_40-060: T,F,F,F,F,T,F,F, F,F,F,F,F,T,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-11-DBG3 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:022 F:234)
+02:07:13| GetSupportedPIDs | Mode:1 ECUCnt:1 PIDSupDicCnt:1
+02:07:13| ... LogBitArray
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:-------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:000-00_00-020: T,T,F,T,T,T,T,T, F,F,F,T,T,T,T,T, F,T,F,T,T,T,F,F, F,F,F,F,T,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:032-20_20-040: T,T,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:064-40_40-060: T,F,F,F,F,T,F,F, F,F,F,F,F,T,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 4 | GetSupportedPIDS | Mode1-ECU11:224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:022 F:234)
+02:07:13| ... LogBitArray
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx -------------- 0,1,2,3,4,5,6,7, 8,9,A,B,C,D,E,F, G,H,I,J,K,L,M,N, O,P,Q,R,S,T,U,V
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 000-00_00-020: T,T,F,T,T,T,T,T, F,F,F,T,T,T,T,T, F,T,F,T,T,T,F,F, F,F,F,F,T,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 032-20_20-040: T,T,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 064-40_40-060: T,F,F,F,F,T,F,F, F,F,F,F,F,T,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 096-60_60-080: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 128-80_80-0A0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 160-A0_A0-0C0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 192-C0_C0-0E0: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F
+02:07:13| 2 | GetSupportedPIDs | 1-ECUxx 224-E0_E0-100: F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F, F,F,F,F,F,F,F,F  (T:022 F:234)
+02:07:13| GetSupportedPIDs | PIDCnt-1-11:022  (TPC:22)
+02:07:13| ... DictValueSortDesc
+02:07:13| DVSD | 11:022->11:022
+02:07:13| GetSupportedPIDs | Mode:1 PIDs-'022:00 01 03 04 05 06 07 0B 0C 0D 0E 0F 11 13 14 15 1C 20 21 40 45 4D
+02:07:13|  GetSupportedPIDs | Ending ... Success:TrueTrueTrue 1-11:022
+02:07:13| ReleaseDAD |  Starting ... Cnt:00001,01 (Connect)
+02:07:13| ... ReleaseDAD | Success ... Cnt:00001,00 Opn:T (Connect, Connect)
+02:07:13| ... SetupVehicleIsLinked
+02:07:13| SVLI | VehicleIsLinked:'True'->'?'  (Connect_TMP,Button4_Click,OnClick)
+02:07:13| ... SetupVehicleIsLinked
+02:07:13| SVLI | VehicleIsLinked:'?'->'True'  (Connect_TMP,Button4_Click,OnClick)
+02:07:13| ... MyLastResult | Success,Unknown,?->True
+02:07:13| Connect | Rslt:True EECUID:11 ECUs:1-(11:022->11:022,) Prot:'KWD 2000-F', 'KWD 2000-F' PC:22  (Success,Unknown,?->True, 11.52) (Button4_Click,OnClick,OnClick)
+02:07:13| ... DecrementActiveCount
+02:07:13| ... MyLastResult | Success,Unknown,?->True
+02:07:13| ... Get VIN >>>
+02:07:14| DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+10707,TX MSG,KWPF8F6B,C2 33 F1 01 40 
+10856,RX MSG,KWPF8F6B,
+10856,RX MSG,KWPF8F6B,86 F1 11 41 40 08 08 00 00 
+11910,TX MSG,KWPF8F6B,C2 33 F1 09 02 
+12046,RX MSG,KWPF8F6B,
+12046,RX MSG,KWPF8F6B,87 F1 11 49 02 01 00 00 00 33 
+12046,RX MSG,KWPF8F6B,
+12046,RX MSG,KWPF8F6B,87 F1 11 49 02 02 47 31 54 41 
+12148,RX MSG,KWPF8F6B,
+12148,RX MSG,KWPF8F6B,87 F1 11 49 02 03 35 41 46 39 
+12148,RX MSG,KWPF8F6B,
+12148,RX MSG,KWPF8F6B,87 F1 11 49 02 04 48 4C 31 34 
+12255,RX MSG,KWPF8F6B,
+12255,RX MSG,KWPF8F6B,87 F1 11 49 02 05 34 30 38 32 
+
+02:07:14| SR: 0 | 1
+02:07:14| ... GetEcuIdFromAddress
+02:07:14| ... ByteArrayToHexString
+02:07:14| GetVIN | ECU:11  DLen:020 (00 00 00 33 47 31 54 41 35 41 46 39 48 4C 31 34 34 30 38 32)
+02:07:14| ... ByteArrayToHexString
+02:07:14| ... CheckForNAK | Ret:False  Len:20  Buf:00,00,00,33,47,31,54,41,35,41,46,39,48,4C,31,34,34,30,38,32  SID:09  PID:02  Prot:'KWD 2000-F'
+02:07:14| ... ByteArrayToString
+02:07:14| GetVIN | ECU:11  VIN: 
+02:07:14| DECODE_Bus: DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+10707,TX MSG,KWPF8F6B,C2 33 F1 01 40 
+10856,RX MSG,KWPF8F6B,
+10856,RX MSG,KWPF8F6B,86 F1 11 41 40 08 08 00 00 
+11910,TX MSG,KWPF8F6B,C2 33 F1 09 02 
+12046,RX MSG,KWPF8F6B,
+12046,RX MSG,KWPF8F6B,87 F1 11 49 02 01 00 00 00 33 
+12046,RX MSG,KWPF8F6B,
+12046,RX MSG,KWPF8F6B,87 F1 11 49 02 02 47 31 54 41 
+12148,RX MSG,KWPF8F6B,
+12148,RX MSG,KWPF8F6B,87 F1 11 49 02 03 35 41 46 39 
+12148,RX MSG,KWPF8F6B,
+12148,RX MSG,KWPF8F6B,87 F1 11 49 02 04 48 4C 31 34 
+12255,RX MSG,KWPF8F6B,
+12255,RX MSG,KWPF8F6B,87 F1 11 49 02 05 34 30 38 32 
+
+02:07:14| ... Get MON >>>
+02:07:14| ... SetupMyLastCommResult: ConditionsNotCorrect
+02:07:14| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+02:07:14| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,012.66 | Button4_Click,OnClick,OnClick)
+02:07:14| DoDad-01  ClearCommandLog ...
+02:07:14| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+02:07:15| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (1156)
+02:07:15| DoDad-01  CommandLog.Length ...
+02:07:15| DoDad-01  CommandLog ... (0)
+02:07:15| DoDad-01-CommandLog-Len:144 Siz:144 | iStart: 0
+02:07:15| DoDad-01  SerialData.Length ... (325)
+02:07:15| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00325,00325-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  385,TX MSG,KWPF8F6B,C2 33 F1 01 01 
+                    -  423,RX QRY,KWPF8F6B,Delay: 100
+                    -  532,RX MSG,KWPF8F6B,
+                    -  532,RX MSG,KWPF8F6B,86 F1 11 41 01 85 07 E5 05 
+                    -  532,RX QRY,KWPF8F6B,Delay: 100
+                    -  647,RX QRY,KWPF8F6B,Delay: 100
+                    -  759,RX QRY,KWPF8F6B,Delay: 100
+                    -  865,RX QRY,KWPF8F6B,Delay: 100
+                    -  970,RX QRY,KWPF8F6B,Delay: 100
+                    (1.150 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+02:07:15| DECODE_Bus: DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+385,TX MSG,KWPF8F6B,C2 33 F1 01 01 
+532,RX MSG,KWPF8F6B,
+532,RX MSG,KWPF8F6B,86 F1 11 41 01 85 07 E5 05 
+
+02:07:15| sr | Get MON: 0 | 1
+02:07:15| ... Get DTC >>>
+02:07:15| ... SetupMyLastCommResult: ConditionsNotCorrect
+02:07:15| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+02:07:15| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,013.81 | Button4_Click,OnClick,OnClick)
+02:07:15| DoDad-01  ClearCommandLog ...
+02:07:15| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+02:07:16| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (1172)
+02:07:16| DoDad-01  CommandLog.Length ...
+02:07:16| DoDad-01  CommandLog ... (0)
+02:07:16| DoDad-01-CommandLog-Len:218 Siz:218 | iStart: 0
+02:07:16| DoDad-01  SerialData.Length ... (399)
+02:07:16| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00399,00399-CF:F-DLLInfo:'DAD_DLL_VERSION_1.0.0.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_1.0.0.0
+                    -  402,TX MSG,KWPF8F6B,C1 33 F1 03 
+                    -  432,RX QRY,KWPF8F6B,Delay: 100
+                    -  543,RX MSG,KWPF8F6B,
+                    -  543,RX MSG,KWPF8F6B,87 F1 11 43 03 40 00 16 03 00 
+                    -  543,RX MSG,KWPF8F6B,
+                    -  543,RX MSG,KWPF8F6B,87 F1 11 43 04 52 04 49 00 00 
+                    -  543,RX QRY,KWPF8F6B,Delay: 100
+                    -  656,RX QRY,KWPF8F6B,Delay: 100
+                    -  772,RX QRY,KWPF8F6B,Delay: 100
+                    -  887,RX QRY,KWPF8F6B,Delay: 100
+                    -  995,RX QRY,KWPF8F6B,Delay: 100
+                    (1.175 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+02:07:16| DECODE_Bus: DAD_DLL_VERSION_1.0.0.0
+3.0.7.0
+
+402,TX MSG,KWPF8F6B,C1 33 F1 03 
+543,RX MSG,KWPF8F6B,
+543,RX MSG,KWPF8F6B,87 F1 11 43 03 40 00 16 03 00 
+543,RX MSG,KWPF8F6B,
+543,RX MSG,KWPF8F6B,87 F1 11 43 04 52 04 49 00 00 
+
+02:07:16| sr | Get DTC: 0 | 1
+02:07:16| VIN: 87 F1 11 49 02 05 34 30 38 32
+02:07:16| VIN decode: 3G1TA5AF9HL144082
+02:07:16| MON: 86 F1 11 41 01 85 07 E5 05
+02:07:16| VIN decode: 
+02:07:16| DTC: 87 F1 11 43 04 52 04 49 00 00
+02:07:16| DTC decode: 
+02:07:16| *** Connect ... EOF()
+02:19:27| >>> Checa Device ...................................................
+02:19:27| ... CheckForDevice
+02:19:27| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+02:19:27| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+02:19:27| CFD | Search_Result_Count:0
+02:19:27| CFD | Ending ... Cnt:0
+02:19:27| ... CheckForUSBDevices | Pass
+02:19:43| >>> Checa Device ...................................................
+02:19:43| ... CheckForDevice
+02:19:43| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+02:19:43| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+02:19:43| CFD | Search_Result_Count:1
+02:19:43| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+02:19:43| ... GetObjectArrayAsString
+02:19:43| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+02:19:43| Err:GPVAS | PortName | No encontrado 
+02:19:43| ... GetPropertyValueAsString: 
+02:19:43| ... GetPropertyValueAsString: Drew Technologies, Inc.
+02:19:43| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+02:19:43| ... GetPropertyValueAsString: VehiclePassThru
+02:19:43| ... GetPropertyValueAsString: IMClean DAD GEN 4
+02:19:43| ... GetPropertyValueAsString: IMClean DAD GEN 4
+02:19:43| ... GetPropertyValueAsString: Win32_PnPEntity
+02:19:43| ... GetPropertyValueAsString: IMClean DAD GEN 4
+02:19:43| Err:GPVAS | DriverName | No encontrado 
+02:19:43| ... GetPropertyValueAsString: 
+02:19:43| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+02:19:43| CFD | Ending ... Cnt:1
+02:19:43| ... CheckForUSBDevices | Pass

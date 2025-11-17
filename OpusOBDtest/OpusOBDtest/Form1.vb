@@ -4,7 +4,7 @@ Imports System.Threading
 Public Class Form1
 
     Public Hilo01 As Thread
-
+    Public tmrReloj As Integer
     Private Sub frmOBDtest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim lStatus As String = Nothing
@@ -15,6 +15,7 @@ Public Class Form1
 
         ListBox1.HorizontalScrollbar = True
 
+        tmrReloj = 0
         Timer1.Enabled = True
 
     End Sub
@@ -23,16 +24,21 @@ Public Class Form1
 
         lblFechaHora.Text = Format(Now, "dd-MMM-yyyy - HH:mm:ss")
 
-        PicOBD.Visible = cOpusIMCleanOBDdrv.DeviceData.DeviceLinkOn
+        If cOpusIMCleanOBDdrv.DeviceData.DeviceLinkOn Then
 
-        If b_initDeviceOBD Then
-            UsrBallTimer.Visible = True
-            Call Me.UsrBallTimer.tick_tock()
+            PicOBD.Visible = True
+            UsrBallTimer.Visible = False
+            BtnOBDtest.Enabled = True
 
         Else
 
-            'Hilo01.Abort()
-            UsrBallTimer.Visible = False
+            If b_initDeviceOBD Then
+
+                UsrBallTimer.Visible = True
+                tmrReloj += 1
+                If tmrReloj < 150 Then Call Me.UsrBallTimer.tick_tock()
+
+            End If
 
         End If
 
@@ -42,6 +48,7 @@ Public Class Form1
 
         ListBox1.Items.Clear()
 
+        tmrReloj = 0
         Call ComunicaDeviceOBD()
 
     End Sub
@@ -69,13 +76,12 @@ Public Class Form1
 
         Else
 
-            Applog("initDeviceOBD: " & lStatus)
-
             lblDeviceDescription.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceDescription
             lblIdDevice.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceID
 
             Applog("DeviceData ")
             Applog("-------------------------------------------------------")
+            Applog("initDeviceOBD: " & lStatus)
 
             If Mid(lStatus, 1, 4) = "Pass" Then
 
@@ -98,8 +104,8 @@ Public Class Form1
 
         End If
 
-        Applog(lStatus)
-        Call rntMensajeusuario(lStatus)
+        'Applog(lStatus)
+        'Call rntMensajeusuario(lStatus)
 
     End Sub
 
@@ -114,11 +120,6 @@ Public Class Form1
 
         If Mid(lStatus, 1, 4) = "Pass" Then
 
-            'PicOBD.Visible = True
-
-            BtnOBDtest.Enabled = True
-            lStatus = "Opus IMClean OBD en línea."
-
             lblVoltaje.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage
             lblVoltajeDLC.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC
             lblFirmWare.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceFirmwareVersion
@@ -127,6 +128,13 @@ Public Class Form1
             Applog("DeviceType: " & cOpusIMCleanOBDdrv.DeviceData.DeviceType)
             Applog("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
             Applog("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
+
+            lStatus = "Opus IMClean OBD en línea."
+            Applog(lStatus)
+            Call rntMensajeusuario(lStatus)
+            System.Threading.Thread.Sleep(250)
+
+            Hilo01.Abort()
 
         End If
 
@@ -332,6 +340,7 @@ Public Class Form1
 
         If Len(MySQLConnectionString) > 10 Then '-- Not IsNothing(MySQLConnectionString)
             lStatus = IniSQL()
+            rntMensajeusuario(lStatus)
             If Mid(lStatus, 1, 4) = "Pass" Then
                 lblTerminalDatos.BackColor = Color.Green
             Else

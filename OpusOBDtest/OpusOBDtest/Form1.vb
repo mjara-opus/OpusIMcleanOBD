@@ -9,7 +9,7 @@ Public Class Form1
 
         Dim lStatus As String = Nothing
 
-        Me.Location = New Drawing.Point(50, 50)
+        Me.Location = New Drawing.Point(5, 5)
 
         UsrBallTimer.wTime = 150
 
@@ -28,6 +28,7 @@ Public Class Form1
 
             PicOBD.Visible = True
             UsrBallTimer.Visible = False
+            BtnInitDevice.Enabled = False
             BtnOBDtest.Enabled = True
 
         Else
@@ -89,9 +90,9 @@ Public Class Form1
                 Applog("DeviceDescription: " & cOpusIMCleanOBDdrv.DeviceData.DeviceDescription)
                 Applog("DeviceID: " & cOpusIMCleanOBDdrv.DeviceData.DeviceID)
                 Applog(" ")
-                Applog("IMClean OBD en línea, Iniciando dispositivo ...")
+                Applog("IMClean OBD instalado en el  CPU, Iniciando dispositivo ...")
 
-                Call rntMensajeusuario("IMClean OBD en línea, Iniciando dispositivo ...")
+                Call rntMensajeusuario("IMClean OBD instalado en el  CPU, Iniciando dispositivo ...")
 
                 Control.CheckForIllegalCrossThreadCalls = False
                 Threading.Thread.CurrentThread.ApartmentState = Threading.ApartmentState.STA
@@ -129,7 +130,8 @@ Public Class Form1
             Applog("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
             Applog("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
 
-            lStatus = "Opus IMClean OBD en línea."
+            lStatus = "Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo."
+
             Applog(lStatus)
             Call rntMensajeusuario(lStatus)
             System.Threading.Thread.Sleep(250)
@@ -144,9 +146,17 @@ Public Class Form1
 
     Private Sub BtnOBDtest_Click(sender As Object, e As EventArgs) Handles BtnOBDtest.Click
 
-        Dim lStatus As String = Nothing
+        ListBox1.Items.Clear()
+        lblProtocolo.Text = " "
+        LblVIN.Text = " "
+        lblDTC.Text = " "
+
+
+        Dim lStatus As String = "IMClean OBD comunicando con el ECU del vehículo, espere un momento..."
 
         '//-- 009 - Valor nulo = Monitor no disponible, no completado, sin DTC.  
+        LblOBD_mil.BackColor = Drawing.Color.Gray
+
         LblOBD_MSI_D.BackColor = Drawing.Color.Gray
         LblOBD_MSI_C.BackColor = Drawing.Color.Gray
         LblOBD_MSI.BackColor = Drawing.Color.Gray
@@ -168,7 +178,10 @@ Public Class Form1
         LblOBD_CAT.BackColor = Drawing.Color.Gray
         '||-- 009 - Valor nulo = Monitor no disponible, no completado, sin DTC.  
 
-        Call rntMensajeusuario("IMClean OBD comunicando con el ECU del vehículo, espere un momento...")
+        Me.Refresh()
+
+        Applog(lStatus)
+        Call rntMensajeusuario(lStatus)
 
         lStatus = cOpusIMCleanOBDdrv.VehiculoLink()
 
@@ -176,11 +189,11 @@ Public Class Form1
 
             LblVIN.Text = cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN
 
-            If cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL = "1" Then
-                LblOBD_mil.BackColor = Drawing.Color.Orange '-- Luz encendida = alerta
-            Else
-                LblOBD_mil.BackColor = Drawing.Color.Green '-- 0 / 9 = ok.
-            End If
+            Select Case cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL
+                Case "1" : LblOBD_mil.BackColor = Drawing.Color.Orange '-- Luz encendida = alerta
+                Case "0" : LblOBD_mil.BackColor = Drawing.Color.Green '-- 0 / 9 = ok.
+                Case Else : LblOBD_mil.BackColor = Drawing.Color.Gray
+            End Select
 
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_MSI, 1, 1) = "1" Then LblOBD_MSI_D.BackColor = Drawing.Color.Green '-- Disponible
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_MSI, 2, 1) = "1" Then LblOBD_MSI_C.BackColor = Drawing.Color.Green '-- Completado
@@ -195,12 +208,12 @@ Public Class Form1
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CMB, 1, 1) = "1" Then LblOBD_CMB_D.BackColor = Drawing.Color.Green '-- Disponible
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CMB, 2, 1) = "1" Then LblOBD_CMB_C.BackColor = Drawing.Color.Green '-- Completado
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CMB, 3, 1) = "1" Then LblOBD_CMB.BackColor = Drawing.Color.Red
-            If cOpusIMCleanOBDdrv.InspectionData.OBD_CMB = "110" Then LblOBD_MSI.BackColor = Drawing.Color.Green '-- Sin DTC
+            If cOpusIMCleanOBDdrv.InspectionData.OBD_CMB = "110" Then LblOBD_CMB.BackColor = Drawing.Color.Green '-- Sin DTC
 
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2S, 1, 1) = "1" Then LblOBD_O2S_D.BackColor = Drawing.Color.Green '-- Disponible
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2S, 2, 1) = "1" Then LblOBD_O2S_C.BackColor = Drawing.Color.Green '-- Completado
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2S, 3, 1) = "1" Then LblOBD_O2S.BackColor = Drawing.Color.Red
-            If cOpusIMCleanOBDdrv.InspectionData.OBD_O2S = "110" Then LblOBD_MSI.BackColor = Drawing.Color.Green '-- Sin DTC
+            If cOpusIMCleanOBDdrv.InspectionData.OBD_O2S = "110" Then LblOBD_O2S.BackColor = Drawing.Color.Green '-- Sin DTC
 
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CAT, 1, 1) = "1" Then LblOBD_CAT_D.BackColor = Drawing.Color.Green '-- Disponible
             If Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CAT, 2, 1) = "1" Then LblOBD_CAT_C.BackColor = Drawing.Color.Green '-- Completado
@@ -228,11 +241,21 @@ Public Class Form1
             Applog("CAT: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CAT)
             Applog("DTChx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTChx)
             Applog("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
+            Applog(" ")
+            Applog("Inpección de monitores y codigos DTC en el ECU del vehículo terminada.")
 
             Call rntMensajeusuario("Inpección de monitores y codigos DTC en el ECU del vehículo terminada.")
 
+            If cOpusIMCleanOBDdrv.OBD_SimulationWarning Then
+
+                Applog("Err: Posible simulación de lecturas del ECU detectada.")
+                Call rntMensajeusuario("Err: Posible simulación de lecturas del ECU detectada.")
+
+            End If
+
         Else
 
+            Applog("Err:IMClean OBD fallo comunicanción con el ECU del vehículo.")
             Call rntMensajeusuario("Err:IMClean OBD fallo comunicanción con el ECU del vehículo.")
 
         End If
@@ -339,6 +362,7 @@ Public Class Form1
         MySQLConnectionString = txtMySQLConnectionString.Text
 
         If Len(MySQLConnectionString) > 10 Then '-- Not IsNothing(MySQLConnectionString)
+
             lStatus = IniSQL()
             rntMensajeusuario(lStatus)
             If Mid(lStatus, 1, 4) = "Pass" Then

@@ -3,6 +3,7 @@
 Public Class IMCleanOBD
 
     Public Opus_KeyDevicePass As Boolean
+    Public OBD_SimulationWarning As Boolean
 
     Public Structure srtDeviceData
 
@@ -51,6 +52,35 @@ Public Class IMCleanOBD
     Public InspectionData As srtInspectionData
     Public Shared lInspectionData As srtInspectionData
 
+    Private Sub SetZeroData()
+
+        InspectionData.Fecha_Test = Now 'Format(Now, "ddMMyyyy")
+
+        OBDdata_VIN = Nothing
+        OBDdata_VINtxt = Nothing
+        OBDdata_MIL = Nothing
+        OBDdata_MILtxt = Nothing
+        OBDdata_DTC = Nothing
+        OBDdata_DTCtxt = Nothing
+
+        LrdOBD_MSI = Nothing
+        LrdOBD_CCM = Nothing
+        LrdOBD_CMB = Nothing
+        LrdOBD_O2S = Nothing
+        LrdOBD_CAT = Nothing
+
+        LrdOBD_CCC = Nothing
+        LrdOBD_EVS = Nothing
+        LrdOBD_SAS = Nothing
+        LrdOBD_FAA = Nothing
+        LrdOBD_O2C = Nothing
+
+        OBDdata_PROTOCOLO = Nothing
+
+        xOBD_SimulationWarning = False
+
+    End Sub
+
     Private Sub SetData()
 
         InspectionData.Fecha_Test = Now 'Format(Now, "ddMMyyyy")
@@ -77,6 +107,8 @@ Public Class IMCleanOBD
         InspectionData.OBDdata_PROTOCOLO = OBDdata_PROTOCOLO
 
         lInspectionData = InspectionData
+
+        OBD_SimulationWarning = xOBD_SimulationWarning
 
     End Sub
 
@@ -212,7 +244,10 @@ Public Class IMCleanOBD
 
         Dim lStatus As String = Nothing
 
+        Call SetZeroData()
+
         lStatus = lVehiculoLink()
+
         Call SetData()
 
         If Mid(lStatus, 1, 4) = "Pass" Then

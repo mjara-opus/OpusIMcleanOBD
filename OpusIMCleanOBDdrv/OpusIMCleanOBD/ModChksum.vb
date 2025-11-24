@@ -114,7 +114,7 @@ Module ModChksum
             Applog(linCADD)
         End Try
 
-        'MsgBox("chkSumCADD | " & pCadd & " | " & linCADD)
+        Applog("chkSumCADD | " & pCadd & " | " & linCADD)
         Return linCADD
 
     End Function
@@ -279,6 +279,7 @@ Module ModChksum
             lStatus = "Err:getOpusKeyFile | " & ex.Message
         End Try
 
+        Applog("getOpusKeyFile: " & lStatus)
         Return lStatus
 
     End Function

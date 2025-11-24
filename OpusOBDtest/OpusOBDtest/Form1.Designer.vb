@@ -29,6 +29,7 @@ Partial Class Form1
         Me.lblIDmj = New System.Windows.Forms.Label()
         Me.picLogoESP = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.UsrBallTimer = New usrBallTimer.usrBallTimer()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtMySQLConnectionString = New System.Windows.Forms.TextBox()
         Me.btnIniSQL = New System.Windows.Forms.Button()
@@ -74,7 +75,6 @@ Partial Class Form1
         Me.BtnContinuar = New System.Windows.Forms.Button()
         Me.PicOpusLogo = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.UsrBallTimer = New usrBallTimer.usrBallTimer()
         CType(Me.PicESPLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLogoESP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -175,8 +175,18 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.PanelMsgUsu)
         Me.Panel1.Location = New System.Drawing.Point(12, 70)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1320, 610)
+        Me.Panel1.Size = New System.Drawing.Size(1320, 596)
         Me.Panel1.TabIndex = 282
+        '
+        'UsrBallTimer
+        '
+        Me.UsrBallTimer.BackColor = System.Drawing.Color.White
+        Me.UsrBallTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.UsrBallTimer.Location = New System.Drawing.Point(6, 385)
+        Me.UsrBallTimer.Margin = New System.Windows.Forms.Padding(6)
+        Me.UsrBallTimer.Name = "UsrBallTimer"
+        Me.UsrBallTimer.Size = New System.Drawing.Size(115, 101)
+        Me.UsrBallTimer.TabIndex = 313
         '
         'Label6
         '
@@ -184,7 +194,7 @@ Partial Class Form1
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(14, 581)
+        Me.Label6.Location = New System.Drawing.Point(14, 567)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(212, 18)
         Me.Label6.TabIndex = 312
@@ -192,7 +202,7 @@ Partial Class Form1
         '
         'txtMySQLConnectionString
         '
-        Me.txtMySQLConnectionString.Location = New System.Drawing.Point(231, 577)
+        Me.txtMySQLConnectionString.Location = New System.Drawing.Point(231, 563)
         Me.txtMySQLConnectionString.Name = "txtMySQLConnectionString"
         Me.txtMySQLConnectionString.Size = New System.Drawing.Size(850, 26)
         Me.txtMySQLConnectionString.TabIndex = 311
@@ -230,7 +240,7 @@ Partial Class Form1
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Location = New System.Drawing.Point(639, 242)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(668, 259)
+        Me.ListBox1.Size = New System.Drawing.Size(668, 244)
         Me.ListBox1.TabIndex = 308
         '
         'Button1
@@ -243,6 +253,7 @@ Partial Class Form1
         Me.Button1.TabIndex = 307
         Me.Button1.Text = "test"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'lblFirmWare
         '
@@ -640,7 +651,7 @@ Partial Class Form1
         Me.lblFechaHora.BackColor = System.Drawing.Color.Transparent
         Me.lblFechaHora.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFechaHora.ForeColor = System.Drawing.Color.White
-        Me.lblFechaHora.Location = New System.Drawing.Point(1087, 576)
+        Me.lblFechaHora.Location = New System.Drawing.Point(1087, 562)
         Me.lblFechaHora.Name = "lblFechaHora"
         Me.lblFechaHora.Size = New System.Drawing.Size(220, 24)
         Me.lblFechaHora.TabIndex = 105
@@ -653,7 +664,7 @@ Partial Class Form1
         Me.PanelMsgUsu.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(58, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.PanelMsgUsu.Controls.Add(Me.lblTerminalDatos)
         Me.PanelMsgUsu.Controls.Add(Me.lblMensajeUsuario)
-        Me.PanelMsgUsu.Location = New System.Drawing.Point(9, 506)
+        Me.PanelMsgUsu.Location = New System.Drawing.Point(9, 491)
         Me.PanelMsgUsu.Name = "PanelMsgUsu"
         Me.PanelMsgUsu.Size = New System.Drawing.Size(1298, 67)
         Me.PanelMsgUsu.TabIndex = 42
@@ -689,7 +700,7 @@ Partial Class Form1
         '
         Me.BtnContinuar.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnContinuar.ForeColor = System.Drawing.Color.Black
-        Me.BtnContinuar.Location = New System.Drawing.Point(1152, 686)
+        Me.BtnContinuar.Location = New System.Drawing.Point(1152, 670)
         Me.BtnContinuar.Name = "BtnContinuar"
         Me.BtnContinuar.Size = New System.Drawing.Size(180, 40)
         Me.BtnContinuar.TabIndex = 284
@@ -699,7 +710,7 @@ Partial Class Form1
         'PicOpusLogo
         '
         Me.PicOpusLogo.Image = CType(resources.GetObject("PicOpusLogo.Image"), System.Drawing.Image)
-        Me.PicOpusLogo.Location = New System.Drawing.Point(11, 686)
+        Me.PicOpusLogo.Location = New System.Drawing.Point(11, 670)
         Me.PicOpusLogo.Name = "PicOpusLogo"
         Me.PicOpusLogo.Size = New System.Drawing.Size(260, 45)
         Me.PicOpusLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -710,22 +721,12 @@ Partial Class Form1
         '
         Me.Timer1.Interval = 900
         '
-        'UsrBallTimer
-        '
-        Me.UsrBallTimer.BackColor = System.Drawing.Color.White
-        Me.UsrBallTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UsrBallTimer.Location = New System.Drawing.Point(9, 390)
-        Me.UsrBallTimer.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
-        Me.UsrBallTimer.Name = "UsrBallTimer"
-        Me.UsrBallTimer.Size = New System.Drawing.Size(115, 101)
-        Me.UsrBallTimer.TabIndex = 313
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Teal
-        Me.ClientSize = New System.Drawing.Size(1354, 734)
+        Me.ClientSize = New System.Drawing.Size(1354, 719)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnContinuar)
         Me.Controls.Add(Me.PicOpusLogo)

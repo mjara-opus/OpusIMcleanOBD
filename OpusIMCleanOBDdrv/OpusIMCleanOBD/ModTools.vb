@@ -211,7 +211,7 @@ Module ModTools
 
             conn.ConnectionString = xVIDB_ConnectionString
             conn.Open()
-            lStatus = "Pass: Servicios NET en línea."
+            lStatus = "Pass: Servicio de Base de Datos en línea."
             xVIDBLinkOnline = True
 
         Catch ex As Exception

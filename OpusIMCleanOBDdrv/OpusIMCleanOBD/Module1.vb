@@ -265,6 +265,8 @@ Module Module1
 
     Public xMacAddress As String
 
+    Public xOBD_SimulationWarning As Boolean
+
     Public Structure srtOBDBatteryInformation
         Public BatteryCycleCountAvailable As Boolean
         Public BatteryCycleCountUpdateDateTime As DateTime
@@ -1009,14 +1011,21 @@ Module Module1
         iCount = iCount - 1
         If (iCount < 0) Then iCount = 0
 
-        '------------------------------
-
-        'Applog("TraceLog:" & MyDad.TraceLog)
-        'Applog("CommandLog:" & MyDad.CommandLog)
         OBDdata_PROTOCOLO = MyDad.OBDProtocol
-        'Applog("VendorLog:" & MyDad.VendorLog)
-        'Applog("SerialDataLog:" & MyDad.SerialDataLog)
-        'Applog("Port:" & MyDad.Port)
+
+        '------------------------------
+        'If InStr(Tag, "GetModePID(01, 40)") Then
+        '
+        'Applog("... CommandLog:" & MyDad.CommandLog)
+        'Applog("... Get MON >>>-----------------------------------------------------------------------")
+        'Call DECODE_Bus(MyDad.CommandLog)
+        'Call DECODE_MIL(OBDdata_MIL)
+        '
+        'OBDdata_PROTOCOLO = MyDad.OBDProtocol
+        'Applog(" ")
+        'Applog("MyDad.OBDProtocol:" & MyDad.OBDProtocol)
+        '
+        'End If
 
     End Sub
 
@@ -3405,7 +3414,10 @@ Module Module1
         Dim Ix1 As Integer = 0
         'ReDim OBDdataBus(100)      Chr(13) & '& vbCrLf
 
-        If InStr(pDataTxt, "07 E8") > 0 Then '-- 07 E8 = ECU motor de gasolina 
+        If InStr(pDataTxt, "07 E8") > 0 Or
+                InStr(pDataTxt, "F1 10") > 0 Or
+                    InStr(pDataTxt, "6B 1A") > 0 Or
+                        InStr(pDataTxt, "F1 58") > 0 Then '-- 07 E8 = ECU motor de gasolina 
 
             If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
 
@@ -3875,20 +3887,23 @@ Module Module1
         Dim sr As DrewTech.IIMClean.DT_IMpr = Nothing
         Dim ht As Hashtable = Nothing
 
-        Applog("... Connect_OBD")
+        Applog(" ")
+        Applog("... Connect_OBD ===================================================================================================================")
+        Applog(" ")
 
         Try
+
+            MyDad.ClearLogs()
 
             Dim StartTicks As Int32 = System.Environment.TickCount
             Dim CallingProcedure As String = LocalGetCallingProcedure()
             LocalIncrementActiveCount(CallingProcedure)
             MyDAD_ConnectCount = MyDAD_ConnectCount + 1
             If (MyDAD_ConnectCount > 9999) Then MyDAD_ConnectCount = 9
-            Applog("... Connect | ---------------- Connect ---------------" &
-                    " VIN:'" & sVIN & "'" &
-                    " SC:'" & sSpecialControl & "'" &
-                    " (" & MyDADStatus() & ")" & " (" & CallingProcedure & ")")
-
+            'Applog("... Connect | ---------------- Connect ---------------" &
+            '       " VIN:'" & sVIN & "'" &
+            '      " SC:'" & sSpecialControl & "'" &
+            '     " (" & MyDADStatus() & ")" & " (" & CallingProcedure & ")")
 
             InitializePIDData()
             InitializeStringArrayData()
@@ -4023,6 +4038,39 @@ Module Module1
 
             '===================================
 
+            Applog("... Get MON >>>-----------------------------------------------------------------------")
+            sr = Nothing
+            MyDad.ClearLogs()
+            SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+            DoDad(Sub() sr = MyDad.GetModePID(1, 1), "GetModePID(01, 01) - Readiness, DTC count, MIL", "NoEOL")
+            If (IsNothing(sr) = False) Then
+                lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                Call DECODE_Bus(MyDad.CommandLog)
+                Call DECODE_MIL(OBDdata_MIL)
+
+            Else
+                lStatus = "sr | Get MON: NULL"
+            End If
+            Applog(lStatus)
+
+            Applog("... Get DTC >>>-----------------------------------------------------------------------")
+
+            sr = Nothing
+            MyDad.ClearLogs()
+            SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+            DoDad(Sub() sr = MyDad.GetModePID(3, 0), "GetModePID(03, 00) - DTC count, MIL", "NoEOL")
+            If (IsNothing(sr) = False) Then
+                lStatus = "sr | Get DTC: " & sr.CommResult & " | " & sr.Data.Count
+
+                Call DECODE_Bus(MyDad.CommandLog)
+                Call DECODE_DTC(OBDdata_DTC)
+
+            Else
+                lStatus = "sr | Get DTC: NULL"
+            End If
+            Applog(lStatus)
+
             Applog("... Get VIN >>>-----------------------------------------------------------------------")
 
             sr = MyDad.GetModePID(9, 2) '-- vin
@@ -4058,42 +4106,9 @@ Module Module1
 
             Else
                 'Form1.TextBox3.Text = "VIN: NULL"
+                OBDdata_VIN = "NULL"
+                OBDdata_VINtxt = "NULL"
             End If
-
-            Applog("... Get MON >>>-----------------------------------------------------------------------")
-
-            sr = Nothing
-            MyDad.ClearLogs()
-            SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
-            DoDad(Sub() sr = MyDad.GetModePID(1, 1), "GetModePID(01, 01) - Readiness, DTC count, MIL", "NoEOL")
-            If (IsNothing(sr) = False) Then
-                lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
-
-                Call DECODE_Bus(MyDad.CommandLog)
-                Call DECODE_MIL(OBDdata_MIL)
-
-            Else
-                lStatus = "sr | Get MON: NULL"
-                'Form1.TextBox5.Text = lStatus
-            End If
-            Applog(lStatus)
-
-            Applog("... Get DTC >>>-----------------------------------------------------------------------")
-
-            sr = Nothing
-            MyDad.ClearLogs()
-            SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
-            DoDad(Sub() sr = MyDad.GetModePID(3, 0), "GetModePID(03, 00) - DTC count, MIL", "NoEOL")
-            If (IsNothing(sr) = False) Then
-                lStatus = "sr | Get DTC: " & sr.CommResult & " | " & sr.Data.Count
-
-                Call DECODE_Bus(MyDad.CommandLog)
-                Call DECODE_DTC(OBDdata_DTC)
-
-            Else
-                lStatus = "sr | Get DTC: NULL"
-            End If
-            Applog(lStatus)
 
             Applog("... Get RPM >>>-----------------------------------------------------------------------")
             Dim Ix0 As Integer = 0
@@ -4137,7 +4152,10 @@ Module Module1
             If OBDdata_RPM = OBDdata_RPMmat(1) And
                     OBDdata_RPM = OBDdata_RPMmat(2) And
                         OBDdata_RPM = OBDdata_RPMmat(3) Then
-                Applog("****** Simulación de lecturas OBD detectada.")
+                Applog("****** Posible Simulación de lecturas OBD detectada.")
+                xOBD_SimulationWarning = True
+            Else
+                xOBD_SimulationWarning = False
             End If
 
             Applog("*** Connect ... EOF()")

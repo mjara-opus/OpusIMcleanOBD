@@ -1,0 +1,26 @@
+  Dim sres As DrewTech.IIMClean.DT_IGenericResponse(Of DrewTech.IIMClean.DT_SelfTestRes) = Nothing
+  Dim ires As DrewTech.IIMClean.DT_ISelfTestResponse(Of Integer) = Nothing
+
+  ires = Nothing
+  SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+  Dim ExtendedResult As String = ""
+  DoDad(Sub() sres = MyDad.SelfTest, "SelfTest")
+
+  sres = MyDad.SelfTest
+
+  If (IsNothing(sres) = False) Then
+      Applog("sres..Pass: " & sres.ToString)
+      MsgBox("sres..Pass: ")
+
+  Else
+      Applog("sres..Fail: ")
+      MsgBox("sres..Fail: ")
+  End If
+
+  If (IsNothing(ires) = False) Then
+      Applog("ires..Pass: ")
+      MsgBox("ires..Pass: ")
+  Else
+      Applog("ires..Fail: ")
+      MsgBox("ires..Fail: ")
+  End If

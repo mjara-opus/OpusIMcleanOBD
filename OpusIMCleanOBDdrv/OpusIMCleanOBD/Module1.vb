@@ -732,32 +732,42 @@ Module Module1
 
         If (iCount > 1) Then
             For idx = 0 To 30
-                '? System.Windows.Forms.Application.DoEvents()
+                System.Windows.Forms.Application.DoEvents()
                 System.Threading.Thread.Sleep(200)
-                '? System.Windows.Forms.Application.DoEvents()
+                System.Windows.Forms.Application.DoEvents()
                 If (iCount = 1) Then Exit For
             Next
         End If
 
+        'Applog("DoDad-" & iCount.ToString("00") & " | ..00")
+
         If (MyDoDADSemaphore.WaitOne(2000) = True) Then
+
             Try
                 Dim StartDateTime As DateTime = DateTime.Now
                 If ((MyDadOpen = False) AndAlso (sControl.ToUpper.Contains("SupressAutoOpen".ToUpper) = False)) Then
                     Applog("DoDad-MyDoDADSemaphore-" & iCount.ToString("00") & " | " & Tag & " ... Attempting Open")
                     OpenDAD_If_Needed("DoDad-" & Tag & " (" & CallingProcedure & ")")
                 End If
-                '
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..01")
+
                 MyCurrentSerialDataLog = ""
                 MyCurrentSerialDataLogSize = 0
                 '
                 If (Tag.ToUpper.Contains("Close".ToUpper) = True) Then
                     Applog("Doing close ...")
                 End If
-                '
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..02")
+
                 If (sControl.ToUpper.Contains("SupressConnectCheck".ToUpper) = False) Then
                     If ((bIncludeVoltage = True) AndAlso
                         (MyDadOpen = True) AndAlso
                         (MyLastCommResult <> DrewTech.IIMClean.DT_Com_Result.Success)) Then
+
+                        'Applog("DoDad-" & iCount.ToString("00") & " | ..03")
+
                         Try
                             bReadVoltage = True
                             Dim dRes As DrewTech.IIMClean.DT_IGenericResponse(Of Decimal) = Nothing
@@ -774,12 +784,17 @@ Module Module1
                                 End If
                             End If
                             dRes = Nothing
+
+                            'Applog("DoDad-" & iCount.ToString("00") & " | ..04")
+
                         Catch ex As Exception
                             Applog("Err:DoDad-" & iCount.ToString("00") & " | " & Tag & "-CnctChk-ex:'" & ex.Message)
                         End Try
                     End If
                 End If
                 '
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..05")
+
                 If (MyDeviceLogClear = True) Then
                     MyDeviceLogClear = False
                     Try
@@ -797,6 +812,8 @@ Module Module1
                     End Try
                 End If
                 '
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..05")
+
                 Try
                     If ((bConnected = True) AndAlso (IsNothing(MyDad) = False)) Then
                         Applog("DoDad-" & iCount.ToString("00") & "  ClearCommandLog ...")
@@ -806,6 +823,8 @@ Module Module1
                     Applog("Err:DoDad-" & iCount.ToString("00") & " | " & Tag & "-exCC: " & ex.Message)
                 End Try
                 '
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..06")
+
                 If ((MyDadOpen = True) OrElse (sControl.ToUpper.Contains("IgnoreOpen".ToUpper) = True)) Then
                     If ((bConnected = True) AndAlso (IsNothing(a) = False)) Then
                         Dim StartTicksInvoke As Int32 = System.Environment.TickCount
@@ -822,9 +841,14 @@ Module Module1
                 End If
                 Dim EndDateTime As DateTime = DateTime.Now
 
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..07")
+
                 Const LogEntryPrefix As String = vbCrLf & "                    -  "
                 MyCurrentSerialDataLog = ""
                 MyCurrentSerialDataLogSize = 0
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..08")
+
                 If (IsNothing(a) = False) Then
                     Try
 
@@ -838,10 +862,13 @@ Module Module1
 
                         'Applog("MyDad.CommandLog: " & MyDad.CommandLog)
 
+                        'Applog("DoDad-" & iCount.ToString("00") & " | ..09")
+
                         Dim iStart As Integer = MyCurrentSerialDataLog.IndexOf("DAD_DLL_VERSION_")
                         Dim iEnd As Integer = 0
                         Applog("DoDad-" & iCount.ToString("00") & "-CommandLog-Len:" & MyCurrentSerialDataLog.Length.ToString("0") &
                                  " Siz:" & MyCurrentSerialDataLogSize.ToString("0") & " | iStart: " & iStart)
+
                         If (iStart >= 0) Then
                             iStart = iStart + 16
                             iEnd = MyCurrentSerialDataLog.Substring(iStart).IndexOf(vbCrLf)
@@ -866,10 +893,15 @@ Module Module1
                         Applog("Err:DoDad: " & ex.Message)
                     End Try
                     '
+                    'Applog("DoDad-" & iCount.ToString("00") & " | ..10")
+
                     'Applog("DoDad-" & iCount.ToString("00") & "  SerialDataLog.Length ...")
                     MyCurrentSerialDataLogSize = MyDad.SerialDataLog.Length
                     Applog("DoDad-" & iCount.ToString("00") & "  SerialData.Length ... (" & MyCurrentSerialDataLogSize.ToString("0") & ")")
                     MyCurrentSerialDataLog = MyDad.SerialDataLog  ' Get all bytes (for now)
+
+                    'Applog("DoDad-" & iCount.ToString("00") & " | ..11")
+
                 End If
                 '
                 If (MyCurrentSerialDataLog.Length = LastSerialDataLogLength) Then
@@ -886,6 +918,8 @@ Module Module1
                     'Debug.WriteLine("Here for debug")
                 End If
 
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..12")
+
                 MyCurrentSerialDataLog = Microsoft.VisualBasic.Right(MyCurrentSerialDataLog,
                                                                      CInt(MySerialDataLogMaxBytes)).Trim
                 ' Do some cleanup to make the log pretty
@@ -894,6 +928,9 @@ Module Module1
                         MyCurrentSerialDataLog = Left(MyCurrentSerialDataLog, MyCurrentSerialDataLog.Length - 2)
                     End If
                 End If
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..13")
+
                 MyCurrentSerialDataLog = MyCurrentSerialDataLog.Trim
                 MyCurrentSerialDataLog = MyCurrentSerialDataLog.Replace(vbCrLf & vbCrLf, vbCrLf)
                 MyCurrentSerialDataLog = MyCurrentSerialDataLog.Trim
@@ -912,12 +949,16 @@ Module Module1
                     Applog("Err:DoDad | CSDL-ex: " & ex.Message)
                 End Try
 
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..14")
+
                 If (Tag.ToUpper.Contains("CALID".ToUpper) = True) Then
                     Applog("Tag = CALID")
                 End If
                 If (Tag.ToUpper.Contains("BATTERY".ToUpper) = True) Then
                     Applog("Tag = BATTERY")
                 End If
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..15")
 
                 sTemp = LogEntryPrefix
                 If (MyCurrentSerialDataLog.Length <= 0) Then sTemp = ""
@@ -929,6 +970,8 @@ Module Module1
                                         sTemp, MyCurrentSerialDataLog.Replace(vbCrLf, LogEntryPrefix), vbCrLf,
                                         EndDateTime.Subtract(StartDateTime).TotalSeconds,
                                         Microsoft.VisualBasic.Left(bReadVoltage.ToString, 1), Tag)
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..16")
 
                 If (MyDeviceLogSave = True) Then
                     MyDeviceLogSave = False
@@ -949,6 +992,8 @@ Module Module1
 
                     End Try
                     '
+                    'Applog("DoDad-" & iCount.ToString("00") & " | ..17")
+
                     MyCurrentVendorDataLog = ""
                     MyCurrentVendorDataLogSize = 0
 
@@ -969,6 +1014,9 @@ Module Module1
                             End If
                             MyCurrentVendorDataLog = Trim(MyCurrentVendorDataLog)
                         End If
+
+                        'Applog("DoDad-" & iCount.ToString("00") & " | ..18")
+
                         ElapsedSeconds = DeltaTimeTicks(StartTicks)
                         Applog("VendorLogTime3: " & ElapsedSeconds.ToString("0.000"))
 
@@ -989,6 +1037,8 @@ Module Module1
                         sTemp = "?"
                         If (MyLastReConnect > DateTime.MinValue) Then sTemp = MyLastReConnect.ToString(MyDeviceLogStatusDateFormat)
 
+                        'Applog("DoDad-" & iCount.ToString("00") & " | ..19")
+
                         ElapsedSeconds = DeltaTimeTicks(StartTicks)
 
                         ElapsedSeconds = DeltaTimeTicks(StartTicks)
@@ -999,10 +1049,16 @@ Module Module1
                         Applog("Err:DoDad" & " | " & ex.Message)
                     End Try
                 End If
+
+                'Applog("DoDad-" & iCount.ToString("00") & " | ..20")
+
             Catch ex As Exception
                 LogText = "ex:'" & ex.Message & "'"
             End Try
             MyDoDADSemaphore.Release(1)
+
+            'Applog("DoDad-" & iCount.ToString("00") & " | ..21")
+
         Else
             LogText = Tag & "-" & "Semaphore_Timeout"
         End If
@@ -1011,8 +1067,9 @@ Module Module1
         iCount = iCount - 1
         If (iCount < 0) Then iCount = 0
 
-        OBDdata_PROTOCOLO = MyDad.OBDProtocol
 
+        OBDdata_PROTOCOLO = MyDad.OBDProtocol
+        'Applog("DoDad-" & iCount.ToString("00") & " | ..22F | " & OBDdata_PROTOCOLO)
         '------------------------------
         'If InStr(Tag, "GetModePID(01, 40)") Then
         '
@@ -1026,6 +1083,9 @@ Module Module1
         'Applog("MyDad.OBDProtocol:" & MyDad.OBDProtocol)
         '
         'End If
+
+        'Applog("... SelfTest:" & MyDad.SelfTest.ToString())
+
 
     End Sub
 
@@ -3415,9 +3475,11 @@ Module Module1
         'ReDim OBDdataBus(100)      Chr(13) & '& vbCrLf
 
         If InStr(pDataTxt, "07 E8") > 0 Or
-                InStr(pDataTxt, "F1 10") > 0 Or
-                    InStr(pDataTxt, "6B 1A") > 0 Or
-                        InStr(pDataTxt, "F1 58") > 0 Then '-- 07 E8 = ECU motor de gasolina 
+                InStr(pDataTxt, "07 DF") > 0 Or
+                    InStr(pDataTxt, "07 E0") > 0 Or
+                        InStr(pDataTxt, "F1 10") > 0 Or
+                            InStr(pDataTxt, "6B 1A") > 0 Or
+                                InStr(pDataTxt, "F1 58") > 0 Then '-- 07 E8 = ECU motor de gasolina 
 
             If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
 
@@ -3861,7 +3923,7 @@ Module Module1
 
             Call Connect_OBD()
 
-            lStatus = "Pass: Inspección vehicular OBD exitosa."
+            lStatus = "Pass: Inspección vehicular OBD concluido."
 
         Catch ex As Exception
 
@@ -3900,10 +3962,9 @@ Module Module1
             LocalIncrementActiveCount(CallingProcedure)
             MyDAD_ConnectCount = MyDAD_ConnectCount + 1
             If (MyDAD_ConnectCount > 9999) Then MyDAD_ConnectCount = 9
-            'Applog("... Connect | ---------------- Connect ---------------" &
-            '       " VIN:'" & sVIN & "'" &
-            '      " SC:'" & sSpecialControl & "'" &
-            '     " (" & MyDADStatus() & ")" & " (" & CallingProcedure & ")")
+            Applog("... Connect | ---------------- Connect ---------------" &
+                  " SC:'" & sSpecialControl & "'" &
+                 " (" & MyDADStatus() & ")" & " (" & CallingProcedure & ")")
 
             InitializePIDData()
             InitializeStringArrayData()
@@ -3989,6 +4050,10 @@ Module Module1
                     Applog("Err:Connect | " & ex.Message & " | (" & MyLastResult() & " | " & FunctionSeconds(StartTicks) & ") | " & CallingProcedure)
                 End Try
                 ReleaseDAD("Connect")
+            Else
+
+                Applog("******************************************** GetDAD(Connect) = false")
+
             End If
 
             Connect_Succeeded = bSuccess
@@ -4038,102 +4103,303 @@ Module Module1
 
             '===================================
 
+            Applog(" ")
             Applog("... Get MON >>>-----------------------------------------------------------------------")
-            sr = Nothing
-            MyDad.ClearLogs()
-            SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
-            DoDad(Sub() sr = MyDad.GetModePID(1, 1), "GetModePID(01, 01) - Readiness, DTC count, MIL", "NoEOL")
-            If (IsNothing(sr) = False) Then
-                lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
-
-                Call DECODE_Bus(MyDad.CommandLog)
-                Call DECODE_MIL(OBDdata_MIL)
-
-            Else
-                lStatus = "sr | Get MON: NULL"
-            End If
-            Applog(lStatus)
-
-            Applog("... Get DTC >>>-----------------------------------------------------------------------")
-
-            sr = Nothing
-            MyDad.ClearLogs()
-            SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
-            DoDad(Sub() sr = MyDad.GetModePID(3, 0), "GetModePID(03, 00) - DTC count, MIL", "NoEOL")
-            If (IsNothing(sr) = False) Then
-                lStatus = "sr | Get DTC: " & sr.CommResult & " | " & sr.Data.Count
-
-                Call DECODE_Bus(MyDad.CommandLog)
-                Call DECODE_DTC(OBDdata_DTC)
-
-            Else
-                lStatus = "sr | Get DTC: NULL"
-            End If
-            Applog(lStatus)
-
-            Applog("... Get VIN >>>-----------------------------------------------------------------------")
-
-            sr = MyDad.GetModePID(9, 2) '-- vin
-
-            Applog(MyDad.CommandLog)
-
-            If (IsNothing(sr) = False) Then
-
-                lStatus = "SR: " & sr.CommResult & " | " & sr.Data.Count
-                Applog(lStatus)
-
-                For Each edata As DrewTech.IIMClean.DT_IECUData In sr.Data
-                    Dim EcuId As Byte = GetEcuIdFromAddress(edata.Address)
-                    Try
-                        Applog("GetVIN | ECU:" & EcuId.ToString("X02") &
-                                              "  DLen:" & edata.Data.Length.ToString("000") &
-                                              " (" & ByteArrayToHexString(edata.Data) & ")")
-                    Catch ex As Exception
-                    End Try
-
-                    OBDdata_VINtxt = ""
-                    tVINLength = 0
-                    If ((edata.Data.Length > 1) AndAlso (CheckForNAK(9, 2, edata.Data) = False)) Then
-                        VinStart = 0
-                        If (MyObdProtocolCAN = True) Then VinStart = 1
-                        OBDdata_VINtxt = ByteArrayToString(edata.Data, VinStart, "?", True, tVINLength)
-                        Applog("GetVIN | ECU:" & EcuId.ToString("X02") & "  VIN: " & OBDdata_VIN)
-                    End If
-
-                Next
-
-                Call DECODE_Bus(MyDad.CommandLog)
-
-            Else
-                'Form1.TextBox3.Text = "VIN: NULL"
-                OBDdata_VIN = "NULL"
-                OBDdata_VINtxt = "NULL"
-            End If
-
-            Applog("... Get RPM >>>-----------------------------------------------------------------------")
-            Dim Ix0 As Integer = 0
-            ReDim OBDdata_RPMmat(3)
-
-            For Ix0 = 1 To 4
+            Try
 
                 sr = Nothing
                 MyDad.ClearLogs()
                 SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
-                DoDad(Sub() sr = MyDad.GetModePID(1, &HC), "GetModePID(03, 00) - DTC count, MIL", "NoEOL")
+                DoDad(Sub() sr = MyDad.GetModePID(1, 1), "GetModePID(01, 01) - Readiness, DTC count, MIL", "NoEOL")
                 If (IsNothing(sr) = False) Then
-                    lStatus = "sr | Get RPM(" & Ix0 & "): " & sr.CommResult & " | " & sr.Data.Count
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
 
                     Call DECODE_Bus(MyDad.CommandLog)
-                    Call DECODE_RPM(OBDdata_RPMhx)
-
-                    If Ix0 < 4 Then OBDdata_RPMmat(Ix0) = OBDdata_RPM
+                    Call DECODE_MIL(OBDdata_MIL)
 
                 Else
-                    lStatus = "sr | Get RPM: NULL"
+                    lStatus = "sr | Get MON: NULL"
                 End If
                 Applog(lStatus)
 
-            Next
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... Get DTC >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(3, 0), "GetModePID(03, 00) - DTC count, MIL", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get DTC: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_DTC(OBDdata_DTC)
+
+                Else
+                    lStatus = "sr | Get DTC: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &H1F), "GetModePID(01, 1F) - Tmp. Encendido", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Tmp. Encendido: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Tmp. Encendido: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 21), "GetModePID(01, 21) - Distancia MIL", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Distancia MIL: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Distancia MIL: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 31), "GetModePID(01, 31) - Distancia MIL Borrada", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Distancia MIL Borrada: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Distancia MIL Borrada: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 33), "GetModePID(01, 33) - Presion Barometrica Kpa", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Presion Barometrica Kpa: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Presion Barometrica Kpa: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &H4D), "GetModePID(01, 4D) - Tmp MIL on", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Tmp MIL on: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Tmp MIL on: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 51), "GetModePID(01, 51) - Tipo Combustible", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Tipo Combustible: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Tipo Combustible: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (01, 7F) Tmp Marcha Motor >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &H7F), "GetModePID(01, 7F) - Tmp Marcha Motor", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Tmp Marcha Motor: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Tmp Marcha Motor: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... (09, 04) Cal ID >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(9, 4), "GetModePID(09, 04) - Cal ID", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Cal ID: " & sr.CommResult & " | " & sr.Data.Count
+
+                    'Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Cal ID: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... Get VIN >>>-----------------------------------------------------------------------")
+            Try
+                sr = MyDad.GetModePID(9, 2) '-- vin
+
+                Applog(MyDad.CommandLog)
+
+                If (IsNothing(sr) = False) Then
+
+                    lStatus = "SR: " & sr.CommResult & " | " & sr.Data.Count
+                    Applog(lStatus)
+
+                    For Each edata As DrewTech.IIMClean.DT_IECUData In sr.Data
+                        Dim EcuId As Byte = GetEcuIdFromAddress(edata.Address)
+                        Try
+                            Applog("GetVIN | ECU:" & EcuId.ToString("X02") &
+                                              "  DLen:" & edata.Data.Length.ToString("000") &
+                                              " (" & ByteArrayToHexString(edata.Data) & ")")
+                        Catch ex As Exception
+                        End Try
+
+                        OBDdata_VINtxt = ""
+                        tVINLength = 0
+                        If ((edata.Data.Length > 1) AndAlso (CheckForNAK(9, 2, edata.Data) = False)) Then
+                            VinStart = 0
+                            If (MyObdProtocolCAN = True) Then VinStart = 1
+                            OBDdata_VINtxt = ByteArrayToString(edata.Data, VinStart, "?", True, tVINLength)
+                            Applog("GetVIN | ECU:" & EcuId.ToString("X02") & "  VIN: " & OBDdata_VIN)
+                        End If
+
+                    Next
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    'Form1.TextBox3.Text = "VIN: NULL"
+                    OBDdata_VIN = "NULL"
+                    OBDdata_VINtxt = "NULL"
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
+            Applog("... Get RPM >>>-----------------------------------------------------------------------")
+            Try
+
+                Dim Ix0 As Integer = 0
+                ReDim OBDdata_RPMmat(3)
+
+                For Ix0 = 1 To 4
+
+                    sr = Nothing
+                    MyDad.ClearLogs()
+                    SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                    DoDad(Sub() sr = MyDad.GetModePID(1, &HC), "GetModePID(01, 0C) - DTC count, MIL", "NoEOL")
+                    If (IsNothing(sr) = False) Then
+                        lStatus = "sr | Get RPM(" & Ix0 & "): " & sr.CommResult & " | " & sr.Data.Count
+
+                        Call DECODE_Bus(MyDad.CommandLog)
+                        Call DECODE_RPM(OBDdata_RPMhx)
+
+                        If Ix0 < 4 Then OBDdata_RPMmat(Ix0) = OBDdata_RPM
+
+                    Else
+                        lStatus = "sr | Get RPM: NULL"
+                    End If
+                    Applog(lStatus)
+
+                Next
+
+            Catch ex As Exception
+
+            End Try
 
             Applog("... >>>-----------------------------------------------------------------------")
             Applog("... >>>-----------------------------------------------------------------------")
@@ -4162,7 +4428,7 @@ Module Module1
 
         Catch ex As Exception
 
-            lStatus = "Err:Connect | " & ex.Message
+            lStatus = "Err:Connect_OBD | " & ex.Message
             Applog(lStatus)
             'MsgBox(lStatus)
 
@@ -4205,7 +4471,36 @@ Module Module1
                 sDeviceVoltageDLC = rDec.Data
                 Applog("InitIMCleanDevice | DeviceVoltageDLC:" & sDeviceVoltageDLC)
 
-                MyDad.ClearCommandLog()
+                'Dim sres As DrewTech.IIMClean.DT_IGenericResponse(Of DrewTech.IIMClean.DT_SelfTestRes) = Nothing
+                'Dim ires As DrewTech.IIMClean.DT_ISelfTestResponse(Of Integer) = Nothing
+
+                'ires = Nothing
+                'SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                'Dim ExtendedResult As String = ""
+                'DoDad(Sub() sres = MyDad.SelfTest, "SelfTest")
+
+                'sres = MyDad.SelfTest
+
+                'If (IsNothing(sres) = False) Then
+                'Applog("sres..Pass: " & sres.ToString)
+                'MsgBox("sres..Pass: ")
+
+                'Else
+                'Applog("sres..Fail: ")
+                'MsgBox("sres..Fail: ")
+                'End If
+
+                'If (IsNothing(ires) = False) Then
+                'Applog("ires..Pass: ")
+                'MsgBox("ires..Pass: ")
+                'Else
+                'Applog("ires..Fail: ")
+                'MsgBox("ires..Fail: ")
+                'End If
+                'Applog("CheckLink..Pass: " & sres.Data.ToString)
+                'MsgBox("CheckLink..Pass: " & ires.Data)
+
+                'MyDad.ClearCommandLog()
 
             Else
 

@@ -3479,7 +3479,8 @@ Module Module1
                     InStr(pDataTxt, "07 E0") > 0 Or
                         InStr(pDataTxt, "F1 10") > 0 Or
                             InStr(pDataTxt, "6B 1A") > 0 Or
-                                InStr(pDataTxt, "F1 58") > 0 Then '-- 07 E8 = ECU motor de gasolina 
+                                InStr(pDataTxt, "48 6B") > 0 Or
+                                    InStr(pDataTxt, "F1 58") > 0 Then '-- 07 E8 = ECU motor de gasolina 
 
             If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
 
@@ -3976,6 +3977,7 @@ Module Module1
             ConnectModuleHashtable = New Hashtable()
             '
             If (GetDAD("Connect") = True) Then
+                Applog("... Connect | 1 | GetDAD =Connect")
                 Try
                     Do While ((bSuccess = False) And (RetryCount >= 0))
                         Mode9PidSupportOverall = Nothing
@@ -4051,11 +4053,11 @@ Module Module1
                 End Try
                 ReleaseDAD("Connect")
             Else
-
-                Applog("******************************************** GetDAD(Connect) = false")
+                Applog("... Connect | 1 | GetDAD =No Connect")
 
             End If
 
+            Applog("... Connect | 2")
             Connect_Succeeded = bSuccess
             Connect_MyEngineId = MyEngineId
             Connect_MyObdProtocol = MyObdProtocol
@@ -4069,6 +4071,7 @@ Module Module1
             sTemp = ""
             Try
                 If (Connect_Succeeded = True) Then
+                    Applog("... Connect | 3 | Connect_Succeeded = True")
                     For Each eEntry As DictionaryEntry In Connect_ConnectModuleHashtable 'Connect.GetModuleHashtable
                         If (sTemp.Length > 0) Then sTemp = sTemp & ","
                         sTemp = sTemp & CByte(eEntry.Key).ToString("X02")
@@ -4090,7 +4093,7 @@ Module Module1
                     End If
                 End If
             Catch ex As Exception
-                Applog("Err:Connect | " & ex.Message)
+                Applog("Err:Connect_OBD | " & ex.Message)
             End Try
 
             Applog("Connect | Rslt:" & Connect_Succeeded.ToString &

@@ -9,7 +9,13 @@ Imports OpusIMCleanOBDdrv
 Module Module1
 
     Public b_initDeviceOBD As Boolean
+    Public b_VehTest As Boolean
     Public cOpusIMCleanOBDdrv As New OpusIMCleanOBDdrv.IMCleanOBD
+
+    Public xPlaca As String
+    Public xFechaHora As String
+
+    Public tmrVehTest As Integer = 20
 
     Public MySQLConnectionString As String = "server=localhost;uid=opus1234;pwd=1234opus;database=OpusOBDtest;Integrated Security=True"
 
@@ -38,6 +44,23 @@ Module Module1
 
             Dim sw As New System.IO.StreamWriter(logFile, True)
             sw.WriteLine(lDato)
+            sw.Close()
+
+        Catch ex As Exception
+            'MsgBox("AppLog:" + ex.Message)
+        End Try
+
+    End Sub
+
+    Public Sub wrReporte(ByVal pDato As String)
+
+        Dim txFecha As String = Format(Now, "ddMMyyyy")
+        Dim logFile As String = "C:\OPUS_PROG\Reportes\OBD_IMClean_Rep_" & txFecha & ".txt"
+
+        Try
+
+            Dim sw As New System.IO.StreamWriter(logFile, True)
+            sw.WriteLine(pDato)
             sw.Close()
 
         Catch ex As Exception

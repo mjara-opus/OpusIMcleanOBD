@@ -29,6 +29,10 @@ Partial Class Form1
         Me.lblIDmj = New System.Windows.Forms.Label()
         Me.picLogoESP = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PrgBrSalval = New System.Windows.Forms.ProgressBar()
+        Me.btnSalvar = New System.Windows.Forms.Button()
+        Me.lblPlaca = New System.Windows.Forms.Label()
+        Me.txtPlaca = New System.Windows.Forms.TextBox()
         Me.UsrBallTimer = New usrBallTimer.usrBallTimer()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtMySQLConnectionString = New System.Windows.Forms.TextBox()
@@ -132,6 +136,10 @@ Partial Class Form1
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.PrgBrSalval)
+        Me.Panel1.Controls.Add(Me.btnSalvar)
+        Me.Panel1.Controls.Add(Me.lblPlaca)
+        Me.Panel1.Controls.Add(Me.txtPlaca)
         Me.Panel1.Controls.Add(Me.UsrBallTimer)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtMySQLConnectionString)
@@ -178,6 +186,46 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(1320, 596)
         Me.Panel1.TabIndex = 282
         '
+        'PrgBrSalval
+        '
+        Me.PrgBrSalval.Location = New System.Drawing.Point(10, 204)
+        Me.PrgBrSalval.Name = "PrgBrSalval"
+        Me.PrgBrSalval.Size = New System.Drawing.Size(217, 10)
+        Me.PrgBrSalval.TabIndex = 317
+        Me.PrgBrSalval.Visible = False
+        '
+        'btnSalvar
+        '
+        Me.btnSalvar.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalvar.ForeColor = System.Drawing.Color.Black
+        Me.btnSalvar.Location = New System.Drawing.Point(9, 165)
+        Me.btnSalvar.Name = "btnSalvar"
+        Me.btnSalvar.Size = New System.Drawing.Size(218, 33)
+        Me.btnSalvar.TabIndex = 316
+        Me.btnSalvar.Text = "Salvar"
+        Me.btnSalvar.UseVisualStyleBackColor = True
+        '
+        'lblPlaca
+        '
+        Me.lblPlaca.AutoSize = True
+        Me.lblPlaca.BackColor = System.Drawing.Color.Transparent
+        Me.lblPlaca.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPlaca.ForeColor = System.Drawing.Color.White
+        Me.lblPlaca.Location = New System.Drawing.Point(8, 68)
+        Me.lblPlaca.Name = "lblPlaca"
+        Me.lblPlaca.Size = New System.Drawing.Size(57, 22)
+        Me.lblPlaca.TabIndex = 315
+        Me.lblPlaca.Text = "Placa"
+        '
+        'txtPlaca
+        '
+        Me.txtPlaca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtPlaca.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPlaca.Location = New System.Drawing.Point(9, 93)
+        Me.txtPlaca.Name = "txtPlaca"
+        Me.txtPlaca.Size = New System.Drawing.Size(215, 29)
+        Me.txtPlaca.TabIndex = 1
+        '
         'UsrBallTimer
         '
         Me.UsrBallTimer.BackColor = System.Drawing.Color.White
@@ -199,6 +247,7 @@ Partial Class Form1
         Me.Label6.Size = New System.Drawing.Size(212, 18)
         Me.Label6.TabIndex = 312
         Me.Label6.Text = "Cadena de conexión MySQL:"
+        Me.Label6.Visible = False
         '
         'txtMySQLConnectionString
         '
@@ -208,17 +257,20 @@ Partial Class Form1
         Me.txtMySQLConnectionString.TabIndex = 311
         Me.txtMySQLConnectionString.Text = "server=localhost;uid=opus1234;pwd=1234opus;database=OpusOBDtest;Integrated Securi" &
     "ty=True"
+        Me.txtMySQLConnectionString.Visible = False
         '
         'btnIniSQL
         '
+        Me.btnIniSQL.Enabled = False
         Me.btnIniSQL.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIniSQL.ForeColor = System.Drawing.Color.Black
-        Me.btnIniSQL.Location = New System.Drawing.Point(9, 17)
+        Me.btnIniSQL.Location = New System.Drawing.Point(9, 223)
         Me.btnIniSQL.Name = "btnIniSQL"
-        Me.btnIniSQL.Size = New System.Drawing.Size(218, 33)
+        Me.btnIniSQL.Size = New System.Drawing.Size(86, 33)
         Me.btnIniSQL.TabIndex = 310
         Me.btnIniSQL.Text = "Conectar SQL"
         Me.btnIniSQL.UseVisualStyleBackColor = True
+        Me.btnIniSQL.Visible = False
         '
         'Label2
         '
@@ -247,9 +299,9 @@ Partial Class Form1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(9, 184)
+        Me.Button1.Location = New System.Drawing.Point(101, 223)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(215, 33)
+        Me.Button1.Size = New System.Drawing.Size(86, 33)
         Me.Button1.TabIndex = 307
         Me.Button1.Text = "test"
         Me.Button1.UseVisualStyleBackColor = True
@@ -284,7 +336,7 @@ Partial Class Form1
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(415, 207)
+        Me.Label1.Location = New System.Drawing.Point(415, 209)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 22)
         Me.Label1.TabIndex = 304
@@ -296,7 +348,7 @@ Partial Class Form1
         Me.lblVoltajeDLC.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblVoltajeDLC.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVoltajeDLC.ForeColor = System.Drawing.Color.White
-        Me.lblVoltajeDLC.Location = New System.Drawing.Point(469, 202)
+        Me.lblVoltajeDLC.Location = New System.Drawing.Point(469, 204)
         Me.lblVoltajeDLC.Name = "lblVoltajeDLC"
         Me.lblVoltajeDLC.Size = New System.Drawing.Size(157, 30)
         Me.lblVoltajeDLC.TabIndex = 303
@@ -307,7 +359,7 @@ Partial Class Form1
         Me.lblIdDevice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblIdDevice.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIdDevice.ForeColor = System.Drawing.Color.White
-        Me.lblIdDevice.Location = New System.Drawing.Point(235, 118)
+        Me.lblIdDevice.Location = New System.Drawing.Point(235, 129)
         Me.lblIdDevice.Name = "lblIdDevice"
         Me.lblIdDevice.Size = New System.Drawing.Size(391, 30)
         Me.lblIdDevice.TabIndex = 301
@@ -559,10 +611,10 @@ Partial Class Form1
         '
         Me.BtnInitDevice.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInitDevice.ForeColor = System.Drawing.Color.Black
-        Me.BtnInitDevice.Location = New System.Drawing.Point(9, 59)
+        Me.BtnInitDevice.Location = New System.Drawing.Point(9, 16)
         Me.BtnInitDevice.Name = "BtnInitDevice"
         Me.BtnInitDevice.Size = New System.Drawing.Size(218, 33)
-        Me.BtnInitDevice.TabIndex = 260
+        Me.BtnInitDevice.TabIndex = 0
         Me.BtnInitDevice.Text = "Inicializar OBD"
         Me.BtnInitDevice.UseVisualStyleBackColor = True
         '
@@ -583,7 +635,7 @@ Partial Class Form1
         Me.lblVoltaje.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblVoltaje.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVoltaje.ForeColor = System.Drawing.Color.White
-        Me.lblVoltaje.Location = New System.Drawing.Point(469, 161)
+        Me.lblVoltaje.Location = New System.Drawing.Point(469, 166)
         Me.lblVoltaje.Name = "lblVoltaje"
         Me.lblVoltaje.Size = New System.Drawing.Size(157, 30)
         Me.lblVoltaje.TabIndex = 252
@@ -594,7 +646,7 @@ Partial Class Form1
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(393, 165)
+        Me.Label7.Location = New System.Drawing.Point(393, 170)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(67, 22)
         Me.Label7.TabIndex = 251
@@ -639,10 +691,10 @@ Partial Class Form1
         Me.BtnOBDtest.Enabled = False
         Me.BtnOBDtest.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOBDtest.ForeColor = System.Drawing.Color.Black
-        Me.BtnOBDtest.Location = New System.Drawing.Point(9, 102)
+        Me.BtnOBDtest.Location = New System.Drawing.Point(9, 128)
         Me.BtnOBDtest.Name = "BtnOBDtest"
         Me.BtnOBDtest.Size = New System.Drawing.Size(218, 33)
-        Me.BtnOBDtest.TabIndex = 143
+        Me.BtnOBDtest.TabIndex = 3
         Me.BtnOBDtest.Text = "Vehiculo Inspección"
         Me.BtnOBDtest.UseVisualStyleBackColor = True
         '
@@ -676,11 +728,11 @@ Partial Class Form1
         Me.lblTerminalDatos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblTerminalDatos.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTerminalDatos.ForeColor = System.Drawing.Color.White
-        Me.lblTerminalDatos.Location = New System.Drawing.Point(1191, 21)
+        Me.lblTerminalDatos.Location = New System.Drawing.Point(1169, 22)
         Me.lblTerminalDatos.Name = "lblTerminalDatos"
-        Me.lblTerminalDatos.Size = New System.Drawing.Size(100, 31)
+        Me.lblTerminalDatos.Size = New System.Drawing.Size(122, 31)
         Me.lblTerminalDatos.TabIndex = 283
-        Me.lblTerminalDatos.Text = "MySQL"
+        Me.lblTerminalDatos.Text = "OBD - ECU"
         Me.lblTerminalDatos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblTerminalDatos.UseCompatibleTextRendering = True
         '
@@ -691,7 +743,7 @@ Partial Class Form1
         Me.lblMensajeUsuario.ForeColor = System.Drawing.Color.White
         Me.lblMensajeUsuario.Location = New System.Drawing.Point(15, 19)
         Me.lblMensajeUsuario.Name = "lblMensajeUsuario"
-        Me.lblMensajeUsuario.Size = New System.Drawing.Size(1169, 31)
+        Me.lblMensajeUsuario.Size = New System.Drawing.Size(1147, 31)
         Me.lblMensajeUsuario.TabIndex = 31
         Me.lblMensajeUsuario.Text = "Mensajes para el usuario"
         Me.lblMensajeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -704,7 +756,7 @@ Partial Class Form1
         Me.BtnContinuar.Name = "BtnContinuar"
         Me.BtnContinuar.Size = New System.Drawing.Size(180, 40)
         Me.BtnContinuar.TabIndex = 284
-        Me.BtnContinuar.Text = "Terminar"
+        Me.BtnContinuar.Text = "Salir"
         Me.BtnContinuar.UseVisualStyleBackColor = True
         '
         'PicOpusLogo
@@ -725,7 +777,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Teal
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1354, 719)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnContinuar)
@@ -801,4 +853,8 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents txtMySQLConnectionString As TextBox
     Friend WithEvents UsrBallTimer As usrBallTimer.usrBallTimer
+    Friend WithEvents txtPlaca As TextBox
+    Friend WithEvents lblPlaca As Label
+    Friend WithEvents btnSalvar As Button
+    Friend WithEvents PrgBrSalval As ProgressBar
 End Class

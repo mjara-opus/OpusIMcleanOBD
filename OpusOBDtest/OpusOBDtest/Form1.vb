@@ -1,9 +1,13 @@
 ﻿
+Imports System.Net.NetworkInformation
+Imports System.Runtime.Serialization.Formatters
 Imports System.Threading
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form1
 
     Public Hilo01 As Thread
+    Public Hilo02 As Thread
     Public tmrReloj As Integer
     Private Sub frmOBDtest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -24,12 +28,14 @@ Public Class Form1
 
         lblFechaHora.Text = Format(Now, "dd-MMM-yyyy - HH:mm:ss")
 
-        If cOpusIMCleanOBDdrv.DeviceData.DeviceLinkOn Then
+        If cOpusIMCleanOBDdrv.DeviceData.DeviceLinkOn And b_initDeviceOBD Then
 
+            b_initDeviceOBD = False
             PicOBD.Visible = True
             UsrBallTimer.Visible = False
             BtnInitDevice.Enabled = False
             BtnOBDtest.Enabled = True
+
 
         Else
 
@@ -42,6 +48,15 @@ Public Class Form1
             End If
 
         End If
+
+        If b_VehTest Then
+
+            UsrBallTimer.Visible = True
+            tmrReloj += 1
+            If tmrReloj < tmrVehTest Then Call Me.UsrBallTimer.tick_tock()
+
+        End If
+
 
     End Sub
 
@@ -61,21 +76,31 @@ Public Class Form1
         Call rntMensajeusuario(lStatus)
         Applog(lStatus)
 
-        lStatus = cOpusIMCleanOBDdrv.ReviewDevicePlug()
+        Do
 
-        If Mid(lStatus, 1, 4) = "Key?" Then '-- requerimiento de licencia
+            lStatus = cOpusIMCleanOBDdrv.ReviewDevicePlug()
 
-            Call rntMensajeusuario("!:Opus IMClean OBD requiere licencia usuario." & lStatus) ' Opus IMClean OBD requiere licencia usuario.")
-            Applog("Opus IMClean OBD requiere licencia usuario.") '"Opus IMClean OBD licencia no valida o expirada.")
-            Applog(lStatus)
+            If Mid(lStatus, 1, 4) = "Key?" Then '-- requerimiento de licencia
 
-            lStatus = InputBox(Mid(lStatus, 5, 50), "Ingrese Licencia usuario.")
+                Call rntMensajeusuario("!:Opus IMClean OBD requiere licencia de software. " & lStatus) ' Opus IMClean OBD requiere licencia usuario.")
+                Applog("Opus IMClean OBD requiere licencia de software.") '"Opus IMClean OBD licencia no valida o expirada.")
+                Applog(lStatus)
 
-            lStatus = cOpusIMCleanOBDdrv.set_OpusKeyDevice(lStatus)
+                lStatus = InputBox(Mid(lStatus, 5, 50), "Ingrese Licencia de software.", lStatus)
 
-            MsgBox(lStatus)
+                lStatus = cOpusIMCleanOBDdrv.set_OpusKeyDevice(lStatus)
 
-        Else
+                If Mid(lStatus, 1, 4) = "Err:" Then Exit Do
+
+            Else
+
+                Exit Do
+
+            End If
+
+        Loop
+
+        If Mid(lStatus, 1, 4) = "Pass" Then
 
             lblDeviceDescription.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceDescription
             lblIdDevice.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceID
@@ -106,7 +131,7 @@ Public Class Form1
         End If
 
         'Applog(lStatus)
-        'Call rntMensajeusuario(lStatus)
+        Call rntMensajeusuario(lStatus)
 
     End Sub
 
@@ -144,17 +169,14 @@ Public Class Form1
 
     End Sub
 
-    Private Sub BtnOBDtest_Click(sender As Object, e As EventArgs) Handles BtnOBDtest.Click
+    Private Sub limpiaCampos()
 
         ListBox1.Items.Clear()
+
         lblProtocolo.Text = " "
         LblVIN.Text = " "
         lblDTC.Text = " "
 
-
-        Dim lStatus As String = "IMClean OBD comunicando con el ECU del vehículo, espere un momento..."
-
-        '//-- 009 - Valor nulo = Monitor no disponible, no completado, sin DTC.  
         LblOBD_mil.BackColor = Drawing.Color.Gray
 
         LblOBD_MSI_D.BackColor = Drawing.Color.Gray
@@ -176,16 +198,56 @@ Public Class Form1
         LblOBD_CAT_D.BackColor = Drawing.Color.Gray
         LblOBD_CAT_C.BackColor = Drawing.Color.Gray
         LblOBD_CAT.BackColor = Drawing.Color.Gray
-        '||-- 009 - Valor nulo = Monitor no disponible, no completado, sin DTC.  
 
         Me.Refresh()
 
-        Applog(lStatus)
-        Call rntMensajeusuario(lStatus)
+    End Sub
 
-        lStatus = cOpusIMCleanOBDdrv.VehiculoLink()
+
+
+    Private Sub BtnOBDtest_Click(sender As Object, e As EventArgs) Handles BtnOBDtest.Click
+
+        Dim lStatus As String = "IMClean OBD comunicando con el ECU del vehículo, espere un momento..."
+
+        xPlaca = txtPlaca.Text
+        xFechaHora = Format(Now, "dd/MM/yyyy -  HH:mm:ss")
+
+        Call limpiaCampos()
+
+        If Len(xPlaca) < 3 Then
+
+            Call rntMensajeusuario("!:Captura la placa / matricula del vehículo.")
+            txtPlaca.Select()
+
+        Else
+
+            Applog(lStatus)
+            Call rntMensajeusuario(lStatus)
+
+            Control.CheckForIllegalCrossThreadCalls = False
+            Threading.Thread.CurrentThread.ApartmentState = Threading.ApartmentState.STA
+
+            UsrBallTimer.wTime = tmrVehTest
+            UsrBallTimer.resetAvance()
+            UsrBallTimer.Visible = True
+            tmrReloj = 0
+            b_VehTest = True
+
+            Hilo02 = New Thread(AddressOf VehTest)
+            Hilo02.Start()
+
+        End If
+
+    End Sub
+
+    Private Sub VehTest()
+
+        Dim lStatus As String = cOpusIMCleanOBDdrv.VehiculoLink()
 
         If Mid(lStatus, 1, 4) = "Pass" Then
+
+            lblVoltaje.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage
+            lblVoltajeDLC.Text = cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC
 
             LblVIN.Text = cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN
 
@@ -227,40 +289,73 @@ Public Class Form1
             Applog("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
             Applog("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
             Applog(" ")
-            Applog("InspectionData")
+            Applog("Placa: " & xPlaca & "           Fecha: " & xFechaHora)
             Applog("-------------------------------------------------------")
             Applog("OBDdata_PROTOCOLO: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO)
-            Applog("OBDdata_VINhx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VINhx)
             Applog("OBDdata_VIN: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN)
-            Applog("OBDdata_MILhx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MILhx)
             Applog("OBDdata_MIL: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
             Applog("MSI: " & cOpusIMCleanOBDdrv.InspectionData.OBD_MSI)
             Applog("CCM: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CCM)
             Applog("CMB: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CMB)
             Applog("OS2: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2S)
             Applog("CAT: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CAT)
-            Applog("DTChx: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTChx)
+            Applog("CCC: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CCC)
+            Applog("EVS: " & cOpusIMCleanOBDdrv.InspectionData.OBD_EVS)
+            Applog("SAS: " & cOpusIMCleanOBDdrv.InspectionData.OBD_SAS)
+            Applog("FAA: " & cOpusIMCleanOBDdrv.InspectionData.OBD_FAA)
+            Applog("O2C: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2C)
             Applog("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
+            Applog(" ")
+            Applog("Pid0101 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0101) '-- Monitores MIL
+            Applog("Pid0300 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0300) '-- DTC
+            Applog("Pid0121 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0121) '-- Distancia MIL on
+            Applog("Pid0131 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0131) '-- Distancia MIL borrado
+            Applog("Pid0133 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0133) '-- Presion Barometrica Kpa 
+            Applog("Pid011F : " & cOpusIMCleanOBDdrv.InspectionData.Pid011F) '-- Tiempo de encendido motor
+            Applog("Pid017F : " & cOpusIMCleanOBDdrv.InspectionData.Pid017F) '-- Tiempo de marcha motor
+            Applog("Pid014D : " & cOpusIMCleanOBDdrv.InspectionData.Pid014D) '-- Tiempo MIL on
+            Applog("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0951) '-- Tipo combustible
+            Applog("Pid0902 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0902) '-- VIN
+            Applog("Pid0904 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0904) '-- Cal ID
+            Applog("Pid010C : " & cOpusIMCleanOBDdrv.InspectionData.Pid010C) '-- RPM
             Applog(" ")
             Applog("Inpección de monitores y codigos DTC en el ECU del vehículo terminada.")
 
             Call rntMensajeusuario("Inpección de monitores y codigos DTC en el ECU del vehículo terminada.")
 
-            If cOpusIMCleanOBDdrv.OBD_SimulationWarning Then
+            If Not cOpusIMCleanOBDdrv.InspectionData.OBD_ECU_onLine Then
 
-                Applog("Err: Posible simulación de lecturas del ECU detectada.")
-                Call rntMensajeusuario("Err: Posible simulación de lecturas del ECU detectada.")
+                lblTerminalDatos.BackColor = Color.Gray '-- OBD-ECU gris
+                Applog("Err: El OBD no esta conectado al vehículo.")
+                Call rntMensajeusuario("Err: El OBD no esta conectado al vehículo.")
+
+            Else
+
+                lblTerminalDatos.BackColor = Color.Green '-- OBD-ECU verde
+
+                If cOpusIMCleanOBDdrv.OBD_SimulationWarning Then
+
+                    Applog("Err: Posible simulación de lecturas del ECU detectada.")
+                    Call rntMensajeusuario("Err: Posible simulación de lecturas del ECU detectada.")
+
+                End If
 
             End If
 
         Else
 
+            lblTerminalDatos.BackColor = Color.Gray '-- OBD-ECU 
             Applog("Err:IMClean OBD fallo comunicanción con el ECU del vehículo.")
             Call rntMensajeusuario("Err:IMClean OBD fallo comunicanción con el ECU del vehículo.")
 
         End If
 
+        b_VehTest = False
+        UsrBallTimer.Visible = False
+
     End Sub
+
+
 
     Private Sub BtnContinuar_Click(sender As Object, e As EventArgs) Handles BtnContinuar.Click
 
@@ -397,5 +492,103 @@ Public Class Form1
 
     End Function
 
+    Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
+
+        wrReporte("-------------------------------------------------------")
+        wrReporte("Placa: " & xPlaca)
+        wrReporte("Fecha-Hora: " & xFechaHora)
+        wrReporte("ECU_onLine: " & cOpusIMCleanOBDdrv.InspectionData.OBD_ECU_onLine)
+        wrReporte("Posible Simulación: " & cOpusIMCleanOBDdrv.OBD_SimulationWarning)
+        wrReporte("-------------------------------------------------------")
+        wrReporte("OBDdata_PROTOCOLO: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO)
+        wrReporte("OBDdata_VIN: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN)
+        wrReporte("OBDdata_MIL: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
+        wrReporte("MSI: " & cOpusIMCleanOBDdrv.InspectionData.OBD_MSI)
+        wrReporte("CCM: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CCM)
+        wrReporte("CMB: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CMB)
+        wrReporte("OS2: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2S)
+        wrReporte("CAT: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CAT)
+        wrReporte("CCC: " & cOpusIMCleanOBDdrv.InspectionData.OBD_CCC)
+        wrReporte("EVS: " & cOpusIMCleanOBDdrv.InspectionData.OBD_EVS)
+        wrReporte("SAS: " & cOpusIMCleanOBDdrv.InspectionData.OBD_SAS)
+        wrReporte("FAA: " & cOpusIMCleanOBDdrv.InspectionData.OBD_FAA)
+        wrReporte("O2C: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2C)
+        wrReporte("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
+        wrReporte(" ")
+        wrReporte("Pid0101 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0101) '-- Monitores MIL
+        wrReporte("Pid0300 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0300) '-- DTC
+        wrReporte("Pid0121 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0121) '-- Distancia MIL on
+        wrReporte("Pid0131 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0131) '-- Distancia MIL borrado
+        wrReporte("Pid0133 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0133) '-- Presion Barometrica Kpa 
+        wrReporte("Pid011F : " & cOpusIMCleanOBDdrv.InspectionData.Pid011F) '-- Tiempo de encendido motor
+        wrReporte("Pid017F : " & cOpusIMCleanOBDdrv.InspectionData.Pid017F) '-- Tiempo de marcha motor
+        wrReporte("Pid014D : " & cOpusIMCleanOBDdrv.InspectionData.Pid014D) '-- Tiempo MIL on
+        wrReporte("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0951) '-- Tipo combustible
+        wrReporte("Pid0902 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0902) '-- VIN
+        wrReporte("Pid0904 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0904) '-- Cal ID
+        wrReporte("Pid010C : " & cOpusIMCleanOBDdrv.InspectionData.Pid010C) '-- RPM
+        wrReporte("=======================================================")
+        wrReporte(" ")
+
+        Call limpiaCampos()
+
+        lblTerminalDatos.BackColor = Color.Gray '-- OBD-ECU verde
+
+        Call rtnBarraProceso()
+
+        txtPlaca.Text = " "
+        txtPlaca.Select()
+
+    End Sub
+
+    Private Sub rtnBarraProceso()
+
+        PrgBrSalval.Visible = True
+        PrgBrSalval.BackColor = Drawing.Color.Red
+        PrgBrSalval.Maximum = 100
+        Dim IxPrgBrSalval As Integer
+        For IxPrgBrSalval = 1 To 100
+            System.Threading.Thread.Sleep(10)
+            PrgBrSalval.Value = IxPrgBrSalval
+
+        Next
+        System.Threading.Thread.Sleep(250)
+        PrgBrSalval.Value = 0
+        PrgBrSalval.Visible = False
+
+    End Sub
+
+    Private Sub BtnInitDevice_GotFocus(sender As Object, e As EventArgs) Handles BtnInitDevice.GotFocus
+        BtnInitDevice.BackColor = xFocusColor
+    End Sub
+
+    Private Sub BtnInitDevice_LostFocus(sender As Object, e As EventArgs) Handles BtnInitDevice.LostFocus
+        BtnInitDevice.BackColor = xBtnNeutro
+    End Sub
+
+    Private Sub BtnOBDtest_GotFocus(sender As Object, e As EventArgs) Handles BtnOBDtest.GotFocus
+        BtnOBDtest.BackColor = xFocusColor
+    End Sub
+
+    Private Sub BtnOBDtest_LostFocus(sender As Object, e As EventArgs) Handles BtnOBDtest.LostFocus
+        BtnOBDtest.BackColor = xBtnNeutro
+    End Sub
+
+    Private Sub btnSalvar_GotFocus(sender As Object, e As EventArgs) Handles btnSalvar.GotFocus
+        btnSalvar.BackColor = xFocusColor
+    End Sub
+
+    Private Sub btnSalvar_LostFocus(sender As Object, e As EventArgs) Handles btnSalvar.LostFocus
+        btnSalvar.BackColor = xBtnNeutro
+    End Sub
+
+    Private Sub txtPlaca_GotFocus(sender As Object, e As EventArgs) Handles txtPlaca.GotFocus
+        Call rntMensajeusuario("Capture la placa del vehículo a probar.")
+        txtPlaca.BackColor = xbackColorAmarillo
+    End Sub
+
+    Private Sub txtPlaca_LostFocus(sender As Object, e As EventArgs) Handles txtPlaca.LostFocus
+        txtPlaca.BackColor = Drawing.Color.White
+    End Sub
 
 End Class

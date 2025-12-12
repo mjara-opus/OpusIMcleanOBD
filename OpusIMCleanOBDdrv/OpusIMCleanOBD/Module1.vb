@@ -207,13 +207,13 @@ Module Module1
     Public OBDdataBus As String()
 
     Public OBDdata_PROTOCOLO As String
-    Public OBDdata_VIN As String
+    'Public OBDdata_VIN As String
     Public OBDdata_VINtxt As String
-    Public OBDdata_MIL As String
+    'Public OBDdata_MIL As String
     Public OBDdata_MILtxt As String
-    Public OBDdata_DTC As String
+    'Public OBDdata_DTC As String
     Public OBDdata_DTCtxt As String
-    Public OBDdata_RPMhx As String
+    'Public OBDdata_RPMhx As String
     Public OBDdata_RPM As Integer
     Public OBDdata_RPMmat(3) As Integer
 
@@ -248,6 +248,19 @@ Module Module1
     Public xDTC_FAA As Boolean
     Public xDTC_O2C As Boolean
 
+    Public xPid0101 As String = "Null" '-- Monitores MIL
+    Public xPid0300 As String = "Null" '-- DTC
+    Public xPid0121 As String = "Null" '-- Distancia MIL on
+    Public xPid0131 As String = "Null" '-- Distancia MIL borrado
+    Public xPid0133 As String = "Null" '-- Presion Barometrica Kpa 
+    Public xPid011F As String = "Null" '-- Tiempo de encendido motor
+    Public xPid017F As String = "Null" '-- Tiempo de marcha motor
+    Public xPid014D As String = "Null" '-- Tiempo MIL on
+    Public xPid0951 As String = "Null" '-- Tipo combustible
+    Public xPid0902 As String = "Null" '-- VIN
+    Public xPid0904 As String = "Null" '-- Cal ID
+    Public xPid010C As String = "Null" '-- RPM
+
     Public facNS As Int32
     Public facFH As Int32
 
@@ -265,7 +278,9 @@ Module Module1
 
     Public xMacAddress As String
 
+    Public xOBD_ECU_onLine As Boolean
     Public xOBD_SimulationWarning As Boolean
+    Public xMinVoltage As Integer = 8 '-- Minimo voltaje que puede registrar un motor.
 
     Public Structure srtOBDBatteryInformation
         Public BatteryCycleCountAvailable As Boolean
@@ -3474,48 +3489,116 @@ Module Module1
         Dim Ix1 As Integer = 0
         'ReDim OBDdataBus(100)      Chr(13) & '& vbCrLf
 
+        Dim banMotGas As Boolean = False
+
+        If InStr(pDataTxt, "07 E8") > 0 Then
+            banMotGas = True '-- 07 E8 = ECU motor de gasolina 
+
+        End If
+
         If InStr(pDataTxt, "07 E8") > 0 Or
                 InStr(pDataTxt, "07 DF") > 0 Or
                     InStr(pDataTxt, "07 E0") > 0 Or
                         InStr(pDataTxt, "F1 10") > 0 Or
                             InStr(pDataTxt, "6B 1A") > 0 Or
                                 InStr(pDataTxt, "48 6B") > 0 Or
-                                    InStr(pDataTxt, "F1 58") > 0 Then '-- 07 E8 = ECU motor de gasolina 
+                                    InStr(pDataTxt, "F1 58") > 0 Then '-- posibles ECUS no conocidos (electricos? diesel?) 
 
-            If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
 
-                If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
-
-                OBDdata_MIL = Trim(lBustxt)
-                'Call DECODE_MIL(OBDdata_MIL)
-
-            Else
-
-                If InStr(pDataTxt, "41 0C") > 0 Then '-- OBDdata_RPM 
-
-                    If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
-                    OBDdata_RPMhx = Trim(lBustxt)
-
-                Else
-
-                    If InStr(pDataTxt, "49 02") > 0 Then '-- OBDdata_MIL 
-
-                        If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
-                        OBDdata_VIN = Trim(lBustxt)
-
-                    Else
-
-                        If InStr(pDataTxt, "43") > 0 Then '-- OBDdata_DTC 
-
-                            If Ix0 > 0 Then lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
-                            OBDdata_DTC = Trim(lBustxt)
-
-                        End If
-
-                    End If
-
+            If InStr(pDataTxt, "41 01") > 0 And banMotGas Then '-- OBDdata_MIL 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0101 = Trim(lBustxt)
+                    Call DECODE_MIL(xPid0101)
                 End If
+            End If
 
+            If InStr(pDataTxt, "41 0C") > 0 Then '-- OBDdata_RPM 
+                If Ix0 > 0 And banMotGas Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid010C = Trim(lBustxt)
+                    Call DECODE_RPM(xPid010C)
+                End If
+            End If
+
+            If InStr(pDataTxt, "43") > 0 And banMotGas Then '-- OBDdata_DTC
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0300 = Trim(lBustxt)
+                    Call DECODE_DTC(xPid0300)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 21") > 0 Then '-- Distancia MIL on
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0121 = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid0121)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 31") > 0 Then '-- Distancia MIL borrado
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0131 = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid0131)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 33") > 0 Then '-- Presion Barometrica Kpa
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0133 = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid0133)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 1F") > 0 Then '-- Tiempo de encendido motor
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid011F = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid011F)
+                End If
+            End If
+
+            If InStr(pDataTxt, "01 7F") > 0 Then '-- Tiempo de marcha motor
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid017F = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid017F)
+                End If
+            End If
+
+            If InStr(pDataTxt, "01 4D") > 0 Then '-- Tiempo MIL on
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid014D = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid014D)
+                End If
+            End If
+
+            If InStr(pDataTxt, "09 51") > 0 Then '-- Tipo combustible
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0951 = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid0951)
+                End If
+            End If
+
+            If InStr(pDataTxt, "09 02") > 0 Then '-- VIN
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0902 = Trim(lBustxt)
+                    'Call DECODE_RPM(xPid0902)
+                End If
+            End If
+
+            If InStr(pDataTxt, "09 04") > 0 Then '-- Cal ID
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0904 = Trim(lBustxt)
+                    'Call DECODE_VIN(xPid0904)
+                End If
             End If
 
         End If
@@ -3957,6 +4040,7 @@ Module Module1
         Try
 
             MyDad.ClearLogs()
+            xOBD_ECU_onLine = False
 
             Dim StartTicks As Int32 = System.Environment.TickCount
             Dim CallingProcedure As String = LocalGetCallingProcedure()
@@ -4105,6 +4189,7 @@ Module Module1
             LocalDecrementActiveCount(CallingProcedure)
 
             '===================================
+            If sDeviceVoltage > xMinVoltage And sDeviceVoltageDLC > xMinVoltage Then xOBD_ECU_onLine = True '-- validamos los voltajes para identificar que es un vehiculo.
 
             Applog(" ")
             Applog("... Get MON >>>-----------------------------------------------------------------------")
@@ -4118,7 +4203,7 @@ Module Module1
                     lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
 
                     Call DECODE_Bus(MyDad.CommandLog)
-                    Call DECODE_MIL(OBDdata_MIL)
+                    'Call DECODE_MIL(xPid0101)
 
                 Else
                     lStatus = "sr | Get MON: NULL"
@@ -4141,7 +4226,7 @@ Module Module1
                     lStatus = "sr | Get DTC: " & sr.CommResult & " | " & sr.Data.Count
 
                     Call DECODE_Bus(MyDad.CommandLog)
-                    Call DECODE_DTC(OBDdata_DTC)
+                    'Call DECODE_DTC(xPid0300)
 
                 Else
                     lStatus = "sr | Get DTC: NULL"
@@ -4163,7 +4248,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Tmp. Encendido: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Tmp. Encendido: NULL"
@@ -4185,7 +4270,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Distancia MIL: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Distancia MIL: NULL"
@@ -4207,7 +4292,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Distancia MIL Borrada: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Distancia MIL Borrada: NULL"
@@ -4229,7 +4314,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Presion Barometrica Kpa: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Presion Barometrica Kpa: NULL"
@@ -4251,7 +4336,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Tmp MIL on: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Tmp MIL on: NULL"
@@ -4273,7 +4358,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Tipo Combustible: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Tipo Combustible: NULL"
@@ -4295,7 +4380,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Tmp Marcha Motor: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Tmp Marcha Motor: NULL"
@@ -4317,7 +4402,7 @@ Module Module1
                 If (IsNothing(sr) = False) Then
                     lStatus = "sr | Cal ID: " & sr.CommResult & " | " & sr.Data.Count
 
-                    'Call DECODE_Bus(MyDad.CommandLog)
+                    Call DECODE_Bus(MyDad.CommandLog)
 
                 Else
                     lStatus = "sr | Cal ID: NULL"
@@ -4355,7 +4440,7 @@ Module Module1
                             VinStart = 0
                             If (MyObdProtocolCAN = True) Then VinStart = 1
                             OBDdata_VINtxt = ByteArrayToString(edata.Data, VinStart, "?", True, tVINLength)
-                            Applog("GetVIN | ECU:" & EcuId.ToString("X02") & "  VIN: " & OBDdata_VIN)
+                            Applog("GetVIN | ECU:" & EcuId.ToString("X02") & "  VIN: " & xPid0902)
                         End If
 
                     Next
@@ -4364,7 +4449,7 @@ Module Module1
 
                 Else
                     'Form1.TextBox3.Text = "VIN: NULL"
-                    OBDdata_VIN = "NULL"
+                    xPid0902 = "NULL"
                     OBDdata_VINtxt = "NULL"
                 End If
 
@@ -4389,7 +4474,7 @@ Module Module1
                         lStatus = "sr | Get RPM(" & Ix0 & "): " & sr.CommResult & " | " & sr.Data.Count
 
                         Call DECODE_Bus(MyDad.CommandLog)
-                        Call DECODE_RPM(OBDdata_RPMhx)
+                        'Call DECODE_RPM(xPid010C)
 
                         If Ix0 < 4 Then OBDdata_RPMmat(Ix0) = OBDdata_RPM
 
@@ -4407,24 +4492,40 @@ Module Module1
             Applog("... >>>-----------------------------------------------------------------------")
             Applog("... >>>-----------------------------------------------------------------------")
 
-            Applog("VIN Hx: " & OBDdata_VIN)
             Applog("VIN: " & OBDdata_VINtxt)
-
-            Applog("MON Hx: " & OBDdata_MIL)
             Applog("MON: " & OBDdata_MILtxt)
-
-            Applog("DTC Hx: " & OBDdata_DTC)
             Applog("DTC: " & OBDdata_DTCtxt)
 
-            Applog("RPM Hx: " & OBDdata_RPMhx)
+            Applog("Voltage: " & sDeviceVoltage)
+            Applog("VoltageDLC: " & sDeviceVoltageDLC)
+
+            Applog("Pid0101 : " & xPid0101) '-- Monitores MIL
+            Applog("Pid0300 : " & xPid0300) '-- DTC
+            Applog("Pid0121 : " & xPid0121) '-- Distancia MIL on
+            Applog("Pid0131 : " & xPid0131) '-- Distancia MIL borrado
+            Applog("Pid0133 : " & xPid0133) '-- Presion Barometrica Kpa 
+            Applog("Pid011F : " & xPid011F) '-- Tiempo de encendido motor
+            Applog("Pid017F : " & xPid017F) '-- Tiempo de marcha motor
+            Applog("Pid014D : " & xPid014D) '-- Tiempo MIL on
+            Applog("Pid0951 : " & xPid0951) '-- Tipo combustible
+            Applog("Pid0902 : " & xPid0902) '-- VIN
+            Applog("Pid0904 : " & xPid0904) '-- Cal ID
+
+            Applog("Pid010C: " & xPid010C) '-- RPM
             Applog("RPM: " & OBDdata_RPM & " | 1: " & OBDdata_RPMmat(1) & " | 2: " & OBDdata_RPMmat(2) & " | 3: " & OBDdata_RPMmat(3))
-            If OBDdata_RPM = OBDdata_RPMmat(1) And
+
+            If xOBD_ECU_onLine Then
+
+                If OBDdata_RPM = OBDdata_RPMmat(1) And
                     OBDdata_RPM = OBDdata_RPMmat(2) And
                         OBDdata_RPM = OBDdata_RPMmat(3) Then
-                Applog("****** Posible Simulación de lecturas OBD detectada.")
-                xOBD_SimulationWarning = True
+                    Applog("****** Posible Simulación de lecturas OBD detectada.")
+                    xOBD_SimulationWarning = True
+                Else
+                    xOBD_SimulationWarning = False
+                End If
             Else
-                xOBD_SimulationWarning = False
+                Applog("****** OBD no conectado al vehículo.")
             End If
 
             Applog("*** Connect ... EOF()")

@@ -27,11 +27,10 @@ Public Class IMCleanOBD
 
         Public Fecha_Test As DateTime
 
-        Public OBDdata_VINhx As String
+        Public OBD_ECU_onLine As Boolean '-- Bandera de reconocimeinto de ECU conectado
+
         Public OBDdata_VIN As String
-        Public OBDdata_MILhx As String
         Public OBDdata_MIL As String
-        Public OBDdata_DTChx As String
         Public OBDdata_DTC As String
 
         Public OBDdata_PROTOCOLO As String
@@ -48,6 +47,19 @@ Public Class IMCleanOBD
         Public OBD_FAA As String '-- Sistema de fugas de aire acondicionado
         Public OBD_O2C As String '-- Sistema de calentamiento del sensor de oxigeno
 
+        Public Pid0101 As String '-- Monitores MIL
+        Public Pid0300 As String '-- DTC
+        Public Pid0121 As String '-- Distancia MIL on
+        Public Pid0131 As String '-- Distancia MIL borrado
+        Public Pid0133 As String '-- Presion Barometrica Kpa 
+        Public Pid011F As String '-- Tiempo de encendido motor
+        Public Pid017F As String '-- Tiempo de marcha motor
+        Public Pid014D As String '-- Tiempo MIL on
+        Public Pid0951 As String '-- Tipo combustible
+        Public Pid0902 As String '-- VIN
+        Public Pid0904 As String '-- Cal ID
+        Public Pid010C As String '-- RPM
+
     End Structure
     Public InspectionData As srtInspectionData
     Public Shared lInspectionData As srtInspectionData
@@ -56,11 +68,21 @@ Public Class IMCleanOBD
 
         InspectionData.Fecha_Test = Now 'Format(Now, "ddMMyyyy")
 
-        OBDdata_VIN = Nothing
+        xPid0101 = "Null" '-- Monitores MIL
+        xPid0300 = "Null" '-- DTC
+        xPid0121 = "Null" '-- Distancia MIL on
+        xPid0131 = "Null" '-- Distancia MIL borrado
+        xPid0133 = "Null" '-- Presion Barometrica Kpa 
+        xPid011F = "Null" '-- Tiempo de encendido motor
+        xPid017F = "Null" '-- Tiempo de marcha motor
+        xPid014D = "Null" '-- Tiempo MIL on
+        xPid0951 = "Null" '-- Tipo combustible
+        xPid0902 = "Null" '-- VIN
+        xPid0904 = "Null" '-- Cal ID
+        xPid010C = "Null" '-- RPM
+
         OBDdata_VINtxt = Nothing
-        OBDdata_MIL = Nothing
         OBDdata_MILtxt = Nothing
-        OBDdata_DTC = Nothing
         OBDdata_DTCtxt = Nothing
 
         LrdOBD_MSI = Nothing
@@ -85,11 +107,21 @@ Public Class IMCleanOBD
 
         InspectionData.Fecha_Test = Now 'Format(Now, "ddMMyyyy")
 
-        InspectionData.OBDdata_VINhx = OBDdata_VIN & " #" & calcCRC(OBDdata_VIN)
+        InspectionData.Pid0101 = xPid0101 '& " #" & calcCRC(xPid0101) '-- Monitores MIL
+        InspectionData.Pid0300 = xPid0300 '& " #" & calcCRC(xPid0300) '-- DTC
+        InspectionData.Pid0121 = xPid0121 '& " #" & calcCRC(xPid0121) '-- Distancia MIL on
+        InspectionData.Pid0131 = xPid0131 '& " #" & calcCRC(xPid0131) '-- Distancia MIL borrado
+        InspectionData.Pid0133 = xPid0133 '& " #" & calcCRC(xPid0133) '-- Presion Barometrica Kpa 
+        InspectionData.Pid011F = xPid011F '& " #" & calcCRC(xPid011F) '-- Tiempo de encendido motor
+        InspectionData.Pid017F = xPid017F '& " #" & calcCRC(xPid017F) '-- Tiempo de marcha motor
+        InspectionData.Pid014D = xPid014D '& " #" & calcCRC(xPid014D) '-- Tiempo MIL on
+        InspectionData.Pid0951 = xPid0951 '& " #" & calcCRC(xPid0951) '-- Tipo combustible
+        InspectionData.Pid0902 = xPid0902 '& " #" & calcCRC(xPid0902) '-- VIN
+        InspectionData.Pid0904 = xPid0904 '& " #" & calcCRC(xPid0904) '-- Cal ID
+        InspectionData.Pid010C = xPid010C '& " #" & calcCRC(xPid010C) '-- RPM
+
         InspectionData.OBDdata_VIN = OBDdata_VINtxt
-        InspectionData.OBDdata_MILhx = OBDdata_MIL & " #" & calcCRC(OBDdata_MIL)
         InspectionData.OBDdata_MIL = OBDdata_MILtxt
-        InspectionData.OBDdata_DTChx = OBDdata_DTC & " #" & calcCRC(OBDdata_DTC)
         InspectionData.OBDdata_DTC = OBDdata_DTCtxt
 
         InspectionData.OBD_MSI = LrdOBD_MSI
@@ -106,9 +138,10 @@ Public Class IMCleanOBD
 
         InspectionData.OBDdata_PROTOCOLO = OBDdata_PROTOCOLO
 
-        lInspectionData = InspectionData
-
         OBD_SimulationWarning = xOBD_SimulationWarning
+        InspectionData.OBD_ECU_onLine = xOBD_ECU_onLine
+
+        lInspectionData = InspectionData
 
     End Sub
 

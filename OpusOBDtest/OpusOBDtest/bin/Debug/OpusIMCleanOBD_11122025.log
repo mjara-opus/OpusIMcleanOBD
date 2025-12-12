@@ -1,0 +1,2243 @@
+09:37:22| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:37:22| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:37:26| CFD | Search_Result_Count:1
+09:37:26| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:37:26| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:37:26| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:37:26| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:37:26| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:37:26| ... GetPropertyValueAsString: VehiclePassThru
+09:37:26| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:37:26| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:37:26| ... GetPropertyValueAsString: Win32_PnPEntity
+09:37:26| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:37:26| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:37:26| ... CheckForDevice |1
+09:37:26| Pass:FindUSBDevices.
+09:37:52| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= DWDBZAQJBOPHX
+09:37:52| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= DWDBZAQJBOPHX
+09:38:01| zipESP:  | 
+09:38:22| chkSumCADD |  | Err:Opus IMClean OBD licencia no valida. |  =/= DSGRDEQFEELMT
+09:56:43| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:56:43| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:56:47| CFD | Search_Result_Count:1
+09:56:47| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:56:47| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:56:47| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:56:47| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:56:47| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:56:47| ... GetPropertyValueAsString: VehiclePassThru
+09:56:47| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:56:47| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:56:47| ... GetPropertyValueAsString: Win32_PnPEntity
+09:56:47| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:56:47| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:56:47| ... CheckForDevice |1
+09:56:47| Pass:FindUSBDevices.
+09:57:09| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+09:57:09| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+09:57:15| zipESP:  | 
+09:57:31| chkSumCADD |  | Err:Opus IMClean OBD licencia no valida. |  =/= HYGDSFMTUVRQR
+09:57:53| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:57:53| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:57:56| CFD | Search_Result_Count:1
+09:57:56| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:57:56| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:57:56| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:57:56| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:57:56| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:57:56| ... GetPropertyValueAsString: VehiclePassThru
+09:57:56| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:57:56| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:57:56| ... GetPropertyValueAsString: Win32_PnPEntity
+09:57:56| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:57:56| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:57:56| ... CheckForDevice |1
+09:57:56| Pass:FindUSBDevices.
+09:58:21| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+09:58:21| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+09:58:42| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+09:58:52| chkSumCADD | HYGDSFMTUVRQRHYXCVB | Err:Opus IMClean OBD licencia expirada. | 11/12/0201 =/= 11/12/2025
+09:59:07| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+09:59:07| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+09:59:10| CFD | Search_Result_Count:1
+09:59:10| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:59:10| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:59:10| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+09:59:10| ... GetPropertyValueAsString: Drew Technologies, Inc.
+09:59:10| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+09:59:10| ... GetPropertyValueAsString: VehiclePassThru
+09:59:10| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:59:10| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:59:10| ... GetPropertyValueAsString: Win32_PnPEntity
+09:59:10| ... GetPropertyValueAsString: IMClean DAD GEN 4
+09:59:10| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+09:59:10| ... CheckForDevice |1
+09:59:10| Pass:FindUSBDevices.
+09:59:16| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+09:59:16| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+09:59:19| zipESP:  | 
+09:59:25| chkSumCADD |  | Err:Opus IMClean OBD licencia no valida. |  =/= HYGDSFMTUVRQR
+10:06:37| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:06:37| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:06:40| CFD | Search_Result_Count:1
+10:06:40| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:06:40| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:06:40| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:06:40| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:06:40| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:06:40| ... GetPropertyValueAsString: VehiclePassThru
+10:06:40| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:06:40| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:06:40| ... GetPropertyValueAsString: Win32_PnPEntity
+10:06:40| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:06:40| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:06:40| ... CheckForDevice |1
+10:06:40| Pass:FindUSBDevices.
+10:06:40| chkSumCADD(HODWNEWPAXIDJUOPLZ)
+10:06:41| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:06:41| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:07:00| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+10:07:00| chkSumCADD(HYGDSFMTUVRQRHYXCVB)
+10:07:00| chkSumCADD | HYGDSFMTUVRQRHYXCVB | Err:Opus IMClean OBD licencia expirada. | 11/12/0201 =/= 11/12/2025
+10:39:52| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:39:52| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:39:57| CFD | Search_Result_Count:1
+10:39:57| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:39:57| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:39:57| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:39:57| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:39:57| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:39:57| ... GetPropertyValueAsString: VehiclePassThru
+10:39:57| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:39:57| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:39:57| ... GetPropertyValueAsString: Win32_PnPEntity
+10:39:57| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:39:57| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:39:57| ... CheckForDevice |1
+10:39:57| Pass:FindUSBDevices.
+10:39:57| chkSumCADD(HODWNEWPAXIDJUOPLZ)
+10:39:57| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:39:57| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:40:07| zipESP:  | 
+10:40:07| chkSumCADD()
+10:40:07| chkSumCADD |  | Err:Opus IMClean OBD licencia no valida. |  =/= HYGDSFMTUVRQR
+10:42:07| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:42:07| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:42:10| CFD | Search_Result_Count:1
+10:42:11| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:42:11| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:42:11| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:42:11| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:42:11| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:42:11| ... GetPropertyValueAsString: VehiclePassThru
+10:42:11| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:42:11| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:42:11| ... GetPropertyValueAsString: Win32_PnPEntity
+10:42:11| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:42:11| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:42:11| ... CheckForDevice |1
+10:42:11| Pass:FindUSBDevices.
+10:42:11| chkSumCADD(HODWNEWPAXIDJUOPLZ)
+10:42:11| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:42:11| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:42:33| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+10:42:33| chkSumCADD(HYGDSFMTUVRQRHYXCVB)
+10:42:33| chkSumCADD | HYGDSFMTUVRQRHYXCVB | Err:Opus IMClean OBD licencia expirada. | 11/12/0201 =/= 11/12/2025
+10:45:25| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:45:25| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:45:28| CFD | Search_Result_Count:1
+10:45:28| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:45:28| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:45:28| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:45:28| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:45:28| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:45:28| ... GetPropertyValueAsString: VehiclePassThru
+10:45:28| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:45:28| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:45:28| ... GetPropertyValueAsString: Win32_PnPEntity
+10:45:28| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:45:28| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:45:28| ... CheckForDevice |1
+10:45:28| Pass:FindUSBDevices.
+10:45:28| chkSumCADD(HODWNEWPAXIDJUOPLZ)
+10:45:28| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:45:28| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:45:41| zipESP:  | 
+10:45:41| chkSumCADD()
+10:45:42| chkSumCADD |  | Err:Opus IMClean OBD licencia no valida. |  =/= HYGDSFMTUVRQR
+10:50:12| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:50:12| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:50:15| CFD | Search_Result_Count:1
+10:50:15| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:50:15| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:50:15| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:50:15| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:50:15| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:50:15| ... GetPropertyValueAsString: VehiclePassThru
+10:50:15| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:50:15| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:50:16| ... GetPropertyValueAsString: Win32_PnPEntity
+10:50:16| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:50:16| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:50:16| ... CheckForDevice |1
+10:50:16| Pass:FindUSBDevices.
+10:50:16| chkSumCADD(HODWNEWPAXIDJUOPLZ)
+10:50:16| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:50:16| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:50:30| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+10:50:30| chkSumCADD(HYGDSFMTUVRQRHYXCVB)
+10:50:30| chkSumCADD | HYGDSFMTUVRQRHYXCVB | Err:Opus IMClean OBD licencia expirada. | 11/12/0201 =/= 11/12/2025
+10:52:18| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:52:18| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:52:21| CFD | Search_Result_Count:1
+10:52:21| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:52:21| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:52:21| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:52:21| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:52:21| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:52:21| ... GetPropertyValueAsString: VehiclePassThru
+10:52:21| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:52:21| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:52:21| ... GetPropertyValueAsString: Win32_PnPEntity
+10:52:21| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:52:21| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:52:21| ... CheckForDevice |1
+10:52:21| Pass:FindUSBDevices.
+10:52:21| chkSumCADD(HODWNEWPAXIDJUOPLZ)
+10:52:21| chkSumCADD | HODWNEWPAXIDJUOPLZ | Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:52:21| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:52:29| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+10:52:29| chkSumCADD(HYGDSFMTUVRQRHYXCVB)
+10:52:29| chkSumCADD | HYGDSFMTUVRQRHYXCVB | Err:Opus IMClean OBD licencia expirada. | 11/12/0201 =/= 11/12/2025
+10:55:36| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:55:36| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:55:39| CFD | Search_Result_Count:1
+10:55:39| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:55:39| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:55:39| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:55:39| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:55:39| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:55:39| ... GetPropertyValueAsString: VehiclePassThru
+10:55:39| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:55:39| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:55:39| ... GetPropertyValueAsString: Win32_PnPEntity
+10:55:39| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:55:39| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:55:39| ... CheckForDevice |1
+10:55:39| Pass:FindUSBDevices.
+10:55:57| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida. | HODWNEWPAXIDJ =/= HCDNOBMXRFVLV
+10:56:09| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+10:59:08| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:59:08| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:59:12| CFD | Search_Result_Count:1
+10:59:12| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:59:12| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:59:12| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:59:12| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:59:12| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:59:12| ... GetPropertyValueAsString: VehiclePassThru
+10:59:12| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:59:12| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:59:12| ... GetPropertyValueAsString: Win32_PnPEntity
+10:59:12| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:59:12| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:59:12| ... CheckForDevice |1
+10:59:12| Pass:FindUSBDevices.
+10:59:18| getOpusKeyFile: Err:Opus IMClean OBD licencia no valida.
+10:59:29| zipESP: HYGDSFMTUVRQRHYXCVB | HYGDSFMTUVRQRHYXCVB
+10:59:32| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:59:32| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:59:36| CFD | Search_Result_Count:1
+10:59:36| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:59:36| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:59:36| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:59:36| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:59:36| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:59:36| ... GetPropertyValueAsString: VehiclePassThru
+10:59:36| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:59:36| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:59:36| ... GetPropertyValueAsString: Win32_PnPEntity
+10:59:36| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:59:36| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:59:36| ... CheckForDevice |1
+10:59:36| Pass:FindUSBDevices.
+10:59:39| getOpusKeyFile: Pass:Opus IMClean OBD Licencia valida.
+10:59:39| facNS: IEXFM0000207393E -> 13417
+10:59:39| facFH: 11122025 -> 2531
+11:01:52| Success
+11:01:52| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+11:01:52| InitIMCleanDevice | DeviceType:4171
+11:01:52| InitIMCleanDevice | DeviceVoltage:0
+11:01:52| InitIMCleanDevice | DeviceVoltageDLC:0
+01:59:49| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+01:59:49| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+01:59:54| CFD | Search_Result_Count:1
+01:59:54| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+01:59:54| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+01:59:54| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+01:59:54| ... GetPropertyValueAsString: Drew Technologies, Inc.
+01:59:54| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+01:59:54| ... GetPropertyValueAsString: VehiclePassThru
+01:59:54| ... GetPropertyValueAsString: IMClean DAD GEN 4
+01:59:54| ... GetPropertyValueAsString: IMClean DAD GEN 4
+01:59:54| ... GetPropertyValueAsString: Win32_PnPEntity
+01:59:54| ... GetPropertyValueAsString: IMClean DAD GEN 4
+01:59:54| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+01:59:54| ... CheckForDevice |1
+01:59:54| Pass:FindUSBDevices.
+02:00:00| getOpusKeyFile: Pass:Opus IMClean OBD Licencia valida.
+02:00:00| facNS: IEXFM0000207393E -> 13417
+02:00:00| facFH: 11122025 -> 2531
+02:02:13| Success
+02:02:13| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+02:02:13| InitIMCleanDevice | DeviceType:4171
+02:02:13| InitIMCleanDevice | DeviceVoltage:0
+02:02:13| InitIMCleanDevice | DeviceVoltageDLC:0
+06:25:06| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+06:25:06| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+06:25:10| CFD | Search_Result_Count:1
+06:25:10| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+06:25:10| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+06:25:10| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+06:25:10| ... GetPropertyValueAsString: Drew Technologies, Inc.
+06:25:10| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+06:25:10| ... GetPropertyValueAsString: VehiclePassThru
+06:25:10| ... GetPropertyValueAsString: IMClean DAD GEN 4
+06:25:10| ... GetPropertyValueAsString: IMClean DAD GEN 4
+06:25:10| ... GetPropertyValueAsString: Win32_PnPEntity
+06:25:10| ... GetPropertyValueAsString: IMClean DAD GEN 4
+06:25:10| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+06:25:10| ... CheckForDevice |1
+06:25:10| Pass:FindUSBDevices.
+06:25:10| getOpusKeyFile: Pass:Opus IMClean OBD Licencia valida.
+06:25:10| facNS: IEXFM0000207393E -> 13417
+06:25:10| facFH: 11122025 -> 2531
+06:27:22| Success
+06:27:22| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+06:27:22| InitIMCleanDevice | DeviceType:4171
+06:27:22| InitIMCleanDevice | DeviceVoltage:0
+06:27:22| InitIMCleanDevice | DeviceVoltageDLC:0
+06:27:39|  
+06:27:39| ... Connect_OBD ===================================================================================================================
+06:27:39|  
+06:27:39| ... GetCallingProcedure | lVehiculoLink
+06:27:39| ... GetCallingProcedure | VehiculoLink
+06:27:39| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:39| ... IncrementActiveCount | 1
+06:27:39| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:27:39| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:27:39| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:27:39| ... MyDADStatus | LCR:ConditionsNotCorrect,Unknown
+06:27:39| ... Connect | ---------------- Connect --------------- SC:'' (LCR:ConditionsNotCorrect,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:39| GetDAD | Starting ... Cnt:00001,00 Opn:F (Connect)
+06:27:39| GetDAD | Success ... Cnt:00001,01 Opn:F (Connect, )
+06:27:39| ... Connect | 1 | GetDAD =Connect
+06:27:39| ... SetupMyLastCommResult: InvalidData
+06:27:39| ... MyDad.Initialize 
+06:27:39| ... DoDad | Action: System.Action | tag: Initialize
+06:27:39| ... GetCallingProcedure | lVehiculoLink
+06:27:39| ... GetCallingProcedure | VehiculoLink
+06:27:39| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:39| DoDad-01 | Initialize (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:39| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+06:27:39| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:39| ... SetupMyLastCommResult: Success
+06:27:39| ... IsCommResultSuccess | True
+06:27:39| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.00) DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:39| ... OpenDAD_If_Needed | True
+06:27:39| DoDad-MyDeviceLogClear-01  ClearLogs ...
+06:27:39| DoDad-01  ClearCommandLog ...
+06:27:39| DoDad-01  Invoke ... (Initialize)
+06:27:47| ... SetupVehicleIsLinked
+06:27:47| ... GetCallingProcedure | SetupMyLastCommResult
+06:27:47| ... GetCallingProcedure | _Lambda$__0
+06:27:47| ... GetCallingProcedure | DoDad
+06:27:47| SVLI | VehicleIsLinked:'?'->'False'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+06:27:47| ... SetupMyLastCommResult: VehicleNotConnected
+06:27:47| DoDad-01  Invoke ... (Initialize)  (7687)
+06:27:47| DoDad-01  CommandLog.Length ...
+06:27:47| DoDad-01  CommandLog ... (0)
+06:27:47| DoDad-01-CommandLog-Len:39 Siz:39 | iStart: 0
+06:27:47| DoDad-01  SerialData.Length ... (28)
+06:27:47| DoDad-01 | Initialize-SLL:00028,00028-CF:T-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (7.688 s,F) Initialize | 
+06:27:47| ... MyLastResult | VehicleNotConnected,Unknown,?->False
+06:27:47| Connect | Init-Rty:2 (VehicleNotConnected,Unknown,?->False | 7.72) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+06:27:47| ... MyDad.Initialize > NOT Success
+06:27:47| ... GetCallingProcedure | Connect_OBD
+06:27:47| ... GetCallingProcedure | lVehiculoLink
+06:27:47| ... GetCallingProcedure | VehiculoLink
+06:27:47| ... MyDADStatus | LCR:VehicleNotConnected,Unknown
+06:27:47| ResetConnection 01-Starting ... Cntrl:'NOGETDAD,NOCLOSEOPEN' (LCR:VehicleNotConnected,Unknown) (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:27:47| ... GetCallingProcedure | ResetConnection
+06:27:47| ... GetCallingProcedure | Connect_OBD
+06:27:47| ... GetCallingProcedure | lVehiculoLink
+06:27:47| ... MyLastResult | VehicleNotConnected,Unknown,?->False
+06:27:47| ResetConnectionInternal 01-bDoIt:T  sCtrl:'NOGETDAD,NOCLOSEOPEN'  ()  (VehicleNotConnected,Unknown,?->False, (ResetConnection,Connect_OBD,lVehiculoLink)
+06:27:47| ... SetupMyLastCommResult: Success
+06:27:47| ... IsCommResultSuccess | True
+06:27:47| ... SetupMyLastCommResult: InvalidData
+06:27:47| ... DoDad | Action: System.Action | tag: Reset
+06:27:47| ... GetCallingProcedure | ResetConnection
+06:27:47| ... GetCallingProcedure | Connect_OBD
+06:27:47| ... GetCallingProcedure | lVehiculoLink
+06:27:47| DoDad-01 | Reset (Open:True,007.71 | ResetConnection,Connect_OBD,lVehiculoLink)
+06:27:47| DoDad-01  ClearCommandLog ...
+06:27:47| DoDad-01  Invoke ... (Reset)
+06:27:47| DoDad-01  Invoke ... (Reset)  (000)
+06:27:47| DoDad-01  CommandLog.Length ...
+06:27:47| DoDad-01  CommandLog ... (0)
+06:27:47| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:47| DoDad-01  SerialData.Length ... (28)
+06:27:47| DoDad-01 | Reset-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.008 s,F) Reset | NoEOL
+06:27:47| ... SetupMyLastCommResult: Success
+06:27:47| ... MyLastResult | Success,Unknown,?->
+06:27:47|  (Result:Success,Unknown,?->)
+06:27:47| ... SetupMyLastCommResult: InvalidData
+06:27:47| ... DoDad | Action: System.Action | tag: Reset
+06:27:47| ... GetCallingProcedure | ResetConnection
+06:27:47| ... GetCallingProcedure | Connect_OBD
+06:27:47| ... GetCallingProcedure | lVehiculoLink
+06:27:47| DoDad-01 | Reset (Open:True,007.94 | ResetConnection,Connect_OBD,lVehiculoLink)
+06:27:47| DoDad-01  ClearCommandLog ...
+06:27:47| DoDad-01  Invoke ... (Reset)
+06:27:47| DoDad-01  Invoke ... (Reset)  (000)
+06:27:47| DoDad-01  CommandLog.Length ...
+06:27:47| DoDad-01  CommandLog ... (0)
+06:27:47| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:47| DoDad-01  SerialData.Length ... (28)
+06:27:47| DoDad-01 | Reset-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) Reset | NoEOL
+06:27:47| ... SetupMyLastCommResult: Success
+06:27:47| ... MyLastResult | Success,Unknown,?->
+06:27:47|  (Result:Success,Unknown,?->)
+06:27:47| ... SetupMyLastCommResult: Success
+06:27:47| ... MyLastResult | Success,Unknown,?->
+06:27:47| ... ResetConnectionInternal 01-Ret:True  sCtrl:'NOGETDAD,NOCLOSEOPEN'  (Reset:Success)  (Success,Unknown,?->, 0.22) (ResetConnection,Connect_OBD,lVehiculoLink)
+06:27:47| ... MyLastResult | Success,Unknown,?->
+06:27:47| ResetConnection 01-Ret:True  (Success,Unknown,?->, 0.23) (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:27:47| ... SetupMyLastCommResult: InvalidData
+06:27:47| ... MyDad.Initialize 
+06:27:47| ... DoDad | Action: System.Action | tag: Initialize
+06:27:47| ... GetCallingProcedure | lVehiculoLink
+06:27:47| ... GetCallingProcedure | VehiculoLink
+06:27:47| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:47| DoDad-01 | Initialize (Open:True,007.94 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:47| DoDad-01  ClearCommandLog ...
+06:27:47| DoDad-01  Invoke ... (Initialize)
+06:27:49| ... SetupMyLastCommResult: DADError
+06:27:49| DoDad-01  Invoke ... (Initialize)  (2360)
+06:27:49| DoDad-01  CommandLog.Length ...
+06:27:49| DoDad-01  CommandLog ... (0)
+06:27:49| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:49| DoDad-01  SerialData.Length ... (28)
+06:27:49| DoDad-01 | Initialize-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.346 s,F) Initialize | 
+06:27:49| ... MyLastResult | DADError,Unknown,?->
+06:27:49| Connect | Init-Rty:1 (DADError,Unknown,?-> | 10.31) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+06:27:49| ... MyDad.Initialize > NOT Success
+06:27:49| ReleaseDAD |  Starting ... Cnt:00001,01 (Connect)
+06:27:49| ... ReleaseDAD | Success ... Cnt:00001,00 Opn:T (Connect, Connect)
+06:27:49| ... Connect | 2
+06:27:49| ... SetupVehicleIsLinked
+06:27:49| ... GetCallingProcedure | Connect_OBD
+06:27:49| ... GetCallingProcedure | lVehiculoLink
+06:27:49| ... GetCallingProcedure | VehiculoLink
+06:27:49| SVLI | VehicleIsLinked:''->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:27:49| ... MyLastResult | DADError,Unknown,->?
+06:27:49| Connect | Rslt:False EECUID:00 ECUs:0-() Prot:'None', 'None' PC:0  (DADError,Unknown,->?, 10.31) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:49| ... DecrementActiveCount | 0
+06:27:49| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:27:49| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:27:49| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:27:49| ... LocalDecrementActiveCount | 0
+06:27:49|  
+06:27:49| ... Get MON >>>-----------------------------------------------------------------------
+06:27:49| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:49| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+06:27:49| ... GetCallingProcedure | lVehiculoLink
+06:27:49| ... GetCallingProcedure | VehiculoLink
+06:27:49| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:49| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,010.30 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:49| DoDad-01  ClearCommandLog ...
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (000)
+06:27:49| DoDad-01  CommandLog.Length ...
+06:27:49| DoDad-01  CommandLog ... (0)
+06:27:49| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:49| DoDad-01  SerialData.Length ... (28)
+06:27:49| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.002 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+06:27:49|  
+06:27:49| ... Get DTC >>>-----------------------------------------------------------------------
+06:27:49| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:49| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+06:27:49| ... GetCallingProcedure | lVehiculoLink
+06:27:49| ... GetCallingProcedure | VehiculoLink
+06:27:49| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:49| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,010.35 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:49| DoDad-01  ClearCommandLog ...
+06:27:49| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+06:27:49| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (000)
+06:27:49| DoDad-01  CommandLog.Length ...
+06:27:49| DoDad-01  CommandLog ... (0)
+06:27:49| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:49| DoDad-01  SerialData.Length ... (28)
+06:27:49| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+06:27:49|  
+06:27:49| ... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------
+06:27:49| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:49| ... DoDad | Action: System.Action | tag: GetModePID(01, 1F) - Tmp. Encendido
+06:27:49| ... GetCallingProcedure | lVehiculoLink
+06:27:49| ... GetCallingProcedure | VehiculoLink
+06:27:49| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:49| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido (Open:True,010.36 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:49| DoDad-01  ClearCommandLog ...
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)  (000)
+06:27:49| DoDad-01  CommandLog.Length ...
+06:27:49| DoDad-01  CommandLog ... (0)
+06:27:49| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:49| DoDad-01  SerialData.Length ... (28)
+06:27:49| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) GetModePID(01, 1F) - Tmp. Encendido | NoEOL
+06:27:49|  
+06:27:49| ... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------
+06:27:49| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:49| ... DoDad | Action: System.Action | tag: GetModePID(01, 21) - Distancia MIL
+06:27:49| ... GetCallingProcedure | lVehiculoLink
+06:27:49| ... GetCallingProcedure | VehiculoLink
+06:27:49| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:49| DoDad-01 | GetModePID(01, 21) - Distancia MIL (Open:True,010.37 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:49| DoDad-01  ClearCommandLog ...
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)  (000)
+06:27:49| DoDad-01  CommandLog.Length ...
+06:27:49| DoDad-01  CommandLog ... (0)
+06:27:49| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:49| DoDad-01  SerialData.Length ... (28)
+06:27:49| DoDad-01 | GetModePID(01, 21) - Distancia MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.001 s,F) GetModePID(01, 21) - Distancia MIL | NoEOL
+06:27:49|  
+06:27:49| ... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------
+06:27:49| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:49| ... DoDad | Action: System.Action | tag: GetModePID(01, 31) - Distancia MIL Borrada
+06:27:49| ... GetCallingProcedure | lVehiculoLink
+06:27:49| ... GetCallingProcedure | VehiculoLink
+06:27:49| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:49| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada (Open:True,010.39 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:49| DoDad-01  ClearCommandLog ...
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)
+06:27:49| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)  (000)
+06:27:49| DoDad-01  CommandLog.Length ...
+06:27:49| DoDad-01  CommandLog ... (0)
+06:27:49| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:49| DoDad-01  SerialData.Length ... (28)
+06:27:49| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.001 s,F) GetModePID(01, 31) - Distancia MIL Borrada | NoEOL
+06:27:50|  
+06:27:50| ... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------
+06:27:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:50| ... DoDad | Action: System.Action | tag: GetModePID(01, 33) - Presion Barometrica Kpa
+06:27:50| ... GetCallingProcedure | lVehiculoLink
+06:27:50| ... GetCallingProcedure | VehiculoLink
+06:27:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:50| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa (Open:True,010.40 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:50| DoDad-01  ClearCommandLog ...
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)  (000)
+06:27:50| DoDad-01  CommandLog.Length ...
+06:27:50| DoDad-01  CommandLog ... (0)
+06:27:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:50| DoDad-01  SerialData.Length ... (28)
+06:27:50| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.001 s,F) GetModePID(01, 33) - Presion Barometrica Kpa | NoEOL
+06:27:50|  
+06:27:50| ... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------
+06:27:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:50| ... DoDad | Action: System.Action | tag: GetModePID(01, 4D) - Tmp MIL on
+06:27:50| ... GetCallingProcedure | lVehiculoLink
+06:27:50| ... GetCallingProcedure | VehiculoLink
+06:27:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:50| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on (Open:True,010.42 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:50| DoDad-01  ClearCommandLog ...
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)  (000)
+06:27:50| DoDad-01  CommandLog.Length ...
+06:27:50| DoDad-01  CommandLog ... (0)
+06:27:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:50| DoDad-01  SerialData.Length ... (28)
+06:27:50| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.001 s,F) GetModePID(01, 4D) - Tmp MIL on | NoEOL
+06:27:50|  
+06:27:50| ... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------
+06:27:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:50| ... DoDad | Action: System.Action | tag: GetModePID(01, 51) - Tipo Combustible
+06:27:50| ... GetCallingProcedure | lVehiculoLink
+06:27:50| ... GetCallingProcedure | VehiculoLink
+06:27:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:50| DoDad-01 | GetModePID(01, 51) - Tipo Combustible (Open:True,010.43 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:50| DoDad-01  ClearCommandLog ...
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)  (000)
+06:27:50| DoDad-01  CommandLog.Length ...
+06:27:50| DoDad-01  CommandLog ... (0)
+06:27:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:50| DoDad-01  SerialData.Length ... (28)
+06:27:50| DoDad-01 | GetModePID(01, 51) - Tipo Combustible-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) GetModePID(01, 51) - Tipo Combustible | NoEOL
+06:27:50|  
+06:27:50| ... (01, 7F) Tmp Marcha Motor >>>-----------------------------------------------------------------------
+06:27:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:50| ... DoDad | Action: System.Action | tag: GetModePID(01, 7F) - Tmp Marcha Motor
+06:27:50| ... GetCallingProcedure | lVehiculoLink
+06:27:50| ... GetCallingProcedure | VehiculoLink
+06:27:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:50| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor (Open:True,010.44 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:50| DoDad-01  ClearCommandLog ...
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)  (000)
+06:27:50| DoDad-01  CommandLog.Length ...
+06:27:50| DoDad-01  CommandLog ... (0)
+06:27:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:50| DoDad-01  SerialData.Length ... (28)
+06:27:50| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.002 s,F) GetModePID(01, 7F) - Tmp Marcha Motor | NoEOL
+06:27:50|  
+06:27:50| ... (09, 04) Cal ID >>>-----------------------------------------------------------------------
+06:27:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:50| ... DoDad | Action: System.Action | tag: GetModePID(09, 04) - Cal ID
+06:27:50| ... GetCallingProcedure | lVehiculoLink
+06:27:50| ... GetCallingProcedure | VehiculoLink
+06:27:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:50| DoDad-01 | GetModePID(09, 04) - Cal ID (Open:True,010.46 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:50| DoDad-01  ClearCommandLog ...
+06:27:50| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)
+06:27:50| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)  (000)
+06:27:50| DoDad-01  CommandLog.Length ...
+06:27:50| DoDad-01  CommandLog ... (0)
+06:27:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:50| DoDad-01  SerialData.Length ... (28)
+06:27:50| DoDad-01 | GetModePID(09, 04) - Cal ID-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) GetModePID(09, 04) - Cal ID | NoEOL
+06:27:50|  
+06:27:50| ... Get VIN >>>-----------------------------------------------------------------------
+06:27:50| DAD_DLL_VERSION_21.10.25.0
+
+
+
+06:27:50|  
+06:27:50| ... Get RPM >>>-----------------------------------------------------------------------
+06:27:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:27:50| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:27:50| ... GetCallingProcedure | lVehiculoLink
+06:27:50| ... GetCallingProcedure | VehiculoLink
+06:27:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:27:50| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:True,010.48 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:27:50| DoDad-01  ClearCommandLog ...
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)
+06:27:50| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)  (000)
+06:27:50| DoDad-01  CommandLog.Length ...
+06:27:50| DoDad-01  CommandLog ... (0)
+06:27:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:27:50| DoDad-01  SerialData.Length ... (28)
+06:27:50| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:27:50| ... >>>-----------------------------------------------------------------------
+06:27:50| ... >>>-----------------------------------------------------------------------
+06:27:50| VIN Hx: Null
+06:27:50| VIN: 
+06:27:50| MON Hx: Null
+06:27:50| MON: 
+06:27:50| DTC Hx: Null
+06:27:50| DTC: 
+06:27:50| RPM Hx: Null
+06:27:50| RPM: 0 | 1: 0 | 2: 0 | 3: 0
+06:27:50| ****** Posible Simulación de lecturas OBD detectada.
+06:27:50| *** Connect ... EOF()
+06:27:50| VehiculoLink: Pass: Inspección vehicular OBD concluido.
+06:28:23|  
+06:28:23| ... Connect_OBD ===================================================================================================================
+06:28:23|  
+06:28:23| ... GetCallingProcedure | lVehiculoLink
+06:28:23| ... GetCallingProcedure | VehiculoLink
+06:28:23| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:23| ... IncrementActiveCount | 1
+06:28:23| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:28:23| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:28:23| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:28:23| ... MyDADStatus | LCR:ConditionsNotCorrect,Unknown
+06:28:23| ... Connect | ---------------- Connect --------------- SC:'' (LCR:ConditionsNotCorrect,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:23| GetDAD | Starting ... Cnt:00002,00 Opn:T (Connect)
+06:28:23| GetDAD | Success ... Cnt:00002,01 Opn:T (Connect, Connect)
+06:28:23| ... Connect | 1 | GetDAD =Connect
+06:28:23| ... SetupMyLastCommResult: InvalidData
+06:28:23| ... MyDad.Initialize 
+06:28:23| ... DoDad | Action: System.Action | tag: Initialize
+06:28:23| ... GetCallingProcedure | lVehiculoLink
+06:28:23| ... GetCallingProcedure | VehiculoLink
+06:28:23| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:23| DoDad-01 | Initialize (Open:True,044.12 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:23| DoDad-01  ClearCommandLog ...
+06:28:23| DoDad-01  Invoke ... (Initialize)
+06:28:26| ... SetupMyLastCommResult: DADError
+06:28:26| DoDad-01  Invoke ... (Initialize)  (2343)
+06:28:26| DoDad-01  CommandLog.Length ...
+06:28:26| DoDad-01  CommandLog ... (0)
+06:28:26| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:26| DoDad-01  SerialData.Length ... (28)
+06:28:26| DoDad-01 | Initialize-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.346 s,F) Initialize | 
+06:28:26| ... MyLastResult | DADError,Unknown,->?
+06:28:26| Connect | Init-Rty:2 (DADError,Unknown,->? | 2.34) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+06:28:26| ... MyDad.Initialize > NOT Success
+06:28:26| ... GetCallingProcedure | Connect_OBD
+06:28:26| ... GetCallingProcedure | lVehiculoLink
+06:28:26| ... GetCallingProcedure | VehiculoLink
+06:28:26| ... MyDADStatus | LCR:DADError,Unknown
+06:28:26| ResetConnection 01-Starting ... Cntrl:'NOGETDAD,NOCLOSEOPEN' (LCR:DADError,Unknown) (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:28:26| ... GetCallingProcedure | ResetConnection
+06:28:26| ... GetCallingProcedure | Connect_OBD
+06:28:26| ... GetCallingProcedure | lVehiculoLink
+06:28:26| ... MyLastResult | DADError,Unknown,->?
+06:28:26| ResetConnectionInternal 02-bDoIt:T  sCtrl:'NOGETDAD,NOCLOSEOPEN'  ()  (DADError,Unknown,->?, (ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:26| ... SetupMyLastCommResult: Success
+06:28:26| ... IsCommResultSuccess | True
+06:28:26| ... SetupMyLastCommResult: InvalidData
+06:28:26| ... DoDad | Action: System.Action | tag: Reset
+06:28:26| ... GetCallingProcedure | ResetConnection
+06:28:26| ... GetCallingProcedure | Connect_OBD
+06:28:26| ... GetCallingProcedure | lVehiculoLink
+06:28:26| DoDad-01 | Reset (Open:True,046.47 | ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:26| DoDad-01  ClearCommandLog ...
+06:28:26| DoDad-01  Invoke ... (Reset)
+06:28:26| DoDad-01  Invoke ... (Reset)  (000)
+06:28:26| DoDad-01  CommandLog.Length ...
+06:28:26| DoDad-01  CommandLog ... (0)
+06:28:26| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:26| DoDad-01  SerialData.Length ... (28)
+06:28:26| DoDad-01 | Reset-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.001 s,F) Reset | NoEOL
+06:28:26| ... SetupMyLastCommResult: Success
+06:28:26| ... MyLastResult | Success,Unknown,->
+06:28:26|  (Result:Success,Unknown,->)
+06:28:26| ... SetupMyLastCommResult: InvalidData
+06:28:26| ... DoDad | Action: System.Action | tag: Reset
+06:28:26| ... GetCallingProcedure | ResetConnection
+06:28:26| ... GetCallingProcedure | Connect_OBD
+06:28:26| ... GetCallingProcedure | lVehiculoLink
+06:28:26| DoDad-01 | Reset (Open:True,046.69 | ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:26| DoDad-01  ClearCommandLog ...
+06:28:26| DoDad-01  Invoke ... (Reset)
+06:28:26| DoDad-01  Invoke ... (Reset)  (000)
+06:28:26| DoDad-01  CommandLog.Length ...
+06:28:26| DoDad-01  CommandLog ... (0)
+06:28:26| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:26| DoDad-01  SerialData.Length ... (28)
+06:28:26| DoDad-01 | Reset-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.000 s,F) Reset | NoEOL
+06:28:26| ... SetupMyLastCommResult: Success
+06:28:26| ... MyLastResult | Success,Unknown,->
+06:28:26|  (Result:Success,Unknown,->)
+06:28:26| ... SetupMyLastCommResult: Success
+06:28:26| ... MyLastResult | Success,Unknown,->
+06:28:26| ... ResetConnectionInternal 02-Ret:True  sCtrl:'NOGETDAD,NOCLOSEOPEN'  (Reset:Success)  (Success,Unknown,->, 0.22) (ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:26| ... MyLastResult | Success,Unknown,->
+06:28:26| ResetConnection 01-Ret:True  (Success,Unknown,->, 0.22) (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:28:26| ... SetupMyLastCommResult: InvalidData
+06:28:26| ... MyDad.Initialize 
+06:28:26| ... DoDad | Action: System.Action | tag: Initialize
+06:28:26| ... GetCallingProcedure | lVehiculoLink
+06:28:26| ... GetCallingProcedure | VehiculoLink
+06:28:26| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:26| DoDad-01 | Initialize (Open:True,046.69 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:26| DoDad-01  ClearCommandLog ...
+06:28:26| DoDad-01  Invoke ... (Initialize)
+06:28:28| ... SetupMyLastCommResult: DADError
+06:28:28| DoDad-01  Invoke ... (Initialize)  (2391)
+06:28:28| DoDad-01  CommandLog.Length ...
+06:28:28| DoDad-01  CommandLog ... (0)
+06:28:28| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:28| DoDad-01  SerialData.Length ... (28)
+06:28:28| DoDad-01 | Initialize-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.380 s,F) Initialize | 
+06:28:28| ... MyLastResult | DADError,Unknown,->
+06:28:28| Connect | Init-Rty:1 (DADError,Unknown,-> | 4.95) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+06:28:28| ... MyDad.Initialize > NOT Success
+06:28:28| ... GetCallingProcedure | Connect_OBD
+06:28:28| ... GetCallingProcedure | lVehiculoLink
+06:28:28| ... GetCallingProcedure | VehiculoLink
+06:28:28| ... MyDADStatus | LCR:DADError,Unknown
+06:28:28| ResetConnection 01-Starting ... Cntrl:'NOGETDAD' (LCR:DADError,Unknown) (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:28:28| ... GetCallingProcedure | ResetConnection
+06:28:28| ... GetCallingProcedure | Connect_OBD
+06:28:28| ... GetCallingProcedure | lVehiculoLink
+06:28:28| ... MyLastResult | DADError,Unknown,->
+06:28:28| ResetConnectionInternal 03-bDoIt:T  sCtrl:'NOGETDAD'  ()  (DADError,Unknown,->, (ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:28| ... SetupMyLastCommResult: Success
+06:28:28| ... IsCommResultSuccess | True
+06:28:28| ... SetupMyLastCommResult: InvalidData
+06:28:28| ... DoDad | Action: System.Action | tag: Reset
+06:28:28| ... GetCallingProcedure | ResetConnection
+06:28:28| ... GetCallingProcedure | Connect_OBD
+06:28:28| ... GetCallingProcedure | lVehiculoLink
+06:28:28| DoDad-01 | Reset (Open:True,049.07 | ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:28| DoDad-01  ClearCommandLog ...
+06:28:28| DoDad-01  Invoke ... (Reset)
+06:28:28| DoDad-01  Invoke ... (Reset)  (000)
+06:28:28| DoDad-01  CommandLog.Length ...
+06:28:28| DoDad-01  CommandLog ... (0)
+06:28:28| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:28| DoDad-01  SerialData.Length ... (28)
+06:28:28| DoDad-01 | Reset-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.001 s,F) Reset | NoEOL
+06:28:28| ... SetupMyLastCommResult: Success
+06:28:28| ... MyLastResult | Success,Unknown,->
+06:28:28|  (Result:Success,Unknown,->)
+06:28:28| ... SetupMyLastCommResult: InvalidData
+06:28:28| ... DoDad | Action: System.Action | tag: Close-RC
+06:28:28| ... GetCallingProcedure | ResetConnection
+06:28:28| ... GetCallingProcedure | Connect_OBD
+06:28:28| ... GetCallingProcedure | lVehiculoLink
+06:28:28| DoDad-01 | Close-RC (Open:True,049.29 | ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:28| Doing close ...
+06:28:28| DoDad-01  ClearCommandLog ...
+06:28:28| DoDad-01  Invoke ... (Close-RC)
+06:28:28| DoDad-Close ...
+06:28:29| DoDad-01  Invoke ... (Close-RC)  (203)
+06:28:29| DoDad-01  CommandLog.Length ...
+06:28:29| DoDad-01  CommandLog ... (0)
+06:28:29| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:29| DoDad-01  SerialData.Length ... (28)
+06:28:29| DoDad-01 | Close-RC-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (0.206 s,F) Close-RC | 
+06:28:29| ... SetupMyLastCommResult: InvalidData
+06:28:29| ... DoDad | Action: System.Action | tag: Open
+06:28:29| ... GetCallingProcedure | ResetConnection
+06:28:29| ... GetCallingProcedure | Connect_OBD
+06:28:29| ... GetCallingProcedure | lVehiculoLink
+06:28:29| DoDad-01 | Open (Open:False | ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:29| DoDad-01  ClearCommandLog ...
+06:28:29| DoDad-01  Invoke ... (Open)
+06:28:31| DoDad-01  Invoke ... (Open)  (2391)
+06:28:31| DoDad-01  CommandLog.Length ...
+06:28:31| DoDad-01  CommandLog ... (0)
+06:28:31| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:31| DoDad-01  SerialData.Length ... (28)
+06:28:31| DoDad-01 | Open-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.383 s,F) Open | NoEOL
+06:28:31| ... SetupVehicleIsLinked
+06:28:31| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:31| ... GetCallingProcedure | ResetConnectionInternal
+06:28:31| ... GetCallingProcedure | ResetConnection
+06:28:31| ... GetCallingProcedure | Connect_OBD
+06:28:31| SVLI | VehicleIsLinked:''->'False'  (SetupMyLastCommResult,ResetConnectionInternal,ResetConnection,Connect_OBD)
+06:28:31| ... SetupMyLastCommResult: DADNotConnected
+06:28:31| ... MyLastResult | DADNotConnected,Unknown,->False
+06:28:31|  (Result:DADNotConnected,Unknown,->False)
+06:28:31| ... SetupMyLastCommResult: InvalidData
+06:28:31| ... DoDad | Action: System.Action | tag: Reset
+06:28:31| ... GetCallingProcedure | ResetConnection
+06:28:31| ... GetCallingProcedure | Connect_OBD
+06:28:31| ... GetCallingProcedure | lVehiculoLink
+06:28:31| DoDad-01 | Reset (Open:False | ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:31| DoDad-MyDoDADSemaphore-01 | Reset ... Attempting Open
+06:28:31| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Reset (ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:34| ... SetupVehicleIsLinked
+06:28:34| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:34| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:34| ... GetCallingProcedure | DoDad
+06:28:34| ... SetupMyLastCommResult: DADNotConnected
+06:28:34| ... IsCommResultSuccess | False
+06:28:34| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.31) DoDad-Reset (ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:34| ... OpenDAD_If_Needed | False
+06:28:34| DoDad-01  ClearCommandLog ...
+06:28:34| DoDad-01  Invoke ... (Reset)
+06:28:34| DoDad-01  Invoke ... (Reset)  (000)
+06:28:34| DoDad-01  CommandLog.Length ...
+06:28:34| DoDad-01  CommandLog ... (0)
+06:28:34| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:34| DoDad-01  SerialData.Length ... (28)
+06:28:34| DoDad-01 | Reset-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.316 s,F) Reset | NoEOL
+06:28:34| ... SetupMyLastCommResult: Success
+06:28:34| ... MyLastResult | Success,Unknown,False->False
+06:28:34|  (Result:Success,Unknown,False->False)
+06:28:34| ... SetupVehicleIsLinked
+06:28:34| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:34| ... GetCallingProcedure | ResetConnectionInternal
+06:28:34| ... GetCallingProcedure | ResetConnection
+06:28:34| ... GetCallingProcedure | Connect_OBD
+06:28:34| ... SetupMyLastCommResult: DADNotConnected
+06:28:34| ... MyLastResult | DADNotConnected,Unknown,False->False
+06:28:34| ... ResetConnectionInternal 03-Ret:False  sCtrl:'NOGETDAD'  (Open:DADNotConnected Reset:Success)  (DADNotConnected,Unknown,False->False, 5.53) (ResetConnection,Connect_OBD,lVehiculoLink)
+06:28:34| ... MyLastResult | DADNotConnected,Unknown,False->False
+06:28:34| ResetConnection 01-Ret:False  (DADNotConnected,Unknown,False->False, 5.53) (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:28:34| ReleaseDAD |  Starting ... Cnt:00002,01 (Connect)
+06:28:34| ... ReleaseDAD | Success ... Cnt:00002,00 Opn:F (Connect, Connect)
+06:28:34| ... Connect | 2
+06:28:34| ... SetupVehicleIsLinked
+06:28:34| ... GetCallingProcedure | Connect_OBD
+06:28:34| ... GetCallingProcedure | lVehiculoLink
+06:28:34| ... GetCallingProcedure | VehiculoLink
+06:28:34| SVLI | VehicleIsLinked:'False'->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:28:34| ... MyLastResult | DADNotConnected,Unknown,False->?
+06:28:34| Connect | Rslt:False EECUID:00 ECUs:0-() Prot:'None', 'None' PC:0  (DADNotConnected,Unknown,False->?, 10.48) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:34| ... DecrementActiveCount | 0
+06:28:34| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:28:34| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:28:34| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:28:34| ... LocalDecrementActiveCount | 0
+06:28:34|  
+06:28:34| ... Get MON >>>-----------------------------------------------------------------------
+06:28:34| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:34| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+06:28:34| ... GetCallingProcedure | lVehiculoLink
+06:28:34| ... GetCallingProcedure | VehiculoLink
+06:28:34| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:34| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:34| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 01) - Readiness, DTC count, MIL ... Attempting Open
+06:28:34| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 01) - Readiness, DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:36| ... SetupVehicleIsLinked
+06:28:36| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:36| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:36| ... GetCallingProcedure | DoDad
+06:28:36| SVLI | VehicleIsLinked:'?'->'False'  (SetupMyLastCommResult,OpenDAD_If_Needed,DoDad)
+06:28:36| ... SetupMyLastCommResult: DADNotConnected
+06:28:36| ... IsCommResultSuccess | False
+06:28:36| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.36) DoDad-GetModePID(01, 01) - Readiness, DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:36| ... OpenDAD_If_Needed | False
+06:28:36| DoDad-01  ClearCommandLog ...
+06:28:36| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL ... Skipped_Not_Open
+06:28:36| DoDad-01  CommandLog.Length ...
+06:28:36| DoDad-01  CommandLog ... (0)
+06:28:36| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:36| DoDad-01  SerialData.Length ... (28)
+06:28:36| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.359 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+06:28:36| sr | Get MON: NULL
+06:28:36|  
+06:28:36| ... Get DTC >>>-----------------------------------------------------------------------
+06:28:36| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:36| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+06:28:36| ... GetCallingProcedure | lVehiculoLink
+06:28:36| ... GetCallingProcedure | VehiculoLink
+06:28:36| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:36| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:36| DoDad-MyDoDADSemaphore-01 | GetModePID(03, 00) - DTC count, MIL ... Attempting Open
+06:28:36| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(03, 00) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:38| ... SetupVehicleIsLinked
+06:28:38| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:38| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:38| ... GetCallingProcedure | DoDad
+06:28:38| ... SetupMyLastCommResult: DADNotConnected
+06:28:38| ... IsCommResultSuccess | False
+06:28:38| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.36) DoDad-GetModePID(03, 00) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:38| ... OpenDAD_If_Needed | False
+06:28:38| DoDad-01  ClearCommandLog ...
+06:28:38| DoDad-01 | GetModePID(03, 00) - DTC count, MIL ... Skipped_Not_Open
+06:28:38| DoDad-01  CommandLog.Length ...
+06:28:38| DoDad-01  CommandLog ... (0)
+06:28:38| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:38| DoDad-01  SerialData.Length ... (28)
+06:28:38| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.350 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+06:28:38| sr | Get DTC: NULL
+06:28:38|  
+06:28:38| ... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------
+06:28:38| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:38| ... DoDad | Action: System.Action | tag: GetModePID(01, 1F) - Tmp. Encendido
+06:28:38| ... GetCallingProcedure | lVehiculoLink
+06:28:38| ... GetCallingProcedure | VehiculoLink
+06:28:38| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:38| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:38| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 1F) - Tmp. Encendido ... Attempting Open
+06:28:38| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 1F) - Tmp. Encendido (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:41| ... SetupVehicleIsLinked
+06:28:41| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:41| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:41| ... GetCallingProcedure | DoDad
+06:28:41| ... SetupMyLastCommResult: DADNotConnected
+06:28:41| ... IsCommResultSuccess | False
+06:28:41| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.31) DoDad-GetModePID(01, 1F) - Tmp. Encendido (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:41| ... OpenDAD_If_Needed | False
+06:28:41| DoDad-01  ClearCommandLog ...
+06:28:41| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido ... Skipped_Not_Open
+06:28:41| DoDad-01  CommandLog.Length ...
+06:28:41| DoDad-01  CommandLog ... (0)
+06:28:41| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:41| DoDad-01  SerialData.Length ... (28)
+06:28:41| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.320 s,F) GetModePID(01, 1F) - Tmp. Encendido | NoEOL
+06:28:41| sr | Tmp. Encendido: NULL
+06:28:41|  
+06:28:41| ... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------
+06:28:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 21) - Distancia MIL
+06:28:41| ... GetCallingProcedure | lVehiculoLink
+06:28:41| ... GetCallingProcedure | VehiculoLink
+06:28:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:41| DoDad-01 | GetModePID(01, 21) - Distancia MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:41| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 21) - Distancia MIL ... Attempting Open
+06:28:41| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 21) - Distancia MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:43| ... SetupVehicleIsLinked
+06:28:43| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:43| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:43| ... GetCallingProcedure | DoDad
+06:28:43| ... SetupMyLastCommResult: DADNotConnected
+06:28:43| ... IsCommResultSuccess | False
+06:28:43| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.34) DoDad-GetModePID(01, 21) - Distancia MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:43| ... OpenDAD_If_Needed | False
+06:28:43| DoDad-01  ClearCommandLog ...
+06:28:43| DoDad-01 | GetModePID(01, 21) - Distancia MIL ... Skipped_Not_Open
+06:28:43| DoDad-01  CommandLog.Length ...
+06:28:43| DoDad-01  CommandLog ... (0)
+06:28:43| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:43| DoDad-01  SerialData.Length ... (28)
+06:28:43| DoDad-01 | GetModePID(01, 21) - Distancia MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.348 s,F) GetModePID(01, 21) - Distancia MIL | NoEOL
+06:28:43| sr | Distancia MIL: NULL
+06:28:43|  
+06:28:43| ... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------
+06:28:43| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:43| ... DoDad | Action: System.Action | tag: GetModePID(01, 31) - Distancia MIL Borrada
+06:28:43| ... GetCallingProcedure | lVehiculoLink
+06:28:43| ... GetCallingProcedure | VehiculoLink
+06:28:43| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:43| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:43| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 31) - Distancia MIL Borrada ... Attempting Open
+06:28:43| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 31) - Distancia MIL Borrada (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:45| ... SetupVehicleIsLinked
+06:28:45| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:45| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:45| ... GetCallingProcedure | DoDad
+06:28:45| ... SetupMyLastCommResult: DADNotConnected
+06:28:45| ... IsCommResultSuccess | False
+06:28:45| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.33) DoDad-GetModePID(01, 31) - Distancia MIL Borrada (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:45| ... OpenDAD_If_Needed | False
+06:28:45| DoDad-01  ClearCommandLog ...
+06:28:45| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada ... Skipped_Not_Open
+06:28:45| DoDad-01  CommandLog.Length ...
+06:28:45| DoDad-01  CommandLog ... (0)
+06:28:45| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:45| DoDad-01  SerialData.Length ... (28)
+06:28:45| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.336 s,F) GetModePID(01, 31) - Distancia MIL Borrada | NoEOL
+06:28:45| sr | Distancia MIL Borrada: NULL
+06:28:45|  
+06:28:45| ... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------
+06:28:45| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:45| ... DoDad | Action: System.Action | tag: GetModePID(01, 33) - Presion Barometrica Kpa
+06:28:45| ... GetCallingProcedure | lVehiculoLink
+06:28:45| ... GetCallingProcedure | VehiculoLink
+06:28:45| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:45| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:45| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 33) - Presion Barometrica Kpa ... Attempting Open
+06:28:45| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 33) - Presion Barometrica Kpa (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:48| ... SetupVehicleIsLinked
+06:28:48| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:48| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:48| ... GetCallingProcedure | DoDad
+06:28:48| ... SetupMyLastCommResult: DADNotConnected
+06:28:48| ... IsCommResultSuccess | False
+06:28:48| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.39) DoDad-GetModePID(01, 33) - Presion Barometrica Kpa (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:48| ... OpenDAD_If_Needed | False
+06:28:48| DoDad-01  ClearCommandLog ...
+06:28:48| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa ... Skipped_Not_Open
+06:28:48| DoDad-01  CommandLog.Length ...
+06:28:48| DoDad-01  CommandLog ... (0)
+06:28:48| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:48| DoDad-01  SerialData.Length ... (28)
+06:28:48| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.398 s,F) GetModePID(01, 33) - Presion Barometrica Kpa | NoEOL
+06:28:48| sr | Presion Barometrica Kpa: NULL
+06:28:48|  
+06:28:48| ... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------
+06:28:48| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:48| ... DoDad | Action: System.Action | tag: GetModePID(01, 4D) - Tmp MIL on
+06:28:48| ... GetCallingProcedure | lVehiculoLink
+06:28:48| ... GetCallingProcedure | VehiculoLink
+06:28:48| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:48| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:48| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 4D) - Tmp MIL on ... Attempting Open
+06:28:48| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 4D) - Tmp MIL on (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:50| ... SetupVehicleIsLinked
+06:28:50| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:50| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:50| ... GetCallingProcedure | DoDad
+06:28:50| ... SetupMyLastCommResult: DADNotConnected
+06:28:50| ... IsCommResultSuccess | False
+06:28:50| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.38) DoDad-GetModePID(01, 4D) - Tmp MIL on (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:50| ... OpenDAD_If_Needed | False
+06:28:50| DoDad-01  ClearCommandLog ...
+06:28:50| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on ... Skipped_Not_Open
+06:28:50| DoDad-01  CommandLog.Length ...
+06:28:50| DoDad-01  CommandLog ... (0)
+06:28:50| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:50| DoDad-01  SerialData.Length ... (28)
+06:28:50| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.378 s,F) GetModePID(01, 4D) - Tmp MIL on | NoEOL
+06:28:50| sr | Tmp MIL on: NULL
+06:28:50|  
+06:28:50| ... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------
+06:28:50| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:50| ... DoDad | Action: System.Action | tag: GetModePID(01, 51) - Tipo Combustible
+06:28:50| ... GetCallingProcedure | lVehiculoLink
+06:28:50| ... GetCallingProcedure | VehiculoLink
+06:28:50| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:50| DoDad-01 | GetModePID(01, 51) - Tipo Combustible (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:50| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 51) - Tipo Combustible ... Attempting Open
+06:28:50| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 51) - Tipo Combustible (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:53| ... SetupVehicleIsLinked
+06:28:53| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:53| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:53| ... GetCallingProcedure | DoDad
+06:28:53| ... SetupMyLastCommResult: DADNotConnected
+06:28:53| ... IsCommResultSuccess | False
+06:28:53| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.33) DoDad-GetModePID(01, 51) - Tipo Combustible (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:53| ... OpenDAD_If_Needed | False
+06:28:53| DoDad-01  ClearCommandLog ...
+06:28:53| DoDad-01 | GetModePID(01, 51) - Tipo Combustible ... Skipped_Not_Open
+06:28:53| DoDad-01  CommandLog.Length ...
+06:28:53| DoDad-01  CommandLog ... (0)
+06:28:53| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:53| DoDad-01  SerialData.Length ... (28)
+06:28:53| DoDad-01 | GetModePID(01, 51) - Tipo Combustible-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.338 s,F) GetModePID(01, 51) - Tipo Combustible | NoEOL
+06:28:53| sr | Tipo Combustible: NULL
+06:28:53|  
+06:28:53| ... (01, 7F) Tmp Marcha Motor >>>-----------------------------------------------------------------------
+06:28:53| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:53| ... DoDad | Action: System.Action | tag: GetModePID(01, 7F) - Tmp Marcha Motor
+06:28:53| ... GetCallingProcedure | lVehiculoLink
+06:28:53| ... GetCallingProcedure | VehiculoLink
+06:28:53| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:53| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:53| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 7F) - Tmp Marcha Motor ... Attempting Open
+06:28:53| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 7F) - Tmp Marcha Motor (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:55| ... SetupVehicleIsLinked
+06:28:55| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:55| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:55| ... GetCallingProcedure | DoDad
+06:28:55| ... SetupMyLastCommResult: DADNotConnected
+06:28:55| ... IsCommResultSuccess | False
+06:28:55| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.36) DoDad-GetModePID(01, 7F) - Tmp Marcha Motor (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:55| ... OpenDAD_If_Needed | False
+06:28:55| DoDad-01  ClearCommandLog ...
+06:28:55| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor ... Skipped_Not_Open
+06:28:55| DoDad-01  CommandLog.Length ...
+06:28:55| DoDad-01  CommandLog ... (0)
+06:28:55| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:55| DoDad-01  SerialData.Length ... (28)
+06:28:55| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.363 s,F) GetModePID(01, 7F) - Tmp Marcha Motor | NoEOL
+06:28:55| sr | Tmp Marcha Motor: NULL
+06:28:55|  
+06:28:55| ... (09, 04) Cal ID >>>-----------------------------------------------------------------------
+06:28:55| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:55| ... DoDad | Action: System.Action | tag: GetModePID(09, 04) - Cal ID
+06:28:55| ... GetCallingProcedure | lVehiculoLink
+06:28:55| ... GetCallingProcedure | VehiculoLink
+06:28:55| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:55| DoDad-01 | GetModePID(09, 04) - Cal ID (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:55| DoDad-MyDoDADSemaphore-01 | GetModePID(09, 04) - Cal ID ... Attempting Open
+06:28:55| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(09, 04) - Cal ID (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:57| ... SetupVehicleIsLinked
+06:28:57| ... GetCallingProcedure | SetupMyLastCommResult
+06:28:57| ... GetCallingProcedure | OpenDAD_If_Needed
+06:28:57| ... GetCallingProcedure | DoDad
+06:28:57| ... SetupMyLastCommResult: DADNotConnected
+06:28:57| ... IsCommResultSuccess | False
+06:28:57| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.34) DoDad-GetModePID(09, 04) - Cal ID (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:57| ... OpenDAD_If_Needed | False
+06:28:57| DoDad-01  ClearCommandLog ...
+06:28:57| DoDad-01 | GetModePID(09, 04) - Cal ID ... Skipped_Not_Open
+06:28:57| DoDad-01  CommandLog.Length ...
+06:28:57| DoDad-01  CommandLog ... (0)
+06:28:57| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:28:57| DoDad-01  SerialData.Length ... (28)
+06:28:57| DoDad-01 | GetModePID(09, 04) - Cal ID-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.345 s,F) GetModePID(09, 04) - Cal ID | NoEOL
+06:28:57| sr | Cal ID: NULL
+06:28:57|  
+06:28:57| ... Get VIN >>>-----------------------------------------------------------------------
+06:28:57| DAD_DLL_VERSION_21.10.25.0
+
+
+
+06:28:57|  
+06:28:57| ... Get RPM >>>-----------------------------------------------------------------------
+06:28:57| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:28:57| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:28:57| ... GetCallingProcedure | lVehiculoLink
+06:28:57| ... GetCallingProcedure | VehiculoLink
+06:28:57| ... GetCallingProcedure | BtnOBDtest_Click
+06:28:57| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:28:57| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 0C) - DTC count, MIL ... Attempting Open
+06:28:57| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:00| ... SetupVehicleIsLinked
+06:29:00| ... GetCallingProcedure | SetupMyLastCommResult
+06:29:00| ... GetCallingProcedure | OpenDAD_If_Needed
+06:29:00| ... GetCallingProcedure | DoDad
+06:29:00| ... SetupMyLastCommResult: DADNotConnected
+06:29:00| ... IsCommResultSuccess | False
+06:29:00| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.31) DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:00| ... OpenDAD_If_Needed | False
+06:29:00| DoDad-01  ClearCommandLog ...
+06:29:00| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL ... Skipped_Not_Open
+06:29:00| DoDad-01  CommandLog.Length ...
+06:29:00| DoDad-01  CommandLog ... (0)
+06:29:00| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:29:00| DoDad-01  SerialData.Length ... (28)
+06:29:00| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.317 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:29:00| sr | Get RPM: NULL
+06:29:00| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:29:00| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:29:00| ... GetCallingProcedure | lVehiculoLink
+06:29:00| ... GetCallingProcedure | VehiculoLink
+06:29:00| ... GetCallingProcedure | BtnOBDtest_Click
+06:29:00| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:00| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 0C) - DTC count, MIL ... Attempting Open
+06:29:00| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:02| ... SetupVehicleIsLinked
+06:29:02| ... GetCallingProcedure | SetupMyLastCommResult
+06:29:02| ... GetCallingProcedure | OpenDAD_If_Needed
+06:29:02| ... GetCallingProcedure | DoDad
+06:29:02| ... SetupMyLastCommResult: DADNotConnected
+06:29:02| ... IsCommResultSuccess | False
+06:29:02| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.36) DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:02| ... OpenDAD_If_Needed | False
+06:29:02| DoDad-01  ClearCommandLog ...
+06:29:02| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL ... Skipped_Not_Open
+06:29:02| DoDad-01  CommandLog.Length ...
+06:29:02| DoDad-01  CommandLog ... (0)
+06:29:02| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:29:02| DoDad-01  SerialData.Length ... (28)
+06:29:02| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.371 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:29:02| sr | Get RPM: NULL
+06:29:02| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:29:02| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:29:02| ... GetCallingProcedure | lVehiculoLink
+06:29:02| ... GetCallingProcedure | VehiculoLink
+06:29:02| ... GetCallingProcedure | BtnOBDtest_Click
+06:29:02| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:02| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 0C) - DTC count, MIL ... Attempting Open
+06:29:02| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:04| ... SetupVehicleIsLinked
+06:29:04| ... GetCallingProcedure | SetupMyLastCommResult
+06:29:04| ... GetCallingProcedure | OpenDAD_If_Needed
+06:29:04| ... GetCallingProcedure | DoDad
+06:29:04| ... SetupMyLastCommResult: DADNotConnected
+06:29:04| ... IsCommResultSuccess | False
+06:29:04| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.36) DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:04| ... OpenDAD_If_Needed | False
+06:29:04| DoDad-01  ClearCommandLog ...
+06:29:04| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL ... Skipped_Not_Open
+06:29:04| DoDad-01  CommandLog.Length ...
+06:29:04| DoDad-01  CommandLog ... (0)
+06:29:04| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:29:04| DoDad-01  SerialData.Length ... (28)
+06:29:04| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.360 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:29:04| sr | Get RPM: NULL
+06:29:04| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:29:04| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:29:04| ... GetCallingProcedure | lVehiculoLink
+06:29:04| ... GetCallingProcedure | VehiculoLink
+06:29:04| ... GetCallingProcedure | BtnOBDtest_Click
+06:29:04| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:04| DoDad-MyDoDADSemaphore-01 | GetModePID(01, 0C) - DTC count, MIL ... Attempting Open
+06:29:04| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:07| ... SetupVehicleIsLinked
+06:29:07| ... GetCallingProcedure | SetupMyLastCommResult
+06:29:07| ... GetCallingProcedure | OpenDAD_If_Needed
+06:29:07| ... GetCallingProcedure | DoDad
+06:29:07| ... SetupMyLastCommResult: DADNotConnected
+06:29:07| ... IsCommResultSuccess | False
+06:29:07| OpenDAD_If_Needed | DAD_Open:False ... (DADNotConnected | 2.36) DoDad-GetModePID(01, 0C) - DTC count, MIL (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:29:07| ... OpenDAD_If_Needed | False
+06:29:07| DoDad-01  ClearCommandLog ...
+06:29:07| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL ... Skipped_Not_Open
+06:29:07| DoDad-01  CommandLog.Length ...
+06:29:07| DoDad-01  CommandLog ... (0)
+06:29:07| DoDad-01-CommandLog-Len:32 Siz:32 | iStart: 0
+06:29:07| DoDad-01  SerialData.Length ... (28)
+06:29:07| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00028,00028-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    (2.359 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:29:07| sr | Get RPM: NULL
+06:29:07| ... >>>-----------------------------------------------------------------------
+06:29:07| ... >>>-----------------------------------------------------------------------
+06:29:07| VIN Hx: Null
+06:29:07| VIN: 
+06:29:07| MON Hx: Null
+06:29:07| MON: 
+06:29:07| DTC Hx: Null
+06:29:07| DTC: 
+06:29:07| RPM Hx: Null
+06:29:07| RPM: 0 | 1: 0 | 2: 0 | 3: 0
+06:29:07| ****** Posible Simulación de lecturas OBD detectada.
+06:29:07| *** Connect ... EOF()
+06:29:07| VehiculoLink: Pass: Inspección vehicular OBD concluido.
+06:31:00|  
+06:31:00| ... Connect_OBD ===================================================================================================================
+06:31:00|  
+06:31:00| ... GetCallingProcedure | lVehiculoLink
+06:31:00| ... GetCallingProcedure | VehiculoLink
+06:31:00| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:00| ... IncrementActiveCount | 1
+06:31:00| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:31:00| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:31:00| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:31:00| ... MyDADStatus | LCR:DADNotConnected,Unknown
+06:31:00| ... Connect | ---------------- Connect --------------- SC:'' (LCR:DADNotConnected,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:00| GetDAD | Starting ... Cnt:00003,00 Opn:F (Connect)
+06:31:00| GetDAD | Success ... Cnt:00003,01 Opn:F (Connect, Connect)
+06:31:00| ... Connect | 1 | GetDAD =Connect
+06:31:00| ... SetupMyLastCommResult: InvalidData
+06:31:00| ... MyDad.Initialize 
+06:31:00| ... DoDad | Action: System.Action | tag: Initialize
+06:31:00| ... GetCallingProcedure | lVehiculoLink
+06:31:00| ... GetCallingProcedure | VehiculoLink
+06:31:00| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:00| DoDad-01 | Initialize (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:00| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+06:31:00| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:00| ... SetupMyLastCommResult: Success
+06:31:00| ... IsCommResultSuccess | True
+06:31:00| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.08) DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:00| ... OpenDAD_If_Needed | True
+06:31:00| DoDad-01  ClearCommandLog ...
+06:31:00| DoDad-01  Invoke ... (Initialize)
+06:31:12| ... SetupVehicleIsLinked
+06:31:12| ... GetCallingProcedure | SetupMyLastCommResult
+06:31:12| ... GetCallingProcedure | _Lambda$__0
+06:31:12| ... GetCallingProcedure | DoDad
+06:31:12| ... SetupMyLastCommResult: VehicleNotConnected
+06:31:12| DoDad-01  Invoke ... (Initialize)  (11921)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:278 Siz:278 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (363)
+06:31:12| DoDad-01 | Initialize-SLL:00363,00363-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  628,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  632,RX QRY,JVPW1850,Delay: 100
+                    -  747,RX QRY,JVPW1850,Delay: 100
+                    -  865,RX QRY,JVPW1850,Delay: 100
+                    -  994,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  1003,TX MSG,I914**,33 
+                    -  5321,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11800,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11904,TX MSG,ICAN29bt500,18 DB 33 F1 02 01 00 00 00 00 00 00
+                    (12.010 s,F) Initialize | 
+06:31:12| ... MyLastResult | VehicleNotConnected,Unknown,False->False
+06:31:12| Connect | Init-Rty:2 (VehicleNotConnected,Unknown,False->False | 12.02) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+06:31:12| ... MyDad.Initialize > NOT Success
+06:31:12| ReleaseDAD |  Starting ... Cnt:00003,01 (Connect)
+06:31:12| ... ReleaseDAD | Success ... Cnt:00003,00 Opn:T (Connect, Connect)
+06:31:12| ... Connect | 2
+06:31:12| ... SetupVehicleIsLinked
+06:31:12| ... GetCallingProcedure | Connect_OBD
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| SVLI | VehicleIsLinked:'False'->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:31:12| ... MyLastResult | VehicleNotConnected,Unknown,False->?
+06:31:12| Connect | Rslt:False EECUID:00 ECUs:0-() Prot:'None', 'None' PC:0  (VehicleNotConnected,Unknown,False->?, 12.02) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| ... DecrementActiveCount | 0
+06:31:12| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:31:12| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:31:12| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:31:12| ... LocalDecrementActiveCount | 0
+06:31:12|  
+06:31:12| ... Get MON >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,012.01 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 01
+                    (0.003 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+06:31:12|  
+06:31:12| ... Get DTC >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,012.02 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+06:31:12| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:79 Siz:79 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (68)
+06:31:12| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00068,00068-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 03
+                    (0.000 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+06:31:12|  
+06:31:12| ... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 1F) - Tmp. Encendido
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido (Open:True,012.04 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 1F
+                    (0.001 s,F) GetModePID(01, 1F) - Tmp. Encendido | NoEOL
+06:31:12|  
+06:31:12| ... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 21) - Distancia MIL
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 21) - Distancia MIL (Open:True,012.06 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 21) - Distancia MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 15
+                    (0.001 s,F) GetModePID(01, 21) - Distancia MIL | NoEOL
+06:31:12|  
+06:31:12| ... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 31) - Distancia MIL Borrada
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada (Open:True,012.07 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 1F
+                    (0.000 s,F) GetModePID(01, 31) - Distancia MIL Borrada | NoEOL
+06:31:12|  
+06:31:12| ... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 33) - Presion Barometrica Kpa
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa (Open:True,012.08 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 21
+                    (0.000 s,F) GetModePID(01, 33) - Presion Barometrica Kpa | NoEOL
+06:31:12|  
+06:31:12| ... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 4D) - Tmp MIL on
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on (Open:True,012.10 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  1,TX MSG,Invalid Protocol,68 6A F1 01 4D
+                    (0.001 s,F) GetModePID(01, 4D) - Tmp MIL on | NoEOL
+06:31:12|  
+06:31:12| ... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 51) - Tipo Combustible
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 51) - Tipo Combustible (Open:True,012.11 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 51) - Tipo Combustible-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 33
+                    (0.000 s,F) GetModePID(01, 51) - Tipo Combustible | NoEOL
+06:31:12|  
+06:31:12| ... (01, 7F) Tmp Marcha Motor >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 7F) - Tmp Marcha Motor
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor (Open:True,012.12 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  1,TX MSG,Invalid Protocol,68 6A F1 01 7F
+                    (0.000 s,F) GetModePID(01, 7F) - Tmp Marcha Motor | NoEOL
+06:31:12|  
+06:31:12| ... (09, 04) Cal ID >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(09, 04) - Cal ID
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(09, 04) - Cal ID (Open:True,012.14 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)
+06:31:12| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(09, 04) - Cal ID-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 09 04
+                    (0.000 s,F) GetModePID(09, 04) - Cal ID | NoEOL
+06:31:12|  
+06:31:12| ... Get VIN >>>-----------------------------------------------------------------------
+06:31:12| DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+2,TX MSG,Invalid Protocol,68 6A F1 09 04 
+6,TX MSG,Invalid Protocol,68 6A F1 09 02 
+
+06:31:12|  
+06:31:12| ... Get RPM >>>-----------------------------------------------------------------------
+06:31:12| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:12| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:31:12| ... GetCallingProcedure | lVehiculoLink
+06:31:12| ... GetCallingProcedure | VehiculoLink
+06:31:12| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:12| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:True,012.16 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:12| DoDad-01  ClearCommandLog ...
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)
+06:31:12| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)  (000)
+06:31:12| DoDad-01  CommandLog.Length ...
+06:31:12| DoDad-01  CommandLog ... (0)
+06:31:12| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:12| DoDad-01  SerialData.Length ... (71)
+06:31:12| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 0C
+                    (0.004 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:31:12| ... >>>-----------------------------------------------------------------------
+06:31:12| ... >>>-----------------------------------------------------------------------
+06:31:12| VIN Hx: Null
+06:31:12| VIN: 
+06:31:12| MON Hx: Null
+06:31:12| MON: 
+06:31:12| DTC Hx: Null
+06:31:12| DTC: 
+06:31:12| RPM Hx: Null
+06:31:12| RPM: 0 | 1: 0 | 2: 0 | 3: 0
+06:31:12| ****** Posible Simulación de lecturas OBD detectada.
+06:31:12| *** Connect ... EOF()
+06:31:12| VehiculoLink: Pass: Inspección vehicular OBD concluido.
+06:31:29|  
+06:31:29| ... Connect_OBD ===================================================================================================================
+06:31:29|  
+06:31:29| ... GetCallingProcedure | lVehiculoLink
+06:31:29| ... GetCallingProcedure | VehiculoLink
+06:31:29| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:29| ... IncrementActiveCount | 1
+06:31:29| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:31:29| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:31:29| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:31:29| ... MyDADStatus | LCR:ConditionsNotCorrect,Unknown
+06:31:29| ... Connect | ---------------- Connect --------------- SC:'' (LCR:ConditionsNotCorrect,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:29| GetDAD | Starting ... Cnt:00004,00 Opn:T (Connect)
+06:31:29| GetDAD | Success ... Cnt:00004,01 Opn:T (Connect, Connect)
+06:31:29| ... Connect | 1 | GetDAD =Connect
+06:31:29| ... SetupMyLastCommResult: InvalidData
+06:31:29| ... MyDad.Initialize 
+06:31:29| ... DoDad | Action: System.Action | tag: Initialize
+06:31:29| ... GetCallingProcedure | lVehiculoLink
+06:31:29| ... GetCallingProcedure | VehiculoLink
+06:31:29| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:29| DoDad-01 | Initialize (Open:True,029.09 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:29| DoDad-01  ClearCommandLog ...
+06:31:29| DoDad-01  Invoke ... (Initialize)
+06:31:41| ... SetupVehicleIsLinked
+06:31:41| ... GetCallingProcedure | SetupMyLastCommResult
+06:31:41| ... GetCallingProcedure | _Lambda$__0
+06:31:41| ... GetCallingProcedure | DoDad
+06:31:41| SVLI | VehicleIsLinked:'?'->'False'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+06:31:41| ... SetupMyLastCommResult: VehicleNotConnected
+06:31:41| DoDad-01  Invoke ... (Initialize)  (12015)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:279 Siz:279 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (364)
+06:31:41| DoDad-01 | Initialize-SLL:00364,00364-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  633,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  638,RX QRY,JVPW1850,Delay: 100
+                    -  757,RX QRY,JVPW1850,Delay: 100
+                    -  873,RX QRY,JVPW1850,Delay: 100
+                    -  1001,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  1012,TX MSG,I914**,33 
+                    -  5328,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11795,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11907,TX MSG,ICAN29bt500,18 DB 33 F1 02 01 00 00 00 00 00 00
+                    (12.014 s,F) Initialize | 
+06:31:41| ... MyLastResult | VehicleNotConnected,Unknown,?->False
+06:31:41| Connect | Init-Rty:2 (VehicleNotConnected,Unknown,?->False | 12.02) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+06:31:41| ... MyDad.Initialize > NOT Success
+06:31:41| ReleaseDAD |  Starting ... Cnt:00004,01 (Connect)
+06:31:41| ... ReleaseDAD | Success ... Cnt:00004,00 Opn:T (Connect, Connect)
+06:31:41| ... Connect | 2
+06:31:41| ... SetupVehicleIsLinked
+06:31:41| ... GetCallingProcedure | Connect_OBD
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| SVLI | VehicleIsLinked:'False'->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+06:31:41| ... MyLastResult | VehicleNotConnected,Unknown,False->?
+06:31:41| Connect | Rslt:False EECUID:00 ECUs:0-() Prot:'None', 'None' PC:0  (VehicleNotConnected,Unknown,False->?, 12.02) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| ... DecrementActiveCount | 0
+06:31:41| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+06:31:41| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+06:31:41| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+06:31:41| ... LocalDecrementActiveCount | 0
+06:31:41|  
+06:31:41| ... Get MON >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:41| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,041.10 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| DoDad-01  ClearCommandLog ...
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (000)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (71)
+06:31:41| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 01
+                    (0.001 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+06:31:41|  
+06:31:41| ... Get DTC >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:41| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,041.12 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| DoDad-01  ClearCommandLog ...
+06:31:41| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+06:31:41| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (000)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:79 Siz:79 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (68)
+06:31:41| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00068,00068-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 03
+                    (0.001 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+06:31:41|  
+06:31:41| ... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 1F) - Tmp. Encendido
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:41| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido (Open:True,041.12 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| DoDad-01  ClearCommandLog ...
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)  (000)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (71)
+06:31:41| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 1F
+                    (0.000 s,F) GetModePID(01, 1F) - Tmp. Encendido | NoEOL
+06:31:41|  
+06:31:41| ... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 21) - Distancia MIL
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:41| DoDad-01 | GetModePID(01, 21) - Distancia MIL (Open:True,041.14 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| DoDad-01  ClearCommandLog ...
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)  (000)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (71)
+06:31:41| DoDad-01 | GetModePID(01, 21) - Distancia MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 15
+                    (0.000 s,F) GetModePID(01, 21) - Distancia MIL | NoEOL
+06:31:41|  
+06:31:41| ... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 31) - Distancia MIL Borrada
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:41| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada (Open:True,041.15 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| DoDad-01  ClearCommandLog ...
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)  (000)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (71)
+06:31:41| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 1F
+                    (0.000 s,F) GetModePID(01, 31) - Distancia MIL Borrada | NoEOL
+06:31:41|  
+06:31:41| ... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 33) - Presion Barometrica Kpa
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:41| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa (Open:True,041.17 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:41| DoDad-01  ClearCommandLog ...
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)
+06:31:41| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)  (000)
+06:31:41| DoDad-01  CommandLog.Length ...
+06:31:41| DoDad-01  CommandLog ... (0)
+06:31:41| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:41| DoDad-01  SerialData.Length ... (71)
+06:31:41| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 21
+                    (0.000 s,F) GetModePID(01, 33) - Presion Barometrica Kpa | NoEOL
+06:31:41|  
+06:31:41| ... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------
+06:31:41| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:41| ... DoDad | Action: System.Action | tag: GetModePID(01, 4D) - Tmp MIL on
+06:31:41| ... GetCallingProcedure | lVehiculoLink
+06:31:41| ... GetCallingProcedure | VehiculoLink
+06:31:41| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:42| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on (Open:True,041.18 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:42| DoDad-01  ClearCommandLog ...
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)  (000)
+06:31:42| DoDad-01  CommandLog.Length ...
+06:31:42| DoDad-01  CommandLog ... (0)
+06:31:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:42| DoDad-01  SerialData.Length ... (71)
+06:31:42| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  9,TX MSG,Invalid Protocol,68 6A F1 01 4D
+                    (0.000 s,F) GetModePID(01, 4D) - Tmp MIL on | NoEOL
+06:31:42|  
+06:31:42| ... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------
+06:31:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 51) - Tipo Combustible
+06:31:42| ... GetCallingProcedure | lVehiculoLink
+06:31:42| ... GetCallingProcedure | VehiculoLink
+06:31:42| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:42| DoDad-01 | GetModePID(01, 51) - Tipo Combustible (Open:True,041.18 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:42| DoDad-01  ClearCommandLog ...
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)  (000)
+06:31:42| DoDad-01  CommandLog.Length ...
+06:31:42| DoDad-01  CommandLog ... (0)
+06:31:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:42| DoDad-01  SerialData.Length ... (71)
+06:31:42| DoDad-01 | GetModePID(01, 51) - Tipo Combustible-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 33
+                    (0.000 s,F) GetModePID(01, 51) - Tipo Combustible | NoEOL
+06:31:42|  
+06:31:42| ... (01, 7F) Tmp Marcha Motor >>>-----------------------------------------------------------------------
+06:31:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 7F) - Tmp Marcha Motor
+06:31:42| ... GetCallingProcedure | lVehiculoLink
+06:31:42| ... GetCallingProcedure | VehiculoLink
+06:31:42| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:42| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor (Open:True,041.21 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:42| DoDad-01  ClearCommandLog ...
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)  (000)
+06:31:42| DoDad-01  CommandLog.Length ...
+06:31:42| DoDad-01  CommandLog ... (0)
+06:31:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:42| DoDad-01  SerialData.Length ... (71)
+06:31:42| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 7F
+                    (0.000 s,F) GetModePID(01, 7F) - Tmp Marcha Motor | NoEOL
+06:31:42|  
+06:31:42| ... (09, 04) Cal ID >>>-----------------------------------------------------------------------
+06:31:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:42| ... DoDad | Action: System.Action | tag: GetModePID(09, 04) - Cal ID
+06:31:42| ... GetCallingProcedure | lVehiculoLink
+06:31:42| ... GetCallingProcedure | VehiculoLink
+06:31:42| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:42| DoDad-01 | GetModePID(09, 04) - Cal ID (Open:True,041.22 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:42| DoDad-01  ClearCommandLog ...
+06:31:42| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)
+06:31:42| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)  (000)
+06:31:42| DoDad-01  CommandLog.Length ...
+06:31:42| DoDad-01  CommandLog ... (0)
+06:31:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:42| DoDad-01  SerialData.Length ... (71)
+06:31:42| DoDad-01 | GetModePID(09, 04) - Cal ID-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 09 04
+                    (0.000 s,F) GetModePID(09, 04) - Cal ID | NoEOL
+06:31:42|  
+06:31:42| ... Get VIN >>>-----------------------------------------------------------------------
+06:31:42| DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+2,TX MSG,Invalid Protocol,68 6A F1 09 04 
+14,TX MSG,Invalid Protocol,68 6A F1 09 02 
+
+06:31:42|  
+06:31:42| ... Get RPM >>>-----------------------------------------------------------------------
+06:31:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+06:31:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+06:31:42| ... GetCallingProcedure | lVehiculoLink
+06:31:42| ... GetCallingProcedure | VehiculoLink
+06:31:42| ... GetCallingProcedure | BtnOBDtest_Click
+06:31:42| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:True,041.25 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+06:31:42| DoDad-01  ClearCommandLog ...
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)
+06:31:42| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)  (000)
+06:31:42| DoDad-01  CommandLog.Length ...
+06:31:42| DoDad-01  CommandLog ... (0)
+06:31:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+06:31:42| DoDad-01  SerialData.Length ... (71)
+06:31:42| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  1,TX MSG,Invalid Protocol,68 6A F1 01 0C
+                    (0.001 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+06:31:42| ... >>>-----------------------------------------------------------------------
+06:31:42| ... >>>-----------------------------------------------------------------------
+06:31:42| VIN Hx: Null
+06:31:42| VIN: 
+06:31:42| MON Hx: Null
+06:31:42| MON: 
+06:31:42| DTC Hx: Null
+06:31:42| DTC: 
+06:31:42| RPM Hx: Null
+06:31:42| RPM: 0 | 1: 0 | 2: 0 | 3: 0
+06:31:42| ****** Posible Simulación de lecturas OBD detectada.
+06:31:42| *** Connect ... EOF()
+06:31:42| VehiculoLink: Pass: Inspección vehicular OBD concluido.
+07:20:55| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+07:20:55| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+07:20:58| CFD | Search_Result_Count:1
+07:20:58| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+07:20:58| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+07:20:58| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+07:20:58| ... GetPropertyValueAsString: Drew Technologies, Inc.
+07:20:58| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+07:20:58| ... GetPropertyValueAsString: VehiclePassThru
+07:20:58| ... GetPropertyValueAsString: IMClean DAD GEN 4
+07:20:58| ... GetPropertyValueAsString: IMClean DAD GEN 4
+07:20:58| ... GetPropertyValueAsString: Win32_PnPEntity
+07:20:58| ... GetPropertyValueAsString: IMClean DAD GEN 4
+07:20:58| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+07:20:58| ... CheckForDevice |1
+07:20:58| Pass:FindUSBDevices.
+07:20:58| getOpusKeyFile: Pass:Opus IMClean OBD Licencia valida.
+07:20:58| facNS: IEXFM0000207393E -> 13417
+07:20:58| facFH: 11122025 -> 2531
+07:23:10| Success
+07:23:10| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+07:23:10| InitIMCleanDevice | DeviceType:4171
+07:23:10| InitIMCleanDevice | DeviceVoltage:11.6
+07:23:10| InitIMCleanDevice | DeviceVoltageDLC:0.3
+07:23:30|  
+07:23:30| ... Connect_OBD ===================================================================================================================
+07:23:30|  
+07:23:30| ... GetCallingProcedure | lVehiculoLink
+07:23:30| ... GetCallingProcedure | VehiculoLink
+07:23:30| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:30| ... IncrementActiveCount | 1
+07:23:30| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+07:23:30| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+07:23:30| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+07:23:30| ... MyDADStatus | LCR:ConditionsNotCorrect,Unknown
+07:23:30| ... Connect | ---------------- Connect --------------- SC:'' (LCR:ConditionsNotCorrect,Unknown) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:30| GetDAD | Starting ... Cnt:00001,00 Opn:F (Connect)
+07:23:30| GetDAD | Success ... Cnt:00001,01 Opn:F (Connect, )
+07:23:30| ... Connect | 1 | GetDAD =Connect
+07:23:30| ... SetupMyLastCommResult: InvalidData
+07:23:30| ... MyDad.Initialize 
+07:23:30| ... DoDad | Action: System.Action | tag: Initialize
+07:23:30| ... GetCallingProcedure | lVehiculoLink
+07:23:30| ... GetCallingProcedure | VehiculoLink
+07:23:30| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:30| DoDad-01 | Initialize (Open:False | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:30| DoDad-MyDoDADSemaphore-01 | Initialize ... Attempting Open
+07:23:30| OpenDAD_If_Needed | Attempting to open DAD ... DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:30| ... SetupMyLastCommResult: Success
+07:23:30| ... IsCommResultSuccess | True
+07:23:30| OpenDAD_If_Needed | DAD_Open:True ... (Success | 0.00) DoDad-Initialize (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:30| ... OpenDAD_If_Needed | True
+07:23:30| DoDad-MyDeviceLogClear-01  ClearLogs ...
+07:23:30| DoDad-01  ClearCommandLog ...
+07:23:30| DoDad-01  Invoke ... (Initialize)
+07:23:42| ... SetupVehicleIsLinked
+07:23:42| ... GetCallingProcedure | SetupMyLastCommResult
+07:23:42| ... GetCallingProcedure | _Lambda$__0
+07:23:42| ... GetCallingProcedure | DoDad
+07:23:42| SVLI | VehicleIsLinked:'?'->'False'  (SetupMyLastCommResult,_Lambda$__0,DoDad)
+07:23:42| ... SetupMyLastCommResult: VehicleNotConnected
+07:23:42| DoDad-01  Invoke ... (Initialize)  (11922)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:277 Siz:277 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (362)
+07:23:42| DoDad-01 | Initialize-SLL:00362,00362-CF:T-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  534,TX MSG,JVPW1850,68 6A F1 01 00 
+                    -  543,RX QRY,JVPW1850,Delay: 100
+                    -  655,RX QRY,JVPW1850,Delay: 100
+                    -  768,RX QRY,JVPW1850,Delay: 100
+                    -  896,TX MSG,JPWM1850,61 6A F1 01 00 
+                    -  908,TX MSG,I914**,33 
+                    -  5228,TX MSG,KWPF**,C1 33 F1 81 
+                    -  11704,TX MSG,ICAN11bt500,00 00 07 DF 01 00 
+                    -  11820,TX MSG,ICAN29bt500,18 DB 33 F1 02 01 00 00 00 00 00 00
+                    (11.931 s,F) Initialize | 
+07:23:42| ... MyLastResult | VehicleNotConnected,Unknown,?->False
+07:23:42| Connect | Init-Rty:2 (VehicleNotConnected,Unknown,?->False | 11.95) | lVehiculoLink,VehiculoLink,BtnOBDtest_Click
+07:23:42| ... MyDad.Initialize > NOT Success
+07:23:42| ReleaseDAD |  Starting ... Cnt:00001,01 (Connect)
+07:23:42| ... ReleaseDAD | Success ... Cnt:00001,00 Opn:T (Connect, Connect)
+07:23:42| ... Connect | 2
+07:23:42| ... SetupVehicleIsLinked
+07:23:42| ... GetCallingProcedure | Connect_OBD
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| SVLI | VehicleIsLinked:'False'->'?'  (Connect_OBD,lVehiculoLink,VehiculoLink)
+07:23:42| ... MyLastResult | VehicleNotConnected,Unknown,False->?
+07:23:42| Connect | Rslt:False EECUID:00 ECUs:0-() Prot:'None', 'None' PC:0  (VehicleNotConnected,Unknown,False->?, 11.95) (lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| ... DecrementActiveCount | 0
+07:23:42| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:Connect_OBD
+07:23:42| ... GetCallingProcedure | OpusIMCleanOBDdrv.Module1:lVehiculoLink
+07:23:42| ... GetCallingProcedure | OpusIMCleanOBDdrv.IMCleanOBD:VehiculoLink
+07:23:42| ... LocalDecrementActiveCount | 0
+07:23:42|  
+07:23:42| ... Get MON >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 01) - Readiness, DTC count, MIL
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL (Open:True,011.94 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 01) - Readiness, DTC count, MIL)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 01) - Readiness, DTC count, MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  3,TX MSG,Invalid Protocol,68 6A F1 01 01
+                    (0.002 s,F) GetModePID(01, 01) - Readiness, DTC count, MIL | NoEOL
+07:23:42|  
+07:23:42| ... Get DTC >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(03, 00) - DTC count, MIL
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(03, 00) - DTC count, MIL (Open:True,011.94 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)
+07:23:42| DoDad-01  Invoke ... (GetModePID(03, 00) - DTC count, MIL)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:79 Siz:79 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (68)
+07:23:42| DoDad-01 | GetModePID(03, 00) - DTC count, MIL-SLL:00068,00068-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  4,TX MSG,Invalid Protocol,68 6A F1 03
+                    (0.004 s,F) GetModePID(03, 00) - DTC count, MIL | NoEOL
+07:23:42|  
+07:23:42| ... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 1F) - Tmp. Encendido
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido (Open:True,011.95 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 1F) - Tmp. Encendido)  (015)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 1F) - Tmp. Encendido-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 1F
+                    (0.002 s,F) GetModePID(01, 1F) - Tmp. Encendido | NoEOL
+07:23:42|  
+07:23:42| ... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 21) - Distancia MIL
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 21) - Distancia MIL (Open:True,011.95 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 21) - Distancia MIL)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 21) - Distancia MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  0,TX MSG,Invalid Protocol,68 6A F1 01 15
+                    (0.000 s,F) GetModePID(01, 21) - Distancia MIL | NoEOL
+07:23:42|  
+07:23:42| ... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 31) - Distancia MIL Borrada
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada (Open:True,011.95 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 31) - Distancia MIL Borrada)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 31) - Distancia MIL Borrada-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  3,TX MSG,Invalid Protocol,68 6A F1 01 1F
+                    (0.000 s,F) GetModePID(01, 31) - Distancia MIL Borrada | NoEOL
+07:23:42|  
+07:23:42| ... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 33) - Presion Barometrica Kpa
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa (Open:True,011.95 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 33) - Presion Barometrica Kpa)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 33) - Presion Barometrica Kpa-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 21
+                    (0.002 s,F) GetModePID(01, 33) - Presion Barometrica Kpa | NoEOL
+07:23:42|  
+07:23:42| ... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 4D) - Tmp MIL on
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on (Open:True,011.96 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 4D) - Tmp MIL on)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 4D) - Tmp MIL on-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 4D
+                    (0.002 s,F) GetModePID(01, 4D) - Tmp MIL on | NoEOL
+07:23:42|  
+07:23:42| ... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 51) - Tipo Combustible
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 51) - Tipo Combustible (Open:True,011.96 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 51) - Tipo Combustible)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 51) - Tipo Combustible-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 33
+                    (0.000 s,F) GetModePID(01, 51) - Tipo Combustible | NoEOL
+07:23:42|  
+07:23:42| ... (01, 7F) Tmp Marcha Motor >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 7F) - Tmp Marcha Motor
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor (Open:True,011.96 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 7F) - Tmp Marcha Motor)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 7F) - Tmp Marcha Motor-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 7F
+                    (0.000 s,F) GetModePID(01, 7F) - Tmp Marcha Motor | NoEOL
+07:23:42|  
+07:23:42| ... (09, 04) Cal ID >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(09, 04) - Cal ID
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(09, 04) - Cal ID (Open:True,011.96 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)
+07:23:42| DoDad-01  Invoke ... (GetModePID(09, 04) - Cal ID)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(09, 04) - Cal ID-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 09 04
+                    (0.002 s,F) GetModePID(09, 04) - Cal ID | NoEOL
+07:23:42|  
+07:23:42| ... Get VIN >>>-----------------------------------------------------------------------
+07:23:42| DAD_DLL_VERSION_21.10.25.0
+3.0.7.0
+
+2,TX MSG,Invalid Protocol,68 6A F1 09 04 
+2,TX MSG,Invalid Protocol,68 6A F1 09 02 
+
+07:23:42|  
+07:23:42| ... Get RPM >>>-----------------------------------------------------------------------
+07:23:42| ... SetupMyLastCommResult: ConditionsNotCorrect
+07:23:42| ... DoDad | Action: System.Action | tag: GetModePID(01, 0C) - DTC count, MIL
+07:23:42| ... GetCallingProcedure | lVehiculoLink
+07:23:42| ... GetCallingProcedure | VehiculoLink
+07:23:42| ... GetCallingProcedure | BtnOBDtest_Click
+07:23:42| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL (Open:True,011.97 | lVehiculoLink,VehiculoLink,BtnOBDtest_Click)
+07:23:42| DoDad-01  ClearCommandLog ...
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)
+07:23:42| DoDad-01  Invoke ... (GetModePID(01, 0C) - DTC count, MIL)  (000)
+07:23:42| DoDad-01  CommandLog.Length ...
+07:23:42| DoDad-01  CommandLog ... (0)
+07:23:42| DoDad-01-CommandLog-Len:82 Siz:82 | iStart: 0
+07:23:42| DoDad-01  SerialData.Length ... (71)
+07:23:42| DoDad-01 | GetModePID(01, 0C) - DTC count, MIL-SLL:00071,00071-CF:F-DLLInfo:'DAD_DLL_VERSION_21.10.25.0 .. 3.0.7.0'
+                    -  DAD_DLL_VERSION_21.10.25.0
+                    -  2,TX MSG,Invalid Protocol,68 6A F1 01 0C
+                    (0.000 s,F) GetModePID(01, 0C) - DTC count, MIL | NoEOL
+07:23:42| ... >>>-----------------------------------------------------------------------
+07:23:42| ... >>>-----------------------------------------------------------------------
+07:23:42| VIN Hx: Null
+07:23:42| VIN: 
+07:23:42| MON Hx: Null
+07:23:42| MON: 
+07:23:42| DTC Hx: Null
+07:23:42| DTC: 
+07:23:42| RPM Hx: Null
+07:23:42| RPM: 0 | 1: 0 | 2: 0 | 3: 0
+07:23:42| ****** Posible Simulación de lecturas OBD detectada.
+07:23:42| *** Connect ... EOF()
+07:23:42| VehiculoLink: Pass: Inspección vehicular OBD concluido.

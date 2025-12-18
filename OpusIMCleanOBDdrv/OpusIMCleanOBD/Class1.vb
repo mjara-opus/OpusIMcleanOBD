@@ -138,6 +138,9 @@ Public Class IMCleanOBD
 
         InspectionData.OBDdata_PROTOCOLO = OBDdata_PROTOCOLO
 
+        DeviceData.DeviceVoltage = sDeviceVoltage
+        DeviceData.DeviceVoltageDLC = sDeviceVoltageDLC
+
         OBD_SimulationWarning = xOBD_SimulationWarning
         InspectionData.OBD_ECU_onLine = xOBD_ECU_onLine
 

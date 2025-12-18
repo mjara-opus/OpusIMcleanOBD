@@ -53,8 +53,8 @@
               "Title": "Form1.Designer.vb",
               "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.Designer.vb",
               "RelativeDocumentMoniker": "OpusOBDtest\\Form1.Designer.vb",
-              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.Designer.vb*",
-              "RelativeToolTip": "OpusOBDtest\\Form1.Designer.vb*",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.Designer.vb",
+              "RelativeToolTip": "OpusOBDtest\\Form1.Designer.vb",
               "ViewState": "AgIAAN0AAAAAAAAAAAAqwPsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-31T01:31:05.615Z",
@@ -68,9 +68,10 @@
               "RelativeDocumentMoniker": "OpusOBDtest\\Module1.vb",
               "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Module1.vb",
               "RelativeToolTip": "OpusOBDtest\\Module1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-23T23:14:51.95Z"
+              "WhenOpened": "2025-10-23T23:14:51.95Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -78,9 +79,9 @@
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb",
               "RelativeDocumentMoniker": "OpusOBDtest\\Form1.vb",
-              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb*",
-              "RelativeToolTip": "OpusOBDtest\\Form1.vb*",
-              "ViewState": "AgIAANoAAAAAAAAAAAAqwOoAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb",
+              "RelativeToolTip": "OpusOBDtest\\Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-22T00:33:33.466Z",
               "EditorCaption": ""
@@ -91,8 +92,8 @@
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb",
               "RelativeDocumentMoniker": "OpusOBDtest\\Form1.vb",
-              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb [Design]*",
-              "RelativeToolTip": "OpusOBDtest\\Form1.vb [Design]*",
+              "ToolTip": "C:\\PRY_NT\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb [Design]",
+              "RelativeToolTip": "OpusOBDtest\\Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-22T00:31:38.638Z",
               "EditorCaption": " [Design]"

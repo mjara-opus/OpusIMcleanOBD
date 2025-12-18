@@ -190,17 +190,18 @@ Partial Class Form1
         '
         Me.PrgBrSalval.Location = New System.Drawing.Point(10, 204)
         Me.PrgBrSalval.Name = "PrgBrSalval"
-        Me.PrgBrSalval.Size = New System.Drawing.Size(217, 10)
+        Me.PrgBrSalval.Size = New System.Drawing.Size(195, 10)
         Me.PrgBrSalval.TabIndex = 317
         Me.PrgBrSalval.Visible = False
         '
         'btnSalvar
         '
+        Me.btnSalvar.Enabled = False
         Me.btnSalvar.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalvar.ForeColor = System.Drawing.Color.Black
         Me.btnSalvar.Location = New System.Drawing.Point(9, 165)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(218, 33)
+        Me.btnSalvar.Size = New System.Drawing.Size(196, 33)
         Me.btnSalvar.TabIndex = 316
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.UseVisualStyleBackColor = True
@@ -219,21 +220,23 @@ Partial Class Form1
         '
         'txtPlaca
         '
+        Me.txtPlaca.BackColor = System.Drawing.Color.FromArgb(CType(CType(188, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(152, Byte), Integer))
         Me.txtPlaca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtPlaca.Enabled = False
         Me.txtPlaca.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPlaca.Location = New System.Drawing.Point(9, 93)
         Me.txtPlaca.Name = "txtPlaca"
-        Me.txtPlaca.Size = New System.Drawing.Size(215, 29)
+        Me.txtPlaca.Size = New System.Drawing.Size(193, 29)
         Me.txtPlaca.TabIndex = 1
         '
         'UsrBallTimer
         '
         Me.UsrBallTimer.BackColor = System.Drawing.Color.White
         Me.UsrBallTimer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UsrBallTimer.Location = New System.Drawing.Point(6, 385)
+        Me.UsrBallTimer.Location = New System.Drawing.Point(9, 335)
         Me.UsrBallTimer.Margin = New System.Windows.Forms.Padding(6)
         Me.UsrBallTimer.Name = "UsrBallTimer"
-        Me.UsrBallTimer.Size = New System.Drawing.Size(115, 101)
+        Me.UsrBallTimer.Size = New System.Drawing.Size(154, 147)
         Me.UsrBallTimer.TabIndex = 313
         '
         'Label6
@@ -613,7 +616,7 @@ Partial Class Form1
         Me.BtnInitDevice.ForeColor = System.Drawing.Color.Black
         Me.BtnInitDevice.Location = New System.Drawing.Point(9, 16)
         Me.BtnInitDevice.Name = "BtnInitDevice"
-        Me.BtnInitDevice.Size = New System.Drawing.Size(218, 33)
+        Me.BtnInitDevice.Size = New System.Drawing.Size(196, 33)
         Me.BtnInitDevice.TabIndex = 0
         Me.BtnInitDevice.Text = "Inicializar OBD"
         Me.BtnInitDevice.UseVisualStyleBackColor = True
@@ -693,7 +696,7 @@ Partial Class Form1
         Me.BtnOBDtest.ForeColor = System.Drawing.Color.Black
         Me.BtnOBDtest.Location = New System.Drawing.Point(9, 128)
         Me.BtnOBDtest.Name = "BtnOBDtest"
-        Me.BtnOBDtest.Size = New System.Drawing.Size(218, 33)
+        Me.BtnOBDtest.Size = New System.Drawing.Size(196, 33)
         Me.BtnOBDtest.TabIndex = 3
         Me.BtnOBDtest.Text = "Vehiculo Inspección"
         Me.BtnOBDtest.UseVisualStyleBackColor = True
@@ -789,6 +792,7 @@ Partial Class Form1
         Me.Controls.Add(Me.picLogoESP)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         CType(Me.PicESPLogo, System.ComponentModel.ISupportInitialize).EndInit()

@@ -3505,7 +3505,7 @@ Module Module1
                                     InStr(pDataTxt, "F1 58") > 0 Then '-- posibles ECUS no conocidos (electricos? diesel?) 
 
 
-            If InStr(pDataTxt, "41 01") > 0 And banMotGas Then '-- OBDdata_MIL 
+            If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0101 = Trim(lBustxt)
@@ -3521,7 +3521,13 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "43") > 0 And banMotGas Then '-- OBDdata_DTC
+            If InStr(pDataTxt, "E8 43") > 0 Or
+                    InStr(pDataTxt, "DF 43") > 0 Or
+                        InStr(pDataTxt, "E0 43") > 0 Or
+                            InStr(pDataTxt, "10 43") > 0 Or
+                                InStr(pDataTxt, "1A 43") > 0 Or
+                                       InStr(pDataTxt, "6B 43") > 0 Or
+                                            InStr(pDataTxt, "58 43") > 0 Then '-- OBDdata_DTC
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0300 = Trim(lBustxt)
@@ -3561,7 +3567,7 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "01 7F") > 0 Then '-- Tiempo de marcha motor
+            If InStr(pDataTxt, "41 7F") > 0 Then '-- Tiempo de marcha motor
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid017F = Trim(lBustxt)
@@ -3569,7 +3575,7 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "01 4D") > 0 Then '-- Tiempo MIL on
+            If InStr(pDataTxt, "41 4D") > 0 Then '-- Tiempo MIL on
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid014D = Trim(lBustxt)
@@ -3577,7 +3583,7 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "09 51") > 0 Then '-- Tipo combustible
+            If InStr(pDataTxt, "49 51") > 0 Then '-- Tipo combustible
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0951 = Trim(lBustxt)
@@ -3585,7 +3591,7 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "09 02") > 0 Then '-- VIN
+            If InStr(pDataTxt, "49 02") > 0 Then '-- VIN
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0902 = Trim(lBustxt)
@@ -3593,7 +3599,7 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "09 04") > 0 Then '-- Cal ID
+            If InStr(pDataTxt, "49 04") > 0 Then '-- Cal ID
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0904 = Trim(lBustxt)
@@ -4189,7 +4195,6 @@ Module Module1
             LocalDecrementActiveCount(CallingProcedure)
 
             '===================================
-            If sDeviceVoltage > xMinVoltage And sDeviceVoltageDLC > xMinVoltage Then xOBD_ECU_onLine = True '-- validamos los voltajes para identificar que es un vehiculo.
 
             Applog(" ")
             Applog("... Get MON >>>-----------------------------------------------------------------------")
@@ -4458,6 +4463,28 @@ Module Module1
             End Try
 
             Applog(" ")
+            Applog("... Get VOLTAJES >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                    MyDad.ClearLogs()
+                    SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 42), "GetModePID(01, 42) - Voltaje", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get Voltaje: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get Voltaje: NULL"
+                End If
+                    Applog(lStatus)
+
+            Catch ex As Exception
+
+            End Try
+
+            Applog(" ")
             Applog("... Get RPM >>>-----------------------------------------------------------------------")
             Try
 
@@ -4488,6 +4515,33 @@ Module Module1
             Catch ex As Exception
 
             End Try
+
+            Dim rResTT As DrewTech.IIMClean.DT_IGenericResponse(Of DrewTech.IIMClean.DT_SelfTestRes) = Nothing
+            Dim rRes As DrewTech.IIMClean.DT_Com_Result = DrewTech.IIMClean.DT_Com_Result.InvalidData ' Nothing
+            Dim rStr As DrewTech.IIMClean.DT_IGenericResponse(Of String) = Nothing
+            Dim rInt As DrewTech.IIMClean.DT_IGenericResponse(Of Integer) = Nothing
+            Dim rDec As DrewTech.IIMClean.DT_IGenericResponse(Of Decimal) = Nothing
+
+            rRes = MyDad.Open()
+            Applog(rRes.ToString())
+
+            'rStr = MyDad.GetFirmwareVersion()
+            'sFirmwareVersion = rStr.Data
+            'Applog("InitIMCleanDevice | FirmwareVersion:" & sFirmwareVersion)
+
+            'rInt = MyDad.GetDeviceType
+            'sDeviceType = rInt.Data
+            'Applog("InitIMCleanDevice | DeviceType:" & sDeviceType)
+
+            rDec = MyDad.GetVoltage
+            sDeviceVoltage = rDec.Data
+            Applog("InitIMCleanDevice | DeviceVoltage:" & sDeviceVoltage)
+
+            rDec = MyDad.GetVoltageDLC
+            sDeviceVoltageDLC = rDec.Data
+            Applog("InitIMCleanDevice | DeviceVoltageDLC:" & sDeviceVoltageDLC)
+
+            If sDeviceVoltage > xMinVoltage And sDeviceVoltageDLC > xMinVoltage Then xOBD_ECU_onLine = True '-- validamos los voltajes para identificar que es un vehiculo.
 
             Applog("... >>>-----------------------------------------------------------------------")
             Applog("... >>>-----------------------------------------------------------------------")
@@ -4524,8 +4578,16 @@ Module Module1
                 Else
                     xOBD_SimulationWarning = False
                 End If
+
             Else
+
+                If Len(xPid0902) > 8 Then
+                    xOBD_ECU_onLine = True
+                    xOBD_SimulationWarning = True
+                    Applog("****** Posible Simulación de lecturas OBD detectada.")
+                End If
                 Applog("****** OBD no conectado al vehículo.")
+
             End If
 
             Applog("*** Connect ... EOF()")
@@ -4574,37 +4636,6 @@ Module Module1
                 rDec = MyDad.GetVoltageDLC
                 sDeviceVoltageDLC = rDec.Data
                 Applog("InitIMCleanDevice | DeviceVoltageDLC:" & sDeviceVoltageDLC)
-
-                'Dim sres As DrewTech.IIMClean.DT_IGenericResponse(Of DrewTech.IIMClean.DT_SelfTestRes) = Nothing
-                'Dim ires As DrewTech.IIMClean.DT_ISelfTestResponse(Of Integer) = Nothing
-
-                'ires = Nothing
-                'SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
-                'Dim ExtendedResult As String = ""
-                'DoDad(Sub() sres = MyDad.SelfTest, "SelfTest")
-
-                'sres = MyDad.SelfTest
-
-                'If (IsNothing(sres) = False) Then
-                'Applog("sres..Pass: " & sres.ToString)
-                'MsgBox("sres..Pass: ")
-
-                'Else
-                'Applog("sres..Fail: ")
-                'MsgBox("sres..Fail: ")
-                'End If
-
-                'If (IsNothing(ires) = False) Then
-                'Applog("ires..Pass: ")
-                'MsgBox("ires..Pass: ")
-                'Else
-                'Applog("ires..Fail: ")
-                'MsgBox("ires..Fail: ")
-                'End If
-                'Applog("CheckLink..Pass: " & sres.Data.ToString)
-                'MsgBox("CheckLink..Pass: " & ires.Data)
-
-                'MyDad.ClearCommandLog()
 
             Else
 

@@ -15,7 +15,7 @@ Module Module1
     Public xPlaca As String
     Public xFechaHora As String
 
-    Public tmrVehTest As Integer = 20
+    Public tmrVehTest As Integer = 25
 
     Public MySQLConnectionString As String = "server=localhost;uid=opus1234;pwd=1234opus;database=OpusOBDtest;Integrated Security=True"
 
@@ -28,6 +28,8 @@ Module Module1
     Public xBtnNeutro As Object = Drawing.Color.FromArgb(223, 221, 217) '--#dfddd9
     Public xbackColorAmarillo As Object = Drawing.Color.FromArgb(250, 173, 20) '--#faad14
     Public xbackMarron As Object = Drawing.Color.FromArgb(150, 104, 12) '--#96680c
+    Public xCampoTexto As Object = Drawing.Color.FromArgb(188, 183, 152) '--#96680c
+
     '||-------------------------------
 
     Public Sub Applog(ByVal lParametro As String)

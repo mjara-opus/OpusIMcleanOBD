@@ -1,0 +1,105 @@
+-------------------------------------------------------
+Placa: L19AJW
+Fecha-Hora: 19/12/2025 -  10:25:05
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 3G1J85DC6GS610110
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4D
+Pid011F : 00 00 07 E8 41 1F 00 B9
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 33 47 31 4A 38 35 44 43 36 47 53 36 31 30 31 31 30
+Pid0904 : 00 00 07 E8 49 04 08 31 32 36 35 39 33 31 39 00 00 00 00 00 00 00 00 32 35 31 39 36 37 34 35 00 00 00 00 00 00 00 00 32 35 31 39 36 31 38 33 00 00 00 00 00 00 00 00 31 32 36 32 39 33 37 31 00 00 00 00 00 00 00 00 32 35 31 39 30 37 31 34 00 00 00 00 00 00 00 00 32 35 31 39 34 32 35 35 00 00 00 00 00 00 00 00 32 35 31 39 34 32 36 31 00 00 00 00 00 00 00 00 32 35 31 39 34 32 35 38 00 00 00 00 00 00 00 00
+Pid010C : 00 00 07 E8 41 0C 0A 62
+=======================================================
+ 
+-------------------------------------------------------
+Placa:  U09BJN
+Fecha-Hora: 19/12/2025 -  10:34:31
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: KWPS8FE9
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 109
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 86 F1 10 41 01 00 07 65 01
+Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+Pid0121 : 84 F1 10 41 21 00 00
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : 87 F1 10 49 04 04 38 36 35 30
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa: PDJ1615
+Fecha-Hora: 19/12/2025 -  13:25:22
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: KWPF8FE9
+OBDdata_VIN: 8A1FC1J5XCL084315
+OBDdata_MIL: 
+MSI: 
+CCM: 
+CMB: 
+OS2: 
+CAT: 
+CCC: 
+EVS: 
+SAS: 
+FAA: 
+O2C: 
+DTC: 
+ 
+Pid0101 : Null
+Pid0300 : Null
+Pid0121 : Null
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : Null
+Pid010C : Null
+=======================================================
+ 

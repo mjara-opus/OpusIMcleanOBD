@@ -1,0 +1,140 @@
+-------------------------------------------------------
+Placa: 179YBN
+Fecha-Hora: 24/12/2025 -  10:09:33
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN29bt500
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 109
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 18 DA F1 10 41 01 00 07 E1 81
+Pid0300 : 18 DA F1 10 43 00
+Pid0121 : 18 DA F1 10 41 21 00 00
+Pid0131 : Null
+Pid0133 : 18 DA F1 10 41 33 4E
+Pid011F : 18 DA F1 10 41 1F 00 7B
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : 18 DA F1 10 49 04 01 33 37 38 30 35 2D 52 31 42 2D 58 30 33 30 00 00
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa:  T59BCL
+Fecha-Hora: 24/12/2025 -  11:22:42
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4E
+Pid011F : 00 00 07 E8 41 1F 00 16
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : 00 00 07 E8 49 04 01 33 33 39 32 30 2D 37 39 4D 33 2A 30 30 30 30 31
+Pid010C : 00 00 07 E8 41 0C 0B 00
+=======================================================
+ 
+-------------------------------------------------------
+Placa:  L40ATR
+Fecha-Hora: 24/12/2025 -  13:07:44
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 E1 80
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : 00 00 07 E8 41 1F 00 17
+Pid017F : Null
+Pid014D : 00 00 07 E8 41 4D 00 00
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : 00 00 07 E8 49 04 01 31 39 4C 45 36 41 00 00 00 00 00 00 00 00 00 00
+Pid010C : 00 00 07 E8 41 0C 0A F0
+=======================================================
+ 
+-------------------------------------------------------
+Placa: A70BRP
+Fecha-Hora: 24/12/2025 -  13:14:53
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: KWPS8FE9
+OBDdata_VIN: ?????????????????
+OBDdata_MIL: 
+MSI: 
+CCM: 
+CMB: 
+OS2: 
+CAT: 
+CCC: 
+EVS: 
+SAS: 
+FAA: 
+O2C: 
+DTC: 
+ 
+Pid0101 : Null
+Pid0300 : Null
+Pid0121 : Null
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : Null
+Pid010C : Null
+=======================================================
+ 

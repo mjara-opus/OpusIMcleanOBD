@@ -1,0 +1,420 @@
+-------------------------------------------------------
+Placa: H49BPU
+Fecha-Hora: 18/12/2025 -  10:36:41
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: MR0CX3DD6R1424606
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:110 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 110
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 29 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4C
+Pid011F : 00 00 07 E8 41 1F 00 B2
+Pid017F : Null
+Pid014D : 00 00 07 E8 41 4D 00 00
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 4D 52 30 43 58 33 44 44 36 52 31 34 32 34 36 30 36
+Pid0904 : 00 00 07 E8 49 04 02 33 46 30 4A 37 31 30 30 00 00 00 00 00 00 00 00 41 30 32 30 32 30 30 30 00 00 00 00 00 00 00 00
+Pid010C : 00 00 07 E8 41 0C 0A 47
+=======================================================
+ 
+-------------------------------------------------------
+Placa:  23F789
+Fecha-Hora: 18/12/2025 -  10:42:44
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 1C4HJXEG2MW708915
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4C
+Pid011F : 00 00 07 E8 41 1F 00 17
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 31 43 34 48 4A 58 45 47 32 4D 57 37 30 38 39 31 35
+Pid0904 : 00 00 07 E8 49 04 01 36 38 35 30 31 36 30 35 41 43 00 00 00 00 00 00
+Pid010C : 00 00 07 E8 41 0C 0A D8
+=======================================================
+ 
+-------------------------------------------------------
+Placa: Y90ATB
+Fecha-Hora: 18/12/2025 -  11:07:19
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: KWPS8FE9
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 109
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 86 F1 10 41 01 00 07 65 01
+Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+Pid0121 : 84 F1 10 41 21 00 00
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : 87 F1 10 49 04 02 30 36 30 31
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa: S69BAM
+Fecha-Hora: 18/12/2025 -  11:16:12
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: KWPF8FEF
+OBDdata_VIN: MA6CB5CD3KT052615
+OBDdata_MIL: 
+MSI: 
+CCM: 
+CMB: 
+OS2: 
+CAT: 
+CCC: 
+EVS: 
+SAS: 
+FAA: 
+O2C: 
+DTC: 
+ 
+Pid0101 : Null
+Pid0300 : Null
+Pid0121 : Null
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : Null
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa: 950ULL
+Fecha-Hora: 18/12/2025 -  11:36:31
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: I9140808
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:109 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:109
+MSI: 110
+CCM: 109
+CMB: 110
+OS2: 109
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 109
+DTC: 
+ 
+Pid0101 : 48 6B 10 41 01 00 07 65 21
+Pid0300 : 48 6B 10 43 00 00 00 00 00 00
+Pid0121 : 48 6B 10 41 21 00 00
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : Null
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa:  K79BNT
+Fecha-Hora: 18/12/2025 -  11:51:46
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: Invalid Protocol
+OBDdata_VIN: 
+OBDdata_MIL: 
+MSI: 
+CCM: 
+CMB: 
+OS2: 
+CAT: 
+CCC: 
+EVS: 
+SAS: 
+FAA: 
+O2C: 
+DTC: 
+ 
+Pid0101 : Null
+Pid0300 : Null
+Pid0121 : Null
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : Null
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa: MX143D3
+Fecha-Hora: 18/12/2025 -  12:21:36
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 1C6RR7KG1RS167055
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:109 | O2s:109 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:109
+MSI: 110
+CCM: 110
+CMB: 109
+OS2: 109
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 109
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 27 E5 20
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4D
+Pid011F : 00 00 07 E8 41 1F 00 3E
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 31 43 36 52 52 37 4B 47 31 52 53 31 36 37 30 35 35
+Pid0904 : 00 00 07 E8 49 04 01 36 38 36 37 32 32 37 38 41 42 00 00 00 00 00 00
+Pid010C : 00 00 07 E8 41 0C 0B 48
+=======================================================
+ 
+-------------------------------------------------------
+Placa: V50AKB
+Fecha-Hora: 18/12/2025 -  12:38:35
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 3VW2M1AJ2GM250001
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4E
+Pid011F : 00 00 07 E8 41 1F 00 36
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 33 56 57 32 4D 31 41 4A 32 47 4D 32 35 30 30 30 31
+Pid0904 : 00 00 07 E8 49 04 01 30 36 47 39 30 36 30 35 35 41 4A 20 31 34 30 35
+Pid010C : 00 00 07 E8 41 0C 0C 6E
+=======================================================
+ 
+-------------------------------------------------------
+Placa: 769YUU
+Fecha-Hora: 18/12/2025 -  12:59:11
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN29bt500
+OBDdata_VIN: 
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 18 DA F1 10 41 01 00 07 61 00
+Pid0300 : 18 DA F1 10 43 00
+Pid0121 : 18 DA F1 10 41 21 00 00
+Pid0131 : Null
+Pid0133 : 18 DA F1 10 41 33 4D
+Pid011F : 18 DA F1 10 41 1F 00 52
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : Null
+Pid0904 : 18 DA F1 10 49 04 01 33 37 38 30 35 2D 52 43 31 2D 50 31 34 30 00 00
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa: 749WFD
+Fecha-Hora: 18/12/2025 -  13:12:51
+ECU_onLine: True
+Posible Simulación: True
+-------------------------------------------------------
+OBDdata_PROTOCOLO: JVPW1850
+OBDdata_VIN: 2A4GP64LX6R870607
+OBDdata_MIL: Mil:0| Msi:009 | Ccm:009 | Cmb:009 | O2s:009 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:009
+MSI: 009
+CCM: 009
+CMB: 009
+OS2: 009
+CAT: 110
+CCC: 009
+EVS: 009
+SAS: 009
+FAA: 009
+O2C: 009
+DTC: 
+ 
+Pid0101 : 48 6B 18 41 01 00 04 00 00
+Pid0300 : Null
+Pid0121 : 48 6B 10 41 21 00 00
+Pid0131 : Null
+Pid0133 : Null
+Pid011F : Null
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 48 6B 10 49 02 05 30 36 30 37
+Pid0904 : 48 6B 18 49 04 04 00 00 00 00
+Pid010C : Null
+=======================================================
+ 
+-------------------------------------------------------
+Placa: D30ABX
+Fecha-Hora: 18/12/2025 -  13:28:08
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: WV1CDZSE4EX000344
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 65 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4E
+Pid011F : 00 00 07 E8 41 1F 00 1B
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 57 56 31 43 44 5A 53 45 34 45 58 30 30 30 33 34 34
+Pid0904 : 00 00 07 E8 49 04 01 30 33 46 39 30 36 30 37 30 47 4B 20 35 34 33 35
+Pid010C : 00 00 07 E8 41 0C 0E EC
+=======================================================
+ 
+-------------------------------------------------------
+Placa: PVD219C
+Fecha-Hora: 18/12/2025 -  13:48:56
+ECU_onLine: True
+Posible Simulación: False
+-------------------------------------------------------
+OBDdata_PROTOCOLO: ICAN11bt500
+OBDdata_VIN: 3GNAX9EV9JS510454
+OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+MSI: 110
+CCM: 110
+CMB: 110
+OS2: 110
+CAT: 110
+CCC: 009
+EVS: 110
+SAS: 009
+FAA: 009
+O2C: 110
+DTC: 
+ 
+Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+Pid0300 : 00 00 07 E8 43 00
+Pid0121 : 00 00 07 E8 41 21 00 00
+Pid0131 : Null
+Pid0133 : 00 00 07 E8 41 33 4D
+Pid011F : 00 00 07 E8 41 1F 00 1B
+Pid017F : Null
+Pid014D : Null
+Pid0951 : Null
+Pid0902 : 00 00 07 E8 49 02 01 33 47 4E 41 58 39 45 56 39 4A 53 35 31 30 34 35 34
+Pid0904 : 00 00 07 E8 49 04 08 31 32 36 38 37 32 32 35 00 00 00 00 00 00 00 00 31 32 36 38 38 31 33 34 00 00 00 00 00 00 00 00 31 32 36 38 38 31 33 33 00 00 00 00 00 00 00 00 31 32 36 35 30 33 37 37 00 00 00 00 00 00 00 00 31 32 36 37 32 34 33 30 00 00 00 00 00 00 00 00 31 32 36 38 38 31 34 30 00 00 00 00 00 00 00 00 31 32 36 38 38 31 34 36 00 00 00 00 00 00 00 00 31 32 36 38 38 31 34 32 00 00 00 00 00 00 00 00
+Pid010C : 00 00 07 E8 41 0C 0D FC
+=======================================================
+ 

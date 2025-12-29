@@ -1,0 +1,2964 @@
+01:01:00| Iniciando conexión con el IMClean OBD...13:01:00
+01:04:50| Iniciando conexión con el IMClean OBD...13:04:50
+01:04:51| Opus IMClean OBD requiere licencia de software.
+01:04:51| Key? IEXFM0000207393E-C45AB1CE966E
+01:09:48| Iniciando conexión con el IMClean OBD...13:09:48
+01:09:48| Opus IMClean OBD requiere licencia de software.
+01:09:48| Key? IEXFM0000207393E-C45AB1CE966E
+01:11:10| Iniciando conexión con el IMClean OBD...13:11:10
+01:11:11| Opus IMClean OBD requiere licencia de software.
+01:11:11| Key? IEXFM0000207393E-C45AB1CE966E
+01:11:30| DeviceData 
+01:11:30| -------------------------------------------------------
+01:11:30| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+01:11:30| Licencia: 2025® Ok
+01:11:30| DeviceDescription: IMClean DAD GEN 4
+01:11:30| DeviceID: IEXFM0000207393E
+01:11:30|  
+01:11:30| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+01:13:43| initDeviceOBD: Pass: IMClean OBD en línea.
+01:13:43| DeviceManufacturer: Drew Technologies, Inc.
+01:13:43| DeviceType: 4171
+01:13:43| DeviceVoltage: 0
+01:13:43| DeviceVoltageDLC: 0
+01:13:43| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+01:15:13| IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:15:36| DeviceVoltage: 0
+01:15:36| DeviceVoltageDLC: 0
+01:15:36|  
+01:15:36| Placa: LTH1234           Fecha: 12/12/2025 -  13:15:13
+01:15:36| -------------------------------------------------------
+01:15:36| OBDdata_PROTOCOLO: Invalid Protocol
+01:15:36| OBDdata_VIN: 
+01:15:36| OBDdata_MIL: 
+01:15:36| MSI: 
+01:15:36| CCM: 
+01:15:36| CMB: 
+01:15:36| OS2: 
+01:15:36| CAT: 
+01:15:36| CCC: 
+01:15:36| EVS: 
+01:15:36| SAS: 
+01:15:36| FAA: 
+01:15:36| O2C: 
+01:15:36| DTC: 
+01:15:36|  
+01:15:36| Pid0101 : Null
+01:15:36| Pid0300 : Null
+01:15:36| Pid0121 : Null
+01:15:36| Pid0131 : Null
+01:15:36| Pid0133 : Null
+01:15:36| Pid011F : Null
+01:15:36| Pid017F : Null
+01:15:36| Pid014D : Null
+01:15:36| Pid0951 : Null
+01:15:36| Pid0902 : Null
+01:15:36| Pid0904 : Null
+01:15:36| Pid010C : Null
+01:15:36|  
+01:15:36| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:15:36| Err: El OBD no esta conectado al vehículo.
+01:23:53| Iniciando conexión con el IMClean OBD...13:23:53
+01:23:53| DeviceData 
+01:23:53| -------------------------------------------------------
+01:23:53| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+01:23:53| Licencia: 2025® Ok
+01:23:53| DeviceDescription: IMClean DAD GEN 4
+01:23:53| DeviceID: IEXFM0000207393E
+01:23:53|  
+01:23:53| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+01:26:05| initDeviceOBD: Pass: IMClean OBD en línea.
+01:26:05| DeviceManufacturer: Drew Technologies, Inc.
+01:26:05| DeviceType: 4171
+01:26:05| DeviceVoltage: 0
+01:26:05| DeviceVoltageDLC: 0
+01:26:05| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:20:37| Iniciando conexión con el IMClean OBD...10:20:37
+10:20:38| DeviceData 
+10:20:38| -------------------------------------------------------
+10:20:38| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:20:38| Licencia: 2025® Ok
+10:20:38| DeviceDescription: IMClean DAD GEN 4
+10:20:38| DeviceID: IEXFM0000207393E
+10:20:38|  
+10:20:38| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:22:51| initDeviceOBD: Pass: IMClean OBD en línea.
+10:22:51| DeviceManufacturer: Drew Technologies, Inc.
+10:22:51| DeviceType: 4171
+10:22:51| DeviceVoltage: 0
+10:22:51| DeviceVoltageDLC: 0
+10:22:51| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:23:49| Iniciando conexión con el IMClean OBD...10:23:49
+10:23:50| DeviceData 
+10:23:50| -------------------------------------------------------
+10:23:50| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:23:50| Licencia: 2025® Ok
+10:23:50| DeviceDescription: IMClean DAD GEN 4
+10:23:50| DeviceID: IEXFM0000207393E
+10:23:50|  
+10:23:50| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:26:01| initDeviceOBD: Pass: IMClean OBD en línea.
+10:26:01| DeviceManufacturer: Drew Technologies, Inc.
+10:26:01| DeviceType: 4171
+10:26:01| DeviceVoltage: 0
+10:26:01| DeviceVoltageDLC: 0
+10:26:01| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:26:12| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:26:29| DeviceVoltage: 0
+10:26:29| DeviceVoltageDLC: 0
+10:26:29|  
+10:26:29| Placa: OPUS123           Fecha: 17/12/2025 -  10:26:12
+10:26:29| -------------------------------------------------------
+10:26:29| OBDdata_PROTOCOLO: Invalid Protocol
+10:26:29| OBDdata_VIN: 
+10:26:29| OBDdata_MIL: 
+10:26:29| MSI: 
+10:26:29| CCM: 
+10:26:29| CMB: 
+10:26:29| OS2: 
+10:26:29| CAT: 
+10:26:29| CCC: 
+10:26:29| EVS: 
+10:26:29| SAS: 
+10:26:29| FAA: 
+10:26:29| O2C: 
+10:26:29| DTC: 
+10:26:29|  
+10:26:29| Pid0101 : Null
+10:26:29| Pid0300 : Null
+10:26:29| Pid0121 : Null
+10:26:29| Pid0131 : Null
+10:26:29| Pid0133 : Null
+10:26:29| Pid011F : Null
+10:26:29| Pid017F : Null
+10:26:29| Pid014D : Null
+10:26:29| Pid0951 : Null
+10:26:29| Pid0902 : Null
+10:26:29| Pid0904 : Null
+10:26:29| Pid010C : Null
+10:26:29|  
+10:26:29| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:26:29| Err: El OBD no esta conectado al vehículo.
+10:28:04| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:28:32| DeviceVoltage: 0
+10:28:32| DeviceVoltageDLC: 0
+10:28:32|  
+10:28:32| Placa: LF63450           Fecha: 17/12/2025 -  10:28:04
+10:28:32| -------------------------------------------------------
+10:28:32| OBDdata_PROTOCOLO: ICAN11bt500
+10:28:32| OBDdata_VIN: 1FTBR1C85LKA79079
+10:28:32| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:28:32| MSI: 110
+10:28:32| CCM: 110
+10:28:32| CMB: 110
+10:28:32| OS2: 110
+10:28:32| CAT: 110
+10:28:32| CCC: 009
+10:28:32| EVS: 110
+10:28:32| SAS: 009
+10:28:32| FAA: 009
+10:28:32| O2C: 110
+10:28:32| DTC: 
+10:28:32|  
+10:28:32| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+10:28:32| Pid0300 : 00 00 07 E8 43 00
+10:28:32| Pid0121 : 00 00 07 E8 41 21 00 00
+10:28:32| Pid0131 : Null
+10:28:32| Pid0133 : 00 00 07 E8 41 33 4E
+10:28:32| Pid011F : 00 00 07 E8 41 1F 00 25
+10:28:32| Pid017F : Null
+10:28:32| Pid014D : Null
+10:28:32| Pid0951 : Null
+10:28:32| Pid0902 : 00 00 07 E8 49 02 01 31 46 54 42 52 31 43 38 35 4C 4B 41 37 39 30 37 39
+10:28:32| Pid0904 : 00 00 07 E8 49 04 01 46 56 47 4A 32 46 30 2E 48 33 32 00 00 00 00 00
+10:28:32| Pid010C : 00 00 07 E8 41 0C 0A 14
+10:28:32|  
+10:28:32| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:28:32| Err: Posible simulación de lecturas del ECU detectada.
+10:38:09| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:38:37| DeviceVoltage: 0
+10:38:37| DeviceVoltageDLC: 0
+10:38:37|  
+10:38:37| Placa:  LF63450           Fecha: 17/12/2025 -  10:38:09
+10:38:37| -------------------------------------------------------
+10:38:37| OBDdata_PROTOCOLO: ICAN11bt500
+10:38:37| OBDdata_VIN: 1FTBR1C85LKA79079
+10:38:37| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:38:37| MSI: 110
+10:38:37| CCM: 110
+10:38:37| CMB: 110
+10:38:37| OS2: 110
+10:38:37| CAT: 110
+10:38:37| CCC: 009
+10:38:38| EVS: 110
+10:38:38| SAS: 009
+10:38:38| FAA: 009
+10:38:38| O2C: 110
+10:38:38| DTC: 
+10:38:38|  
+10:38:38| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+10:38:38| Pid0300 : 00 00 07 E8 43 00
+10:38:38| Pid0121 : 00 00 07 E8 41 21 00 00
+10:38:38| Pid0131 : Null
+10:38:38| Pid0133 : 00 00 07 E8 41 33 4E
+10:38:38| Pid011F : 00 00 07 E8 41 1F 00 1B
+10:38:38| Pid017F : Null
+10:38:38| Pid014D : Null
+10:38:38| Pid0951 : Null
+10:38:38| Pid0902 : 00 00 07 E8 49 02 01 31 46 54 42 52 31 43 38 35 4C 4B 41 37 39 30 37 39
+10:38:38| Pid0904 : 00 00 07 E8 49 04 01 46 56 47 4A 32 46 30 2E 48 33 32 00 00 00 00 00
+10:38:38| Pid010C : 00 00 07 E8 41 0C 0A 21
+10:38:38|  
+10:38:38| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:38:38| Err: Posible simulación de lecturas del ECU detectada.
+10:41:29| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:41:56| DeviceVoltage: 0
+10:41:56| DeviceVoltageDLC: 0
+10:41:56|  
+10:41:56| Placa: MUE889A           Fecha: 17/12/2025 -  10:41:29
+10:41:56| -------------------------------------------------------
+10:41:56| OBDdata_PROTOCOLO: KWPS8FE9
+10:41:56| OBDdata_VIN: 
+10:41:56| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:41:56| MSI: 110
+10:41:56| CCM: 110
+10:41:56| CMB: 110
+10:41:56| OS2: 110
+10:41:56| CAT: 110
+10:41:56| CCC: 009
+10:41:56| EVS: 110
+10:41:56| SAS: 009
+10:41:56| FAA: 009
+10:41:56| O2C: 110
+10:41:56| DTC: 
+10:41:56|  
+10:41:56| Pid0101 : 86 F1 10 41 01 00 07 65 00
+10:41:56| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+10:41:56| Pid0121 : 84 F1 10 41 21 00 00
+10:41:56| Pid0131 : Null
+10:41:56| Pid0133 : Null
+10:41:56| Pid011F : Null
+10:41:56| Pid017F : Null
+10:41:56| Pid014D : Null
+10:41:56| Pid0951 : Null
+10:41:56| Pid0902 : Null
+10:41:56| Pid0904 : 87 F1 10 49 04 04 38 35 35 34
+10:41:56| Pid010C : Null
+10:41:56|  
+10:41:56| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:41:56| Err: El OBD no esta conectado al vehículo.
+10:42:25| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:42:39| DeviceVoltage: 0
+10:42:39| DeviceVoltageDLC: 0
+10:42:39|  
+10:42:39| Placa:  MUE889A           Fecha: 17/12/2025 -  10:42:25
+10:42:39| -------------------------------------------------------
+10:42:39| OBDdata_PROTOCOLO: Invalid Protocol
+10:42:39| OBDdata_VIN: 
+10:42:39| OBDdata_MIL: 
+10:42:39| MSI: 
+10:42:39| CCM: 
+10:42:39| CMB: 
+10:42:39| OS2: 
+10:42:39| CAT: 
+10:42:39| CCC: 
+10:42:39| EVS: 
+10:42:39| SAS: 
+10:42:39| FAA: 
+10:42:39| O2C: 
+10:42:39| DTC: 
+10:42:39|  
+10:42:39| Pid0101 : Null
+10:42:39| Pid0300 : Null
+10:42:39| Pid0121 : Null
+10:42:39| Pid0131 : Null
+10:42:39| Pid0133 : Null
+10:42:39| Pid011F : Null
+10:42:39| Pid017F : Null
+10:42:39| Pid014D : Null
+10:42:39| Pid0951 : Null
+10:42:39| Pid0902 : Null
+10:42:39| Pid0904 : Null
+10:42:39| Pid010C : Null
+10:42:39|  
+10:42:39| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:42:39| Err: El OBD no esta conectado al vehículo.
+10:42:56| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:43:12| DeviceVoltage: 0
+10:43:12| DeviceVoltageDLC: 0
+10:43:12|  
+10:43:12| Placa:  MUE889A           Fecha: 17/12/2025 -  10:42:56
+10:43:12| -------------------------------------------------------
+10:43:12| OBDdata_PROTOCOLO: Invalid Protocol
+10:43:12| OBDdata_VIN: 
+10:43:12| OBDdata_MIL: 
+10:43:12| MSI: 
+10:43:12| CCM: 
+10:43:12| CMB: 
+10:43:12| OS2: 
+10:43:12| CAT: 
+10:43:12| CCC: 
+10:43:12| EVS: 
+10:43:12| SAS: 
+10:43:12| FAA: 
+10:43:12| O2C: 
+10:43:12| DTC: 
+10:43:12|  
+10:43:12| Pid0101 : Null
+10:43:12| Pid0300 : Null
+10:43:12| Pid0121 : Null
+10:43:12| Pid0131 : Null
+10:43:12| Pid0133 : Null
+10:43:12| Pid011F : Null
+10:43:12| Pid017F : Null
+10:43:12| Pid014D : Null
+10:43:12| Pid0951 : Null
+10:43:12| Pid0902 : Null
+10:43:12| Pid0904 : Null
+10:43:12| Pid010C : Null
+10:43:12|  
+10:43:12| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:43:12| Err: El OBD no esta conectado al vehículo.
+10:43:43| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:44:09| DeviceVoltage: 0
+10:44:09| DeviceVoltageDLC: 0
+10:44:09|  
+10:44:09| Placa:  MUE889A           Fecha: 17/12/2025 -  10:43:43
+10:44:09| -------------------------------------------------------
+10:44:09| OBDdata_PROTOCOLO: KWPS8FE9
+10:44:09| OBDdata_VIN: 
+10:44:09| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:44:09| MSI: 110
+10:44:09| CCM: 110
+10:44:09| CMB: 110
+10:44:09| OS2: 110
+10:44:09| CAT: 110
+10:44:09| CCC: 009
+10:44:09| EVS: 110
+10:44:09| SAS: 009
+10:44:09| FAA: 009
+10:44:09| O2C: 110
+10:44:09| DTC: 
+10:44:09|  
+10:44:09| Pid0101 : 86 F1 10 41 01 00 07 65 00
+10:44:09| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+10:44:09| Pid0121 : 84 F1 10 41 21 00 00
+10:44:09| Pid0131 : Null
+10:44:09| Pid0133 : Null
+10:44:09| Pid011F : Null
+10:44:09| Pid017F : Null
+10:44:09| Pid014D : Null
+10:44:09| Pid0951 : Null
+10:44:09| Pid0902 : Null
+10:44:09| Pid0904 : 87 F1 10 49 04 04 38 35 35 34
+10:44:10| Pid010C : Null
+10:44:10|  
+10:44:10| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:44:10| Err: El OBD no esta conectado al vehículo.
+10:49:02| Iniciando conexión con el IMClean OBD...10:49:02
+10:49:03| DeviceData 
+10:49:03| -------------------------------------------------------
+10:49:03| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:49:03| Licencia: 2025® Ok
+10:49:03| DeviceDescription: IMClean DAD GEN 4
+10:49:03| DeviceID: IEXFM0000207393E
+10:49:03|  
+10:49:03| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:51:14| initDeviceOBD: Pass: IMClean OBD en línea.
+10:51:14| DeviceManufacturer: Drew Technologies, Inc.
+10:51:14| DeviceType: 4171
+10:51:14| DeviceVoltage: 13.6
+10:51:14| DeviceVoltageDLC: 14.1
+10:51:14| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:51:30| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:51:56| DeviceVoltage: 13.6
+10:51:56| DeviceVoltageDLC: 14.1
+10:51:56|  
+10:51:56| Placa: MUA889A           Fecha: 17/12/2025 -  10:51:30
+10:51:56| -------------------------------------------------------
+10:51:56| OBDdata_PROTOCOLO: KWPS8FE9
+10:51:56| OBDdata_VIN: 
+10:51:56| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:51:56| MSI: 110
+10:51:56| CCM: 110
+10:51:56| CMB: 110
+10:51:56| OS2: 110
+10:51:56| CAT: 110
+10:51:56| CCC: 009
+10:51:56| EVS: 110
+10:51:56| SAS: 009
+10:51:56| FAA: 009
+10:51:56| O2C: 110
+10:51:56| DTC: 
+10:51:56|  
+10:51:56| Pid0101 : 86 F1 10 41 01 00 07 65 00
+10:51:56| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+10:51:56| Pid0121 : 84 F1 10 41 21 00 00
+10:51:56| Pid0131 : Null
+10:51:56| Pid0133 : Null
+10:51:56| Pid011F : Null
+10:51:56| Pid017F : Null
+10:51:56| Pid014D : Null
+10:51:56| Pid0951 : Null
+10:51:56| Pid0902 : Null
+10:51:56| Pid0904 : 87 F1 10 49 04 04 38 35 35 34
+10:51:56| Pid010C : Null
+10:51:56|  
+10:51:56| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:51:56| Err: Posible simulación de lecturas del ECU detectada.
+10:54:34| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:55:03| DeviceVoltage: 13.6
+10:55:03| DeviceVoltageDLC: 14.1
+10:55:03|  
+10:55:03| Placa: LF63450           Fecha: 17/12/2025 -  10:54:34
+10:55:03| -------------------------------------------------------
+10:55:03| OBDdata_PROTOCOLO: ICAN11bt500
+10:55:03| OBDdata_VIN: 1FTBR1C85LKA79079
+10:55:03| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:55:03| MSI: 110
+10:55:03| CCM: 110
+10:55:03| CMB: 110
+10:55:03| OS2: 110
+10:55:03| CAT: 110
+10:55:03| CCC: 009
+10:55:03| EVS: 110
+10:55:03| SAS: 009
+10:55:03| FAA: 009
+10:55:03| O2C: 110
+10:55:03| DTC: 
+10:55:03|  
+10:55:03| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+10:55:03| Pid0300 : 00 00 07 E8 43 00
+10:55:03| Pid0121 : 00 00 07 E8 41 21 00 00
+10:55:03| Pid0131 : Null
+10:55:03| Pid0133 : 00 00 07 E8 41 33 4E
+10:55:03| Pid011F : 00 00 07 E8 41 1F 00 20
+10:55:03| Pid017F : Null
+10:55:03| Pid014D : Null
+10:55:03| Pid0951 : Null
+10:55:03| Pid0902 : 00 00 07 E8 49 02 01 31 46 54 42 52 31 43 38 35 4C 4B 41 37 39 30 37 39
+10:55:03| Pid0904 : 00 00 07 E8 49 04 01 46 56 47 4A 32 46 30 2E 48 33 32 00 00 00 00 00
+10:55:03| Pid010C : 00 00 07 E8 41 0C 0A 1C
+10:55:03|  
+10:55:03| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:59:20| Iniciando conexión con el IMClean OBD...10:59:20
+10:59:21| DeviceData 
+10:59:21| -------------------------------------------------------
+10:59:21| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:59:21| Licencia: 2025® Ok
+10:59:21| DeviceDescription: IMClean DAD GEN 4
+10:59:21| DeviceID: IEXFM0000207393E
+10:59:21|  
+10:59:21| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+11:01:33| initDeviceOBD: Pass: IMClean OBD en línea.
+11:01:33| DeviceManufacturer: Drew Technologies, Inc.
+11:01:33| DeviceType: 4171
+11:01:33| DeviceVoltage: 3.1
+11:01:33| DeviceVoltageDLC: 3.4
+11:01:33| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+11:01:50| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:02:13| DeviceVoltage: 3.1
+11:02:13| DeviceVoltageDLC: 3.4
+11:02:13|  
+11:02:13| Placa: LF63450           Fecha: 17/12/2025 -  11:01:50
+11:02:13| -------------------------------------------------------
+11:02:13| OBDdata_PROTOCOLO: Invalid Protocol
+11:02:13| OBDdata_VIN: 
+11:02:13| OBDdata_MIL: 
+11:02:13| MSI: 
+11:02:13| CCM: 
+11:02:13| CMB: 
+11:02:13| OS2: 
+11:02:13| CAT: 
+11:02:13| CCC: 
+11:02:13| EVS: 
+11:02:13| SAS: 
+11:02:13| FAA: 
+11:02:13| O2C: 
+11:02:13| DTC: 
+11:02:13|  
+11:02:13| Pid0101 : Null
+11:02:13| Pid0300 : Null
+11:02:13| Pid0121 : Null
+11:02:13| Pid0131 : Null
+11:02:13| Pid0133 : Null
+11:02:13| Pid011F : Null
+11:02:13| Pid017F : Null
+11:02:13| Pid014D : Null
+11:02:13| Pid0951 : Null
+11:02:13| Pid0902 : Null
+11:02:13| Pid0904 : Null
+11:02:13| Pid010C : Null
+11:02:13|  
+11:02:13| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:02:13| Err: El OBD no esta conectado al vehículo.
+11:02:25| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:02:54| DeviceVoltage: 3.1
+11:02:54| DeviceVoltageDLC: 3.4
+11:02:54|  
+11:02:54| Placa: LF63450           Fecha: 17/12/2025 -  11:02:25
+11:02:54| -------------------------------------------------------
+11:02:54| OBDdata_PROTOCOLO: ICAN11bt500
+11:02:54| OBDdata_VIN: 1FTBR1C85LKA79079
+11:02:54| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:02:54| MSI: 110
+11:02:54| CCM: 110
+11:02:54| CMB: 110
+11:02:54| OS2: 110
+11:02:54| CAT: 110
+11:02:54| CCC: 009
+11:02:54| EVS: 110
+11:02:54| SAS: 009
+11:02:54| FAA: 009
+11:02:54| O2C: 110
+11:02:54| DTC: 
+11:02:54|  
+11:02:54| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+11:02:54| Pid0300 : 00 00 07 E8 43 00
+11:02:54| Pid0121 : 00 00 07 E8 41 21 00 00
+11:02:54| Pid0131 : Null
+11:02:54| Pid0133 : 00 00 07 E8 41 33 4E
+11:02:54| Pid011F : 00 00 07 E8 41 1F 00 D8
+11:02:54| Pid017F : Null
+11:02:54| Pid014D : Null
+11:02:54| Pid0951 : Null
+11:02:54| Pid0902 : 00 00 07 E8 49 02 01 31 46 54 42 52 31 43 38 35 4C 4B 41 37 39 30 37 39
+11:02:54| Pid0904 : 00 00 07 E8 49 04 01 46 56 47 4A 32 46 30 2E 48 33 32 00 00 00 00 00
+11:02:54| Pid010C : 00 00 07 E8 41 0C 0A 13
+11:02:54|  
+11:02:54| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:02:54| Err: Posible simulación de lecturas del ECU detectada.
+11:04:45| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:05:12| DeviceVoltage: 3.1
+11:05:12| DeviceVoltageDLC: 3.4
+11:05:12|  
+11:05:12| Placa:  MUE889A           Fecha: 17/12/2025 -  11:04:45
+11:05:12| -------------------------------------------------------
+11:05:12| OBDdata_PROTOCOLO: KWPS8FE9
+11:05:12| OBDdata_VIN: 
+11:05:12| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:05:12| MSI: 110
+11:05:12| CCM: 110
+11:05:12| CMB: 110
+11:05:12| OS2: 110
+11:05:12| CAT: 110
+11:05:12| CCC: 009
+11:05:12| EVS: 110
+11:05:12| SAS: 009
+11:05:12| FAA: 009
+11:05:12| O2C: 110
+11:05:12| DTC: 
+11:05:12|  
+11:05:12| Pid0101 : 86 F1 10 41 01 00 07 65 00
+11:05:12| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+11:05:12| Pid0121 : 84 F1 10 41 21 00 00
+11:05:12| Pid0131 : Null
+11:05:12| Pid0133 : Null
+11:05:12| Pid011F : Null
+11:05:12| Pid017F : Null
+11:05:12| Pid014D : Null
+11:05:12| Pid0951 : Null
+11:05:12| Pid0902 : Null
+11:05:12| Pid0904 : 87 F1 10 49 04 04 38 35 35 34
+11:05:12| Pid010C : Null
+11:05:12|  
+11:05:12| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:05:12| Err: El OBD no esta conectado al vehículo.
+11:05:27| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:05:42| DeviceVoltage: 3.1
+11:05:42| DeviceVoltageDLC: 3.4
+11:05:42|  
+11:05:42| Placa:  MUE889A           Fecha: 17/12/2025 -  11:05:26
+11:05:42| -------------------------------------------------------
+11:05:42| OBDdata_PROTOCOLO: Invalid Protocol
+11:05:42| OBDdata_VIN: 
+11:05:42| OBDdata_MIL: 
+11:05:42| MSI: 
+11:05:42| CCM: 
+11:05:42| CMB: 
+11:05:42| OS2: 
+11:05:42| CAT: 
+11:05:42| CCC: 
+11:05:42| EVS: 
+11:05:42| SAS: 
+11:05:42| FAA: 
+11:05:42| O2C: 
+11:05:42| DTC: 
+11:05:42|  
+11:05:42| Pid0101 : Null
+11:05:42| Pid0300 : Null
+11:05:42| Pid0121 : Null
+11:05:42| Pid0131 : Null
+11:05:42| Pid0133 : Null
+11:05:42| Pid011F : Null
+11:05:42| Pid017F : Null
+11:05:42| Pid014D : Null
+11:05:42| Pid0951 : Null
+11:05:42| Pid0902 : Null
+11:05:42| Pid0904 : Null
+11:05:42| Pid010C : Null
+11:05:42|  
+11:05:42| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:05:42| Err: El OBD no esta conectado al vehículo.
+11:05:58| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:06:13| DeviceVoltage: 3.1
+11:06:13| DeviceVoltageDLC: 3.4
+11:06:13|  
+11:06:13| Placa:  MUE889A           Fecha: 17/12/2025 -  11:05:58
+11:06:13| -------------------------------------------------------
+11:06:13| OBDdata_PROTOCOLO: Invalid Protocol
+11:06:13| OBDdata_VIN: 
+11:06:13| OBDdata_MIL: 
+11:06:13| MSI: 
+11:06:13| CCM: 
+11:06:13| CMB: 
+11:06:13| OS2: 
+11:06:13| CAT: 
+11:06:13| CCC: 
+11:06:13| EVS: 
+11:06:13| SAS: 
+11:06:13| FAA: 
+11:06:13| O2C: 
+11:06:13| DTC: 
+11:06:13|  
+11:06:13| Pid0101 : Null
+11:06:13| Pid0300 : Null
+11:06:13| Pid0121 : Null
+11:06:13| Pid0131 : Null
+11:06:13| Pid0133 : Null
+11:06:13| Pid011F : Null
+11:06:13| Pid017F : Null
+11:06:13| Pid014D : Null
+11:06:13| Pid0951 : Null
+11:06:13| Pid0902 : Null
+11:06:13| Pid0904 : Null
+11:06:13| Pid010C : Null
+11:06:13|  
+11:06:13| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:06:13| Err: El OBD no esta conectado al vehículo.
+11:06:30| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:06:56| DeviceVoltage: 3.1
+11:06:56| DeviceVoltageDLC: 3.4
+11:06:56|  
+11:06:56| Placa:  MUE889A           Fecha: 17/12/2025 -  11:06:30
+11:06:56| -------------------------------------------------------
+11:06:56| OBDdata_PROTOCOLO: KWPS8FE9
+11:06:56| OBDdata_VIN: 
+11:06:56| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:06:56| MSI: 110
+11:06:56| CCM: 110
+11:06:56| CMB: 110
+11:06:56| OS2: 110
+11:06:56| CAT: 110
+11:06:56| CCC: 009
+11:06:56| EVS: 110
+11:06:56| SAS: 009
+11:06:56| FAA: 009
+11:06:56| O2C: 110
+11:06:56| DTC: 
+11:06:56|  
+11:06:56| Pid0101 : 86 F1 10 41 01 00 07 65 00
+11:06:56| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+11:06:56| Pid0121 : 84 F1 10 41 21 00 00
+11:06:56| Pid0131 : Null
+11:06:56| Pid0133 : Null
+11:06:56| Pid011F : Null
+11:06:56| Pid017F : Null
+11:06:56| Pid014D : Null
+11:06:56| Pid0951 : Null
+11:06:56| Pid0902 : Null
+11:06:56| Pid0904 : 87 F1 10 49 04 04 38 35 35 34
+11:06:56| Pid010C : Null
+11:06:56|  
+11:06:56| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:06:56| Err: El OBD no esta conectado al vehículo.
+11:10:15| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:10:41| DeviceVoltage: 3.1
+11:10:41| DeviceVoltageDLC: 3.4
+11:10:41|  
+11:10:41| Placa:  715UD           Fecha: 17/12/2025 -  11:10:15
+11:10:41| -------------------------------------------------------
+11:10:41| OBDdata_PROTOCOLO: ICAN11bt500
+11:10:41| OBDdata_VIN: WMEEK31X38K060031
+11:10:41| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:10:41| MSI: 110
+11:10:41| CCM: 110
+11:10:41| CMB: 110
+11:10:41| OS2: 111
+11:10:41| CAT: 110
+11:10:41| CCC: 009
+11:10:41| EVS: 110
+11:10:41| SAS: 009
+11:10:41| FAA: 009
+11:10:41| O2C: 110
+11:10:41| DTC: P0138, P0139
+11:10:41|  
+11:10:41| Pid0101 : 00 00 07 E8 41 01 02 07 65 00
+11:10:41| Pid0300 : 00 00 07 E8 43 02 01 38 01 39
+11:10:41| Pid0121 : 00 00 07 E8 41 21 00 8C
+11:10:41| Pid0131 : Null
+11:10:41| Pid0133 : Null
+11:10:41| Pid011F : 00 00 07 E8 41 1F 00 18
+11:10:41| Pid017F : Null
+11:10:41| Pid014D : Null
+11:10:41| Pid0951 : Null
+11:10:41| Pid0902 : 00 00 07 E8 49 02 01 57 4D 45 45 4B 33 31 58 33 38 4B 30 36 30 30 33 31
+11:10:41| Pid0904 : 00 00 07 E8 49 04 02 31 33 32 34 34 36 30 38 39 35 31 37 30 30 31 31 34 35 31 34 34 36 38 39 39 35 31 37 30 30 30 31
+11:10:41| Pid010C : 00 00 07 E8 41 0C 0E D4
+11:10:41|  
+11:10:41| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:10:41| Err: Posible simulación de lecturas del ECU detectada.
+11:13:36| Iniciando conexión con el IMClean OBD...11:13:36
+11:13:36| DeviceData 
+11:13:36| -------------------------------------------------------
+11:13:36| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+11:13:36| Licencia: 2025® Ok
+11:13:36| DeviceDescription: IMClean DAD GEN 4
+11:13:36| DeviceID: IEXFM0000207393E
+11:13:36|  
+11:13:36| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+11:15:48| initDeviceOBD: Pass: IMClean OBD en línea.
+11:15:48| DeviceManufacturer: Drew Technologies, Inc.
+11:15:48| DeviceType: 4171
+11:15:48| DeviceVoltage: 0
+11:15:48| DeviceVoltageDLC: 0
+11:15:48| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+11:21:47| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:22:13| DeviceVoltage: 0
+11:22:13| DeviceVoltageDLC: 0
+11:22:13|  
+11:22:13| Placa: 400ZZY           Fecha: 17/12/2025 -  11:21:47
+11:22:13| -------------------------------------------------------
+11:22:13| OBDdata_PROTOCOLO: ICAN11bt500
+11:22:13| OBDdata_VIN: 3G1J85CC7FS566621
+11:22:13| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:22:13| MSI: 110
+11:22:13| CCM: 110
+11:22:13| CMB: 110
+11:22:13| OS2: 110
+11:22:13| CAT: 110
+11:22:13| CCC: 009
+11:22:13| EVS: 009
+11:22:13| SAS: 009
+11:22:13| FAA: 009
+11:22:13| O2C: 110
+11:22:13| DTC: 
+11:22:13|  
+11:22:13| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:22:13| Pid0300 : 00 00 07 E8 43 00
+11:22:13| Pid0121 : 00 00 07 E8 41 21 00 00
+11:22:13| Pid0131 : Null
+11:22:13| Pid0133 : 00 00 07 E8 41 33 4D
+11:22:13| Pid011F : 00 00 07 E8 41 1F 00 18
+11:22:13| Pid017F : Null
+11:22:13| Pid014D : Null
+11:22:13| Pid0951 : Null
+11:22:13| Pid0902 : 00 00 07 E8 49 02 01 33 47 31 4A 38 35 43 43 37 46 53 35 36 36 36 32 31
+11:22:13| Pid0904 : 00 00 07 E8 49 04 08 31 32 36 35 39 33 31 39 00 00 00 00 00 00 00 00 32 35 31 39 32 37 35 35 00 00 00 00 00 00 00 00 32 35 31 39 32 37 34 34 00 00 00 00 00 00 00 00 31 32 36 32 39 33 37 31 00 00 00 00 00 00 00 00 32 35 31 39 30 37 31 34 00 00 00 00 00 00 00 00 32 35 31 39 32 37 36 35 00 00 00 00 00 00 00 00 32 35 31 39 32 37 38 35 00 00 00 00 00 00 00 00 32 35 31 39 32 37 37 35 00 00 00 00 00 00 00 00
+11:22:13| Pid010C : 00 00 07 E8 41 0C 0B FC
+11:22:13|  
+11:22:13| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:22:13| Err: Posible simulación de lecturas del ECU detectada.
+11:30:31| Iniciando conexión con el IMClean OBD...11:30:31
+11:30:31| DeviceData 
+11:30:31| -------------------------------------------------------
+11:30:31| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+11:30:31| Licencia: 2025® Ok
+11:30:31| DeviceDescription: IMClean DAD GEN 4
+11:30:31| DeviceID: IEXFM0000207393E
+11:30:31|  
+11:30:31| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+11:32:43| initDeviceOBD: Pass: IMClean OBD en línea.
+11:32:43| DeviceManufacturer: Drew Technologies, Inc.
+11:32:43| DeviceType: 4171
+11:32:43| DeviceVoltage: 13.4
+11:32:43| DeviceVoltageDLC: 13.7
+11:32:43| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+11:33:15| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:33:41| DeviceVoltage: 13.4
+11:33:41| DeviceVoltageDLC: 13.7
+11:33:41|  
+11:33:41| Placa: 200ZSW           Fecha: 17/12/2025 -  11:33:15
+11:33:41| -------------------------------------------------------
+11:33:41| OBDdata_PROTOCOLO: ICAN11bt500
+11:33:41| OBDdata_VIN: 
+11:33:41| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:33:41| MSI: 110
+11:33:41| CCM: 110
+11:33:41| CMB: 110
+11:33:41| OS2: 110
+11:33:41| CAT: 110
+11:33:41| CCC: 009
+11:33:41| EVS: 009
+11:33:41| SAS: 009
+11:33:41| FAA: 009
+11:33:41| O2C: 110
+11:33:41| DTC: 
+11:33:41|  
+11:33:41| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:33:41| Pid0300 : 00 00 07 E8 43 00
+11:33:41| Pid0121 : 00 00 07 E8 41 21 00 00
+11:33:41| Pid0131 : Null
+11:33:41| Pid0133 : 00 00 07 E8 49 04 01 31 39 50 41 33 41 00 00 00 00 00 00 00 00 00 00
+11:33:41| Pid011F : 00 00 07 E8 41 1F 00 BD
+11:33:41| Pid017F : Null
+11:33:41| Pid014D : 00 00 07 E8 41 4D 00 00
+11:33:41| Pid0951 : Null
+11:33:41| Pid0902 : Null
+11:33:41| Pid0904 : 00 00 07 E8 49 04 01 31 39 50 41 33 41 00 00 00 00 00 00 00 00 00 00
+11:33:41| Pid010C : 00 00 07 E8 41 0C 0A 5A
+11:33:41|  
+11:33:41| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:50:03| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:50:29| DeviceVoltage: 13.4
+11:50:29| DeviceVoltageDLC: 13.7
+11:50:29|  
+11:50:29| Placa:  279WMJ           Fecha: 17/12/2025 -  11:50:03
+11:50:29| -------------------------------------------------------
+11:50:29| OBDdata_PROTOCOLO: ICAN11bt500
+11:50:29| OBDdata_VIN: 
+11:50:29| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:009 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:009
+11:50:29| MSI: 110
+11:50:29| CCM: 110
+11:50:29| CMB: 110
+11:50:29| OS2: 009
+11:50:29| CAT: 110
+11:50:29| CCC: 009
+11:50:29| EVS: 009
+11:50:29| SAS: 009
+11:50:29| FAA: 009
+11:50:29| O2C: 009
+11:50:29| DTC: 
+11:50:29|  
+11:50:29| Pid0101 : 00 00 07 E8 41 01 00 07 01 00
+11:50:29| Pid0300 : 00 00 07 E8 43 00
+11:50:29| Pid0121 : 00 00 07 E8 41 21 00 00
+11:50:29| Pid0131 : Null
+11:50:29| Pid0133 : 00 00 07 E8 41 33 4C
+11:50:29| Pid011F : 00 00 07 E8 41 1F 00 1B
+11:50:29| Pid017F : Null
+11:50:29| Pid014D : 00 00 07 E8 41 4D 00 00
+11:50:29| Pid0951 : Null
+11:50:29| Pid0902 : Null
+11:50:29| Pid0904 : 00 00 07 E8 49 04 01 33 35 32 47 37 31 30 30 00 00 00 00 00 00 00 00
+11:50:29| Pid010C : 00 00 07 E8 41 0C 0B 3B
+11:50:29|  
+11:50:29| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:06:11| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:06:39| DeviceVoltage: 13.4
+12:06:39| DeviceVoltageDLC: 13.7
+12:06:39|  
+12:06:39| Placa:  K50AZW           Fecha: 17/12/2025 -  12:06:11
+12:06:39| -------------------------------------------------------
+12:06:39| OBDdata_PROTOCOLO: ICAN11bt500
+12:06:39| OBDdata_VIN: JM1DKCB70K1421222
+12:06:39| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:06:39| MSI: 110
+12:06:39| CCM: 110
+12:06:39| CMB: 110
+12:06:39| OS2: 110
+12:06:39| CAT: 110
+12:06:39| CCC: 009
+12:06:39| EVS: 009
+12:06:39| SAS: 009
+12:06:39| FAA: 009
+12:06:39| O2C: 110
+12:06:39| DTC: 
+12:06:39|  
+12:06:39| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+12:06:39| Pid0300 : 00 00 07 E8 43 00
+12:06:39| Pid0121 : 00 00 07 E8 41 21 00 00
+12:06:39| Pid0131 : Null
+12:06:39| Pid0133 : 00 00 07 E8 41 33 4E
+12:06:39| Pid011F : 00 00 07 E8 41 1F 00 1E
+12:06:39| Pid017F : Null
+12:06:39| Pid014D : Null
+12:06:39| Pid0951 : Null
+12:06:39| Pid0902 : 00 00 07 E8 49 02 01 4A 4D 31 44 4B 43 42 37 30 4B 31 34 32 31 32 32 32
+12:06:39| Pid0904 : 00 00 07 E8 49 04 01 50 41 30 34 45 43 30 30 30 50 45 55 42 30 35 30
+12:06:39| Pid010C : 00 00 07 E8 41 0C 0B C2
+12:06:39|  
+12:06:39| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:21:37| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:22:03| DeviceVoltage: 13.4
+12:22:03| DeviceVoltageDLC: 13.7
+12:22:03|  
+12:22:03| Placa:  Y89AJS           Fecha: 17/12/2025 -  12:21:37
+12:22:03| -------------------------------------------------------
+12:22:03| OBDdata_PROTOCOLO: ICAN11bt500
+12:22:03| OBDdata_VIN: 3C4PDCGBXGT161898
+12:22:03| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:22:03| MSI: 110
+12:22:03| CCM: 110
+12:22:03| CMB: 110
+12:22:03| OS2: 110
+12:22:03| CAT: 110
+12:22:03| CCC: 009
+12:22:03| EVS: 009
+12:22:03| SAS: 009
+12:22:03| FAA: 009
+12:22:03| O2C: 110
+12:22:03| DTC: 
+12:22:03|  
+12:22:03| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+12:22:03| Pid0300 : 00 00 07 E8 43 00
+12:22:03| Pid0121 : 00 00 07 E8 41 21 00 00
+12:22:03| Pid0131 : Null
+12:22:03| Pid0133 : 00 00 07 E8 41 33 4D
+12:22:03| Pid011F : 00 00 07 E8 41 1F 00 16
+12:22:03| Pid017F : Null
+12:22:03| Pid014D : Null
+12:22:03| Pid0951 : Null
+12:22:03| Pid0902 : 00 00 07 E8 49 02 01 33 43 34 50 44 43 47 42 58 47 54 31 36 31 38 39 38
+12:22:03| Pid0904 : 00 00 07 E8 49 04 01 36 38 32 37 34 36 32 39 41 45 00 00 00 00 00 00
+12:22:03| Pid010C : 00 00 07 E8 41 0C 0D 1C
+12:22:03|  
+12:22:03| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:09:49| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:10:15| DeviceVoltage: 13.4
+01:10:15| DeviceVoltageDLC: 13.7
+01:10:15|  
+01:10:15| Placa: 441YAN           Fecha: 17/12/2025 -  13:09:49
+01:10:15| -------------------------------------------------------
+01:10:16| OBDdata_PROTOCOLO: ICAN11bt500
+01:10:16| OBDdata_VIN: 5GAKV7ED7BJ403339
+01:10:16| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+01:10:16| MSI: 110
+01:10:16| CCM: 110
+01:10:16| CMB: 110
+01:10:16| OS2: 110
+01:10:16| CAT: 110
+01:10:16| CCC: 009
+01:10:16| EVS: 110
+01:10:16| SAS: 009
+01:10:16| FAA: 009
+01:10:16| O2C: 110
+01:10:16| DTC: 
+01:10:16|  
+01:10:16| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+01:10:16| Pid0300 : 00 00 07 E8 43 00
+01:10:16| Pid0121 : 00 00 07 E8 41 21 00 00
+01:10:16| Pid0131 : Null
+01:10:16| Pid0133 : 00 00 07 E8 41 33 4E
+01:10:16| Pid011F : 00 00 07 E8 41 1F 00 1A
+01:10:16| Pid017F : Null
+01:10:16| Pid014D : Null
+01:10:16| Pid0951 : Null
+01:10:16| Pid0902 : 00 00 07 E8 49 02 01 35 47 41 4B 56 37 45 44 37 42 4A 34 30 33 33 33 39
+01:10:16| Pid0904 : 00 00 07 E8 49 04 04 31 32 36 33 35 30 32 30 00 00 00 00 00 00 00 00 31 32 36 34 39 35 30 30 00 00 00 00 00 00 00 00 31 32 36 33 38 32 33 37 00 00 00 00 00 00 00 00 31 32 36 33 38 32 33 39 00 00 00 00 00 00 00 00
+01:10:16| Pid010C : 00 00 07 E8 41 0C 09 82
+01:10:16|  
+01:10:16| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:26:49| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:27:19| DeviceVoltage: 13.4
+01:27:19| DeviceVoltageDLC: 13.7
+01:27:19|  
+01:27:19| Placa:  L09BMY           Fecha: 17/12/2025 -  13:26:49
+01:27:19| -------------------------------------------------------
+01:27:19| OBDdata_PROTOCOLO: ICAN29bt500
+01:27:19| OBDdata_VIN: 1HGCV2696NA900968
+01:27:19| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:27:19| MSI: 110
+01:27:19| CCM: 110
+01:27:19| CMB: 110
+01:27:19| OS2: 110
+01:27:19| CAT: 110
+01:27:19| CCC: 009
+01:27:19| EVS: 009
+01:27:19| SAS: 009
+01:27:19| FAA: 009
+01:27:19| O2C: 110
+01:27:19| DTC: 
+01:27:19|  
+01:27:19| Pid0101 : 18 DA F1 10 41 01 00 07 E1 00
+01:27:19| Pid0300 : 18 DA F1 10 43 00
+01:27:19| Pid0121 : 18 DA F1 10 41 21 00 00
+01:27:19| Pid0131 : Null
+01:27:19| Pid0133 : 18 DA F1 10 41 33 4D
+01:27:19| Pid011F : 18 DA F1 10 41 1F 00 1F
+01:27:19| Pid017F : Null
+01:27:19| Pid014D : Null
+01:27:19| Pid0951 : Null
+01:27:19| Pid0902 : 18 DA F1 10 49 02 01 31 48 47 43 56 32 36 39 36 4E 41 39 30 30 39 36 38
+01:27:19| Pid0904 : 18 DA F1 10 49 04 01 33 37 38 30 35 2D 36 42 32 2D 58 38 32 30 00 00
+01:27:19| Pid010C : Null
+01:27:19|  
+01:27:19| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:27:19| Err: Posible simulación de lecturas del ECU detectada.
+01:38:38| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:39:04| DeviceVoltage: 13.4
+01:39:04| DeviceVoltageDLC: 13.7
+01:39:04|  
+01:39:04| Placa: P39AAG           Fecha: 17/12/2025 -  13:38:38
+01:39:04| -------------------------------------------------------
+01:39:04| OBDdata_PROTOCOLO: ICAN11bt500
+01:39:04| OBDdata_VIN: 
+01:39:04| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:39:04| MSI: 110
+01:39:04| CCM: 110
+01:39:04| CMB: 110
+01:39:04| OS2: 110
+01:39:04| CAT: 110
+01:39:04| CCC: 009
+01:39:04| EVS: 009
+01:39:04| SAS: 009
+01:39:04| FAA: 009
+01:39:04| O2C: 110
+01:39:04| DTC: 
+01:39:04|  
+01:39:04| Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+01:39:04| Pid0300 : 00 00 07 E8 43 00
+01:39:04| Pid0121 : 00 00 07 E8 41 21 00 00
+01:39:04| Pid0131 : Null
+01:39:04| Pid0133 : Null
+01:39:04| Pid011F : 00 00 07 E8 41 1F 00 1D
+01:39:04| Pid017F : Null
+01:39:04| Pid014D : 00 00 07 E8 41 4D 00 00
+01:39:04| Pid0951 : Null
+01:39:04| Pid0902 : Null
+01:39:04| Pid0904 : 00 00 07 E8 49 04 01 31 45 4C 35 39 42 00 00 00 00 00 00 00 00 00 00
+01:39:04| Pid010C : 00 00 07 E8 41 0C 0D 48
+01:39:04|  
+01:39:04| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:39:04| Err: Posible simulación de lecturas del ECU detectada.
+10:34:08| Iniciando conexión con el IMClean OBD...10:34:08
+10:34:08| DeviceData 
+10:34:09| -------------------------------------------------------
+10:34:09| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:34:09| Licencia: 2025® Ok
+10:34:09| DeviceDescription: IMClean DAD GEN 4
+10:34:09| DeviceID: IEXFM0000207393E
+10:34:09|  
+10:34:09| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:36:21| initDeviceOBD: Pass: IMClean OBD en línea.
+10:36:21| DeviceManufacturer: Drew Technologies, Inc.
+10:36:21| DeviceType: 4171
+10:36:21| DeviceVoltage: 13.5
+10:36:21| DeviceVoltageDLC: 13.8
+10:36:21| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:36:41| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:37:07| DeviceVoltage: 13.5
+10:37:07| DeviceVoltageDLC: 13.9
+10:37:07|  
+10:37:07| Placa: H49BPU           Fecha: 18/12/2025 -  10:36:41
+10:37:07| -------------------------------------------------------
+10:37:07| OBDdata_PROTOCOLO: ICAN11bt500
+10:37:07| OBDdata_VIN: MR0CX3DD6R1424606
+10:37:07| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:110 | Faa:009 | O2c:110
+10:37:07| MSI: 110
+10:37:07| CCM: 110
+10:37:07| CMB: 110
+10:37:07| OS2: 110
+10:37:07| CAT: 110
+10:37:07| CCC: 009
+10:37:07| EVS: 009
+10:37:07| SAS: 110
+10:37:07| FAA: 009
+10:37:07| O2C: 110
+10:37:07| DTC: 
+10:37:07|  
+10:37:07| Pid0101 : 00 00 07 E8 41 01 00 07 29 00
+10:37:07| Pid0300 : 00 00 07 E8 43 00
+10:37:08| Pid0121 : 00 00 07 E8 41 21 00 00
+10:37:08| Pid0131 : Null
+10:37:08| Pid0133 : 00 00 07 E8 41 33 4C
+10:37:08| Pid011F : 00 00 07 E8 41 1F 00 B2
+10:37:08| Pid017F : Null
+10:37:08| Pid014D : 00 00 07 E8 41 4D 00 00
+10:37:08| Pid0951 : Null
+10:37:08| Pid0902 : 00 00 07 E8 49 02 01 4D 52 30 43 58 33 44 44 36 52 31 34 32 34 36 30 36
+10:37:08| Pid0904 : 00 00 07 E8 49 04 02 33 46 30 4A 37 31 30 30 00 00 00 00 00 00 00 00 41 30 32 30 32 30 30 30 00 00 00 00 00 00 00 00
+10:37:08| Pid010C : 00 00 07 E8 41 0C 0A 47
+10:37:08|  
+10:37:08| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:42:44| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:43:14| DeviceVoltage: 13.6
+10:43:14| DeviceVoltageDLC: 14
+10:43:14|  
+10:43:14| Placa:  23F789           Fecha: 18/12/2025 -  10:42:44
+10:43:14| -------------------------------------------------------
+10:43:14| OBDdata_PROTOCOLO: ICAN11bt500
+10:43:14| OBDdata_VIN: 1C4HJXEG2MW708915
+10:43:14| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:43:14| MSI: 110
+10:43:14| CCM: 110
+10:43:14| CMB: 110
+10:43:14| OS2: 110
+10:43:14| CAT: 110
+10:43:14| CCC: 009
+10:43:14| EVS: 110
+10:43:14| SAS: 009
+10:43:14| FAA: 009
+10:43:14| O2C: 110
+10:43:14| DTC: 
+10:43:14|  
+10:43:14| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+10:43:14| Pid0300 : 00 00 07 E8 43 00
+10:43:14| Pid0121 : 00 00 07 E8 41 21 00 00
+10:43:14| Pid0131 : Null
+10:43:14| Pid0133 : 00 00 07 E8 41 33 4C
+10:43:14| Pid011F : 00 00 07 E8 41 1F 00 17
+10:43:14| Pid017F : Null
+10:43:14| Pid014D : Null
+10:43:14| Pid0951 : Null
+10:43:14| Pid0902 : 00 00 07 E8 49 02 01 31 43 34 48 4A 58 45 47 32 4D 57 37 30 38 39 31 35
+10:43:14| Pid0904 : 00 00 07 E8 49 04 01 36 38 35 30 31 36 30 35 41 43 00 00 00 00 00 00
+10:43:14| Pid010C : 00 00 07 E8 41 0C 0A D8
+10:43:14|  
+10:43:14| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:07:19| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:07:49| DeviceVoltage: 13.2
+11:07:49| DeviceVoltageDLC: 13.7
+11:07:49|  
+11:07:49| Placa: Y90ATB           Fecha: 18/12/2025 -  11:07:19
+11:07:49| -------------------------------------------------------
+11:07:49| OBDdata_PROTOCOLO: KWPS8FE9
+11:07:49| OBDdata_VIN: 
+11:07:49| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:07:49| MSI: 110
+11:07:49| CCM: 109
+11:07:49| CMB: 110
+11:07:49| OS2: 110
+11:07:49| CAT: 110
+11:07:49| CCC: 009
+11:07:49| EVS: 110
+11:07:49| SAS: 009
+11:07:49| FAA: 009
+11:07:49| O2C: 110
+11:07:49| DTC: 
+11:07:49|  
+11:07:49| Pid0101 : 86 F1 10 41 01 00 07 65 01
+11:07:49| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+11:07:49| Pid0121 : 84 F1 10 41 21 00 00
+11:07:49| Pid0131 : Null
+11:07:49| Pid0133 : Null
+11:07:49| Pid011F : Null
+11:07:49| Pid017F : Null
+11:07:49| Pid014D : Null
+11:07:49| Pid0951 : Null
+11:07:49| Pid0902 : Null
+11:07:49| Pid0904 : 87 F1 10 49 04 02 30 36 30 31
+11:07:49| Pid010C : Null
+11:07:49|  
+11:07:49| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:07:49| Err: Posible simulación de lecturas del ECU detectada.
+11:16:12| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:16:43| DeviceVoltage: 13.4
+11:16:43| DeviceVoltageDLC: 13.9
+11:16:43|  
+11:16:43| Placa: S69BAM           Fecha: 18/12/2025 -  11:16:12
+11:16:43| -------------------------------------------------------
+11:16:43| OBDdata_PROTOCOLO: KWPF8FEF
+11:16:43| OBDdata_VIN: MA6CB5CD3KT052615
+11:16:43| OBDdata_MIL: 
+11:16:43| MSI: 
+11:16:43| CCM: 
+11:16:43| CMB: 
+11:16:43| OS2: 
+11:16:43| CAT: 
+11:16:43| CCC: 
+11:16:43| EVS: 
+11:16:43| SAS: 
+11:16:43| FAA: 
+11:16:43| O2C: 
+11:16:43| DTC: 
+11:16:43|  
+11:16:43| Pid0101 : Null
+11:16:43| Pid0300 : Null
+11:16:43| Pid0121 : Null
+11:16:43| Pid0131 : Null
+11:16:43| Pid0133 : Null
+11:16:43| Pid011F : Null
+11:16:43| Pid017F : Null
+11:16:43| Pid014D : Null
+11:16:43| Pid0951 : Null
+11:16:43| Pid0902 : Null
+11:16:43| Pid0904 : Null
+11:16:43| Pid010C : Null
+11:16:43|  
+11:16:43| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:16:43| Err: Posible simulación de lecturas del ECU detectada.
+11:36:31| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:37:00| DeviceVoltage: 13.5
+11:37:00| DeviceVoltageDLC: 13.9
+11:37:00|  
+11:37:00| Placa: 950ULL           Fecha: 18/12/2025 -  11:36:31
+11:37:00| -------------------------------------------------------
+11:37:00| OBDdata_PROTOCOLO: I9140808
+11:37:00| OBDdata_VIN: 
+11:37:00| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:109 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:109
+11:37:00| MSI: 110
+11:37:00| CCM: 109
+11:37:00| CMB: 110
+11:37:00| OS2: 109
+11:37:00| CAT: 110
+11:37:00| CCC: 009
+11:37:00| EVS: 110
+11:37:00| SAS: 009
+11:37:00| FAA: 009
+11:37:00| O2C: 109
+11:37:00| DTC: 
+11:37:00|  
+11:37:00| Pid0101 : 48 6B 10 41 01 00 07 65 21
+11:37:00| Pid0300 : 48 6B 10 43 00 00 00 00 00 00
+11:37:00| Pid0121 : 48 6B 10 41 21 00 00
+11:37:00| Pid0131 : Null
+11:37:00| Pid0133 : Null
+11:37:00| Pid011F : Null
+11:37:00| Pid017F : Null
+11:37:00| Pid014D : Null
+11:37:00| Pid0951 : Null
+11:37:00| Pid0902 : Null
+11:37:00| Pid0904 : Null
+11:37:00| Pid010C : Null
+11:37:00|  
+11:37:00| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:37:00| Err: Posible simulación de lecturas del ECU detectada.
+11:51:46| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:51:59| DeviceVoltage: 12.2
+11:51:59| DeviceVoltageDLC: 12.5
+11:51:59|  
+11:51:59| Placa:  K79BNT           Fecha: 18/12/2025 -  11:51:46
+11:51:59| -------------------------------------------------------
+11:51:59| OBDdata_PROTOCOLO: Invalid Protocol
+11:51:59| OBDdata_VIN: 
+11:51:59| OBDdata_MIL: 
+11:51:59| MSI: 
+11:51:59| CCM: 
+11:51:59| CMB: 
+11:51:59| OS2: 
+11:51:59| CAT: 
+11:51:59| CCC: 
+11:51:59| EVS: 
+11:51:59| SAS: 
+11:51:59| FAA: 
+11:51:59| O2C: 
+11:51:59| DTC: 
+11:51:59|  
+11:51:59| Pid0101 : Null
+11:51:59| Pid0300 : Null
+11:51:59| Pid0121 : Null
+11:51:59| Pid0131 : Null
+11:51:59| Pid0133 : Null
+11:51:59| Pid011F : Null
+11:51:59| Pid017F : Null
+11:51:59| Pid014D : Null
+11:51:59| Pid0951 : Null
+11:51:59| Pid0902 : Null
+11:51:59| Pid0904 : Null
+11:51:59| Pid010C : Null
+11:51:59|  
+11:51:59| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:21:36| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:22:05| DeviceVoltage: 13.4
+12:22:05| DeviceVoltageDLC: 13.8
+12:22:05|  
+12:22:05| Placa: MX143D3           Fecha: 18/12/2025 -  12:21:36
+12:22:05| -------------------------------------------------------
+12:22:05| OBDdata_PROTOCOLO: ICAN11bt500
+12:22:05| OBDdata_VIN: 1C6RR7KG1RS167055
+12:22:05| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:109 | O2s:109 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:109
+12:22:05| MSI: 110
+12:22:06| CCM: 110
+12:22:06| CMB: 109
+12:22:06| OS2: 109
+12:22:06| CAT: 110
+12:22:06| CCC: 009
+12:22:06| EVS: 110
+12:22:06| SAS: 009
+12:22:06| FAA: 009
+12:22:06| O2C: 109
+12:22:06| DTC: 
+12:22:06|  
+12:22:06| Pid0101 : 00 00 07 E8 41 01 00 27 E5 20
+12:22:06| Pid0300 : 00 00 07 E8 43 00
+12:22:06| Pid0121 : 00 00 07 E8 41 21 00 00
+12:22:06| Pid0131 : Null
+12:22:06| Pid0133 : 00 00 07 E8 41 33 4D
+12:22:06| Pid011F : 00 00 07 E8 41 1F 00 3E
+12:22:06| Pid017F : Null
+12:22:06| Pid014D : Null
+12:22:06| Pid0951 : Null
+12:22:06| Pid0902 : 00 00 07 E8 49 02 01 31 43 36 52 52 37 4B 47 31 52 53 31 36 37 30 35 35
+12:22:06| Pid0904 : 00 00 07 E8 49 04 01 36 38 36 37 32 32 37 38 41 42 00 00 00 00 00 00
+12:22:06| Pid010C : 00 00 07 E8 41 0C 0B 48
+12:22:06|  
+12:22:06| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:38:35| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:39:02| DeviceVoltage: 13.3
+12:39:02| DeviceVoltageDLC: 13.7
+12:39:02|  
+12:39:02| Placa: V50AKB           Fecha: 18/12/2025 -  12:38:35
+12:39:02| -------------------------------------------------------
+12:39:02| OBDdata_PROTOCOLO: ICAN11bt500
+12:39:02| OBDdata_VIN: 3VW2M1AJ2GM250001
+12:39:03| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:39:03| MSI: 110
+12:39:03| CCM: 110
+12:39:03| CMB: 110
+12:39:03| OS2: 110
+12:39:03| CAT: 110
+12:39:03| CCC: 009
+12:39:03| EVS: 009
+12:39:03| SAS: 009
+12:39:03| FAA: 009
+12:39:03| O2C: 110
+12:39:03| DTC: 
+12:39:03|  
+12:39:03| Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+12:39:03| Pid0300 : 00 00 07 E8 43 00
+12:39:03| Pid0121 : 00 00 07 E8 41 21 00 00
+12:39:03| Pid0131 : Null
+12:39:03| Pid0133 : 00 00 07 E8 41 33 4E
+12:39:03| Pid011F : 00 00 07 E8 41 1F 00 36
+12:39:03| Pid017F : Null
+12:39:03| Pid014D : Null
+12:39:03| Pid0951 : Null
+12:39:03| Pid0902 : 00 00 07 E8 49 02 01 33 56 57 32 4D 31 41 4A 32 47 4D 32 35 30 30 30 31
+12:39:03| Pid0904 : 00 00 07 E8 49 04 01 30 36 47 39 30 36 30 35 35 41 4A 20 31 34 30 35
+12:39:03| Pid010C : 00 00 07 E8 41 0C 0C 6E
+12:39:03|  
+12:39:03| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:59:11| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:59:40| DeviceVoltage: 13.8
+12:59:40| DeviceVoltageDLC: 14.3
+12:59:40|  
+12:59:40| Placa: 769YUU           Fecha: 18/12/2025 -  12:59:11
+12:59:40| -------------------------------------------------------
+12:59:40| OBDdata_PROTOCOLO: ICAN29bt500
+12:59:40| OBDdata_VIN: 
+12:59:40| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:59:40| MSI: 110
+12:59:40| CCM: 110
+12:59:40| CMB: 110
+12:59:40| OS2: 110
+12:59:40| CAT: 110
+12:59:40| CCC: 009
+12:59:40| EVS: 009
+12:59:40| SAS: 009
+12:59:40| FAA: 009
+12:59:40| O2C: 110
+12:59:40| DTC: 
+12:59:40|  
+12:59:40| Pid0101 : 18 DA F1 10 41 01 00 07 61 00
+12:59:40| Pid0300 : 18 DA F1 10 43 00
+12:59:40| Pid0121 : 18 DA F1 10 41 21 00 00
+12:59:40| Pid0131 : Null
+12:59:40| Pid0133 : 18 DA F1 10 41 33 4D
+12:59:40| Pid011F : 18 DA F1 10 41 1F 00 52
+12:59:40| Pid017F : Null
+12:59:40| Pid014D : Null
+12:59:40| Pid0951 : Null
+12:59:40| Pid0902 : Null
+12:59:40| Pid0904 : 18 DA F1 10 49 04 01 33 37 38 30 35 2D 52 43 31 2D 50 31 34 30 00 00
+12:59:40| Pid010C : Null
+12:59:40|  
+12:59:40| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:59:40| Err: Posible simulación de lecturas del ECU detectada.
+01:12:51| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:13:14| DeviceVoltage: 13.9
+01:13:14| DeviceVoltageDLC: 14.4
+01:13:14|  
+01:13:14| Placa: 749WFD           Fecha: 18/12/2025 -  13:12:51
+01:13:14| -------------------------------------------------------
+01:13:14| OBDdata_PROTOCOLO: JVPW1850
+01:13:14| OBDdata_VIN: 2A4GP64LX6R870607
+01:13:14| OBDdata_MIL: Mil:0| Msi:009 | Ccm:009 | Cmb:009 | O2s:009 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:009
+01:13:14| MSI: 009
+01:13:14| CCM: 009
+01:13:14| CMB: 009
+01:13:14| OS2: 009
+01:13:14| CAT: 110
+01:13:14| CCC: 009
+01:13:14| EVS: 009
+01:13:14| SAS: 009
+01:13:14| FAA: 009
+01:13:14| O2C: 009
+01:13:14| DTC: 
+01:13:14|  
+01:13:14| Pid0101 : 48 6B 18 41 01 00 04 00 00
+01:13:14| Pid0300 : Null
+01:13:14| Pid0121 : 48 6B 10 41 21 00 00
+01:13:14| Pid0131 : Null
+01:13:14| Pid0133 : Null
+01:13:14| Pid011F : Null
+01:13:14| Pid017F : Null
+01:13:14| Pid014D : Null
+01:13:14| Pid0951 : Null
+01:13:14| Pid0902 : 48 6B 10 49 02 05 30 36 30 37
+01:13:14| Pid0904 : 48 6B 18 49 04 04 00 00 00 00
+01:13:14| Pid010C : Null
+01:13:14|  
+01:13:14| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:13:14| Err: Posible simulación de lecturas del ECU detectada.
+01:28:08| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:28:35| DeviceVoltage: 13.7
+01:28:35| DeviceVoltageDLC: 14.1
+01:28:35|  
+01:28:35| Placa: D30ABX           Fecha: 18/12/2025 -  13:28:08
+01:28:35| -------------------------------------------------------
+01:28:35| OBDdata_PROTOCOLO: ICAN11bt500
+01:28:35| OBDdata_VIN: WV1CDZSE4EX000344
+01:28:35| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+01:28:35| MSI: 110
+01:28:35| CCM: 110
+01:28:35| CMB: 110
+01:28:35| OS2: 110
+01:28:35| CAT: 110
+01:28:35| CCC: 009
+01:28:35| EVS: 110
+01:28:35| SAS: 009
+01:28:35| FAA: 009
+01:28:35| O2C: 110
+01:28:35| DTC: 
+01:28:35|  
+01:28:35| Pid0101 : 00 00 07 E8 41 01 00 07 65 00
+01:28:35| Pid0300 : 00 00 07 E8 43 00
+01:28:35| Pid0121 : 00 00 07 E8 41 21 00 00
+01:28:35| Pid0131 : Null
+01:28:35| Pid0133 : 00 00 07 E8 41 33 4E
+01:28:35| Pid011F : 00 00 07 E8 41 1F 00 1B
+01:28:35| Pid017F : Null
+01:28:35| Pid014D : Null
+01:28:35| Pid0951 : Null
+01:28:35| Pid0902 : 00 00 07 E8 49 02 01 57 56 31 43 44 5A 53 45 34 45 58 30 30 30 33 34 34
+01:28:35| Pid0904 : 00 00 07 E8 49 04 01 30 33 46 39 30 36 30 37 30 47 4B 20 35 34 33 35
+01:28:35| Pid010C : 00 00 07 E8 41 0C 0E EC
+01:28:35|  
+01:28:35| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:48:56| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:49:24| DeviceVoltage: 13.2
+01:49:24| DeviceVoltageDLC: 13.6
+01:49:24|  
+01:49:24| Placa: PVD219C           Fecha: 18/12/2025 -  13:48:56
+01:49:24| -------------------------------------------------------
+01:49:24| OBDdata_PROTOCOLO: ICAN11bt500
+01:49:24| OBDdata_VIN: 3GNAX9EV9JS510454
+01:49:24| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+01:49:24| MSI: 110
+01:49:24| CCM: 110
+01:49:24| CMB: 110
+01:49:24| OS2: 110
+01:49:24| CAT: 110
+01:49:24| CCC: 009
+01:49:24| EVS: 110
+01:49:24| SAS: 009
+01:49:24| FAA: 009
+01:49:24| O2C: 110
+01:49:24| DTC: 
+01:49:24|  
+01:49:24| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+01:49:24| Pid0300 : 00 00 07 E8 43 00
+01:49:24| Pid0121 : 00 00 07 E8 41 21 00 00
+01:49:24| Pid0131 : Null
+01:49:24| Pid0133 : 00 00 07 E8 41 33 4D
+01:49:24| Pid011F : 00 00 07 E8 41 1F 00 1B
+01:49:24| Pid017F : Null
+01:49:24| Pid014D : Null
+01:49:24| Pid0951 : Null
+01:49:24| Pid0902 : 00 00 07 E8 49 02 01 33 47 4E 41 58 39 45 56 39 4A 53 35 31 30 34 35 34
+01:49:24| Pid0904 : 00 00 07 E8 49 04 08 31 32 36 38 37 32 32 35 00 00 00 00 00 00 00 00 31 32 36 38 38 31 33 34 00 00 00 00 00 00 00 00 31 32 36 38 38 31 33 33 00 00 00 00 00 00 00 00 31 32 36 35 30 33 37 37 00 00 00 00 00 00 00 00 31 32 36 37 32 34 33 30 00 00 00 00 00 00 00 00 31 32 36 38 38 31 34 30 00 00 00 00 00 00 00 00 31 32 36 38 38 31 34 36 00 00 00 00 00 00 00 00 31 32 36 38 38 31 34 32 00 00 00 00 00 00 00 00
+01:49:24| Pid010C : 00 00 07 E8 41 0C 0D FC
+01:49:24|  
+01:49:24| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:22:29| Iniciando conexión con el IMClean OBD...10:22:29
+10:22:29| DeviceData 
+10:22:29| -------------------------------------------------------
+10:22:29| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:22:29| Licencia: 2025® Ok
+10:22:29| DeviceDescription: IMClean DAD GEN 4
+10:22:29| DeviceID: IEXFM0000207393E
+10:22:29|  
+10:22:29| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:24:41| initDeviceOBD: Pass: IMClean OBD en línea.
+10:24:41| DeviceManufacturer: Drew Technologies, Inc.
+10:24:41| DeviceType: 4171
+10:24:41| DeviceVoltage: 12.4
+10:24:41| DeviceVoltageDLC: 12.8
+10:24:41| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:25:05| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:25:32| DeviceVoltage: 12.3
+10:25:32| DeviceVoltageDLC: 12.8
+10:25:32|  
+10:25:32| Placa: L19AJW           Fecha: 19/12/2025 -  10:25:05
+10:25:32| -------------------------------------------------------
+10:25:32| OBDdata_PROTOCOLO: ICAN11bt500
+10:25:32| OBDdata_VIN: 3G1J85DC6GS610110
+10:25:32| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+10:25:32| MSI: 110
+10:25:32| CCM: 110
+10:25:32| CMB: 110
+10:25:32| OS2: 110
+10:25:32| CAT: 110
+10:25:33| CCC: 009
+10:25:33| EVS: 009
+10:25:33| SAS: 009
+10:25:33| FAA: 009
+10:25:33| O2C: 110
+10:25:33| DTC: 
+10:25:33|  
+10:25:33| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+10:25:33| Pid0300 : 00 00 07 E8 43 00
+10:25:33| Pid0121 : 00 00 07 E8 41 21 00 00
+10:25:33| Pid0131 : Null
+10:25:33| Pid0133 : 00 00 07 E8 41 33 4D
+10:25:33| Pid011F : 00 00 07 E8 41 1F 00 B9
+10:25:33| Pid017F : Null
+10:25:33| Pid014D : Null
+10:25:33| Pid0951 : Null
+10:25:33| Pid0902 : 00 00 07 E8 49 02 01 33 47 31 4A 38 35 44 43 36 47 53 36 31 30 31 31 30
+10:25:33| Pid0904 : 00 00 07 E8 49 04 08 31 32 36 35 39 33 31 39 00 00 00 00 00 00 00 00 32 35 31 39 36 37 34 35 00 00 00 00 00 00 00 00 32 35 31 39 36 31 38 33 00 00 00 00 00 00 00 00 31 32 36 32 39 33 37 31 00 00 00 00 00 00 00 00 32 35 31 39 30 37 31 34 00 00 00 00 00 00 00 00 32 35 31 39 34 32 35 35 00 00 00 00 00 00 00 00 32 35 31 39 34 32 36 31 00 00 00 00 00 00 00 00 32 35 31 39 34 32 35 38 00 00 00 00 00 00 00 00
+10:25:33| Pid010C : 00 00 07 E8 41 0C 0A 62
+10:25:33|  
+10:25:33| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:34:31| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:34:59| DeviceVoltage: 13.7
+10:34:59| DeviceVoltageDLC: 14.1
+10:34:59|  
+10:34:59| Placa:  U09BJN           Fecha: 19/12/2025 -  10:34:31
+10:34:59| -------------------------------------------------------
+10:34:59| OBDdata_PROTOCOLO: KWPS8FE9
+10:34:59| OBDdata_VIN: 
+10:34:59| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+10:34:59| MSI: 110
+10:34:59| CCM: 109
+10:34:59| CMB: 110
+10:34:59| OS2: 110
+10:34:59| CAT: 110
+10:34:59| CCC: 009
+10:34:59| EVS: 110
+10:34:59| SAS: 009
+10:34:59| FAA: 009
+10:34:59| O2C: 110
+10:34:59| DTC: 
+10:34:59|  
+10:34:59| Pid0101 : 86 F1 10 41 01 00 07 65 01
+10:34:59| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+10:34:59| Pid0121 : 84 F1 10 41 21 00 00
+10:34:59| Pid0131 : Null
+10:34:59| Pid0133 : Null
+10:34:59| Pid011F : Null
+10:34:59| Pid017F : Null
+10:34:59| Pid014D : Null
+10:34:59| Pid0951 : Null
+10:34:59| Pid0902 : Null
+10:34:59| Pid0904 : 87 F1 10 49 04 04 38 36 35 30
+10:34:59| Pid010C : Null
+10:34:59|  
+10:34:59| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:34:59| Err: Posible simulación de lecturas del ECU detectada.
+01:25:22| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:26:02| DeviceVoltage: 13.5
+01:26:02| DeviceVoltageDLC: 14.1
+01:26:02|  
+01:26:02| Placa: PDJ1615           Fecha: 19/12/2025 -  13:25:22
+01:26:02| -------------------------------------------------------
+01:26:02| OBDdata_PROTOCOLO: KWPF8FE9
+01:26:02| OBDdata_VIN: 8A1FC1J5XCL084315
+01:26:02| OBDdata_MIL: 
+01:26:02| MSI: 
+01:26:02| CCM: 
+01:26:02| CMB: 
+01:26:02| OS2: 
+01:26:02| CAT: 
+01:26:02| CCC: 
+01:26:02| EVS: 
+01:26:02| SAS: 
+01:26:02| FAA: 
+01:26:02| O2C: 
+01:26:02| DTC: 
+01:26:02|  
+01:26:02| Pid0101 : Null
+01:26:02| Pid0300 : Null
+01:26:02| Pid0121 : Null
+01:26:02| Pid0131 : Null
+01:26:02| Pid0133 : Null
+01:26:02| Pid011F : Null
+01:26:02| Pid017F : Null
+01:26:02| Pid014D : Null
+01:26:02| Pid0951 : Null
+01:26:02| Pid0902 : Null
+01:26:02| Pid0904 : Null
+01:26:02| Pid010C : Null
+01:26:02|  
+01:26:02| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:26:02| Err: Posible simulación de lecturas del ECU detectada.
+10:47:36| Iniciando conexión con el IMClean OBD...10:47:35
+10:47:36| DeviceData 
+10:47:36| -------------------------------------------------------
+10:47:36| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:47:36| Licencia: 2025® Ok
+10:47:36| DeviceDescription: IMClean DAD GEN 4
+10:47:36| DeviceID: IEXFM0000207393E
+10:47:36|  
+10:47:36| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:49:48| initDeviceOBD: Pass: IMClean OBD en línea.
+10:49:48| DeviceManufacturer: Drew Technologies, Inc.
+10:49:48| DeviceType: 4171
+10:49:48| DeviceVoltage: 12.4
+10:49:48| DeviceVoltageDLC: 12.9
+10:49:48| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:50:01| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:50:30| DeviceVoltage: 12.4
+10:50:30| DeviceVoltageDLC: 13
+10:50:30|  
+10:50:30| Placa: MX400D5           Fecha: 22/12/2025 -  10:50:01
+10:50:30| -------------------------------------------------------
+10:50:30| OBDdata_PROTOCOLO: ICAN11bt500
+10:50:30| OBDdata_VIN: 3N1AB8AE7SY331936
+10:50:30| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+10:50:30| MSI: 110
+10:50:30| CCM: 110
+10:50:30| CMB: 110
+10:50:30| OS2: 110
+10:50:30| CAT: 110
+10:50:30| CCC: 009
+10:50:30| EVS: 009
+10:50:30| SAS: 009
+10:50:30| FAA: 009
+10:50:30| O2C: 110
+10:50:31| DTC: 
+10:50:31|  
+10:50:31| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+10:50:31| Pid0300 : 00 00 07 E8 43 00
+10:50:31| Pid0121 : 00 00 07 E8 41 21 00 00
+10:50:31| Pid0131 : Null
+10:50:31| Pid0133 : 00 00 07 E8 41 33 4E
+10:50:31| Pid011F : 00 00 07 E8 41 1F 00 EF
+10:50:31| Pid017F : Null
+10:50:31| Pid014D : 00 00 07 E8 41 4D 00 00
+10:50:31| Pid0951 : Null
+10:50:31| Pid0902 : 00 00 07 E8 49 02 01 33 4E 31 41 42 38 41 45 37 53 59 33 33 31 39 33 36
+10:50:31| Pid0904 : 00 00 07 E8 49 04 02 31 46 31 36 47 36 00 00 00 00 00 00 00 00 00 00 54 39 43 4D 30 43 00 00 00 00 00 00 00 00 00 00
+10:50:31| Pid010C : 00 00 07 E8 41 0C 0A 28
+10:50:31|  
+10:50:31| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:25:02| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:25:32| DeviceVoltage: 13.9
+11:25:32| DeviceVoltageDLC: 14.3
+11:25:32|  
+11:25:32| Placa: RDZ424E           Fecha: 22/12/2025 -  11:25:02
+11:25:32| -------------------------------------------------------
+11:25:32| OBDdata_PROTOCOLO: ICAN11bt500
+11:25:32| OBDdata_VIN: WBA31DT09S9W70736
+11:25:32| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:25:32| MSI: 110
+11:25:32| CCM: 110
+11:25:32| CMB: 110
+11:25:32| OS2: 110
+11:25:32| CAT: 110
+11:25:32| CCC: 009
+11:25:32| EVS: 009
+11:25:32| SAS: 009
+11:25:32| FAA: 009
+11:25:32| O2C: 110
+11:25:32| DTC: 
+11:25:32|  
+11:25:32| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:25:32| Pid0300 : 00 00 07 E8 43 00
+11:25:32| Pid0121 : 00 00 07 E8 41 21 00 00
+11:25:32| Pid0131 : Null
+11:25:32| Pid0133 : 00 00 07 E8 49 02 01 57 42 41 33 31 44 54 30 39 53 39 57 37 30 37 33 36
+11:25:32| Pid011F : 00 00 07 E8 41 1F 00 1B
+11:25:32| Pid017F : Null
+11:25:32| Pid014D : Null
+11:25:32| Pid0951 : Null
+11:25:32| Pid0902 : 00 00 07 E8 49 02 01 57 42 41 33 31 44 54 30 39 53 39 57 37 30 37 33 36
+11:25:32| Pid0904 : 00 00 07 E8 49 04 01 44 31 30 41 30 41 37 46 00 00 00 00 00 00 00 00
+11:25:32| Pid010C : 00 00 07 E8 41 0C 0D 3A
+11:25:32|  
+11:25:32| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:42:52| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:43:27| DeviceVoltage: 13.9
+11:43:27| DeviceVoltageDLC: 14.3
+11:43:27|  
+11:43:27| Placa: Y79ANY           Fecha: 22/12/2025 -  11:42:52
+11:43:27| -------------------------------------------------------
+11:43:27| OBDdata_PROTOCOLO: ICAN11bt500
+11:43:27| OBDdata_VIN: 2C4JC1AG1DR809807
+11:43:27| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:43:27| MSI: 110
+11:43:27| CCM: 110
+11:43:27| CMB: 110
+11:43:27| OS2: 110
+11:43:27| CAT: 110
+11:43:27| CCC: 009
+11:43:27| EVS: 110
+11:43:27| SAS: 009
+11:43:27| FAA: 009
+11:43:27| O2C: 110
+11:43:27| DTC: 
+11:43:27|  
+11:43:27| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+11:43:27| Pid0300 : 00 00 07 E8 43 00
+11:43:27| Pid0121 : 00 00 07 E8 41 21 00 00
+11:43:27| Pid0131 : Null
+11:43:27| Pid0133 : 00 00 07 E8 41 33 4D
+11:43:27| Pid011F : 00 00 07 E8 41 1F 01 9D
+11:43:27| Pid017F : Null
+11:43:27| Pid014D : Null
+11:43:27| Pid0951 : Null
+11:43:27| Pid0902 : 00 00 07 E8 49 02 01 32 43 34 4A 43 31 41 47 31 44 52 38 30 39 38 30 37
+11:43:27| Pid0904 : 00 00 07 E8 49 04 01 36 38 31 36 31 35 31 30 41 45 00 00 00 00 00 00
+11:43:27| Pid010C : 00 00 07 E8 41 0C 09 D0
+11:43:27|  
+11:43:27| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:06:52| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:07:20| DeviceVoltage: 13.5
+12:07:20| DeviceVoltageDLC: 14.1
+12:07:20|  
+12:07:20| Placa: D40AXL           Fecha: 22/12/2025 -  12:06:52
+12:07:20| -------------------------------------------------------
+12:07:20| OBDdata_PROTOCOLO: KWPS8FE9
+12:07:20| OBDdata_VIN: 
+12:07:20| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:109 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:109
+12:07:20| MSI: 110
+12:07:20| CCM: 109
+12:07:20| CMB: 110
+12:07:20| OS2: 109
+12:07:20| CAT: 110
+12:07:20| CCC: 009
+12:07:20| EVS: 110
+12:07:20| SAS: 009
+12:07:20| FAA: 009
+12:07:20| O2C: 109
+12:07:20| DTC: 
+12:07:20|  
+12:07:20| Pid0101 : 86 F1 10 41 01 00 07 65 61
+12:07:20| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+12:07:20| Pid0121 : 84 F1 10 41 21 00 00
+12:07:20| Pid0131 : Null
+12:07:20| Pid0133 : Null
+12:07:20| Pid011F : Null
+12:07:20| Pid017F : Null
+12:07:20| Pid014D : Null
+12:07:20| Pid0951 : Null
+12:07:20| Pid0902 : Null
+12:07:20| Pid0904 : 87 F1 10 49 04 04 38 36 35 30
+12:07:20| Pid010C : Null
+12:07:20|  
+12:07:20| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:07:20| Err: Posible simulación de lecturas del ECU detectada.
+12:21:34| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:22:01| DeviceVoltage: 13.5
+12:22:01| DeviceVoltageDLC: 14
+12:22:01|  
+12:22:01| Placa: RCH559C           Fecha: 22/12/2025 -  12:21:34
+12:22:01| -------------------------------------------------------
+12:22:01| OBDdata_PROTOCOLO: ICAN11bt500
+12:22:01| OBDdata_VIN: 3VVHB6B29MM007046
+12:22:01| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:22:01| MSI: 110
+12:22:01| CCM: 110
+12:22:01| CMB: 110
+12:22:01| OS2: 110
+12:22:01| CAT: 110
+12:22:01| CCC: 009
+12:22:01| EVS: 009
+12:22:01| SAS: 009
+12:22:01| FAA: 009
+12:22:01| O2C: 110
+12:22:01| DTC: 
+12:22:01|  
+12:22:01| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+12:22:02| Pid0300 : 00 00 07 E8 43 00
+12:22:02| Pid0121 : 00 00 07 E8 41 21 00 00
+12:22:02| Pid0131 : Null
+12:22:02| Pid0133 : 00 00 07 E8 41 33 4E
+12:22:02| Pid011F : 00 00 07 E8 41 1F 00 1D
+12:22:02| Pid017F : Null
+12:22:02| Pid014D : Null
+12:22:02| Pid0951 : Null
+12:22:02| Pid0902 : 00 00 07 E8 49 02 01 33 56 56 48 42 36 42 32 39 4D 4D 30 30 37 30 34 36
+12:22:02| Pid0904 : 00 00 07 E8 49 04 01 30 34 45 30 32 37 4E 48 31 34 30 38 41 44 41 41
+12:22:02| Pid010C : 00 00 07 E8 41 0C 0C EC
+12:22:02|  
+12:22:02| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:09:13| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:09:40| DeviceVoltage: 13.3
+01:09:40| DeviceVoltageDLC: 13.8
+01:09:40|  
+01:09:40| Placa: W30BHG           Fecha: 22/12/2025 -  13:09:13
+01:09:40| -------------------------------------------------------
+01:09:40| OBDdata_PROTOCOLO: ICAN11bt500
+01:09:40| OBDdata_VIN: 
+01:09:40| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:09:40| MSI: 110
+01:09:40| CCM: 110
+01:09:40| CMB: 110
+01:09:40| OS2: 110
+01:09:40| CAT: 110
+01:09:40| CCC: 009
+01:09:40| EVS: 009
+01:09:40| SAS: 009
+01:09:40| FAA: 009
+01:09:40| O2C: 110
+01:09:40| DTC: 
+01:09:40|  
+01:09:40| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+01:09:40| Pid0300 : 00 00 07 E8 43 00
+01:09:40| Pid0121 : 00 00 07 E8 41 21 00 00
+01:09:40| Pid0131 : Null
+01:09:40| Pid0133 : 00 00 07 E8 41 33 4E
+01:09:40| Pid011F : 00 00 07 E8 41 1F 04 A7
+01:09:40| Pid017F : Null
+01:09:40| Pid014D : Null
+01:09:40| Pid0951 : Null
+01:09:40| Pid0902 : Null
+01:09:40| Pid0904 : 00 00 07 E8 49 04 01 33 33 39 38 30 2D 35 33 53 42 2A 30 30 30 30 30
+01:09:40| Pid010C : 00 00 07 E8 41 0C 0C 8A
+01:09:40|  
+01:09:40| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:51:18| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:51:32| DeviceVoltage: 14.5
+01:51:32| DeviceVoltageDLC: 14.9
+01:51:32|  
+01:51:32| Placa:  A60ALE           Fecha: 22/12/2025 -  13:51:18
+01:51:32| -------------------------------------------------------
+01:51:32| OBDdata_PROTOCOLO: Invalid Protocol
+01:51:32| OBDdata_VIN: 
+01:51:32| OBDdata_MIL: 
+01:51:32| MSI: 
+01:51:32| CCM: 
+01:51:32| CMB: 
+01:51:32| OS2: 
+01:51:32| CAT: 
+01:51:32| CCC: 
+01:51:32| EVS: 
+01:51:32| SAS: 
+01:51:32| FAA: 
+01:51:32| O2C: 
+01:51:32| DTC: 
+01:51:32|  
+01:51:32| Pid0101 : Null
+01:51:32| Pid0300 : Null
+01:51:32| Pid0121 : Null
+01:51:32| Pid0131 : Null
+01:51:32| Pid0133 : Null
+01:51:32| Pid011F : Null
+01:51:32| Pid017F : Null
+01:51:32| Pid014D : Null
+01:51:32| Pid0951 : Null
+01:51:32| Pid0902 : Null
+01:51:32| Pid0904 : Null
+01:51:32| Pid010C : Null
+01:51:32|  
+01:51:32| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:29:51| Iniciando conexión con el IMClean OBD...10:29:51
+10:29:52| DeviceData 
+10:29:52| -------------------------------------------------------
+10:29:52| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:29:52| Licencia: 2025® Ok
+10:29:52| DeviceDescription: IMClean DAD GEN 4
+10:29:52| DeviceID: IEXFM0000207393E
+10:29:52|  
+10:29:52| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:32:04| initDeviceOBD: Pass: IMClean OBD en línea.
+10:32:04| DeviceManufacturer: Drew Technologies, Inc.
+10:32:04| DeviceType: 4171
+10:32:04| DeviceVoltage: 13.6
+10:32:04| DeviceVoltageDLC: 13.9
+10:32:04| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:32:23| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:32:54| DeviceVoltage: 13.6
+10:32:54| DeviceVoltageDLC: 13.9
+10:32:54|  
+10:32:54| Placa: R99ASK           Fecha: 23/12/2025 -  10:32:23
+10:32:54| -------------------------------------------------------
+10:32:54| OBDdata_PROTOCOLO: KWPF8FEF
+10:32:54| OBDdata_VIN: MA6CB6CD5JT012704
+10:32:54| OBDdata_MIL: 
+10:32:54| MSI: 
+10:32:54| CCM: 
+10:32:54| CMB: 
+10:32:54| OS2: 
+10:32:54| CAT: 
+10:32:54| CCC: 
+10:32:54| EVS: 
+10:32:54| SAS: 
+10:32:54| FAA: 
+10:32:54| O2C: 
+10:32:54| DTC: 
+10:32:54|  
+10:32:54| Pid0101 : Null
+10:32:54| Pid0300 : Null
+10:32:54| Pid0121 : Null
+10:32:54| Pid0131 : Null
+10:32:54| Pid0133 : Null
+10:32:54| Pid011F : Null
+10:32:54| Pid017F : Null
+10:32:54| Pid014D : Null
+10:32:54| Pid0951 : Null
+10:32:54| Pid0902 : Null
+10:32:54| Pid0904 : Null
+10:32:54| Pid010C : Null
+10:32:54|  
+10:32:54| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:32:54| Err: Posible simulación de lecturas del ECU detectada.
+10:45:20| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:45:49| DeviceVoltage: 13.9
+10:45:49| DeviceVoltageDLC: 14.4
+10:45:49|  
+10:45:49| Placa: R10BJH           Fecha: 23/12/2025 -  10:45:20
+10:45:49| -------------------------------------------------------
+10:45:49| OBDdata_PROTOCOLO: ICAN29bt500
+10:45:49| OBDdata_VIN: 3HGRU5838JM009973
+10:45:49| OBDdata_MIL: 
+10:45:49| MSI: 
+10:45:49| CCM: 
+10:45:49| CMB: 
+10:45:49| OS2: 
+10:45:49| CAT: 
+10:45:49| CCC: 
+10:45:49| EVS: 
+10:45:49| SAS: 
+10:45:49| FAA: 
+10:45:49| O2C: 
+10:45:49| DTC: 
+10:45:49|  
+10:45:49| Pid0101 : Null
+10:45:49| Pid0300 : Null
+10:45:49| Pid0121 : Null
+10:45:49| Pid0131 : Null
+10:45:49| Pid0133 : Null
+10:45:49| Pid011F : Null
+10:45:49| Pid017F : Null
+10:45:49| Pid014D : Null
+10:45:49| Pid0951 : Null
+10:45:49| Pid0902 : Null
+10:45:49| Pid0904 : Null
+10:45:49| Pid010C : Null
+10:45:49|  
+10:45:49| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:45:49| Err: Posible simulación de lecturas del ECU detectada.
+11:24:48| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:25:15| DeviceVoltage: 13.4
+11:25:15| DeviceVoltageDLC: 13.9
+11:25:15|  
+11:25:15| Placa: J80ASR           Fecha: 23/12/2025 -  11:24:48
+11:25:15| -------------------------------------------------------
+11:25:15| OBDdata_PROTOCOLO: ICAN11bt500
+11:25:15| OBDdata_VIN: 8AFWR5AA9H6006563
+11:25:15| OBDdata_MIL: Mil:1| Msi:110 | Ccm:109 | Cmb:110 | O2s:109 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:109
+11:25:15| MSI: 110
+11:25:15| CCM: 109
+11:25:15| CMB: 111
+11:25:15| OS2: 109
+11:25:15| CAT: 110
+11:25:15| CCC: 009
+11:25:15| EVS: 009
+11:25:15| SAS: 009
+11:25:15| FAA: 009
+11:25:15| O2C: 109
+11:25:15| DTC: P0172
+11:25:15|  
+11:25:15| Pid0101 : 00 00 07 E8 41 01 81 07 21 21
+11:25:15| Pid0300 : 00 00 07 E8 43 01 01 72
+11:25:15| Pid0121 : 00 00 07 E8 41 21 00 06
+11:25:15| Pid0131 : Null
+11:25:15| Pid0133 : 00 00 07 E8 41 33 50
+11:25:15| Pid011F : 00 00 07 E8 41 1F 06 49
+11:25:15| Pid017F : Null
+11:25:15| Pid014D : Null
+11:25:15| Pid0951 : Null
+11:25:15| Pid0902 : 00 00 07 E8 49 02 01 38 41 46 57 52 35 41 41 39 48 36 30 30 36 35 36 33
+11:25:15| Pid0904 : 00 00 07 E8 49 04 01 44 42 33 39 2D 31 34 43 32 30 34 2D 4B 42 45 00
+11:25:15| Pid010C : 00 00 07 E8 41 0C 0B 2D
+11:25:15|  
+11:25:15| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:35:39| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:36:06| DeviceVoltage: 13.6
+11:36:06| DeviceVoltageDLC: 14.1
+11:36:06|  
+11:36:06| Placa: K59BHP           Fecha: 23/12/2025 -  11:35:39
+11:36:06| -------------------------------------------------------
+11:36:06| OBDdata_PROTOCOLO: ICAN11bt500
+11:36:06| OBDdata_VIN: 
+11:36:06| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:36:06| MSI: 110
+11:36:06| CCM: 110
+11:36:06| CMB: 110
+11:36:06| OS2: 110
+11:36:06| CAT: 110
+11:36:06| CCC: 009
+11:36:06| EVS: 009
+11:36:06| SAS: 009
+11:36:06| FAA: 009
+11:36:06| O2C: 110
+11:36:06| DTC: 
+11:36:06|  
+11:36:06| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:36:06| Pid0300 : 00 00 07 E8 43 00
+11:36:06| Pid0121 : 00 00 07 E8 41 21 00 00
+11:36:06| Pid0131 : Null
+11:36:06| Pid0133 : 00 00 07 E8 41 33 4E
+11:36:06| Pid011F : 00 00 07 E8 41 1F 00 16
+11:36:06| Pid017F : Null
+11:36:06| Pid014D : 00 00 07 E8 41 4D 00 00
+11:36:06| Pid0951 : Null
+11:36:06| Pid0902 : Null
+11:36:06| Pid0904 : 00 00 07 E8 49 04 01 31 33 58 48 36 42 00 00 00 00 00 00 00 00 00 00
+11:36:06| Pid010C : 00 00 07 E8 41 0C 09 60
+11:36:06|  
+11:36:06| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:45:10| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:45:40| DeviceVoltage: 13.5
+11:45:40| DeviceVoltageDLC: 13.8
+11:45:40|  
+11:45:40| Placa: RDE060B           Fecha: 23/12/2025 -  11:45:10
+11:45:40| -------------------------------------------------------
+11:45:40| OBDdata_PROTOCOLO: ICAN11bt500
+11:45:40| OBDdata_VIN: WBA4H7100KBM73399
+11:45:40| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:45:40| MSI: 110
+11:45:40| CCM: 110
+11:45:40| CMB: 110
+11:45:40| OS2: 110
+11:45:40| CAT: 110
+11:45:40| CCC: 009
+11:45:40| EVS: 009
+11:45:40| SAS: 009
+11:45:40| FAA: 009
+11:45:40| O2C: 110
+11:45:40| DTC: 
+11:45:40|  
+11:45:40| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:45:40| Pid0300 : 00 00 07 E8 43 00
+11:45:40| Pid0121 : 00 00 07 E8 41 21 00 00
+11:45:40| Pid0131 : Null
+11:45:40| Pid0133 : 00 00 07 E8 41 33 4E
+11:45:40| Pid011F : 00 00 07 E8 41 1F 00 1B
+11:45:40| Pid017F : Null
+11:45:40| Pid014D : Null
+11:45:40| Pid0951 : Null
+11:45:40| Pid0902 : 00 00 07 E8 49 02 01 57 42 41 34 48 37 31 30 30 4B 42 4D 37 33 33 39 39
+11:45:40| Pid0904 : 00 00 07 E8 49 04 01 33 45 41 32 38 46 46 42 00 00 00 00 00 00 00 00
+11:45:40| Pid010C : 00 00 07 E8 41 0C 0E CE
+11:45:40|  
+11:45:40| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:56:10| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:56:39| DeviceVoltage: 13.7
+11:56:39| DeviceVoltageDLC: 14.2
+11:56:39|  
+11:56:39| Placa: 789XMY           Fecha: 23/12/2025 -  11:56:10
+11:56:39| -------------------------------------------------------
+11:56:39| OBDdata_PROTOCOLO: KWPS8FE9
+11:56:39| OBDdata_VIN: 
+11:56:39| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:56:39| MSI: 110
+11:56:39| CCM: 110
+11:56:39| CMB: 110
+11:56:39| OS2: 110
+11:56:39| CAT: 110
+11:56:39| CCC: 009
+11:56:39| EVS: 110
+11:56:39| SAS: 009
+11:56:39| FAA: 009
+11:56:39| O2C: 110
+11:56:39| DTC: 
+11:56:39|  
+11:56:39| Pid0101 : 86 F1 10 41 01 00 07 65 00
+11:56:39| Pid0300 : 87 F1 10 43 00 00 00 00 00 00
+11:56:39| Pid0121 : 84 F1 10 41 21 00 00
+11:56:39| Pid0131 : Null
+11:56:39| Pid0133 : Null
+11:56:39| Pid011F : Null
+11:56:39| Pid017F : Null
+11:56:39| Pid014D : Null
+11:56:39| Pid0951 : Null
+11:56:39| Pid0902 : Null
+11:56:39| Pid0904 : 87 F1 10 49 04 04 31 30 30 34
+11:56:39| Pid010C : Null
+11:56:39|  
+11:56:39| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:56:39| Err: Posible simulación de lecturas del ECU detectada.
+12:07:22| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:07:48| DeviceVoltage: 11.8
+12:07:48| DeviceVoltageDLC: 12.2
+12:07:48|  
+12:07:48| Placa: 720ZWM           Fecha: 23/12/2025 -  12:07:22
+12:07:48| -------------------------------------------------------
+12:07:48| OBDdata_PROTOCOLO: ICAN11bt500
+12:07:48| OBDdata_VIN: VF1LZ32T2BC247659
+12:07:48| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:009 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:07:48| MSI: 110
+12:07:48| CCM: 110
+12:07:48| CMB: 009
+12:07:48| OS2: 110
+12:07:48| CAT: 110
+12:07:48| CCC: 009
+12:07:48| EVS: 009
+12:07:48| SAS: 009
+12:07:48| FAA: 009
+12:07:48| O2C: 110
+12:07:48| DTC: 
+12:07:48|  
+12:07:48| Pid0101 : 00 00 07 E8 41 01 00 05 21 00
+12:07:48| Pid0300 : 00 00 07 E8 43 00
+12:07:48| Pid0121 : 00 00 07 E8 41 21 00 00
+12:07:48| Pid0131 : Null
+12:07:48| Pid0133 : Null
+12:07:48| Pid011F : Null
+12:07:48| Pid017F : Null
+12:07:48| Pid014D : Null
+12:07:48| Pid0951 : Null
+12:07:48| Pid0902 : 00 00 07 E8 49 02 01 56 46 31 4C 5A 33 32 54 32 42 43 32 34 37 36 35 39
+12:07:48| Pid0904 : 00 00 07 E8 49 04 02 38 32 30 31 31 30 38 34 32 36 00 00 00 00 00 00 32 33 37 31 30 30 39 35 30 52 30 30 30 30 30 30
+12:07:48| Pid010C : 00 00 07 E8 41 0C 0C 56
+12:07:48|  
+12:07:48| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:21:58| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:22:25| DeviceVoltage: 13.6
+12:22:25| DeviceVoltageDLC: 14
+12:22:25|  
+12:22:25| Placa: 459VWX           Fecha: 23/12/2025 -  12:21:58
+12:22:25| -------------------------------------------------------
+12:22:25| OBDdata_PROTOCOLO: ICAN11bt500
+12:22:25| OBDdata_VIN: WDBUF56XX9B340953
+12:22:25| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:109 | Cat:110 | Ccc:009 | Evs:009 | Sas:109 | Faa:009 | O2c:109
+12:22:25| MSI: 110
+12:22:25| CCM: 109
+12:22:25| CMB: 110
+12:22:25| OS2: 109
+12:22:25| CAT: 110
+12:22:25| CCC: 009
+12:22:25| EVS: 009
+12:22:25| SAS: 109
+12:22:25| FAA: 009
+12:22:25| O2C: 109
+12:22:25| DTC: 
+12:22:25|  
+12:22:25| Pid0101 : 00 00 07 E8 41 01 00 07 69 29
+12:22:25| Pid0300 : 00 00 07 E8 43 00
+12:22:25| Pid0121 : 00 00 07 E8 41 21 00 00
+12:22:25| Pid0131 : Null
+12:22:25| Pid0133 : 00 00 07 E8 41 33 4E
+12:22:25| Pid011F : 00 00 07 E8 41 1F 00 1A
+12:22:25| Pid017F : Null
+12:22:25| Pid014D : Null
+12:22:25| Pid0951 : Null
+12:22:25| Pid0902 : 00 00 07 E8 49 02 01 57 44 42 55 46 35 36 58 58 39 42 33 34 30 39 35 33
+12:22:25| Pid0904 : 00 00 07 E8 49 04 01 30 30 33 34 34 36 37 36 34 30 30 31 30 31 31 38
+12:22:25| Pid010C : 00 00 07 E8 41 0C 09 5B
+12:22:25|  
+12:22:25| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:41:59| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:42:27| DeviceVoltage: 13.7
+12:42:27| DeviceVoltageDLC: 14.2
+12:42:27|  
+12:42:27| Placa: B10BPV           Fecha: 23/12/2025 -  12:41:59
+12:42:27| -------------------------------------------------------
+12:42:27| OBDdata_PROTOCOLO: ICAN11bt500
+12:42:27| OBDdata_VIN: MALB25BC2MM081313
+12:42:27| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:42:27| MSI: 110
+12:42:27| CCM: 110
+12:42:27| CMB: 110
+12:42:27| OS2: 110
+12:42:27| CAT: 110
+12:42:27| CCC: 009
+12:42:27| EVS: 009
+12:42:27| SAS: 009
+12:42:27| FAA: 009
+12:42:27| O2C: 110
+12:42:27| DTC: 
+12:42:27|  
+12:42:27| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+12:42:27| Pid0300 : 00 00 07 E8 43 00
+12:42:27| Pid0121 : 00 00 07 E8 41 21 00 00
+12:42:27| Pid0131 : Null
+12:42:27| Pid0133 : 00 00 07 E8 41 33 4E
+12:42:27| Pid011F : 00 00 07 E8 41 1F 00 1E
+12:42:27| Pid017F : Null
+12:42:27| Pid014D : Null
+12:42:27| Pid0951 : Null
+12:42:27| Pid0902 : 00 00 07 E8 49 02 01 4D 41 4C 42 32 35 42 43 32 4D 4D 30 38 31 33 31 33
+12:42:27| Pid0904 : 00 00 07 E8 49 04 01 4D 41 49 33 4B 47 34 30 32 46 30 30 30 36 30 41
+12:42:27| Pid010C : 00 00 07 E8 41 0C 0A 26
+12:42:27|  
+12:42:27| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:56:25| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:56:51| DeviceVoltage: 12.9
+12:56:51| DeviceVoltageDLC: 13.4
+12:56:51|  
+12:56:51| Placa: D89AJM           Fecha: 23/12/2025 -  12:56:25
+12:56:51| -------------------------------------------------------
+12:56:51| OBDdata_PROTOCOLO: ICAN11bt500
+12:56:51| OBDdata_VIN: 
+12:56:51| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:56:51| MSI: 110
+12:56:51| CCM: 110
+12:56:51| CMB: 110
+12:56:51| OS2: 110
+12:56:51| CAT: 110
+12:56:51| CCC: 009
+12:56:51| EVS: 009
+12:56:51| SAS: 009
+12:56:51| FAA: 009
+12:56:51| O2C: 110
+12:56:51| DTC: 
+12:56:51|  
+12:56:51| Pid0101 : 00 00 07 E8 41 01 00 07 21 00
+12:56:51| Pid0300 : 00 00 07 E8 43 00
+12:56:51| Pid0121 : 00 00 07 E8 41 21 00 00
+12:56:51| Pid0131 : Null
+12:56:51| Pid0133 : 00 00 07 E8 41 33 57
+12:56:51| Pid011F : 00 00 07 E8 41 1F 00 1A
+12:56:51| Pid017F : Null
+12:56:51| Pid014D : 00 00 07 E8 41 4D 00 00
+12:56:51| Pid0951 : Null
+12:56:51| Pid0902 : Null
+12:56:51| Pid0904 : 00 00 07 E8 49 04 01 33 32 36 43 32 30 30 30 00 00 00 00 00 00 00 00
+12:56:51| Pid010C : 00 00 07 E8 41 0C 0A 24
+12:56:51|  
+12:56:51| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:39:35| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:40:02| DeviceVoltage: 13.6
+01:40:02| DeviceVoltageDLC: 14.1
+01:40:02|  
+01:40:02| Placa:  K03BBL           Fecha: 23/12/2025 -  13:39:35
+01:40:02| -------------------------------------------------------
+01:40:02| OBDdata_PROTOCOLO: ICAN11bt500
+01:40:02| OBDdata_VIN: 2C4JC1AG1CR322752
+01:40:02| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:109 | O2s:109 | Cat:110 | Ccc:009 | Evs:109 | Sas:009 | Faa:009 | O2c:109
+01:40:02| MSI: 110
+01:40:02| CCM: 109
+01:40:02| CMB: 109
+01:40:02| OS2: 109
+01:40:02| CAT: 110
+01:40:02| CCC: 009
+01:40:02| EVS: 109
+01:40:02| SAS: 009
+01:40:02| FAA: 009
+01:40:02| O2C: 109
+01:40:02| DTC: 
+01:40:02|  
+01:40:02| Pid0101 : 00 00 07 E8 41 01 00 27 E5 A5
+01:40:02| Pid0300 : 00 00 07 E8 43 00
+01:40:02| Pid0121 : 00 00 07 E8 41 21 00 00
+01:40:02| Pid0131 : Null
+01:40:02| Pid0133 : 00 00 07 E8 41 33 4D
+01:40:02| Pid011F : 00 00 07 E8 41 1F 00 18
+01:40:02| Pid017F : Null
+01:40:02| Pid014D : Null
+01:40:02| Pid0951 : Null
+01:40:02| Pid0902 : 00 00 07 E8 49 02 01 32 43 34 4A 43 31 41 47 31 43 52 33 32 32 37 35 32
+01:40:02| Pid0904 : 00 00 07 E8 49 04 01 36 38 31 38 35 34 37 30 41 43 00 00 00 00 00 00
+01:40:02| Pid010C : 00 00 07 E8 41 0C 0B 70
+01:40:02|  
+01:40:02| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:47:27| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:47:54| DeviceVoltage: 12.7
+01:47:54| DeviceVoltageDLC: 13.2
+01:47:54|  
+01:47:54| Placa:  G20BFP           Fecha: 23/12/2025 -  13:47:27
+01:47:54| -------------------------------------------------------
+01:47:54| OBDdata_PROTOCOLO: ICAN11bt500
+01:47:54| OBDdata_VIN: 3VWHP6BU7KM030031
+01:47:54| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:47:54| MSI: 110
+01:47:54| CCM: 110
+01:47:54| CMB: 110
+01:47:54| OS2: 110
+01:47:54| CAT: 110
+01:47:54| CCC: 009
+01:47:54| EVS: 009
+01:47:54| SAS: 009
+01:47:54| FAA: 009
+01:47:54| O2C: 110
+01:47:54| DTC: 
+01:47:54|  
+01:47:54| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+01:47:54| Pid0300 : 00 00 07 E8 43 00
+01:47:54| Pid0121 : 00 00 07 E8 41 21 00 00
+01:47:54| Pid0131 : Null
+01:47:54| Pid0133 : 00 00 07 E8 41 33 4E
+01:47:54| Pid011F : 00 00 07 E8 41 1F 00 15
+01:47:54| Pid017F : Null
+01:47:54| Pid014D : Null
+01:47:54| Pid0951 : Null
+01:47:54| Pid0902 : 00 00 07 E8 49 02 01 33 56 57 48 50 36 42 55 37 4B 4D 30 33 30 30 33 31
+01:47:54| Pid0904 : 00 00 07 E8 49 04 01 30 34 45 30 32 37 4C 4D 35 38 35 37 42 41 41 41
+01:47:54| Pid010C : 00 00 07 E8 41 0C 0C 06
+01:47:54|  
+01:47:54| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+02:04:57| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+02:05:24| DeviceVoltage: 13.8
+02:05:24| DeviceVoltageDLC: 14.2
+02:05:24|  
+02:05:24| Placa: J20BLP           Fecha: 23/12/2025 -  14:04:57
+02:05:24| -------------------------------------------------------
+02:05:24| OBDdata_PROTOCOLO: ICAN11bt500
+02:05:24| OBDdata_VIN: 3FADP4CJ0HM111087
+02:05:24| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+02:05:24| MSI: 110
+02:05:24| CCM: 110
+02:05:24| CMB: 110
+02:05:24| OS2: 110
+02:05:24| CAT: 110
+02:05:24| CCC: 009
+02:05:24| EVS: 009
+02:05:24| SAS: 009
+02:05:24| FAA: 009
+02:05:24| O2C: 110
+02:05:24| DTC: 
+02:05:24|  
+02:05:24| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+02:05:24| Pid0300 : 00 00 07 E8 43 00
+02:05:24| Pid0121 : 00 00 07 E8 41 21 00 00
+02:05:24| Pid0131 : Null
+02:05:24| Pid0133 : 00 00 07 E8 41 33 4E
+02:05:24| Pid011F : 00 00 07 E8 41 1F 00 22
+02:05:24| Pid017F : Null
+02:05:24| Pid014D : Null
+02:05:24| Pid0951 : Null
+02:05:24| Pid0902 : 00 00 07 E8 49 02 01 33 46 41 44 50 34 43 4A 30 48 4D 31 31 31 30 38 37
+02:05:24| Pid0904 : 00 00 07 E8 49 04 01 47 32 42 41 2D 31 34 43 32 30 34 2D 43 43 00 00
+02:05:24| Pid010C : 00 00 07 E8 41 0C 0B B8
+02:05:24|  
+02:05:24| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:07:04| Iniciando conexión con el IMClean OBD...10:07:04
+10:07:04| DeviceData 
+10:07:04| -------------------------------------------------------
+10:07:04| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:07:04| Licencia: 2025® Ok
+10:07:04| DeviceDescription: IMClean DAD GEN 4
+10:07:04| DeviceID: IEXFM0000207393E
+10:07:04|  
+10:07:04| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:09:17| initDeviceOBD: Pass: IMClean OBD en línea.
+10:09:17| DeviceManufacturer: Drew Technologies, Inc.
+10:09:17| DeviceType: 4171
+10:09:17| DeviceVoltage: 12.4
+10:09:17| DeviceVoltageDLC: 13
+10:09:17| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:09:33| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:10:01| DeviceVoltage: 12.3
+10:10:01| DeviceVoltageDLC: 12.9
+10:10:01|  
+10:10:01| Placa: 179YBN           Fecha: 24/12/2025 -  10:09:33
+10:10:01| -------------------------------------------------------
+10:10:02| OBDdata_PROTOCOLO: ICAN29bt500
+10:10:02| OBDdata_VIN: 
+10:10:02| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+10:10:02| MSI: 110
+10:10:02| CCM: 109
+10:10:02| CMB: 110
+10:10:02| OS2: 110
+10:10:02| CAT: 110
+10:10:02| CCC: 009
+10:10:02| EVS: 009
+10:10:02| SAS: 009
+10:10:02| FAA: 009
+10:10:02| O2C: 110
+10:10:02| DTC: 
+10:10:02|  
+10:10:02| Pid0101 : 18 DA F1 10 41 01 00 07 E1 81
+10:10:02| Pid0300 : 18 DA F1 10 43 00
+10:10:02| Pid0121 : 18 DA F1 10 41 21 00 00
+10:10:02| Pid0131 : Null
+10:10:02| Pid0133 : 18 DA F1 10 41 33 4E
+10:10:02| Pid011F : 18 DA F1 10 41 1F 00 7B
+10:10:02| Pid017F : Null
+10:10:02| Pid014D : Null
+10:10:02| Pid0951 : Null
+10:10:02| Pid0902 : Null
+10:10:02| Pid0904 : 18 DA F1 10 49 04 01 33 37 38 30 35 2D 52 31 42 2D 58 30 33 30 00 00
+10:10:02| Pid010C : Null
+10:10:02|  
+10:10:02| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:10:02| Err: Posible simulación de lecturas del ECU detectada.
+11:22:43| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:23:09| DeviceVoltage: 13.2
+11:23:09| DeviceVoltageDLC: 13.7
+11:23:09|  
+11:23:09| Placa:  T59BCL           Fecha: 24/12/2025 -  11:22:42
+11:23:09| -------------------------------------------------------
+11:23:09| OBDdata_PROTOCOLO: ICAN11bt500
+11:23:09| OBDdata_VIN: 
+11:23:09| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:23:09| MSI: 110
+11:23:09| CCM: 110
+11:23:09| CMB: 110
+11:23:09| OS2: 110
+11:23:09| CAT: 110
+11:23:09| CCC: 009
+11:23:09| EVS: 009
+11:23:09| SAS: 009
+11:23:09| FAA: 009
+11:23:09| O2C: 110
+11:23:09| DTC: 
+11:23:09|  
+11:23:09| Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+11:23:09| Pid0300 : 00 00 07 E8 43 00
+11:23:09| Pid0121 : 00 00 07 E8 41 21 00 00
+11:23:09| Pid0131 : Null
+11:23:09| Pid0133 : 00 00 07 E8 41 33 4E
+11:23:09| Pid011F : 00 00 07 E8 41 1F 00 16
+11:23:09| Pid017F : Null
+11:23:09| Pid014D : Null
+11:23:09| Pid0951 : Null
+11:23:09| Pid0902 : Null
+11:23:09| Pid0904 : 00 00 07 E8 49 04 01 33 33 39 32 30 2D 37 39 4D 33 2A 30 30 30 30 31
+11:23:09| Pid010C : 00 00 07 E8 41 0C 0B 00
+11:23:09|  
+11:23:09| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:07:44| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:08:11| DeviceVoltage: 13.6
+01:08:11| DeviceVoltageDLC: 14.1
+01:08:11|  
+01:08:11| Placa:  L40ATR           Fecha: 24/12/2025 -  13:07:44
+01:08:11| -------------------------------------------------------
+01:08:11| OBDdata_PROTOCOLO: ICAN11bt500
+01:08:11| OBDdata_VIN: 
+01:08:11| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:08:11| MSI: 110
+01:08:11| CCM: 110
+01:08:11| CMB: 110
+01:08:11| OS2: 110
+01:08:11| CAT: 110
+01:08:11| CCC: 009
+01:08:11| EVS: 009
+01:08:11| SAS: 009
+01:08:11| FAA: 009
+01:08:11| O2C: 110
+01:08:11| DTC: 
+01:08:11|  
+01:08:11| Pid0101 : 00 00 07 E8 41 01 00 07 E1 80
+01:08:11| Pid0300 : 00 00 07 E8 43 00
+01:08:11| Pid0121 : 00 00 07 E8 41 21 00 00
+01:08:11| Pid0131 : Null
+01:08:11| Pid0133 : Null
+01:08:11| Pid011F : 00 00 07 E8 41 1F 00 17
+01:08:11| Pid017F : Null
+01:08:11| Pid014D : 00 00 07 E8 41 4D 00 00
+01:08:11| Pid0951 : Null
+01:08:11| Pid0902 : Null
+01:08:11| Pid0904 : 00 00 07 E8 49 04 01 31 39 4C 45 36 41 00 00 00 00 00 00 00 00 00 00
+01:08:11| Pid010C : 00 00 07 E8 41 0C 0A F0
+01:08:11|  
+01:08:11| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:14:53| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:15:19| DeviceVoltage: 13.2
+01:15:19| DeviceVoltageDLC: 13.7
+01:15:19|  
+01:15:19| Placa: A70BRP           Fecha: 24/12/2025 -  13:14:53
+01:15:19| -------------------------------------------------------
+01:15:19| OBDdata_PROTOCOLO: KWPS8FE9
+01:15:19| OBDdata_VIN: ?????????????????
+01:15:19| OBDdata_MIL: 
+01:15:19| MSI: 
+01:15:19| CCM: 
+01:15:19| CMB: 
+01:15:19| OS2: 
+01:15:19| CAT: 
+01:15:19| CCC: 
+01:15:19| EVS: 
+01:15:19| SAS: 
+01:15:19| FAA: 
+01:15:19| O2C: 
+01:15:19| DTC: 
+01:15:19|  
+01:15:19| Pid0101 : Null
+01:15:19| Pid0300 : Null
+01:15:19| Pid0121 : Null
+01:15:19| Pid0131 : Null
+01:15:19| Pid0133 : Null
+01:15:19| Pid011F : Null
+01:15:19| Pid017F : Null
+01:15:19| Pid014D : Null
+01:15:19| Pid0951 : Null
+01:15:19| Pid0902 : Null
+01:15:19| Pid0904 : Null
+01:15:19| Pid010C : Null
+01:15:19|  
+01:15:19| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:15:19| Err: Posible simulación de lecturas del ECU detectada.
+10:12:13| Iniciando conexión con el IMClean OBD...10:12:13
+10:12:14| DeviceData 
+10:12:14| -------------------------------------------------------
+10:12:14| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:12:14| Licencia: 2025® Ok
+10:12:14| DeviceDescription: IMClean DAD GEN 4
+10:12:14| DeviceID: IEXFM0000207393E
+10:12:14|  
+10:12:14| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:14:25| initDeviceOBD: Pass: IMClean OBD en línea.
+10:14:25| DeviceManufacturer: Drew Technologies, Inc.
+10:14:25| DeviceType: 4171
+10:14:25| DeviceVoltage: 0
+10:14:25| DeviceVoltageDLC: 0
+10:14:25| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:38:50| Iniciando conexión con el IMClean OBD...10:38:50
+10:38:50| DeviceData 
+10:38:50| -------------------------------------------------------
+10:38:50| initDeviceOBD: Pass:IMClean OBD conectado al CPU.
+10:38:50| Licencia: 2025® Ok
+10:38:50| DeviceDescription: IMClean DAD GEN 4
+10:38:50| DeviceID: IEXFM0000207393E
+10:38:50|  
+10:38:50| IMClean OBD instalado en el  CPU, Iniciando dispositivo ...
+10:41:02| initDeviceOBD: Pass: IMClean OBD en línea.
+10:41:02| DeviceManufacturer: Drew Technologies, Inc.
+10:41:02| DeviceType: 4171
+10:41:02| DeviceVoltage: 13.8
+10:41:02| DeviceVoltageDLC: 14.2
+10:41:02| Opus IMClean OBD en línea. Esperando comunicación con el ECU del vehículo.
+10:41:14| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:41:40| DeviceVoltage: 13.8
+10:41:40| DeviceVoltageDLC: 14.2
+10:41:40|  
+10:41:40| Placa: 630XVD           Fecha: 26/12/2025 -  10:41:14
+10:41:40| -------------------------------------------------------
+10:41:41| OBDdata_PROTOCOLO: ICAN11bt500
+10:41:41| OBDdata_VIN: 
+10:41:41| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+10:41:41| MSI: 110
+10:41:41| CCM: 110
+10:41:41| CMB: 110
+10:41:41| OS2: 110
+10:41:41| CAT: 110
+10:41:41| CCC: 009
+10:41:41| EVS: 009
+10:41:41| SAS: 009
+10:41:41| FAA: 009
+10:41:41| O2C: 110
+10:41:41| DTC: 
+10:41:41|  
+10:41:41| Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+10:41:41| Pid0300 : 00 00 07 E8 43 00
+10:41:41| Pid0121 : 00 00 07 E8 41 21 00 00
+10:41:41| Pid0131 : Null
+10:41:41| Pid0133 : 00 00 07 E8 41 33 4E
+10:41:41| Pid011F : 00 00 07 E8 41 1F 00 A8
+10:41:41| Pid017F : Null
+10:41:41| Pid014D : Null
+10:41:41| Pid0951 : Null
+10:41:41| Pid0902 : Null
+10:41:41| Pid0904 : 00 00 07 E8 49 04 01 33 33 39 38 30 2D 37 31 4C 41 2A 30 30 30 30 32
+10:41:41| Pid010C : 00 00 07 E8 41 0C 0A 19
+10:41:41|  
+10:41:41| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:51:35| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+10:52:08| DeviceVoltage: 13.7
+10:52:08| DeviceVoltageDLC: 14.1
+10:52:08|  
+10:52:08| Placa:  750XBS           Fecha: 26/12/2025 -  10:51:35
+10:52:08| -------------------------------------------------------
+10:52:08| OBDdata_PROTOCOLO: KWPF8FE9
+10:52:08| OBDdata_VIN: 3G1TC5C67AL135040
+10:52:08| OBDdata_MIL: 
+10:52:08| MSI: 
+10:52:08| CCM: 
+10:52:08| CMB: 
+10:52:08| OS2: 
+10:52:08| CAT: 
+10:52:08| CCC: 
+10:52:08| EVS: 
+10:52:08| SAS: 
+10:52:08| FAA: 
+10:52:08| O2C: 
+10:52:08| DTC: 
+10:52:08|  
+10:52:08| Pid0101 : Null
+10:52:08| Pid0300 : Null
+10:52:08| Pid0121 : Null
+10:52:08| Pid0131 : Null
+10:52:08| Pid0133 : Null
+10:52:08| Pid011F : Null
+10:52:08| Pid017F : Null
+10:52:08| Pid014D : Null
+10:52:08| Pid0951 : Null
+10:52:08| Pid0902 : Null
+10:52:08| Pid0904 : Null
+10:52:08| Pid010C : Null
+10:52:08|  
+10:52:08| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+10:52:08| Err: Posible simulación de lecturas del ECU detectada.
+11:09:13| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:09:40| DeviceVoltage: 13.7
+11:09:40| DeviceVoltageDLC: 14.2
+11:09:40|  
+11:09:40| Placa: G90AKJ           Fecha: 26/12/2025 -  11:09:13
+11:09:40| -------------------------------------------------------
+11:09:40| OBDdata_PROTOCOLO: ICAN11bt500
+11:09:40| OBDdata_VIN: 
+11:09:40| OBDdata_MIL: Mil:0| Msi:110 | Ccm:109 | Cmb:110 | O2s:109 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:109
+11:09:40| MSI: 110
+11:09:40| CCM: 109
+11:09:40| CMB: 110
+11:09:40| OS2: 109
+11:09:40| CAT: 110
+11:09:40| CCC: 009
+11:09:40| EVS: 009
+11:09:40| SAS: 009
+11:09:40| FAA: 009
+11:09:40| O2C: 109
+11:09:40| DTC: 
+11:09:40|  
+11:09:40| Pid0101 : 00 00 07 E8 41 01 00 07 E1 A1
+11:09:40| Pid0300 : 00 00 07 E8 43 00
+11:09:40| Pid0121 : 00 00 07 E8 41 21 00 00
+11:09:40| Pid0131 : Null
+11:09:40| Pid0133 : Null
+11:09:40| Pid011F : 00 00 07 E8 41 1F 00 23
+11:09:40| Pid017F : Null
+11:09:40| Pid014D : 00 00 07 E8 41 4D 00 00
+11:09:40| Pid0951 : Null
+11:09:40| Pid0902 : Null
+11:09:40| Pid0904 : 00 00 07 E8 49 04 01 31 39 4B 4D 30 41 00 00 00 00 00 00 00 00 00 00
+11:09:40| Pid010C : 00 00 07 E8 41 0C 09 F6
+11:09:40|  
+11:09:40| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:16:36| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:17:03| DeviceVoltage: 13.3
+11:17:03| DeviceVoltageDLC: 13.7
+11:17:03|  
+11:17:03| Placa: Y90AMV           Fecha: 26/12/2025 -  11:16:36
+11:17:03| -------------------------------------------------------
+11:17:03| OBDdata_PROTOCOLO: ICAN11bt500
+11:17:03| OBDdata_VIN: 3VW1K1AJ8GM300398
+11:17:03| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:17:03| MSI: 110
+11:17:03| CCM: 110
+11:17:03| CMB: 110
+11:17:03| OS2: 110
+11:17:03| CAT: 110
+11:17:03| CCC: 009
+11:17:03| EVS: 009
+11:17:03| SAS: 009
+11:17:03| FAA: 009
+11:17:03| O2C: 110
+11:17:03| DTC: 
+11:17:03|  
+11:17:03| Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+11:17:03| Pid0300 : 00 00 07 E8 43 00
+11:17:03| Pid0121 : 00 00 07 E8 41 21 00 00
+11:17:03| Pid0131 : Null
+11:17:03| Pid0133 : 00 00 07 E8 41 33 4E
+11:17:03| Pid011F : 00 00 07 E8 41 1F 00 17
+11:17:03| Pid017F : Null
+11:17:03| Pid014D : Null
+11:17:03| Pid0951 : Null
+11:17:03| Pid0902 : 00 00 07 E8 49 02 01 33 56 57 31 4B 31 41 4A 38 47 4D 33 30 30 33 39 38
+11:17:03| Pid0904 : 00 00 07 E8 49 04 01 30 36 47 39 30 36 30 35 35 41 4E 20 31 35 30 30
+11:17:03| Pid010C : 00 00 07 E8 41 0C 0C 1E
+11:17:03|  
+11:17:03| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:28:37| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:29:04| DeviceVoltage: 13.8
+11:29:04| DeviceVoltageDLC: 14.1
+11:29:04|  
+11:29:04| Placa: S80BHG           Fecha: 26/12/2025 -  11:28:37
+11:29:04| -------------------------------------------------------
+11:29:04| OBDdata_PROTOCOLO: ICAN11bt500
+11:29:04| OBDdata_VIN: LSGHD52HXLD153736
+11:29:04| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:29:04| MSI: 110
+11:29:04| CCM: 110
+11:29:04| CMB: 110
+11:29:04| OS2: 110
+11:29:04| CAT: 110
+11:29:04| CCC: 009
+11:29:04| EVS: 009
+11:29:04| SAS: 009
+11:29:04| FAA: 009
+11:29:04| O2C: 110
+11:29:04| DTC: 
+11:29:04|  
+11:29:04| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:29:04| Pid0300 : 00 00 07 E8 43 00
+11:29:04| Pid0121 : 00 00 07 E8 41 21 00 00
+11:29:04| Pid0131 : Null
+11:29:04| Pid0133 : Null
+11:29:04| Pid011F : Null
+11:29:04| Pid017F : Null
+11:29:04| Pid014D : Null
+11:29:04| Pid0951 : Null
+11:29:04| Pid0902 : 00 00 07 E8 49 02 01 4C 53 47 48 44 35 32 48 58 4C 44 31 35 33 37 33 36
+11:29:04| Pid0904 : 00 00 07 E8 49 04 01 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
+11:29:04| Pid010C : 00 00 07 E8 41 0C 0C 49
+11:29:04|  
+11:29:04| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:37:12| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:37:40| DeviceVoltage: 14
+11:37:40| DeviceVoltageDLC: 14.5
+11:37:40|  
+11:37:40| Placa: VCE766D           Fecha: 26/12/2025 -  11:37:12
+11:37:40| -------------------------------------------------------
+11:37:40| OBDdata_PROTOCOLO: ICAN11bt500
+11:37:40| OBDdata_VIN: 2C4RC1BG2HR816143
+11:37:40| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:110 | Sas:009 | Faa:009 | O2c:110
+11:37:40| MSI: 110
+11:37:40| CCM: 110
+11:37:40| CMB: 110
+11:37:40| OS2: 110
+11:37:40| CAT: 110
+11:37:40| CCC: 009
+11:37:40| EVS: 110
+11:37:40| SAS: 009
+11:37:40| FAA: 009
+11:37:40| O2C: 110
+11:37:40| DTC: 
+11:37:40|  
+11:37:40| Pid0101 : 00 00 07 E8 41 01 00 07 E5 00
+11:37:40| Pid0300 : 00 00 07 E8 43 00
+11:37:40| Pid0121 : 00 00 07 E8 41 21 00 00
+11:37:40| Pid0131 : Null
+11:37:40| Pid0133 : 00 00 07 E8 41 33 4D
+11:37:40| Pid011F : 00 00 07 E8 41 1F 00 19
+11:37:40| Pid017F : Null
+11:37:40| Pid014D : Null
+11:37:40| Pid0951 : Null
+11:37:40| Pid0902 : 00 00 07 E8 49 02 01 32 43 34 52 43 31 42 47 32 48 52 38 31 36 31 34 33
+11:37:40| Pid0904 : 00 00 07 E8 49 04 01 36 38 32 36 37 30 32 31 41 4A 00 00 00 00 00 00
+11:37:40| Pid010C : 00 00 07 E8 41 0C 0A C0
+11:37:40|  
+11:37:40| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+11:44:19| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+11:44:47| DeviceVoltage: 13
+11:44:47| DeviceVoltageDLC: 13.6
+11:44:47|  
+11:44:47| Placa: M29ADZ           Fecha: 26/12/2025 -  11:44:19
+11:44:47| -------------------------------------------------------
+11:44:47| OBDdata_PROTOCOLO: ICAN11bt500
+11:44:47| OBDdata_VIN: 3MDDJACV1GM102638
+11:44:47| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+11:44:47| MSI: 110
+11:44:47| CCM: 110
+11:44:47| CMB: 110
+11:44:47| OS2: 110
+11:44:47| CAT: 110
+11:44:47| CCC: 009
+11:44:47| EVS: 009
+11:44:47| SAS: 009
+11:44:47| FAA: 009
+11:44:47| O2C: 110
+11:44:47| DTC: 
+11:44:47|  
+11:44:47| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+11:44:47| Pid0300 : 00 00 07 E8 43 00
+11:44:47| Pid0121 : 00 00 07 E8 41 21 00 00
+11:44:47| Pid0131 : Null
+11:44:47| Pid0133 : 00 00 07 E8 41 33 4E
+11:44:47| Pid011F : 00 00 07 E8 41 1F 00 18
+11:44:47| Pid017F : Null
+11:44:47| Pid014D : Null
+11:44:47| Pid0951 : Null
+11:44:47| Pid0902 : 00 00 07 E8 49 02 01 33 4D 44 44 4A 41 43 56 31 47 4D 31 30 32 36 33 38
+11:44:47| Pid0904 : 00 00 07 E8 49 04 01 50 35 37 44 45 47 30 30 30 50 35 56 36 30 35 30
+11:44:47| Pid010C : 00 00 07 E8 41 0C 08 A2
+11:44:47|  
+11:44:47| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:00:49| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:01:16| DeviceVoltage: 13.7
+12:01:16| DeviceVoltageDLC: 14.2
+12:01:16|  
+12:01:16| Placa: 189ZSB           Fecha: 26/12/2025 -  12:00:49
+12:01:16| -------------------------------------------------------
+12:01:16| OBDdata_PROTOCOLO: ICAN11bt500
+12:01:16| OBDdata_VIN: 
+12:01:16| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:01:16| MSI: 110
+12:01:16| CCM: 110
+12:01:16| CMB: 110
+12:01:16| OS2: 110
+12:01:16| CAT: 110
+12:01:16| CCC: 009
+12:01:16| EVS: 009
+12:01:16| SAS: 009
+12:01:16| FAA: 009
+12:01:16| O2C: 110
+12:01:16| DTC: 
+12:01:16|  
+12:01:16| Pid0101 : 00 00 07 E8 41 01 00 07 E1 80
+12:01:16| Pid0300 : 00 00 07 E8 43 00
+12:01:16| Pid0121 : 00 00 07 E8 41 21 00 00
+12:01:16| Pid0131 : Null
+12:01:16| Pid0133 : Null
+12:01:16| Pid011F : 00 00 07 E8 41 1F 02 90
+12:01:16| Pid017F : Null
+12:01:16| Pid014D : 00 00 07 E8 41 4D 00 00
+12:01:16| Pid0951 : Null
+12:01:16| Pid0902 : Null
+12:01:16| Pid0904 : 00 00 07 E8 49 04 01 31 39 4C 50 30 41 00 00 00 00 00 00 00 00 00 00
+12:01:16| Pid010C : 00 00 07 E8 41 0C 0A BE
+12:01:16|  
+12:01:16| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:01:16| Err: Posible simulación de lecturas del ECU detectada.
+12:07:25| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:07:56| DeviceVoltage: 13.5
+12:07:56| DeviceVoltageDLC: 13.9
+12:07:56|  
+12:07:56| Placa: N11BSL           Fecha: 26/12/2025 -  12:07:25
+12:07:56| -------------------------------------------------------
+12:07:56| OBDdata_PROTOCOLO: ICAN29bt500
+12:07:56| OBDdata_VIN: 9362658Y0S9311028
+12:07:56| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:07:56| MSI: 110
+12:07:56| CCM: 110
+12:07:56| CMB: 110
+12:07:56| OS2: 110
+12:07:56| CAT: 110
+12:07:56| CCC: 009
+12:07:56| EVS: 009
+12:07:56| SAS: 009
+12:07:56| FAA: 009
+12:07:56| O2C: 110
+12:07:56| DTC: 
+12:07:56|  
+12:07:56| Pid0101 : 18 DA F1 10 41 01 00 07 61 00
+12:07:56| Pid0300 : 18 DA F1 10 43 00
+12:07:56| Pid0121 : 18 DA F1 10 41 21 00 00
+12:07:56| Pid0131 : Null
+12:07:56| Pid0133 : 18 DA F1 10 41 33 4E
+12:07:56| Pid011F : Null
+12:07:56| Pid017F : Null
+12:07:56| Pid014D : Null
+12:07:56| Pid0951 : Null
+12:07:56| Pid0902 : 18 DA F1 10 49 02 01 39 33 36 32 36 35 38 59 30 53 39 33 31 31 30 32 38
+12:07:56| Pid0904 : 18 DA F1 10 49 04 01 31 30 47 46 47 4A 49 42 39 32 57 37 32 20 20 20
+12:07:56| Pid010C : Null
+12:07:56|  
+12:07:56| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+12:07:56| Err: Posible simulación de lecturas del ECU detectada.
+12:54:28| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+12:54:55| DeviceVoltage: 13.8
+12:54:55| DeviceVoltageDLC: 14.1
+12:54:55|  
+12:54:55| Placa:  H20BMH           Fecha: 26/12/2025 -  12:54:28
+12:54:55| -------------------------------------------------------
+12:54:55| OBDdata_PROTOCOLO: ICAN11bt500
+12:54:55| OBDdata_VIN: LSGHD52H5PD125171
+12:54:55| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+12:54:55| MSI: 110
+12:54:55| CCM: 110
+12:54:55| CMB: 110
+12:54:55| OS2: 110
+12:54:55| CAT: 110
+12:54:55| CCC: 009
+12:54:55| EVS: 009
+12:54:55| SAS: 009
+12:54:55| FAA: 009
+12:54:55| O2C: 110
+12:54:55| DTC: 
+12:54:55|  
+12:54:55| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+12:54:55| Pid0300 : 00 00 07 E8 43 00
+12:54:55| Pid0121 : 00 00 07 E8 41 21 00 00
+12:54:55| Pid0131 : Null
+12:54:55| Pid0133 : Null
+12:54:55| Pid011F : Null
+12:54:55| Pid017F : Null
+12:54:55| Pid014D : Null
+12:54:55| Pid0951 : Null
+12:54:55| Pid0902 : 00 00 07 E8 49 02 01 4C 53 47 48 44 35 32 48 35 50 44 31 32 35 31 37 31
+12:54:55| Pid0904 : 00 00 07 E8 49 04 01 32 34 31 32 30 38 35 36 00 00 00 00 00 00 00 00
+12:54:55| Pid010C : 00 00 07 E8 41 0C 0C 60
+12:54:55|  
+12:54:55| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:22:21| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:22:47| DeviceVoltage: 13.2
+01:22:47| DeviceVoltageDLC: 13.5
+01:22:47|  
+01:22:47| Placa: 430XNC           Fecha: 26/12/2025 -  13:22:21
+01:22:47| -------------------------------------------------------
+01:22:47| OBDdata_PROTOCOLO: ICAN11bt500
+01:22:47| OBDdata_VIN: 
+01:22:47| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:22:48| MSI: 110
+01:22:48| CCM: 110
+01:22:48| CMB: 110
+01:22:48| OS2: 110
+01:22:48| CAT: 110
+01:22:48| CCC: 009
+01:22:48| EVS: 009
+01:22:48| SAS: 009
+01:22:48| FAA: 009
+01:22:48| O2C: 110
+01:22:48| DTC: 
+01:22:48|  
+01:22:48| Pid0101 : 00 00 07 E8 41 01 00 07 61 00
+01:22:48| Pid0300 : 00 00 07 E8 43 00
+01:22:48| Pid0121 : 00 00 07 E8 41 21 00 00
+01:22:48| Pid0131 : Null
+01:22:48| Pid0133 : Null
+01:22:48| Pid011F : 00 00 07 E8 41 1F 00 15
+01:22:48| Pid017F : Null
+01:22:48| Pid014D : Null
+01:22:48| Pid0951 : Null
+01:22:48| Pid0902 : Null
+01:22:48| Pid0904 : 00 00 07 E8 49 04 02 31 33 55 42 30 41 00 00 00 00 00 00 00 00 00 00 32 53 31 46 30 30 00 00 00 00 00 00 00 00 00 00
+01:22:48| Pid010C : 00 00 07 E8 41 0C 0A E4
+01:22:48|  
+01:22:48| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:34:22| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:34:48| DeviceVoltage: 13.8
+01:34:48| DeviceVoltageDLC: 14.2
+01:34:48|  
+01:34:48| Placa: J59BMJ           Fecha: 26/12/2025 -  13:34:22
+01:34:48| -------------------------------------------------------
+01:34:48| OBDdata_PROTOCOLO: ICAN11bt500
+01:34:48| OBDdata_VIN: LSGHD52H2PD113852
+01:34:48| OBDdata_MIL: Mil:0| Msi:110 | Ccm:110 | Cmb:110 | O2s:110 | Cat:110 | Ccc:009 | Evs:009 | Sas:009 | Faa:009 | O2c:110
+01:34:48| MSI: 110
+01:34:48| CCM: 110
+01:34:48| CMB: 110
+01:34:48| OS2: 110
+01:34:48| CAT: 110
+01:34:48| CCC: 009
+01:34:48| EVS: 009
+01:34:48| SAS: 009
+01:34:48| FAA: 009
+01:34:48| O2C: 110
+01:34:48| DTC: 
+01:34:48|  
+01:34:48| Pid0101 : 00 00 07 E8 41 01 00 07 E1 00
+01:34:48| Pid0300 : 00 00 07 E8 43 00
+01:34:48| Pid0121 : 00 00 07 E8 41 21 00 00
+01:34:48| Pid0131 : Null
+01:34:48| Pid0133 : Null
+01:34:48| Pid011F : Null
+01:34:48| Pid017F : Null
+01:34:48| Pid014D : Null
+01:34:48| Pid0951 : Null
+01:34:48| Pid0902 : 00 00 07 E8 49 02 01 4C 53 47 48 44 35 32 48 32 50 44 31 31 33 38 35 32
+01:34:48| Pid0904 : 00 00 07 E8 49 04 01 32 34 31 32 30 38 35 36 00 00 00 00 00 00 00 00
+01:34:48| Pid010C : 00 00 07 E8 41 0C 0C 30
+01:34:48|  
+01:34:48| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.
+01:57:30| !:IMClean OBD comunicando con el ECU del vehículo, espere un momento...
+01:58:05| DeviceVoltage: 14.3
+01:58:06| DeviceVoltageDLC: 14.8
+01:58:06|  
+01:58:06| Placa: 680ZGN           Fecha: 26/12/2025 -  13:57:30
+01:58:06| -------------------------------------------------------
+01:58:06| OBDdata_PROTOCOLO: ICAN11bt500
+01:58:06| OBDdata_VIN: 3GCPK9E7XDG348974
+01:58:06| OBDdata_MIL: Mil:1| Msi:110 | Ccm:109 | Cmb:109 | O2s:109 | Cat:110 | Ccc:009 | Evs:109 | Sas:009 | Faa:009 | O2c:109
+01:58:06| MSI: 110
+01:58:06| CCM: 109
+01:58:06| CMB: 109
+01:58:06| OS2: 109
+01:58:06| CAT: 110
+01:58:06| CCC: 009
+01:58:06| EVS: 109
+01:58:06| SAS: 009
+01:58:06| FAA: 009
+01:58:06| O2C: 109
+01:58:06| DTC: 
+01:58:06|  
+01:58:06| Pid0101 : 00 00 07 E8 41 01 81 27 E5 E5
+01:58:06| Pid0300 : 00 00 07 E8 43 01 05 23
+01:58:06| Pid0121 : 00 00 07 E8 41 21 00 00
+01:58:06| Pid0131 : Null
+01:58:06| Pid0133 : 00 00 07 E8 41 33 4E
+01:58:06| Pid011F : 00 00 07 E8 41 1F 00 1E
+01:58:06| Pid017F : Null
+01:58:06| Pid014D : Null
+01:58:06| Pid0951 : Null
+01:58:06| Pid0902 : 00 00 07 E8 49 02 01 33 47 43 50 4B 39 45 37 58 44 47 33 34 38 39 37 34
+01:58:06| Pid0904 : 00 00 07 E8 49 04 08 31 32 36 35 33 36 37 34 00 00 00 00 00 00 00 00 31 32 36 34 39 35 33 33 00 00 00 00 00 00 00 00 31 32 36 34 39 35 30 36 00 00 00 00 00 00 00 00 31 32 36 32 35 38 39 32 00 00 00 00 00 00 00 00 31 32 36 32 30 36 38 33 00 00 00 00 00 00 00 00 31 32 36 34 30 39 30 39 00 00 00 00 00 00 00 00 31 32 36 34 39 38 33 38 00 00 00 00 00 00 00 00 31 32 36 34 39 38 30 38 00 00 00 00 00 00 00 00
+01:58:06| Pid010C : 00 00 07 E8 41 0C 09 DE
+01:58:06|  
+01:58:06| Inpección de monitores y codigos DTC en el ECU del vehículo terminada.

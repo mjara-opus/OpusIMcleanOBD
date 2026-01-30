@@ -34,6 +34,7 @@ Public Class IMCleanOBD
         Public OBDdata_DTC As String
 
         Public OBDdata_PROTOCOLO As String
+        Public OBD_ECU As String '-- Tipo de OBD del ECU
 
         Public OBD_MSI As String '-- Sistema de detección de condiciones inadecuadas de ignición de cilindros ' LrdOBD_cilin
         Public OBD_CCM As String '-- Sistema de eficiencia del convertidor catalitico 
@@ -98,6 +99,7 @@ Public Class IMCleanOBD
         LrdOBD_O2C = Nothing
 
         OBDdata_PROTOCOLO = Nothing
+        xOBD_ECU = Nothing
 
         xOBD_SimulationWarning = False
 
@@ -121,7 +123,7 @@ Public Class IMCleanOBD
         InspectionData.Pid010C = xPid010C '& " #" & calcCRC(xPid010C) '-- RPM
 
         InspectionData.OBDdata_VIN = OBDdata_VINtxt
-        InspectionData.OBDdata_MIL = OBDdata_MILtxt
+        InspectionData.OBDdata_MIL = LrdOBD_EDO_MIL 'OBDdata_MILtxt
         InspectionData.OBDdata_DTC = OBDdata_DTCtxt
 
         InspectionData.OBD_MSI = LrdOBD_MSI
@@ -137,6 +139,7 @@ Public Class IMCleanOBD
         InspectionData.OBD_O2C = LrdOBD_O2C
 
         InspectionData.OBDdata_PROTOCOLO = OBDdata_PROTOCOLO
+        InspectionData.OBD_ECU = xOBD_ECU
 
         DeviceData.DeviceVoltage = sDeviceVoltage
         DeviceData.DeviceVoltageDLC = sDeviceVoltageDLC

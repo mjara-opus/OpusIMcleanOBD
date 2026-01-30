@@ -261,6 +261,8 @@ Module Module1
     Public xPid0904 As String = "Null" '-- Cal ID
     Public xPid010C As String = "Null" '-- RPM
 
+    Public xOBD_ECU As String = "Null" '-- Tipo de OBD del ECU
+
     Public facNS As Int32
     Public facFH As Int32
 
@@ -3662,6 +3664,8 @@ Module Module1
 
             If Len(xDato) >= 8 Then '-- Tamaño de dato valido, diferente la lectura no fue correcta.
 
+                xOBD_ECU = Mid(xDato, 3, 2)
+
                 xA = fncDEC_to_BIN(CInt("&H" & Mid(xDato, 1, 2)))
                 xB = fncDEC_to_BIN(CInt("&H" & Mid(xDato, 3, 2)))
                 xC = fncDEC_to_BIN(CInt("&H" & Mid(xDato, 5, 2)))
@@ -3672,6 +3676,26 @@ Module Module1
                 Applog("B: " & Mid(xDato, 3, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 3, 2)), "000") & " | " & xB)
                 Applog("C: " & Mid(xDato, 5, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 5, 2)), "000") & " | " & xC)
                 Applog("D: " & Mid(xDato, 7, 2) & " | " & String.Format(CInt("&H" & Mid(xDato, 7, 2)), "000") & " | " & xD)
+
+                Select Case xOBD_ECU
+
+                    Case "01" : xOBD_ECU = "OBD-II (California)"
+                    Case "02" : xOBD_ECU = "OBD (Federal EPA)"
+                    Case "03" : xOBD_ECU = "OBD / OBD-II"
+                    Case "04" : xOBD_ECU = "OBD-I"
+                    Case "05" : xOBD_ECU = "No cumple OBD"
+                    Case "06" : xOBD_ECU = "EOBD (Europa)"
+                    Case "07" : xOBD_ECU = "EOBD / OBD-II"
+                    Case "08" : xOBD_ECU = "EOBD / OBD"
+                    Case "09" : xOBD_ECU = "EOBD / OBD, OBD-II"
+                    Case "0A" : xOBD_ECU = "JOBD (Japón)"
+                    Case "0B" : xOBD_ECU = "JOBD / OBD-II"
+                    Case "0C" : xOBD_ECU = "JOBD / EOBD"
+                    Case "0D" : xOBD_ECU = "JOBD / EOBD + OBD-II"
+                    Case "11" : xOBD_ECU = "OBD-II (CAN)"
+                    Case Else : xOBD_ECU = "???"
+
+                End Select
 
                 '-- Bin  Dec (posiciones)
                 '-- 0 -> 8
@@ -4525,14 +4549,6 @@ Module Module1
             rRes = MyDad.Open()
             Applog(rRes.ToString())
 
-            'rStr = MyDad.GetFirmwareVersion()
-            'sFirmwareVersion = rStr.Data
-            'Applog("InitIMCleanDevice | FirmwareVersion:" & sFirmwareVersion)
-
-            'rInt = MyDad.GetDeviceType
-            'sDeviceType = rInt.Data
-            'Applog("InitIMCleanDevice | DeviceType:" & sDeviceType)
-
             rDec = MyDad.GetVoltage
             sDeviceVoltage = rDec.Data
             Applog("InitIMCleanDevice | DeviceVoltage:" & sDeviceVoltage)
@@ -4585,6 +4601,8 @@ Module Module1
                     xOBD_ECU_onLine = True
                     xOBD_SimulationWarning = True
                     Applog("****** Posible Simulación de lecturas OBD detectada.")
+                Else
+                    xOBD_SimulationWarning = False
                 End If
                 Applog("****** OBD no conectado al vehículo.")
 

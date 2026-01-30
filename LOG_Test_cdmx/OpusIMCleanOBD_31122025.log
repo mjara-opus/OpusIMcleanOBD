@@ -1,0 +1,24 @@
+10:03:41| CFD | Dev:'IMclean' ID:'USB' HID:'' Cntrl:'' Starting ...
+10:03:41| CFD | Search:'SELECT * FROM Win32_PNPEntity WHERE ( Name Like '%IMclean%' OR Description Like  '%IMclean%')  AND (  DeviceID Like '%USB%') | 
+10:03:42| CFD | Search_Result_Count:1
+10:03:42| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:03:42| ... GetObjectArrayAsString | USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:03:42| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1
+10:03:42| ... GetPropertyValueAsString: Drew Technologies, Inc.
+10:03:42| ... GetPropertyValueAsString: USB\VID_18E1&PID_02A1\IEXFM0000207393E
+10:03:42| ... GetPropertyValueAsString: VehiclePassThru
+10:03:42| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:03:42| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:03:42| ... GetPropertyValueAsString: Win32_PnPEntity
+10:03:42| ... GetPropertyValueAsString: IMClean DAD GEN 4
+10:03:42| Dev_001 Nam:'IMClean DAD GEN 4  PNPID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  HWID:'USB\VID_18E1&PID_02A1&REV_0110|USB\VID_18E1&PID_02A1  ID:'USB\VID_18E1&PID_02A1\IEXFM0000207393E  Cap:'IMClean DAD GEN 4  Cls:'Win32_PnPEntity  Des:'IMClean DAD GEN 4  Drv:'  Man:'Drew Technologies, Inc.  PN:'
+10:03:42| ... CheckForDevice |1
+10:03:42| Pass:FindUSBDevices.
+10:03:42| getOpusKeyFile: Pass:Opus IMClean OBD Licencia valida.
+10:03:42| facNS: IEXFM0000207393E -> 13417
+10:03:42| facFH: 31122025 -> 2547
+10:05:55| Success
+10:05:55| InitIMCleanDevice | FirmwareVersion:4.0.0.0
+10:05:55| InitIMCleanDevice | DeviceType:4171
+10:05:55| InitIMCleanDevice | DeviceVoltage:0
+10:05:55| InitIMCleanDevice | DeviceVoltageDLC:0

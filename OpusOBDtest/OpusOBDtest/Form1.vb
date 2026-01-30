@@ -20,6 +20,8 @@ Public Class Form1
 
         Call rntMensajeusuario("Inicialice el IMClean OBD.")
 
+        Call RntCargaTablas()
+
         ListBox1.HorizontalScrollbar = True
 
         tmrReloj = 0
@@ -216,12 +218,11 @@ Public Class Form1
 
         Dim lStatus As String = "!:IMClean OBD comunicando con el ECU del vehículo, espere un momento..."
 
-        xPlaca = txtPlaca.Text
-        xFechaHora = Format(Now, "dd/MM/yyyy -  HH:mm:ss")
+        ldbFechaHora = Format(Now, "dd/MM/yyyy -  HH:mm:ss")
 
         Call limpiaCampos()
 
-        If Len(xPlaca) < 3 Then
+        If Len(ldbPlaca) < 3 Then
 
             Call rntMensajeusuario("!:Captura la placa / matricula del vehículo.")
             txtPlaca.Select()
@@ -310,14 +311,18 @@ Public Class Form1
         If cOpusIMCleanOBDdrv.InspectionData.OBD_CAT = "110" Then LblOBD_CAT.BackColor = Drawing.Color.Green '-- Sin DTC
 
         lblProtocolo.Text = cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO
+        lblOBDECU.Text = cOpusIMCleanOBDdrv.InspectionData.OBD_ECU
 
         lblDTC.Text = cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC
 
         Applog("DeviceVoltage: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltage)
         Applog("DeviceVoltageDLC: " & cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC)
         Applog(" ")
-        Applog("Placa: " & xPlaca & "           Fecha: " & xFechaHora)
+        Applog("Placa: " & ldbPlaca & "           Fecha: " & ldbFechaHora)
+        Applog("Marca: " & ldbMARCA)
+        Applog("SubMarca: " & ldbSubMARCA & "Modelo: " & ldbModelo)
         Applog("-------------------------------------------------------")
+        Applog("OBD_ECU: " & cOpusIMCleanOBDdrv.InspectionData.OBD_ECU)
         Applog("OBDdata_PROTOCOLO: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO)
         Applog("OBDdata_VIN: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN)
         Applog("OBDdata_MIL: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
@@ -509,11 +514,15 @@ Public Class Form1
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
 
         wrReporte("-------------------------------------------------------")
-        wrReporte("Placa: " & xPlaca)
-        wrReporte("Fecha-Hora: " & xFechaHora)
+        wrReporte("Placa: " & ldbPlaca)
+        wrReporte("Marca: " & ldbMARCA)
+        wrReporte("SubMarca: " & ldbSubMARCA)
+        wrReporte("Modelo: " & ldbModelo)
+        wrReporte("Fecha-Hora: " & ldbFechaHora)
         wrReporte("ECU_onLine: " & cOpusIMCleanOBDdrv.InspectionData.OBD_ECU_onLine)
         wrReporte("Posible Simulación: " & cOpusIMCleanOBDdrv.OBD_SimulationWarning)
         wrReporte("-------------------------------------------------------")
+        wrReporte("OBD_ECU: " & cOpusIMCleanOBDdrv.InspectionData.OBD_ECU)
         wrReporte("OBDdata_PROTOCOLO: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO)
         wrReporte("OBDdata_VIN: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN)
         wrReporte("OBDdata_MIL: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL)
@@ -543,6 +552,51 @@ Public Class Form1
         wrReporte("Pid010C : " & cOpusIMCleanOBDdrv.InspectionData.Pid010C) '-- RPM
         wrReporte("=======================================================")
         wrReporte(" ")
+
+        Dim lRecData As String = ldbFechaHora & "," &
+                            ldbPlaca & "," &
+                            Trim(ldbMARCA) & "," &
+                            Trim(ldbSubMARCA) & "," &
+                            Trim(ldbModelo) & "," &
+                            cOpusIMCleanOBDdrv.InspectionData.OBD_ECU & "," &
+                            cOpusIMCleanOBDdrv.DeviceData.DeviceVoltageDLC & "," &
+                            cOpusIMCleanOBDdrv.InspectionData.OBDdata_PROTOCOLO & "," &
+                            cOpusIMCleanOBDdrv.InspectionData.OBDdata_VIN & "," &
+                            cOpusIMCleanOBDdrv.InspectionData.OBDdata_MIL & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_MSI, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_MSI, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_MSI, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CCM, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CCM, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CCM, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CMB, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CMB, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CMB, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2S, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2S, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2S, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CAT, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CAT, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CAT, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CCC, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CCC, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_CCC, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_EVS, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_EVS, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_EVS, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_SAS, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_SAS, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_SAS, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_FAA, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_FAA, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_FAA, 3, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2C, 1, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2C, 2, 1) & "," &
+                            Mid(cOpusIMCleanOBDdrv.InspectionData.OBD_O2C, 3, 1) & "," &
+                            cOpusIMCleanOBDdrv.OBD_SimulationWarning & "," &
+                            cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC
+
+        Call wrDataCSV(lRecData)
 
         Call limpiaCampos()
 
@@ -603,6 +657,185 @@ Public Class Form1
 
     Private Sub txtPlaca_LostFocus(sender As Object, e As EventArgs) Handles txtPlaca.LostFocus
         txtPlaca.BackColor = xCampoTexto
+        ldbPlaca = txtPlaca.Text
+
+    End Sub
+
+    Private Sub RntCargaTablas()
+
+        Try
+
+            Call CargarMarca()
+
+            Call CargarSubMarca()
+
+        Catch ex As Exception
+
+            Call rntMensajeusuario("Err:Falla al cargar las tablas del CATALOGO VEHICULAR (" & ex.Message & ")")
+            Applog("Err: RntCargaTablas | Falla al cargar las tablas del CATALOGO VEHICULAR (" & ex.Message & ")")
+
+        End Try
+
+    End Sub
+
+    Private Sub CargarMarca()
+
+        Try
+
+            Dim Ztx, Vtx As Integer
+            Dim Ttx, Ftx As String
+
+            Dim xFileTXT As String = "c:\opus_prog\tablas\tb_marca.dat"
+            Dim Apunt As String = FileSystem.FreeFile()
+
+            'Dim ldbMARCA As Integer '= cDBS.dbVEHICULO.dbMARCA
+
+            cbxMarca.DisplayMember = "Text"
+            cbxMarca.ValueMember = "Value"
+            Dim tbMarca As New DataTable
+            tbMarca.Columns.Add("Text", GetType(String))
+            tbMarca.Columns.Add("Value", GetType(Integer))
+
+            FileSystem.FileOpen(Apunt, xFileTXT, OpenMode.Input, OpenAccess.Read)
+            Do While Not EOF(Apunt)
+                Ftx = FileSystem.LineInput(Apunt)
+                Ztx = Len(Ftx)
+                Vtx = Val(Mid(Ftx, 1, 4))
+                Ttx = Mid(Ftx, 6, Ztx)
+
+                If Vtx < 200 Then tbMarca.Rows.Add(Ttx, Vtx)
+
+            Loop
+            FileSystem.FileClose(Apunt)
+            cbxMarca.DataSource = tbMarca
+
+            cbxMarca.Refresh()
+
+        Catch ex As Exception
+            MsgBox("Err:CargarSubMarca | " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub CargarSubMarca()
+
+        Try
+
+            Dim Ztx, V1tx, V2tx As Integer
+            Dim Ttx, Ftx As String
+
+            'Dim ldbSubMARCA As Integer '= cDBS.dbVEHICULO.dbSUBMARCA
+
+            Dim xFileTXT As String = "c:\opus_prog\tablas\tb_SubMarca.dat"
+            Dim Apunt As String = FileSystem.FreeFile()
+
+            cbxSubMarca.DisplayMember = "Text"
+            cbxSubMarca.ValueMember = "Value"
+            Dim tbSubMarca As New DataTable
+            tbSubMarca.Columns.Add("Text", GetType(String))
+            tbSubMarca.Columns.Add("Value", GetType(Integer))
+
+            FileSystem.FileOpen(Apunt, xFileTXT, OpenMode.Input, OpenAccess.Read)
+
+            Do While Not EOF(Apunt)
+                Ftx = FileSystem.LineInput(Apunt)
+                Ztx = Len(Ftx)
+                V1tx = Val(Mid(Ftx, 1, 4))
+                V2tx = Val(Mid(Ftx, 6, 4))
+                Ttx = Mid(Ftx, 11, Ztx)
+
+                If V1tx = Val(Mid(ldbMARCA, 1, 4)) Then tbSubMarca.Rows.Add(Ttx, V2tx)
+
+            Loop
+            FileSystem.FileClose(Apunt)
+
+            cbxSubMarca.DataSource = tbSubMarca
+
+            cbxSubMarca.Refresh()
+
+        Catch ex As Exception
+            MsgBox("Err:CargarSubMarca | " & ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub cbxMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxMarca.SelectedIndexChanged
+        '-- nada
+    End Sub
+
+    Private Sub cbxMarca_GotFocus(sender As Object, e As EventArgs) Handles cbxMarca.GotFocus
+        cbxMarca.BackColor = xFocusColor
+        Call rntMensajeusuario("Seleccione la marca del vehículo.")
+
+    End Sub
+
+    Private Sub cbxMarca_LostFocus(sender As Object, e As EventArgs) Handles cbxMarca.LostFocus
+        cbxMarca.BackColor = xCampoTexto
+        ldbMARCA = Format(cbxMarca.SelectedValue, "000") & " " & cbxMarca.Text
+
+        Call CargarSubMarca()
+
+    End Sub
+
+    Private Sub cbxMarca_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxMarca.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Return) Or e.KeyChar = Convert.ToChar(Keys.Tab) Then
+            cbxSubMarca.Select()
+        End If
+    End Sub
+
+    Private Sub cbxSubMarca_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxSubMarca.SelectedIndexChanged
+        '-- nada
+    End Sub
+
+    Private Sub cbxSubMarca_GotFocus(sender As Object, e As EventArgs) Handles cbxSubMarca.GotFocus
+        cbxSubMarca.BackColor = xFocusColor
+        Call rntMensajeusuario("Seleccione la sub-marca del vehículo.")
+
+    End Sub
+
+    Private Sub cbxSubMarca_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbxSubMarca.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Return) Then
+            txtModelo.Select()
+
+        End If
+
+    End Sub
+
+    Private Sub cbxSubMarca_LostFocus(sender As Object, e As EventArgs) Handles cbxSubMarca.LostFocus
+        cbxSubMarca.BackColor = xCampoTexto
+        ldbSubMARCA = Format(cbxSubMarca.SelectedValue, "000") & " " & cbxSubMarca.Text
+
+    End Sub
+
+    Private Sub txtPlaca_TextChanged(sender As Object, e As EventArgs) Handles txtPlaca.TextChanged
+        '-- nada
+    End Sub
+
+    Private Sub txtPlaca_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPlaca.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Return) Then
+            cbxMarca.Select()
+
+        End If
+    End Sub
+
+    Private Sub txtModelo_TextChanged(sender As Object, e As EventArgs) Handles txtModelo.TextChanged
+        '-- nada
+    End Sub
+
+    Private Sub txtModelo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtModelo.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Return) Then
+            BtnOBDtest.Select()
+
+        End If
+    End Sub
+
+    Private Sub txtModelo_LostFocus(sender As Object, e As EventArgs) Handles txtModelo.LostFocus
+        txtModelo.BackColor = xCampoTexto
+        ldbModelo = txtModelo.Text
+    End Sub
+
+    Private Sub txtModelo_GotFocus(sender As Object, e As EventArgs) Handles txtModelo.GotFocus
+        txtModelo.BackColor = xFocusColor
     End Sub
 
 End Class

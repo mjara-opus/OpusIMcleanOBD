@@ -338,6 +338,7 @@ Public Class Form1
         Applog("O2C: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2C)
         Applog("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
         Applog(" ")
+        Applog("Pid0100 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0100)
         Applog("Pid0101 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0101) '-- Monitores MIL
         Applog("Pid0300 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0300) '-- DTC
         Applog("Pid0121 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0121) '-- Distancia MIL on
@@ -348,7 +349,12 @@ Public Class Form1
         Applog("Pid014D : " & cOpusIMCleanOBDdrv.InspectionData.Pid014D) '-- Tiempo MIL on
         Applog("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0951) '-- Tipo combustible
         Applog("Pid0902 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0902) '-- VIN
+        Applog("Pid0903 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0903)
         Applog("Pid0904 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0904) '-- Cal ID
+        Applog("Pid0905 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0905)
+        Applog("Pid0906 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0906)
+        Applog("Pid0909 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0909)
+        Applog("Pid090A : " & cOpusIMCleanOBDdrv.InspectionData.Pid090A)
         Applog("Pid010C : " & cOpusIMCleanOBDdrv.InspectionData.Pid010C) '-- RPM
         Applog(" ")
         Applog("Inpección de monitores y codigos DTC en el ECU del vehículo terminada.")
@@ -538,6 +544,7 @@ Public Class Form1
         wrReporte("O2C: " & cOpusIMCleanOBDdrv.InspectionData.OBD_O2C)
         wrReporte("DTC: " & cOpusIMCleanOBDdrv.InspectionData.OBDdata_DTC)
         wrReporte(" ")
+        wrReporte("Pid0100 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0100) '-- 
         wrReporte("Pid0101 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0101) '-- Monitores MIL
         wrReporte("Pid0300 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0300) '-- DTC
         wrReporte("Pid0121 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0121) '-- Distancia MIL on
@@ -548,7 +555,12 @@ Public Class Form1
         wrReporte("Pid014D : " & cOpusIMCleanOBDdrv.InspectionData.Pid014D) '-- Tiempo MIL on
         wrReporte("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0951) '-- Tipo combustible
         wrReporte("Pid0902 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0902) '-- VIN
+        wrReporte("Pid0903 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0903) '-- 
         wrReporte("Pid0904 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0904) '-- Cal ID
+        wrReporte("Pid0905 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0905) '-- 
+        wrReporte("Pid0906 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0906) '-- 
+        wrReporte("Pid0909 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0909) '--
+        wrReporte("Pid090A : " & cOpusIMCleanOBDdrv.InspectionData.Pid090A) '-- 
         wrReporte("Pid010C : " & cOpusIMCleanOBDdrv.InspectionData.Pid010C) '-- RPM
         wrReporte("=======================================================")
         wrReporte(" ")

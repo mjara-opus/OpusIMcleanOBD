@@ -50,6 +50,21 @@ Public Class IMCleanOBD
 
         Public Pid0100 As String '-- PID's supported
         Public Pid0101 As String '-- Monitores MIL
+
+        Public Pid0103 As String '-- Fuel system status
+        Public Pid010D As String '-- vehicle speed
+        Public Pid0120 As String '-- PID's supported 21-40
+        Public Pid0130 As String '-- Warm-ups since codes cleaned
+        Public Pid0140 As String '-- PID's supported 41-60 
+        Public Pid0146 As String '-- Ambient air temperature
+        Public Pid014E As String '-- Time since trouble codes cleaned
+        Public Pid015B As String '-- Tiempo MIL on
+        Public Pid015C As String '-- Temperatura aceite motor
+        Public Pid0160 As String '-- PID's supported 61-80
+        Public Pid0180 As String '-- PID's supported 81-A0
+        Public Pid01A6 As String '-- ODOMETER
+        Public Pid01C0 As String '-- PID's supported C1-E0
+
         Public Pid0300 As String '-- DTC
         Public Pid0121 As String '-- Distancia MIL on
         Public Pid0131 As String '-- Distancia MIL borrado
@@ -93,6 +108,21 @@ Public Class IMCleanOBD
         xPid0906 = "Null" '-- CVN
         xPid0909 = "Null" '-- ECU Message
         xPid090A = "Null" '-- ECU Name
+
+        xPid0103 = "Null" '-- Fuel system status
+        xPid010D = "Null" '-- vehicle speed
+        xPid0120 = "Null" '-- PID's supported 21-40
+        xPid0130 = "Null" '-- Warm-ups since codes cleaned
+        xPid0140 = "Null" '-- PID's supported 41-60 
+        xPid0146 = "Null" '-- Ambient air temperature
+        xPid014E = "Null" '-- Time since trouble codes cleaned
+        xPid015B = "Null" '-- Tiempo MIL on
+        xPid015C = "Null" '-- Temperatura aceite motor
+        xPid0160 = "Null" '-- PID's supported 61-80
+        xPid0180 = "Null" '-- PID's supported 81-A0
+        xPid01A6 = "Null" '-- ODOMETER
+        xPid01C0 = "Null" '-- PID's supported C1-E0
+
 
         OBDdata_VINtxt = Nothing
         OBDdata_MILtxt = Nothing
@@ -139,6 +169,19 @@ Public Class IMCleanOBD
         InspectionData.Pid0906 = xPid0906
         InspectionData.Pid0909 = xPid0909
         InspectionData.Pid090A = xPid090A
+        InspectionData.Pid0103 = xPid0103 '-- Fuel system status
+        InspectionData.Pid010D = xPid010D '-- vehicle speed
+        InspectionData.Pid0120 = xPid0120 '-- PID's supported 21-40
+        InspectionData.Pid0130 = xPid0130 '-- Warm-ups since codes cleaned
+        InspectionData.Pid0140 = xPid0140 '-- PID's supported 41-60 
+        InspectionData.Pid0146 = xPid0146 '-- Ambient air temperature
+        InspectionData.Pid014E = xPid014E '-- Time since trouble codes cleaned
+        InspectionData.Pid015B = xPid015B '-- Tiempo MIL on
+        InspectionData.Pid015C = xPid015C '-- Temperatura aceite motor
+        InspectionData.Pid0160 = xPid0160 '-- PID's supported 61-80
+        InspectionData.Pid0180 = xPid0180 '-- PID's supported 81-A0
+        InspectionData.Pid01A6 = xPid01A6 '-- ODOMETER
+        InspectionData.Pid01C0 = xPid01C0 '-- PID's supported C1-E0
 
         InspectionData.OBDdata_VIN = OBDdata_VINtxt
         InspectionData.OBDdata_MIL = LrdOBD_EDO_MIL 'OBDdata_MILtxt
@@ -352,5 +395,8 @@ Public Class IMCleanOBD
 
     End Function
 
+    Public Function fPidCatalogo(ByVal pPID0100 As String) As String
+        Return (flPidCatalogo(pPID0100))
+    End Function
 
 End Class

@@ -340,6 +340,21 @@ Public Class Form1
         Applog(" ")
         Applog("Pid0100 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0100)
         Applog("Pid0101 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0101) '-- Monitores MIL
+
+        Applog("Pid0103 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0103) '-- Fuel system status
+        Applog("Pid010D : " & cOpusIMCleanOBDdrv.InspectionData.Pid010D) '-- vehicle speed KM/H
+        Applog("Pid0120 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0120) '-- PID's supported 21-40
+        Applog("Pid0130 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0130) '-- Warm-ups since codes cleaned
+        Applog("Pid0140 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0140) '-- PID's supported 41-60
+        Applog("Pid0146 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0146) '-- Ambient air temperature
+        Applog("Pid014E : " & cOpusIMCleanOBDdrv.InspectionData.Pid014E) '-- Time since trouble codes cleaned
+        Applog("Pid015B : " & cOpusIMCleanOBDdrv.InspectionData.Pid015B) '-- Tiempo MIL on
+        Applog("Pid015C : " & cOpusIMCleanOBDdrv.InspectionData.Pid015C) '-- Temperatura aceite motor
+        Applog("Pid0160 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0160) '-- PID's supported 61-80
+        Applog("Pid0180 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0180) '-- PID's supported 81-A0
+        Applog("Pid01A6 : " & cOpusIMCleanOBDdrv.InspectionData.Pid01A6) '-- ODOMETER
+        Applog("Pid01C0 : " & cOpusIMCleanOBDdrv.InspectionData.Pid01C0) '-- PID's supported C1-E0
+
         Applog("Pid0300 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0300) '-- DTC
         Applog("Pid0121 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0121) '-- Distancia MIL on
         Applog("Pid0131 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0131) '-- Distancia MIL borrado
@@ -546,6 +561,19 @@ Public Class Form1
         wrReporte(" ")
         wrReporte("Pid0100 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0100) '-- 
         wrReporte("Pid0101 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0101) '-- Monitores MIL
+        wrReporte("Pid0103 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0103) '-- Fuel system status
+        wrReporte("Pid010D : " & cOpusIMCleanOBDdrv.InspectionData.Pid010D) '-- vehicle speed KM/H
+        wrReporte("Pid0120 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0120) '-- PID's supported 21-40
+        wrReporte("Pid0130 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0130) '-- Warm-ups since codes cleaned
+        wrReporte("Pid0140 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0140) '-- PID's supported 41-60
+        wrReporte("Pid0146 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0146) '-- Ambient air temperature
+        wrReporte("Pid014E : " & cOpusIMCleanOBDdrv.InspectionData.Pid014E) '-- Time since trouble codes cleaned
+        wrReporte("Pid015B : " & cOpusIMCleanOBDdrv.InspectionData.Pid015B) '-- Tiempo MIL on
+        wrReporte("Pid015C : " & cOpusIMCleanOBDdrv.InspectionData.Pid015C) '-- Temperatura aceite motor
+        wrReporte("Pid0160 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0160) '-- PID's supported 61-80
+        wrReporte("Pid0180 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0180) '-- PID's supported 81-A0
+        wrReporte("Pid01A6 : " & cOpusIMCleanOBDdrv.InspectionData.Pid01A6) '-- ODOMETER
+        wrReporte("Pid01C0 : " & cOpusIMCleanOBDdrv.InspectionData.Pid01C0) '-- PID's supported C1-E0
         wrReporte("Pid0300 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0300) '-- DTC
         wrReporte("Pid0121 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0121) '-- Distancia MIL on
         wrReporte("Pid0131 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0131) '-- Distancia MIL borrado

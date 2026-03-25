@@ -267,11 +267,26 @@ Module Module1
     Public xPid0906 As String = "Null" '-- CVN
     Public xPid0909 As String = "Null" '-- ECU Message
     Public xPid090A As String = "Null" '-- ECU Name
+    Public xPid0103 As String = "Null" '-- Fuel system status
+    Public xPid010D As String = "Null" '-- vehicle speed
+    Public xPid0120 As String = "Null" '-- PID's supported 21-40
+    Public xPid0130 As String = "Null" '-- Warm-ups since codes cleaned
+    Public xPid0140 As String = "Null" '-- PID's supported 41-60 
+    Public xPid0146 As String = "Null" '-- Ambient air temperature
+    Public xPid014E As String = "Null" '-- Time since trouble codes cleaned
+    Public xPid015B As String = "Null" '-- Tiempo MIL on
+    Public xPid015C As String = "Null" '-- Temperatura aceite motor
+    Public xPid0160 As String = "Null" '-- PID's supported 61-80
+    Public xPid0180 As String = "Null" '-- PID's supported 81-A0
+    Public xPid01A6 As String = "Null" '-- ODOMETER
+    Public xPid01C0 As String = "Null" '-- PID's supported C1-E0
 
     Public xOBD_ECU As String = "Null" '-- Tipo de OBD del ECU
 
     Public facNS As Int32
     Public facFH As Int32
+
+    Public xPIDcatalogo() As Boolean
 
     '||--
 
@@ -386,6 +401,40 @@ Module Module1
         Mode9TotalPIDCount = 0
     End Sub
 
+    Public Function flPidCatalogo(ByVal pPID0100 As String) As String
+
+        ReDim xPIDcatalogo(200)
+
+        Dim lTxtPid As String = Nothing
+        Dim lCar As Char = Nothing
+        Dim lBinCadena As String = Nothing
+        Dim lPidCatalogo As String = Nothing
+        Dim Ix0 As Integer = 0
+        Dim zPid As Integer = Len(pPID0100)
+
+        For Ix0 = 1 To zPid
+            lCar = Mid(pPID0100, Ix0, 1)
+            lBinCadena &= fCharABinario(lCar)
+        Next
+
+        zPid = Len(lBinCadena)
+        For Ix0 = 1 To zPid
+            If Mid(lBinCadena, Ix0, 1) = "1" Then
+                lPidCatalogo &= "PID" & Hex(Ix0) & ","
+            End If
+
+        Next
+
+        Return lPidCatalogo
+
+    End Function
+
+
+    Function fCharABinario(c As Char) As String
+        Dim valor As Integer = AscW(c)   'Obtiene el código Unicode del carácter
+        Dim binario As String = Convert.ToString(valor, 2)
+        Return binario.PadLeft(4, "0"c)  'Completa a 4 bits
+    End Function
 
 
     Function GetCallingProcedure(Optional ByVal CallDepth As Integer = 2,
@@ -3551,6 +3600,97 @@ Module Module1
                 End If
             End If
 
+            If InStr(pDataTxt, "41 03") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0103 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 0D") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid010D = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 20") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0120 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 30") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0130 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 40") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0140 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 46") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0146 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 4E") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid014E = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 5B") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid015B = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 5C") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid015C = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 60") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0160 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 80") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid0180 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 A6") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid01A6 = Trim(lBustxt)
+                End If
+            End If
+
+            If InStr(pDataTxt, "41 C0") > 0 Then '-- 
+                If Ix0 > 0 Then
+                    lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
+                    xPid01C0 = Trim(lBustxt)
+                End If
+            End If
+
             If InStr(pDataTxt, "41 21") > 0 Then '-- Distancia MIL on
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
@@ -4281,7 +4421,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 00)GetSupportedPIDs | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4305,7 +4445,308 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 01)Get MON | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
+
+            Applog(" ")
+            Applog("... (01, 03) Fuel system status >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 3), "GetModePID(01, 01) - Fuel system status", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 03)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 0D) vehicle speed KM/H >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &HD), "GetModePID(01, 0D) - vehicle speed KM/H", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 0D)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 20) PID's supported 21-40 >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 20), "GetModePID(01, 20) - PID's supported 21-40", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 20)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 30) Warm-ups since codes cleaned >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 30), "GetModePID(01, 30) - Warm-ups since codes cleaned", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 30)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 40) PID's supported 41-60 >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 40), "GetModePID(01, 40) - PID's supported 41-60", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 40)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 46) Ambient air temperature >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 46), "GetModePID(01, 46) - Ambient air temperature", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 46)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 4E) Time since trouble codes cleaned >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &H4E), "GetModePID(01, 4E) - Time since trouble codes cleaned", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 4E)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 5B) Tiempo MIL on >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &H5B), "GetModePID(01, 5B) - Tiempo MIL on", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 5B)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 5C) Temperatura aceite motor >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &H5C), "GetModePID(01, 5C) - Temperatura aceite motor", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 5C)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 60) PID's supported 61-80 >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 60), "GetModePID(01, 60) - PID's supported 61-80", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 60)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, 80) PID's supported 81-A0 >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, 80), "GetModePID(01, 80) - PID's supported 81-A0", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, 80)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+            Applog(" ")
+            Applog("... (01, A6) ODOMETER >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &HA6), "GetModePID(01, A6) - ODOMETER", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, A6)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
+
+            Applog(" ")
+            Applog("... (01, C0) PID's supported C1-E0 >>>-----------------------------------------------------------------------")
+            Try
+
+                sr = Nothing
+                MyDad.ClearLogs()
+                SetupMyLastCommResult(DrewTech.IIMClean.DT_Com_Result.ConditionsNotCorrect, False)
+                DoDad(Sub() sr = MyDad.GetModePID(1, &HC0), "GetModePID(01, C0) - PID's supported C1-E0", "NoEOL")
+                If (IsNothing(sr) = False) Then
+                    lStatus = "sr | Get MON: " & sr.CommResult & " | " & sr.Data.Count
+
+                    Call DECODE_Bus(MyDad.CommandLog)
+
+                Else
+                    lStatus = "sr | Get MON: NULL"
+                End If
+                Applog(lStatus)
+
+            Catch ex As Exception
+                Applog("Err:(01, C0)Get MON | " & ex.Message)
+            End Try '-------------------------------------------------------------------------------------------------
+
+
 
             Applog(" ")
             Applog("... (03, 00)Get DTC >>>-----------------------------------------------------------------------")
@@ -4328,7 +4769,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(03, 00)Get DTC | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
             Applog(" ")
             Applog("... (01, 1F) Tmp. Encendido >>>-----------------------------------------------------------------------")
@@ -4350,7 +4791,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 1F) Tmp. Encendido | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
             Applog(" ")
             Applog("... (01, 21) Distancia MIL >>>-----------------------------------------------------------------------")
@@ -4372,7 +4813,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 21) Distancia MIL | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
             Applog(" ")
             Applog("... (01, 31) Distancia MIL Borrada >>>-----------------------------------------------------------------------")
@@ -4394,7 +4835,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 31) Distancia MIL Borrada | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
             Applog(" ")
             Applog("... (01, 33) Presion Barometrica Kpa >>>-----------------------------------------------------------------------")
@@ -4416,7 +4857,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 33) Presion Barometrica Kpa | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
             Applog(" ")
             Applog("... (01, 4D) Tmp MIL on >>>-----------------------------------------------------------------------")
@@ -4438,7 +4879,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 4D) Tmp MIL on | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
             Applog(" ")
             Applog("... (01, 51) Tipo Combustible >>>-----------------------------------------------------------------------")
@@ -4460,7 +4901,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 51) Tipo Combustible | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4483,7 +4924,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(01, 7F) Tmp Marcha Motor | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4506,11 +4947,11 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 03) Cal ID | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
-            Applog("... (09, 03) Cal Message >>>-----------------------------------------------------------------------")
+            Applog("... (09, 04) Cal Message >>>-----------------------------------------------------------------------")
             Try
 
                 sr = Nothing
@@ -4529,7 +4970,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 03) Cal Message | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4552,7 +4993,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 04) Cal ID | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4575,7 +5016,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 05) MessageCount CVN | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4598,7 +5039,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 06) Cal CVN | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4621,7 +5062,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 09) ECU Message | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4644,7 +5085,7 @@ Module Module1
 
             Catch ex As Exception
                 Applog("Err:(09, 0a) ECU Name | " & ex.Message)
-            End Try
+            End Try '-------------------------------------------------------------------------------------------------
 
 
             Applog(" ")
@@ -4776,13 +5217,28 @@ Module Module1
 
             Applog("Pid0100 : " & xPid0100) '-- 
             Applog("Pid0101 : " & xPid0101) '-- Monitores MIL
-            Applog("Pid0300 : " & xPid0300) '-- DTC
+            Applog("Pid0103 : " & xPid0103) '-- Fuel system status
+            'Applog("Pid010C : " & xPid010C) '-- Rpm
+            Applog("Pid010D : " & xPid010D) '-- vehicle speed
+            Applog("Pid0120 : " & xPid0120) '-- PID's supported 21-40
             Applog("Pid0121 : " & xPid0121) '-- Distancia MIL on
-            Applog("Pid0131 : " & xPid0131) '-- Distancia MIL borrado
+            Applog("Pid0130 : " & xPid0130) '-- Warm-ups since codes cleaned
+            Applog("Pid0131 : " & xPid0131) '-- Distancia MIL borrado km/h
             Applog("Pid0133 : " & xPid0133) '-- Presion Barometrica Kpa 
+            Applog("Pid0133 : " & xPid0140) '-- PID's supported 41-60 
+            Applog("Pid0146 : " & xPid0146) '-- Ambient air temperature
+            Applog("Pid014D : " & xPid014D) '-- Tiempo MIL on
+            Applog("Pid014E : " & xPid014E) '-- Time since trouble codes cleaned
+            Applog("Pid015B : " & xPid015B) '-- Tiempo MIL on
+            Applog("Pid015C : " & xPid015C) '-- Temperatura aceite motor
+            Applog("Pid0160 : " & xPid0160) '-- PID's supported 61-80
+            Applog("Pid0180 : " & xPid0180) '-- PID's supported 81-A0
+            Applog("Pid01A6 : " & xPid01A6) '-- ODOMETER
+            Applog("Pid01C0 : " & xPid01C0) '-- PID's supported C1-E0
             Applog("Pid011F : " & xPid011F) '-- Tiempo de encendido motor
             Applog("Pid017F : " & xPid017F) '-- Tiempo de marcha motor
-            Applog("Pid014D : " & xPid014D) '-- Tiempo MIL on
+
+            Applog("Pid0300 : " & xPid0300) '-- DTC
             Applog("Pid0951 : " & xPid0951) '-- Tipo combustible
             Applog("Pid0902 : " & xPid0902) '-- VIN
             Applog("Pid0903 : " & xPid0903) '-- 

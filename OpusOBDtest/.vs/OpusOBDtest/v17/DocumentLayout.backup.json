@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93BBBB16-E80C-447F-B0C2-4A16B4ECE0B5}|OpusOBDtest\\OpusOBDtest.vbproj|C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\opusobdtest\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{93BBBB16-E80C-447F-B0C2-4A16B4ECE0B5}|OpusOBDtest\\OpusOBDtest.vbproj|c:\\pry_opus\\opusimcleanobd\\opusobdtest\\opusobdtest\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{93BBBB16-E80C-447F-B0C2-4A16B4ECE0B5}|OpusOBDtest\\OpusOBDtest.vbproj|solutionrelative:opusobdtest\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{93BBBB16-E80C-447F-B0C2-4A16B4ECE0B5}|OpusOBDtest\\OpusOBDtest.vbproj|c:\\pry_opus\\opusimcleanobd\\opusobdtest\\opusobdtest\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{93BBBB16-E80C-447F-B0C2-4A16B4ECE0B5}|OpusOBDtest\\OpusOBDtest.vbproj|C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\opusobdtest\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{93BBBB16-E80C-447F-B0C2-4A16B4ECE0B5}|OpusOBDtest\\OpusOBDtest.vbproj|solutionrelative:opusobdtest\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -57,8 +57,7 @@
               "RelativeToolTip": "OpusOBDtest\\Form1.Designer.vb",
               "ViewState": "AgIAAN0AAAAAAAAAAAAqwPsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-31T01:31:05.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T01:31:05.615Z"
             },
             {
               "$type": "Document",
@@ -70,8 +69,7 @@
               "RelativeToolTip": "OpusOBDtest\\Module1.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-23T23:14:51.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T23:14:51.95Z"
             },
             {
               "$type": "Document",
@@ -79,9 +77,9 @@
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb",
               "RelativeDocumentMoniker": "OpusOBDtest\\Form1.vb",
-              "ToolTip": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb",
-              "RelativeToolTip": "OpusOBDtest\\Form1.vb",
-              "ViewState": "AgIAAE4BAAAAAAAAAAAiwGgBAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb*",
+              "RelativeToolTip": "OpusOBDtest\\Form1.vb*",
+              "ViewState": "AgIAACcCAAAAAAAAAAAIwEMCAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-22T00:33:33.466Z",
               "EditorCaption": ""
@@ -95,8 +93,7 @@
               "ToolTip": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusOBDtest\\OpusOBDtest\\Form1.vb [Design]",
               "RelativeToolTip": "OpusOBDtest\\Form1.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-10-22T00:31:38.638Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-22T00:31:38.638Z"
             }
           ]
         }

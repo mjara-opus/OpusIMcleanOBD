@@ -73,7 +73,7 @@ Public Class IMCleanOBD
         Public Pid017F As String '-- Tiempo de marcha motor
         Public Pid014D As String '-- Tiempo MIL on
         Public Pid010C As String '-- RPM
-        Public Pid0951 As String '-- Tipo combustible
+        Public Pid0151 As String '-- Tipo combustible
         Public Pid0902 As String '-- VIN
         Public Pid0903 As String '-- Cal Message
         Public Pid0904 As String '-- Cal ID
@@ -100,7 +100,7 @@ Public Class IMCleanOBD
         xPid017F = "Null" '-- Tiempo de marcha motor
         xPid014D = "Null" '-- Tiempo MIL on
         xPid010C = "Null" '-- RPM
-        xPid0951 = "Null" '-- Tipo combustible
+        xPid0151 = "Null" '-- Tipo combustible
         xPid0902 = "Null" '-- VIN
         xPid0903 = "Null" '-- Cal Message
         xPid0904 = "Null" '-- Cal ID
@@ -161,7 +161,7 @@ Public Class IMCleanOBD
         InspectionData.Pid017F = xPid017F '& " #" & calcCRC(xPid017F) '-- Tiempo de marcha motor
         InspectionData.Pid014D = xPid014D '& " #" & calcCRC(xPid014D) '-- Tiempo MIL on
         InspectionData.Pid010C = xPid010C '& " #" & calcCRC(xPid010C) '-- RPM
-        InspectionData.Pid0951 = xPid0951 '& " #" & calcCRC(xPid0951) '-- Tipo combustible
+        InspectionData.Pid0151 = xPid0151 '& " #" & calcCRC(xPid0951) '-- Tipo combustible
         InspectionData.Pid0902 = xPid0902 '& " #" & calcCRC(xPid0902) '-- VIN
         InspectionData.Pid0903 = xPid0903 '& " #" & calcCRC(xPid0902) '-- VIN
         InspectionData.Pid0904 = xPid0904 '& " #" & calcCRC(xPid0904) '-- Cal ID

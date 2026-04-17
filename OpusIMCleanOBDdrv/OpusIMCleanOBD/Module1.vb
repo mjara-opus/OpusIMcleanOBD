@@ -259,7 +259,7 @@ Module Module1
     Public xPid017F As String = "Null" '-- Tiempo de marcha motor
     Public xPid014D As String = "Null" '-- Tiempo MIL on
     Public xPid010C As String = "Null" '-- RPM
-    Public xPid0951 As String = "Null" '-- Tipo combustible
+    Public xPid0151 As String = "Null" '-- Tipo combustible
     Public xPid0902 As String = "Null" '-- VIN
     Public xPid0903 As String = "Null" '-- Cal Message
     Public xPid0904 As String = "Null" '-- Cal ID
@@ -3736,7 +3736,7 @@ Module Module1
             If InStr(pDataTxt, "49 51") > 0 Then '-- Tipo combustible
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
-                    xPid0951 = Trim(lBustxt)
+                    xPid0151 = Trim(lBustxt)
                 End If
             End If
 
@@ -5239,7 +5239,7 @@ Module Module1
             Applog("Pid017F : " & xPid017F) '-- Tiempo de marcha motor
 
             Applog("Pid0300 : " & xPid0300) '-- DTC
-            Applog("Pid0951 : " & xPid0951) '-- Tipo combustible
+            Applog("Pid0951 : " & xPid0151) '-- Tipo combustible
             Applog("Pid0902 : " & xPid0902) '-- VIN
             Applog("Pid0903 : " & xPid0903) '-- 
             Applog("Pid0904 : " & xPid0904) '-- Cal ID

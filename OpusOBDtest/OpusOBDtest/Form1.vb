@@ -362,7 +362,7 @@ Public Class Form1
         Applog("Pid011F : " & cOpusIMCleanOBDdrv.InspectionData.Pid011F) '-- Tiempo de encendido motor
         Applog("Pid017F : " & cOpusIMCleanOBDdrv.InspectionData.Pid017F) '-- Tiempo de marcha motor
         Applog("Pid014D : " & cOpusIMCleanOBDdrv.InspectionData.Pid014D) '-- Tiempo MIL on
-        Applog("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0951) '-- Tipo combustible
+        Applog("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0151) '-- Tipo combustible
         Applog("Pid0902 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0902) '-- VIN
         Applog("Pid0903 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0903)
         Applog("Pid0904 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0904) '-- Cal ID
@@ -581,7 +581,7 @@ Public Class Form1
         wrReporte("Pid011F : " & cOpusIMCleanOBDdrv.InspectionData.Pid011F) '-- Tiempo de encendido motor
         wrReporte("Pid017F : " & cOpusIMCleanOBDdrv.InspectionData.Pid017F) '-- Tiempo de marcha motor
         wrReporte("Pid014D : " & cOpusIMCleanOBDdrv.InspectionData.Pid014D) '-- Tiempo MIL on
-        wrReporte("Pid0951 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0951) '-- Tipo combustible
+        wrReporte("Pid0151 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0151) '-- Tipo combustible
         wrReporte("Pid0902 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0902) '-- VIN
         wrReporte("Pid0903 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0903) '-- 
         wrReporte("Pid0904 : " & cOpusIMCleanOBDdrv.InspectionData.Pid0904) '-- Cal ID

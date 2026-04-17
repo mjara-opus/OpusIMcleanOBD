@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusIMCleanOBDdrv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC89FC2E-A1E3-43B2-ABC2-B9C02600D0BE}|OpusIMCleanOBD\\OpusIMCleanOBDdrv.vbproj|C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusIMCleanOBDdrv\\opusimcleanobd\\class1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{DC89FC2E-A1E3-43B2-ABC2-B9C02600D0BE}|OpusIMCleanOBD\\OpusIMCleanOBDdrv.vbproj|c:\\pry_opus\\opusimcleanobd\\opusimcleanobddrv\\opusimcleanobd\\class1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{DC89FC2E-A1E3-43B2-ABC2-B9C02600D0BE}|OpusIMCleanOBD\\OpusIMCleanOBDdrv.vbproj|solutionrelative:opusimcleanobd\\class1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DC89FC2E-A1E3-43B2-ABC2-B9C02600D0BE}|OpusIMCleanOBD\\OpusIMCleanOBDdrv.vbproj|c:\\pry_opus\\opusimcleanobd\\opusimcleanobddrv\\opusimcleanobd\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{DC89FC2E-A1E3-43B2-ABC2-B9C02600D0BE}|OpusIMCleanOBD\\OpusIMCleanOBDdrv.vbproj|C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusIMCleanOBDdrv\\opusimcleanobd\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{DC89FC2E-A1E3-43B2-ABC2-B9C02600D0BE}|OpusIMCleanOBD\\OpusIMCleanOBDdrv.vbproj|solutionrelative:opusimcleanobd\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "OpusIMCleanOBD\\Class1.vb",
               "ToolTip": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusIMCleanOBDdrv\\OpusIMCleanOBD\\Class1.vb",
               "RelativeToolTip": "OpusIMCleanOBD\\Class1.vb",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAiwLIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowEgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-21T19:43:05.111Z",
               "EditorCaption": ""
@@ -113,7 +113,7 @@
               "RelativeDocumentMoniker": "OpusIMCleanOBD\\Module1.vb",
               "ToolTip": "C:\\PRY_OPUS\\OpusIMcleanOBD\\OpusIMCleanOBDdrv\\OpusIMCleanOBD\\Module1.vb",
               "RelativeToolTip": "OpusIMCleanOBD\\Module1.vb",
-              "ViewState": "AgIAAE4OAAAAAAAAAAAkwGkOAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAADcPAAAAAAAAAAAjwIgPAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-10-18T18:40:18.384Z",
               "EditorCaption": ""

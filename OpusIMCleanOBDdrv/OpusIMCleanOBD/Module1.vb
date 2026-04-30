@@ -3512,23 +3512,17 @@ Module Module1
 
 
     Public Sub DECODE_Bus(ByVal pDataBus As String)
-
         Applog("DECODE_Bus: " & pDataBus)
-
         Dim lCar As String = Nothing
         Dim lBustxt As String = Nothing
         Dim zDB As Integer = Len(pDataBus)
         Dim Ix0 As Integer = 0
-
         For Ix0 = 1 To zDB
-
             lCar = Mid(pDataBus, Ix0, 1)
-
             If Asc(lCar) <> 13 Then '-- chr(13)
                 lBustxt &= lCar
                 'Applog(".. " & lBustxt)
             Else
-
                 If InStr(lBustxt, "RX MSG") > 0 Then DECODE_BusLinea(lBustxt)
                 lBustxt = Nothing
 
@@ -3539,16 +3533,13 @@ Module Module1
     End Sub
 
     Public Sub DECODE_BusLinea(ByVal pDataTxt As String)
-
         Dim lCar As String = Nothing
         Dim lBustxt As String = Nothing
         Dim zDB As Integer = Len(pDataTxt)
         Dim Ix0 As Integer = InStrRev(pDataTxt, ",")
         Dim Ix1 As Integer = 0
         'ReDim OBDdataBus(100)      Chr(13) & '& vbCrLf
-
         Dim banMotGas As Boolean = False
-
         If InStr(pDataTxt, "07 E8") > 0 Then
             banMotGas = True '-- 07 E8 = ECU motor de gasolina 
 
@@ -3561,9 +3552,7 @@ Module Module1
                             InStr(pDataTxt, "6B 1A") > 0 Or
                                 InStr(pDataTxt, "48 6B") > 0 Or
                                     InStr(pDataTxt, "F1 58") > 0 Then '-- posibles ECUS no conocidos (electricos? diesel?) 
-
-
-            If InStr(pDataTxt, "41 01") > 0 Then '-- OBDdata_MIL 
+            If InStr(pDataTxt, "E8 41 01") > 0 Or InStr(pDataTxt, "10 41 01") > 0 Then '-- OBDdata_MIL 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0101 = Trim(lBustxt)
@@ -3571,7 +3560,7 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "41 0C") > 0 Then '-- OBDdata_RPM 
+            If InStr(pDataTxt, "E8 41 0C") > 0 Or InStr(pDataTxt, "10 41 0C") > 0 Then '-- OBDdata_RPM 
                 If Ix0 > 0 And banMotGas Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid010C = Trim(lBustxt)
@@ -3579,13 +3568,15 @@ Module Module1
                 End If
             End If
 
+
             If InStr(pDataTxt, "E8 43") > 0 Or
-                    InStr(pDataTxt, "DF 43") > 0 Or
-                        InStr(pDataTxt, "E0 43") > 0 Or
-                            InStr(pDataTxt, "10 43") > 0 Or
-                                InStr(pDataTxt, "1A 43") > 0 Or
-                                       InStr(pDataTxt, "6B 43") > 0 Or
-                                            InStr(pDataTxt, "58 43") > 0 Then '-- OBDdata_DTC
+                InStr(pDataTxt, "DF 43") > 0 Or
+                    InStr(pDataTxt, "E0 43") > 0 Or
+                        InStr(pDataTxt, "10 43") > 0 Or
+                            InStr(pDataTxt, "1A 43") > 0 Or
+                                InStr(pDataTxt, "6B 43") > 0 Or
+                                    InStr(pDataTxt, "58 43") > 0 Then '-- OBDdata_DTC
+                'If InStr(pDataTxt, "E8 43") > 0 Then '-- OBDdata_DTC
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0300 = Trim(lBustxt)
@@ -3593,196 +3584,196 @@ Module Module1
                 End If
             End If
 
-            If InStr(pDataTxt, "41 00") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 00") > 0 Or InStr(pDataTxt, "10 41 00") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0100 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 03") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 03") > 0 Or InStr(pDataTxt, "10 41 03") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0103 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 0D") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 0D") > 0 Or InStr(pDataTxt, "10 41 0D") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid010D = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 20") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 20") > 0 Or InStr(pDataTxt, "10 41 20") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0120 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 30") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 30") > 0 Or InStr(pDataTxt, "10 41 30") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0130 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 40") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 40") > 0 Or InStr(pDataTxt, "10 41 40") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0140 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 46") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 46") > 0 Or InStr(pDataTxt, "10 41 46") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0146 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 4E") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 4E") > 0 Or InStr(pDataTxt, "10 41 4E") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid014E = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 5B") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 5B") > 0 Or InStr(pDataTxt, "10 41 5B") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid015B = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 5C") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 5C") > 0 Or InStr(pDataTxt, "10 41 5C") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid015C = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 60") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 60") > 0 Or InStr(pDataTxt, "10 41 60") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0160 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 80") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 80") > 0 Or InStr(pDataTxt, "10 41 80") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0180 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 A6") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 A6") > 0 Or InStr(pDataTxt, "E8 41 A6") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid01A6 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 C0") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 41 C0") > 0 Or InStr(pDataTxt, "10 41 C0") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid01C0 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 21") > 0 Then '-- Distancia MIL on
+            If InStr(pDataTxt, "E8 41 21") > 0 Or InStr(pDataTxt, "10 41 21") > 0 Then '-- Distancia MIL on
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0121 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 31") > 0 Then '-- Distancia MIL borrado
+            If InStr(pDataTxt, "E8 41 31") > 0 Or InStr(pDataTxt, "10 41 31") > 0 Then '-- Distancia MIL borrado
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0131 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 33") > 0 Then '-- Presion Barometrica Kpa
+            If InStr(pDataTxt, "E8 41 33") > 0 Or InStr(pDataTxt, "10 41 33") > 0 Then '-- Presion Barometrica Kpa
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0133 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 1F") > 0 Then '-- Tiempo de encendido motor
+            If InStr(pDataTxt, "E8 41 1F") > 0 Or InStr(pDataTxt, "10 41 1F") > 0 Then '-- Tiempo de encendido motor
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid011F = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 7F") > 0 Then '-- Tiempo de marcha motor
+            If InStr(pDataTxt, "E8 41 7F") > 0 Or InStr(pDataTxt, "10 41 7F") > 0 Then '-- Tiempo de marcha motor
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid017F = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "41 4D") > 0 Then '-- Tiempo MIL on
+            If InStr(pDataTxt, "E8 41 4D") > 0 Or InStr(pDataTxt, "10 41 4D") > 0 Then '-- Tiempo MIL on
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid014D = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 51") > 0 Then '-- Tipo combustible
+            If InStr(pDataTxt, "E8 49 51") > 0 Or InStr(pDataTxt, "10 49 51") > 0 Then '-- Tipo combustible
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0151 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 02") > 0 Then '-- VIN
+            If InStr(pDataTxt, "E8 49 02") > 0 Or InStr(pDataTxt, "10 49 02") > 0 Then '-- VIN
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0902 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 03") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 49 03") > 0 Or InStr(pDataTxt, "10 49 03") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0903 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 04") > 0 Then '-- Cal ID
+            If InStr(pDataTxt, "E8 49 04") > 0 Or InStr(pDataTxt, "10 49 04") > 0 Then '-- Cal ID
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0904 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 05") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 49 05") > 0 Or InStr(pDataTxt, "10 49 05") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0905 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 06") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 49 06") > 0 Or InStr(pDataTxt, "10 49 06") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0906 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 09") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 49 09") > 0 Or InStr(pDataTxt, "10 49 09") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid0909 = Trim(lBustxt)
                 End If
             End If
 
-            If InStr(pDataTxt, "49 0A") > 0 Then '-- 
+            If InStr(pDataTxt, "E8 49 0A") > 0 Or InStr(pDataTxt, "10 49 0A") > 0 Then '-- 
                 If Ix0 > 0 Then
                     lBustxt = Mid(pDataTxt, Ix0 + 1, zDB)
                     xPid090A = Trim(lBustxt)
@@ -4060,10 +4051,8 @@ Module Module1
 
 
     Private Function fncDEC_to_BIN(ByVal pDato As Integer) As String
-
         Dim bin As Integer = 0
         Dim output As String = ""
-
         While pDato <> 0
             If pDato Mod 2 = 0 Then
                 bin = 0
@@ -4121,12 +4110,9 @@ Module Module1
 
 
     Private Sub DECODE_DTC(ByVal pBufferDAT As String)
-
         Applog("... DECODE_DTC: " & pBufferDAT)
-
         'pBufferDAT = "000007E843092677267A26AE043204260420030203050310"
-
-        LrdOBD_STATUS_Cadd = zipESP(pBufferDAT) 'lfncLimpCadd(pBufferDAT)
+        LrdOBD_STATUS_Cadd = zipESP(pBufferDAT)
         Dim lPid As String = Nothing
         Dim Ixd As Integer = 0
         Dim zBufferDAT As Integer = Len(LrdOBD_STATUS_Cadd)
@@ -4134,37 +4120,28 @@ Module Module1
         Dim Ix0 As Integer = 0
 
         Try
-
             Ixd = InStr(LrdOBD_STATUS_Cadd, "07E843") '-- 07E843##  | ## = numero de DTC detectados
             If Ixd > 0 Then
-
                 NoDTC = Convert.ToInt16(Mid(LrdOBD_STATUS_Cadd, Ixd + 6, 2), 16)
-
                 LrdOBD_STATUS_Cadd = Mid(LrdOBD_STATUS_Cadd, Ixd + 8, zBufferDAT)
 
                 NoDTC = NoDTC * 4
                 For Ix0 = 1 To NoDTC Step 4
-
                     'MsgBox(Ix0 & " == " & NoDTC)
                     If Len(LrdOBD_STATUS_Cadd) >= 4 Then
-
                         lPid = Mid(LrdOBD_STATUS_Cadd, Ix0, 4)
                         'MsgBox(lPid)
                         If DECODE_DTC_CODIGOS(lPid) Then
-
                             If Len(OBDdata_DTCtxt) > 1 Then
                                 OBDdata_DTCtxt &= ", P" & lPid  '-- Solo si el DTC es parte del catalogo se reporta.
                             Else
                                 OBDdata_DTCtxt &= "P" & lPid   '-- Solo si el DTC es parte del catalogo se reporta.
                             End If
-
                         End If
                     Else
                         Exit For
                     End If
-
                 Next
-
             End If
 
         Catch ex As Exception
@@ -4173,31 +4150,20 @@ Module Module1
 
         End Try
 
-        'Applog("DECODE_DTC >> " & xOBDcadtxt)
-
     End Sub
 
 
-
     Public Sub rntSalvaFalla(ByVal pOBDFalla As String)
-
         Dim Ix0 As Integer = 0
         Dim lOBDFalla As String = "P" & pOBDFalla
-
         For Ix0 = 1 To 20
-
             If xTablaFallas(Ix0) = lOBDFalla Then
                 '-- El codigo ya fue salvado, terminamos proceso    
                 Exit For
-
             Else
-
                 If Len(xTablaFallas(Ix0)) = 0 Then '-- Se localiza registro vacio (ultimo), se guarda
-
                     xTablaFallas(Ix0) = lOBDFalla
-
                     Exit For
-
                 End If
 
             End If
@@ -5239,7 +5205,7 @@ Module Module1
             Applog("Pid017F : " & xPid017F) '-- Tiempo de marcha motor
 
             Applog("Pid0300 : " & xPid0300) '-- DTC
-            Applog("Pid0951 : " & xPid0151) '-- Tipo combustible
+            Applog("Pid0151 : " & xPid0151) '-- Tipo combustible
             Applog("Pid0902 : " & xPid0902) '-- VIN
             Applog("Pid0903 : " & xPid0903) '-- 
             Applog("Pid0904 : " & xPid0904) '-- Cal ID
